@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GL26A-T 액티브 동축 라인어레이 | 현대에이브이씨</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--red:#e94560;--dark:#111;--mid:#444;--light:#888;--bg:#f5f5f7;--white:#fff;--border:#e8e8e8;--navy:#0d1117}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Sans KR',sans-serif;background:var(--white);color:var(--dark)}
+
+header{background:#fff;border-bottom:1px solid var(--border);padding:0 24px;height:60px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.logo a{display:flex;align-items:center;text-decoration:none}
+.logo img{height:36px;object-fit:contain}
+.back-btn{color:var(--light);text-decoration:none;font-size:13px;font-weight:500;transition:color .2s}
+.back-btn:hover{color:var(--red)}
+
+.breadcrumb{background:var(--bg);padding:10px 24px;border-bottom:1px solid var(--border);font-size:12px;color:var(--light)}
+.breadcrumb a{color:var(--light);text-decoration:none}.breadcrumb a:hover{color:var(--red)}
+.breadcrumb strong{color:var(--dark)}
+
+/* HERO */
+.hero{background:var(--navy);color:#fff;overflow:hidden}
+.hero-inner{max-width:1200px;margin:0 auto;padding:60px 24px;display:grid;grid-template-columns:1fr 400px;gap:60px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(233,69,96,.15);border:1px solid rgba(233,69,96,.4);color:#ff8fa0;font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:5px 14px;border-radius:2px;margin-bottom:16px}
+.dot{width:5px;height:5px;background:var(--red);border-radius:50%;animation:blink 1.8s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.hero-brand{font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.35);text-transform:uppercase;margin-bottom:6px}
+.hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.5rem,7vw,5.5rem);line-height:.9;letter-spacing:.05em;color:#fff;margin-bottom:8px}
+.hero-sub{font-size:12px;color:rgba(255,255,255,.4);letter-spacing:.08em;text-transform:uppercase;margin-bottom:20px}
+.hero-desc{font-size:14px;color:rgba(255,255,255,.65);line-height:1.85;margin-bottom:28px}
+.kpi-row{display:flex;gap:24px;margin-bottom:28px;flex-wrap:wrap}
+.kpi{display:flex;flex-direction:column;gap:2px}
+.kpi-val{font-family:'Bebas Neue',sans-serif;font-size:2.2rem;color:#fff;line-height:1}
+.kpi-val span{font-size:.95rem;color:rgba(255,255,255,.4);font-family:'Noto Sans KR',sans-serif;font-weight:300}
+.kpi-lbl{font-size:10px;color:rgba(255,255,255,.35);letter-spacing:.1em;text-transform:uppercase}
+.tags{display:flex;flex-wrap:wrap;gap:7px}
+.tag{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.65);font-size:11px;padding:4px 11px;border-radius:20px}
+.tag.hot{background:rgba(233,69,96,.18);border-color:rgba(233,69,96,.4);color:#ff8fa0}
+
+.hero-img-wrap{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:40px;text-align:center}
+.hero-img-wrap img{width:100%;max-width:260px;height:280px;object-fit:contain;filter:drop-shadow(0 12px 32px rgba(0,0,0,.5))}
+.hero-img-label{margin-top:16px}
+.hero-img-label strong{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;color:#fff;display:block;letter-spacing:.08em}
+.hero-img-label span{font-size:11px;color:rgba(255,255,255,.35);letter-spacing:.1em;text-transform:uppercase}
+
+/* POLY BANNER */
+.poly{background:linear-gradient(90deg,#c0392b,#e94560);color:#fff;padding:12px 24px;text-align:center;font-size:13px}
+.poly strong{font-weight:800;margin-right:10px}
+
+/* MAIN CONTENT */
+.content{max-width:1200px;margin:0 auto;padding:60px 24px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.sticky-img{position:sticky;top:80px}
+.img-main{background:linear-gradient(135deg,#1a2332,#0d1117);border-radius:16px;padding:40px;text-align:center;margin-bottom:12px}
+.img-main img{width:100%;max-width:280px;height:300px;object-fit:contain;filter:drop-shadow(0 12px 32px rgba(0,0,0,.4))}
+
+/* SPEC */
+.prod-badge{display:inline-block;background:#fff3f5;border:1px solid #ffd0d8;color:var(--red);font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-bottom:12px}
+.prod-h2{font-family:'Bebas Neue',sans-serif;font-size:3.5rem;letter-spacing:.06em;line-height:.9;margin-bottom:6px}
+.prod-type{font-size:12px;color:var(--light);letter-spacing:.06em;text-transform:uppercase;margin-bottom:18px}
+.prod-desc{font-size:14px;color:var(--mid);line-height:1.9;margin-bottom:28px;padding-bottom:28px;border-bottom:1px solid var(--border)}
+
+.spec-lbl{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--light);margin-bottom:12px}
+table.spec{width:100%;border-collapse:collapse;margin-bottom:28px}
+table.spec tr{border-bottom:1px solid var(--border)}
+table.spec tr:last-child{border-bottom:none}
+table.spec td{padding:10px 0;font-size:13px;vertical-align:top;line-height:1.5}
+table.spec td:first-child{color:var(--light);font-weight:500;width:44%;padding-right:12px}
+table.spec td:last-child{color:var(--dark);font-weight:600}
+.spec-hl td:last-child{color:var(--red)!important;font-weight:800!important}
+
+.price-box{background:#fff;border:2px solid var(--red);border-radius:10px;padding:20px 24px;margin-bottom:16px}
+.price-row{display:flex;align-items:baseline;gap:20px;flex-wrap:wrap;margin-bottom:10px}
+.pg{display:flex;flex-direction:column;gap:3px}
+.pg-lbl{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--light)}
+.pg-val{font-size:22px;font-weight:900;color:var(--dark)}
+.pg-val small{font-size:12px;font-weight:400;color:var(--light)}
+.pg-supply{font-size:15px;font-weight:700;color:var(--red)}
+.price-div{width:1px;height:36px;background:var(--border)}
+.price-note{font-size:11px;color:var(--light);padding-top:10px;border-top:1px solid var(--border)}
+
+/* FEATURES */
+.sec{padding:60px 24px}
+.sec-inner{max-width:1200px;margin:0 auto}
+.sec-lbl{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:8px}
+.sec-ttl{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.8rem,4vw,2.6rem);letter-spacing:.04em;color:var(--dark);margin-bottom:28px}
+.sec-ttl.w{color:#fff}.sec-lbl.w{color:#ff8fa0}
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.feat{background:#fff;border:1px solid var(--border);border-radius:12px;padding:24px 20px;transition:all .25s;position:relative;overflow:hidden}
+.feat::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.feat:hover{border-color:rgba(233,69,96,.3);transform:translateY(-3px);box-shadow:0 8px 28px rgba(233,69,96,.08)}
+.feat:hover::before{transform:scaleX(1)}
+.feat-icon{font-size:26px;margin-bottom:12px}
+.feat-ttl{font-size:14px;font-weight:700;margin-bottom:8px}
+.feat-txt{font-size:12px;color:var(--light);line-height:1.75}
+
+/* INSTALL */
+.sec-bg{background:var(--bg)}
+.install-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.inst{background:#fff;border:1px solid var(--border);border-radius:10px;padding:20px;transition:border-color .2s}
+.inst:hover{border-color:var(--red)}
+.inst-num{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:var(--red);line-height:1;margin-bottom:8px}
+.inst-ttl{font-size:13px;font-weight:700;margin-bottom:6px}
+.inst-txt{font-size:12px;color:var(--light);line-height:1.7}
+
+/* ACC */
+.sec-dark{background:var(--navy)}
+.acc-note-top{font-size:13px;color:rgba(255,255,255,.45);margin-bottom:20px}
+.acc-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:20px}
+.acc{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:18px 14px;text-align:center;cursor:pointer;transition:all .2s;user-select:none}
+.acc:hover,.acc.on{border-color:rgba(233,69,96,.5);background:rgba(233,69,96,.1)}
+.acc.on{border-color:var(--red)}
+.acc-icon{font-size:22px;margin-bottom:8px}
+.acc-model{font-size:11px;font-weight:700;color:var(--red);letter-spacing:.06em;margin-bottom:4px}
+.acc-name{font-size:11px;color:rgba(255,255,255,.55);line-height:1.5;margin-bottom:10px;min-height:34px}
+.acc-p{border-top:1px solid rgba(255,255,255,.08);padding-top:8px}
+.acc-consumer{font-size:13px;font-weight:700;color:#fff}
+.acc-supply{font-size:10px;color:rgba(255,255,255,.35);margin-top:2px}
+.acc-check{display:none;width:18px;height:18px;background:var(--red);border-radius:50%;align-items:center;justify-content:center;font-size:9px;color:#fff;margin:6px auto 0}
+.acc.on .acc-check{display:flex}
+.acc-total-box{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.att-l p{font-size:12px;color:rgba(255,255,255,.4);margin-bottom:4px}
+.att-total{font-size:28px;font-weight:900;color:#fff}
+.att-total small{font-size:13px;color:rgba(255,255,255,.4);font-weight:400}
+.att-supply{font-size:11px;color:rgba(255,255,255,.3);margin-top:4px}
+.att-r{font-size:11px;color:rgba(255,255,255,.3);text-align:right;line-height:1.8}
+.acc-foot{font-size:11px;color:rgba(255,255,255,.25);text-align:center;margin-top:14px;line-height:1.8}
+
+/* RELATED */
+.related-box{background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.rel-left{display:flex;align-items:center;gap:20px}
+.rel-img img{width:80px;height:80px;object-fit:contain}
+.rel-model{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:.06em}
+.rel-name{font-size:12px;color:var(--light)}
+.rel-desc{font-size:13px;color:var(--mid);max-width:400px;line-height:1.7}
+.rel-btn{display:inline-flex;align-items:center;gap:6px;background:var(--red);color:#fff;font-size:13px;font-weight:700;padding:11px 24px;border-radius:6px;text-decoration:none;transition:background .2s;white-space:nowrap}
+.rel-btn:hover{background:#c0392b}
+
+/* INQUIRY */
+.inquiry{background:linear-gradient(135deg,#e94560,#c0392b);color:#fff;text-align:center;padding:64px 24px}
+.inq-ttl{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,5vw,3rem);letter-spacing:.05em;margin-bottom:10px}
+.inq-sub{font-size:15px;opacity:.85;margin-bottom:32px;line-height:1.7}
+.inq-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.inq-main{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--red);font-weight:800;font-size:15px;padding:14px 36px;border-radius:6px;text-decoration:none;transition:all .2s}
+.inq-main:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.2)}
+.inq-sub-btn{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);color:#fff;font-weight:600;font-size:14px;padding:14px 28px;border-radius:6px;text-decoration:none;border:1px solid rgba(255,255,255,.3)}
+.inq-sub-btn:hover{background:rgba(255,255,255,.2)}
+
+footer{background:#111;color:#fff;padding:24px;font-size:11px;opacity:.5;text-align:center;line-height:1.8}
+
+@media(max-width:1024px){.hero-inner{grid-template-columns:1fr}.content{grid-template-columns:1fr}.sticky-img{position:static}}
+@media(max-width:768px){.feat-grid{grid-template-columns:1fr 1fr}.install-grid{grid-template-columns:1fr 1fr}.acc-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:540px){.feat-grid{grid-template-columns:1fr}.acc-grid{grid-template-columns:1fr 1fr}.install-grid{grid-template-columns:1fr 1fr}.hero-inner{padding:40px 16px}.sec{padding:40px 16px}.content{padding:40px 16px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo"><a href="index.html"><img src="logo.png" alt="(주)현대에이브이씨"></a></div>
+  <a href="index.html" class="back-btn">← 제품 목록</a>
+</header>
+
+<div class="breadcrumb">
+  <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+    <a href="index.html">홈</a> › <a href="index.html">스피커</a> › <a href="index.html">라인어레이</a> › <strong>GL26A-T</strong>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge"><span class="dot"></span>폴리우레아 업그레이드 · NEW</div>
+      <div class="hero-brand">Soundking · Active Coaxial Line Array</div>
+      <h1>GL26A-T</h1>
+      <div class="hero-sub">Active Coaxial 2-Way Full-Range Line Array Speaker</div>
+      <p class="hero-desc">8개의 1인치 네오디뮴 트위터가 동축 배열로 원거리 음장 균일성을 구현하는 컴팩트 액티브 라인어레이. 내장 24비트 DSP, RS-485 네트워크 제어, 폴리우레아 마감으로 어떤 현장에서든 즉시 사용 가능합니다.</p>
+      <div class="kpi-row">
+        <div class="kpi"><div class="kpi-val">129<span>dB</span></div><div class="kpi-lbl">Max SPL</div></div>
+        <div class="kpi"><div class="kpi-val">120<span>°</span></div><div class="kpi-lbl">수평 커버리지</div></div>
+        <div class="kpi"><div class="kpi-val">550<span>W</span></div><div class="kpi-lbl">총 출력 (400+150)</div></div>
+        <div class="kpi"><div class="kpi-val">8.5<span>kg</span></div><div class="kpi-lbl">중량</div></div>
+      </div>
+      <div class="tags">
+        <span class="tag hot">🛡 폴리우레아 마감</span>
+        <span class="tag">동축 배열</span>
+        <span class="tag">24bit DSP</span>
+        <span class="tag">RS-485 네트워크</span>
+        <span class="tag">행잉 포인트 3개</span>
+        <span class="tag">Plug & Play</span>
+      </div>
+    </div>
+    <div class="hero-img-wrap">
+      <img src="https://www.soundking.com/data/upload/20230228/GL26A490_490.webp" alt="GL26A-T"
+           onerror="this.style.display='none'">
+      <div class="hero-img-label">
+        <strong>GL26A-T</strong>
+        <span>Soundking · 현대에이브이씨 공급</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="poly"><strong>🛡 폴리우레아(Polyurea) 페인팅 마감 적용</strong> 일반 도장 대비 충격·마모·방수 내구성 대폭 향상 — 투어링 및 야외 환경에 최적화된 업그레이드 모델</div>
+
+<!-- SPEC DETAIL -->
+<div class="content">
+  <div class="sticky-img">
+    <div class="img-main">
+      <img src="https://www.soundking.com/data/upload/20230228/GL26A490_490.webp" alt="GL26A-T"
+           onerror="this.style.opacity='.3'">
+    </div>
+  </div>
+  <div>
+    <div class="prod-badge">Active Coaxial Line Array</div>
+    <div class="prod-h2">GL26A-T</div>
+    <div class="prod-type">Active Coaxial 2-Way Full-Range Line Array Speaker</div>
+    <p class="prod-desc">8개의 1인치 네오디뮴 도메 트위터와 2개의 6.5인치 네오디뮴 미드-베이스 드라이버가 동축 배열로 구성됩니다. 트위터가 MF 스피커 위에 동축 배열되어 포인트 소스처럼 작동하며 원거리 음장 균일성과 선명도를 크게 향상시킵니다. 내장 고효율 Class D 앰프(400W+150W)와 24비트 DSP를 통해 EQ, 딜레이, 리미터, 프리셋 메모리를 지원하며, RS-485 네트워크로 전체 시스템을 원격 통합 제어할 수 있습니다.</p>
+
+    <div class="spec-lbl">제품 사양</div>
+    <table class="spec">
+      <tr><td>타입</td><td>액티브 동축 2웨이 풀레인지 라인어레이</td></tr>
+      <tr><td>재생주파수</td><td>70Hz ~ 20kHz (-10dB)</td></tr>
+      <tr><td>수평 커버리지</td><td>120°</td></tr>
+      <tr><td>수직 커버리지</td><td>8°</td></tr>
+      <tr><td>엘리먼트 각도</td><td>8°</td></tr>
+      <tr><td>HF 유닛</td><td>8 × 1" 네오디뮴 도메 트위터 (동축 배열)</td></tr>
+      <tr><td>MF/LF 유닛</td><td>2 × 6.5" 네오디뮴 미드-베이스</td></tr>
+      <tr><td>앰프 출력</td><td>400W (MF/LF) + 150W (HF) — Class D</td></tr>
+      <tr class="spec-hl"><td>최대 음압 (SPL)</td><td>129 dB @ 1m</td></tr>
+      <tr><td>입력 감도</td><td>0dBu</td></tr>
+      <tr><td>전원</td><td>230V / 115V</td></tr>
+      <tr><td>행잉 포인트</td><td>3개</td></tr>
+      <tr><td>하우징</td><td>플라이우드 + 폴리우레아 페인팅 (업그레이드)</td></tr>
+      <tr><td>DSP</td><td>24bit / EQ·딜레이·리미터·프리셋 메모리</td></tr>
+      <tr><td>인터페이스</td><td>LCD Display, Line Input, Master Vol/Pre-Set, Parallel, RS-485, AC Main, AC Link</td></tr>
+      <tr><td>제품 사이즈 (W×H×D)</td><td>205 × 354 × 340 mm</td></tr>
+      <tr><td>중량</td><td>8.5 kg</td></tr>
+    </table>
+
+    <div class="price-box">
+      <div class="price-row">
+        <div class="pg"><div class="pg-lbl">소비자가 (VAT 포함)</div><div class="pg-val">2,200,000<small>원 / 개</small></div></div>
+        <div class="price-div"></div>
+        <div class="pg"><div class="pg-lbl">공급가</div><div class="pg-supply">1,100,000원 / 개</div></div>
+      </div>
+      <div class="price-note">※ 공급가는 대리점 기준이며 실제 적용가는 별도 협의합니다.</div>
+    </div>
+
+    <!-- 연관 제품: GL26SA-T -->
+    <div class="spec-lbl" style="margin-bottom:12px">함께 사용하는 제품</div>
+    <div class="related-box">
+      <div class="rel-left">
+        <div class="rel-img">
+          <img src="https://www.soundking.com/data/upload/20230228/GL206SA130_130.webp" alt="GL26SA-T"
+               onerror="this.style.display='none'">
+        </div>
+        <div>
+          <div class="rel-model">GL26SA-T</div>
+          <div class="rel-name">Active Single 15" Subwoofer</div>
+        </div>
+      </div>
+      <p class="rel-desc">GL26A-T의 전용 서브우퍼. 1,200W / 130dB / 40Hz~150Hz로 시스템의 저역을 강화합니다.</p>
+      <a href="gl26sa.html" class="rel-btn">상세 보기 →</a>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURES -->
+<section class="sec sec-bg">
+  <div class="sec-inner">
+    <div class="sec-lbl">주요 특징</div>
+    <div class="sec-ttl">KEY FEATURES</div>
+    <div class="feat-grid">
+      <div class="feat"><div class="feat-icon">🎯</div><div class="feat-ttl">동축(Coaxial) 트위터 배열</div><div class="feat-txt">트위터가 MF 스피커 위에 동축으로 배열됩니다. 오디오-비디오 포지셔닝 정확도가 높아지고 원거리에서도 일관된 음장 균일성과 선명도를 제공합니다.</div></div>
+      <div class="feat"><div class="feat-icon">🛡</div><div class="feat-ttl">폴리우레아 캐비넷 마감</div><div class="feat-txt">일반 파우더 코팅 대비 충격·마모·방수·UV 내구성이 대폭 향상됩니다. 투어링 및 야외 환경에서 캐비넷을 장기간 보호합니다.</div></div>
+      <div class="feat"><div class="feat-icon">⚙️</div><div class="feat-ttl">내장 24비트 DSP</div><div class="feat-txt">EQ, 딜레이, 리미터, 프리셋 메모리 기능을 패널 LCD에서 직접 설정하거나 RS-485로 원격 제어합니다. 다수의 프리셋 탑재로 플러그 앤 플레이 운용이 가능합니다.</div></div>
+      <div class="feat"><div class="feat-icon">🔌</div><div class="feat-ttl">RS-485 네트워크 제어</div><div class="feat-txt">다수의 유닛을 RS-485 네트워크로 연결하여 전체 스피커 시스템을 중앙에서 온라인 통합 제어할 수 있습니다.</div></div>
+      <div class="feat"><div class="feat-icon">🔧</div><div class="feat-ttl">다양한 설치 방식</div><div class="feat-txt">스택, 서스펜션(플라잉), 폴 마운트 등 다양한 설치 방식을 지원합니다. 3개의 행잉 포인트로 안정적인 플라잉 설치가 가능합니다.</div></div>
+      <div class="feat"><div class="feat-icon">▶️</div><div class="feat-ttl">소형·경량 설계</div><div class="feat-txt">205×354×340mm, 8.5kg의 컴팩트한 사이즈. 스택·플라잉·폴 마운트 모두 간편하게 셋업할 수 있습니다.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTALL -->
+<section class="sec">
+  <div class="sec-inner">
+    <div class="sec-lbl">설치 방식</div>
+    <div class="sec-ttl">INSTALLATION</div>
+    <div class="install-grid">
+      <div class="inst"><div class="inst-num">01</div><div class="inst-ttl">스택 (Stacking)</div><div class="inst-txt">GL26SA-T 서브우퍼 위에 GL26A-T를 폴로 올리는 기본 스택 구성. GL26SA 스텍키트 사용.</div></div>
+      <div class="inst"><div class="inst-num">02</div><div class="inst-ttl">서스펜션 (Flying)</div><div class="inst-txt">GL26A 범퍼(플라잉 키트)를 이용해 천장이나 트러스에 매달아 운용. 3개 행잉 포인트 제공.</div></div>
+      <div class="inst"><div class="inst-num">03</div><div class="inst-ttl">폴 마운트</div><div class="inst-txt">GL26A 트레이를 35Ø 스피커 스탠드(DB075)에 장착하여 빠르고 간편하게 세팅.</div></div>
+      <div class="inst"><div class="inst-num">04</div><div class="inst-ttl">풀 서스펜션</div><div class="inst-txt">GL26SA-T와 GL26A-T를 모두 플라잉 구성. GL26SA 범퍼 추가 필요.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ACCESSORIES -->
+<section class="sec sec-dark">
+  <div class="sec-inner">
+    <div class="sec-lbl w">설치 악세사리</div>
+    <div class="sec-ttl w">ACCESSORIES</div>
+    <p class="acc-note-top">클릭하여 선택하면 합계 금액이 자동 계산됩니다.</p>
+    <div class="acc-grid">
+      <div class="acc" onclick="toggleAcc(this)" data-c="310000" data-s="198000">
+        <div class="acc-icon">🔩</div><div class="acc-model">GL26A 범퍼</div>
+        <div class="acc-name">GL26A/GL26A-T 전용 플라잉 키트</div>
+        <div class="acc-p"><div class="acc-consumer">310,000원</div><div class="acc-supply">공급가 198,000원</div></div>
+        <div class="acc-check">✓</div>
+      </div>
+      <div class="acc" onclick="toggleAcc(this)" data-c="550000" data-s="363000">
+        <div class="acc-icon">🔩</div><div class="acc-model">GL26SA 범퍼</div>
+        <div class="acc-name">GL26SA/GL26SA-T 전용 플라잉 키트</div>
+        <div class="acc-p"><div class="acc-consumer">550,000원</div><div class="acc-supply">공급가 363,000원</div></div>
+        <div class="acc-check">✓</div>
+      </div>
+      <div class="acc" onclick="toggleAcc(this)" data-c="300000" data-s="187000">
+        <div class="acc-icon">🔧</div><div class="acc-model">GL26SA 스텍키트</div>
+        <div class="acc-name">GL26A-T + GL26SA-T 스택 구성 브라켓</div>
+        <div class="acc-p"><div class="acc-consumer">300,000원</div><div class="acc-supply">공급가 187,000원</div></div>
+        <div class="acc-check">✓</div>
+      </div>
+      <div class="acc" onclick="toggleAcc(this)" data-c="88000" data-s="50400">
+        <div class="acc-icon">📐</div><div class="acc-model">GL26A 트레이</div>
+        <div class="acc-name">35Ø 스탠드 거치용 트레이</div>
+        <div class="acc-p"><div class="acc-consumer">88,000원</div><div class="acc-supply">공급가 50,400원</div></div>
+        <div class="acc-check">✓</div>
+      </div>
+      <div class="acc" onclick="toggleAcc(this)" data-c="30000" data-s="17600">
+        <div class="acc-icon">🏗</div><div class="acc-model">DB075</div>
+        <div class="acc-name">스피커 스탠드 M20볼트 / 80kg</div>
+        <div class="acc-p"><div class="acc-consumer">30,000원</div><div class="acc-supply">공급가 17,600원</div></div>
+        <div class="acc-check">✓</div>
+      </div>
+    </div>
+    <div class="acc-total-box">
+      <div class="att-l">
+        <p>선택한 악세사리 합계 (소비자가)</p>
+        <div class="att-total"><span id="acc-total">0</span><small>원</small></div>
+        <div class="att-supply" id="acc-supply"></div>
+      </div>
+      <div class="att-r">※ 실제 공급가는 영업 문의 바랍니다.<br>※ 플라잉 설치 시 안전 구조 점검 필수</div>
+    </div>
+    <p class="acc-foot">위 가격은 소비자가(VAT 포함) 기준입니다.</p>
+  </div>
+</section>
+
+<!-- INQUIRY -->
+<section class="inquiry">
+  <div style="max-width:600px;margin:0 auto">
+    <div class="inq-ttl">제품 문의 · 견적 요청</div>
+    <p class="inq-sub">GL26A-T 시스템 구성 상담 및 견적은 아래로 연락 주세요.</p>
+    <div class="inq-actions">
+      <a href="tel:031-8054-0048" class="inq-main">📞 031-8054-0048</a>
+      <a href="index.html" class="inq-sub-btn">← 제품 목록</a>
+    </div>
+    <p style="margin-top:18px;font-size:12px;opacity:.7">경기도 평택시 도일유통길 39-9 · 평일 09:00~18:00</p>
+  </div>
+</section>
+<footer>경기도 평택시 도일유통길 39-9 (도일동) · ☎ 031-8054-0048<br>COPYRIGHT ⓒ HYUNDAI AUDIO VISUAL COMMUNICATIONS CO., LTD. ALL RIGHTS RESERVED.</footer>
+
+<script>
+function toggleAcc(el){
+  el.classList.toggle('on');
+  let c=0,s=0;
+  document.querySelectorAll('.acc.on').forEach(a=>{c+=parseInt(a.dataset.c);s+=parseInt(a.dataset.s);});
+  document.getElementById('acc-total').textContent=c.toLocaleString();
+  document.getElementById('acc-supply').textContent=s>0?'공급가 합계: '+s.toLocaleString()+'원':'';
+}
+</script>
+</body>
+</html>
