@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>P118 액티브 모바일 어레이 시스템 | 현대에이브이씨</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--red:#e94560;--dark:#111;--mid:#444;--light:#888;--bg:#f5f5f7;--white:#fff;--border:#eee;--navy:#0d1117;--purple:#6c3fc5}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Sans KR',sans-serif;background:var(--white);color:var(--dark);line-height:1.6}
+img{max-width:100%}
+
+header{background:#fff;border-bottom:1px solid var(--border);padding:0 24px;height:60px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.logo a{display:flex;align-items:center;text-decoration:none}
+.logo img{height:36px;object-fit:contain}
+.back-btn{color:var(--light);text-decoration:none;font-size:13px;font-weight:500;transition:color .2s}
+.back-btn:hover{color:var(--red)}
+
+.bc{background:var(--bg);padding:10px 24px;border-bottom:1px solid var(--border);font-size:12px;color:var(--light)}
+.bc a{color:var(--light);text-decoration:none}.bc a:hover{color:var(--red)}
+.bc strong{color:var(--dark)}
+
+/* HERO */
+.hero{background:linear-gradient(160deg,#0d0618 0%,#1a0d2e 50%,#0d0618 100%);color:#fff;overflow:hidden;position:relative}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 65% 40%,rgba(108,63,197,.2),transparent 60%)}
+.hero-inner{max-width:1200px;margin:0 auto;padding:64px 24px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;position:relative;z-index:1}
+.h-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(108,63,197,.2);border:1px solid rgba(108,63,197,.5);color:#b89cf5;font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:5px 14px;border-radius:2px;margin-bottom:16px}
+.h-dot{width:5px;height:5px;background:#b89cf5;border-radius:50%;animation:blink 1.8s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.h-brand{font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.35);text-transform:uppercase;margin-bottom:6px}
+.hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.5rem,7vw,5.5rem);line-height:.9;letter-spacing:.05em;color:#fff;margin-bottom:8px}
+.hero h1 .r{color:#b89cf5}
+.h-sub{font-size:12px;color:rgba(255,255,255,.4);letter-spacing:.08em;text-transform:uppercase;margin-bottom:18px}
+.h-desc{font-size:14px;color:rgba(255,255,255,.65);line-height:1.85;margin-bottom:28px}
+.kpi-row{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:28px}
+.kpi{display:flex;flex-direction:column;gap:2px}
+.kv{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:#fff;line-height:1}
+.kv s{font-size:.9rem;color:rgba(255,255,255,.4);font-family:'Noto Sans KR',sans-serif;font-weight:300;text-decoration:none}
+.kl{font-size:10px;color:rgba(255,255,255,.35);letter-spacing:.1em;text-transform:uppercase}
+.h-tags{display:flex;flex-wrap:wrap;gap:7px}
+.tag{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.65);font-size:11px;padding:4px 11px;border-radius:20px}
+.tag.hot{background:rgba(108,63,197,.25);border-color:rgba(108,63,197,.5);color:#b89cf5}
+
+.hero-img{text-align:center}
+.hero-img img{width:100%;max-width:380px;filter:drop-shadow(0 16px 48px rgba(108,63,197,.4));border-radius:4px}
+.hero-img-cap{margin-top:12px;font-size:11px;color:rgba(255,255,255,.35);letter-spacing:.1em;text-transform:uppercase}
+
+/* TABS */
+.tab-wrap{background:#fff;border-bottom:2px solid var(--border);position:sticky;top:60px;z-index:100}
+.tabs{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tb{padding:15px 18px;border:none;background:none;font-size:13px;font-weight:500;color:var(--light);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-2px;white-space:nowrap;transition:all .2s;font-family:'Noto Sans KR',sans-serif}
+.tb.on,.tb:hover{color:var(--red);border-bottom-color:var(--red)}
+
+/* SECTIONS */
+.sec{padding:64px 24px}
+.si{max-width:1200px;margin:0 auto}
+.sl{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:8px}
+.sl.w{color:#ff8fa0}
+.sl.p{color:#b89cf5}
+.st{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.8rem,4vw,2.6rem);letter-spacing:.04em;color:var(--dark);margin-bottom:6px}
+.st.w{color:#fff}
+.sd{font-size:14px;color:var(--light);margin-bottom:36px;max-width:700px;line-height:1.8}
+.sec-bg{background:var(--bg)}
+.sec-dark{background:var(--navy)}
+.sec-purple{background:linear-gradient(160deg,#0d0618,#1a0d2e)}
+
+/* SYSTEM INTRO */
+.sys-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;margin-bottom:48px}
+.sys-img-wrap{background:linear-gradient(135deg,#1a0d2e,#0d0618);border-radius:16px;padding:32px;text-align:center}
+.sys-img-wrap img{width:100%;max-width:340px;filter:drop-shadow(0 12px 32px rgba(108,63,197,.3))}
+
+/* SPEC */
+.prod-tabs{display:flex;gap:0;border-bottom:2px solid var(--border);margin-bottom:32px}
+.ptb{padding:12px 24px;border:none;background:none;font-size:14px;font-weight:600;color:var(--light);cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-2px;transition:all .2s;font-family:'Noto Sans KR',sans-serif}
+.ptb.on{color:var(--red);border-bottom-color:var(--red)}
+.prod-panel{display:none}.prod-panel.on{display:block}
+
+.spec-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.spec-img-wrap{background:linear-gradient(135deg,#1a2332,#0d1117);border-radius:16px;padding:40px;text-align:center;position:sticky;top:130px}
+.spec-img-wrap img{width:100%;max-width:260px;height:280px;object-fit:contain;filter:drop-shadow(0 8px 28px rgba(0,0,0,.5))}
+.prod-badge{display:inline-block;background:#fff3f5;border:1px solid #ffd0d8;color:var(--red);font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+.prod-h2{font-family:'Bebas Neue',sans-serif;font-size:3rem;letter-spacing:.06em;line-height:.9;margin-bottom:6px}
+.prod-type{font-size:12px;color:var(--light);text-transform:uppercase;letter-spacing:.06em;margin-bottom:16px}
+.prod-desc{font-size:14px;color:var(--mid);line-height:1.9;margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid var(--border)}
+.slbl{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--light);margin-bottom:10px}
+table.sp{width:100%;border-collapse:collapse;margin-bottom:0}
+table.sp tr{border-bottom:1px solid var(--border)}
+table.sp tr:last-child{border-bottom:none}
+table.sp td{padding:9px 0;font-size:13px;vertical-align:top;line-height:1.5}
+table.sp td:first-child{color:var(--light);font-weight:500;width:44%;padding-right:12px}
+table.sp td:last-child{color:var(--dark);font-weight:600}
+.sp-hl td:last-child{color:var(--red)!important;font-weight:800!important}
+.price-box{background:#fff;border:2px solid var(--red);border-radius:10px;padding:18px 22px;margin-top:24px}
+.price-inquiry{font-size:22px;font-weight:900;color:var(--red)}
+.price-note{font-size:11px;color:var(--light);margin-top:8px;padding-top:8px;border-top:1px solid var(--border)}
+
+/* FEATURES */
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.feat{background:#fff;border:1px solid var(--border);border-radius:12px;padding:22px 18px;transition:all .25s;position:relative;overflow:hidden}
+.feat::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.feat:hover{border-color:rgba(233,69,96,.3);transform:translateY(-3px);box-shadow:0 8px 28px rgba(233,69,96,.08)}
+.feat:hover::before{transform:scaleX(1)}
+.feat-icon{font-size:24px;margin-bottom:10px}
+.feat-ttl{font-size:13px;font-weight:700;margin-bottom:7px}
+.feat-txt{font-size:12px;color:var(--light);line-height:1.75}
+
+/* MIXER */
+.mixer-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.mixer-img{background:linear-gradient(135deg,#1a0d2e,#0d0618);border-radius:16px;padding:32px;text-align:center}
+.mixer-img img{width:100%;max-width:400px}
+.mixer-channels{display:flex;flex-direction:column;gap:10px}
+.mc{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--border);border-radius:8px;padding:14px 16px}
+.mc-num{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;color:var(--red);min-width:28px;line-height:1}
+.mc-info{}
+.mc-ttl{font-size:13px;font-weight:700;margin-bottom:2px}
+.mc-txt{font-size:12px;color:var(--light);line-height:1.5}
+
+/* INSTALL */
+.install-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.inst{background:#fff;border:1px solid var(--border);border-radius:10px;padding:20px;transition:border-color .2s}
+.inst:hover{border-color:var(--red)}
+.inst-icon{font-size:24px;margin-bottom:8px}
+.inst-ttl{font-size:13px;font-weight:700;margin-bottom:5px}
+.inst-txt{font-size:12px;color:var(--light);line-height:1.7}
+
+footer{background:#111;color:#fff;padding:24px;font-size:11px;opacity:.5;text-align:center;line-height:1.8}
+
+@media(max-width:1024px){.hero-inner{grid-template-columns:1fr}.hero-img{display:none}.spec-grid{grid-template-columns:1fr}.sys-grid{grid-template-columns:1fr}.mixer-grid{grid-template-columns:1fr}.spec-img-wrap{position:static}}
+@media(max-width:768px){.feat-grid{grid-template-columns:1fr 1fr}.install-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:540px){.feat-grid{grid-template-columns:1fr}.install-grid{grid-template-columns:1fr 1fr}.hero-inner,.sec{padding-left:16px;padding-right:16px}.hero-inner{padding-top:40px;padding-bottom:40px}.sec{padding-top:44px;padding-bottom:44px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo"><a href="index.html"><img src="logo.png" alt="(주)현대에이브이씨"></a></div>
+  <a href="index.html" class="back-btn">← 제품 목록</a>
+</header>
+
+<div class="bc">
+  <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+    <a href="index.html">홈</a> › <a href="index.html">스피커</a> › <a href="index.html">컬럼 어레이</a> › <strong>P118 액티브 모바일 어레이 시스템</strong>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="h-badge"><span class="h-dot"></span>Active Mobile Array Sound System</div>
+      <div class="h-brand">Soundking · P Series Active Mobile Array</div>
+      <h1>P118<br><span class="r">Mobile Array</span></h1>
+      <div class="h-sub">Active Mobile Array Sound System</div>
+      <p class="h-desc">4×5" 네오디뮴 MLF 스피커 + 16×1" 돔 혼 HF로 구성된 패시브 어레이와 18인치 액티브 서브우퍼의 완성형 일체형 PA 시스템. 내장 4채널 믹서와 24비트 DSP, 뉴매틱 리프팅 브라켓, 캐스터 설계로 세팅과 이동이 매우 간편합니다.</p>
+      <div class="kpi-row">
+        <div class="kpi"><div class="kv">132<s>dB</s></div><div class="kl">System Max SPL</div></div>
+        <div class="kpi"><div class="kv">1600<s>W</s></div><div class="kl">총 앰프 출력</div></div>
+        <div class="kpi"><div class="kv">100<s>°</s></div><div class="kl">수평 커버리지</div></div>
+        <div class="kpi"><div class="kv">60<s>°</s></div><div class="kl">수직 커버리지</div></div>
+      </div>
+      <div class="h-tags">
+        <span class="tag hot">📦 올인원 시스템</span>
+        <span class="tag">16×1" 돔 혼 HF</span>
+        <span class="tag">4채널 내장 믹서</span>
+        <span class="tag">24bit DSP</span>
+        <span class="tag">LINE LINK 스테레오 연결</span>
+        <span class="tag">뉴매틱 리프팅 브라켓</span>
+        <span class="tag">캐스터 설계</span>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="P118_01.jpg" alt="P118 시스템"
+           onerror="this.style.display='none'">
+      <div class="hero-img-cap">P118 Active Mobile Array Sound System</div>
+    </div>
+  </div>
+</section>
+
+<!-- TABS -->
+<div class="tab-wrap">
+  <div class="tabs">
+    <button class="tb on" onclick="goTab('sec-overview')">시스템 소개</button>
+    <button class="tb" onclick="goTab('sec-spec')">제품 사양</button>
+    <button class="tb" onclick="goTab('sec-mixer')">내장 믹서</button>
+    <button class="tb" onclick="goTab('sec-features')">주요 특징</button>
+    <button class="tb" onclick="goTab('sec-install')">설치 방식</button>
+    <button class="tb" onclick="goTab('sec-acc')">악세사리</button>
+  </div>
+</div>
+
+
+<!-- ══ OVERVIEW ══ -->
+<section class="sec" id="sec-overview">
+  <div class="si">
+    <div class="sl">시스템 소개</div>
+    <div class="st">P118 SYSTEM OVERVIEW</div>
+    <div class="sys-grid">
+      <div class="sys-img-wrap">
+        <img src="P118_1.png" alt="P118 시스템 전체"
+             onerror="this.style.opacity='.3'">
+      </div>
+      <div>
+        <p style="font-size:14px;color:var(--mid);line-height:1.95;margin-bottom:24px">
+          P118은 문화·엔터테인먼트 산업의 성장과 함께 증가하는 소·중형 공연, 뮤직 페스티벌, 행사를 위해 개발된 <strong>올인원 액티브 모바일 어레이 시스템</strong>입니다. 별도의 파워앰프나 믹서 없이 단독으로 완전한 PA 시스템을 구성할 수 있습니다.
+        </p>
+
+        <!-- 구성 요소 -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+          <div style="background:var(--bg);border-radius:12px;padding:20px">
+            <div style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--red);margin-bottom:10px">패시브 어레이 TOP</div>
+            <div style="font-size:13px;font-weight:700;margin-bottom:6px">4×5" MLF + 16×1" 혼 HF</div>
+            <div style="font-size:12px;color:var(--light);line-height:1.7">
+              198 × 736 × 339 mm<br>
+              무게 12.1 kg<br>
+              뉴매틱 리프팅 브라켓으로 높이 조절
+            </div>
+          </div>
+          <div style="background:var(--bg);border-radius:12px;padding:20px">
+            <div style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--red);margin-bottom:10px">18" 액티브 서브우퍼</div>
+            <div style="font-size:13px;font-weight:700;margin-bottom:6px">18" LF + 2×800W CLASS-D</div>
+            <div style="font-size:12px;color:var(--light);line-height:1.7">
+              523 × 852 × 564 mm<br>
+              무게 44.5 kg<br>
+              4채널 믹서 + DSP + 캐스터 내장
+            </div>
+          </div>
+        </div>
+
+        <!-- 시스템 스펙 요약 -->
+        <div style="margin-top:20px;background:linear-gradient(135deg,#1a0d2e,#0d0618);border-radius:12px;padding:20px">
+          <div style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#b89cf5;margin-bottom:14px">시스템 통합 사양</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+            <div style="font-size:12px;color:rgba(255,255,255,.5)">주파수 응답</div><div style="font-size:12px;color:#fff;font-weight:600">30Hz ~ 20kHz (-10dB)</div>
+            <div style="font-size:12px;color:rgba(255,255,255,.5)">최대 음압 (SPL)</div><div style="font-size:13px;color:#b89cf5;font-weight:800">132 dB (peak)</div>
+            <div style="font-size:12px;color:rgba(255,255,255,.5)">커버리지 (H × V)</div><div style="font-size:12px;color:#fff;font-weight:600">100° × 60°</div>
+            <div style="font-size:12px;color:rgba(255,255,255,.5)">총 시스템 높이</div><div style="font-size:12px;color:#fff;font-weight:600">2,225 mm</div>
+            <div style="font-size:12px;color:rgba(255,255,255,.5)">총 앰프 출력</div><div style="font-size:12px;color:#fff;font-weight:600">2 × 800W RMS (1,600W)</div>
+            <div style="font-size:12px;color:rgba(255,255,255,.5)">전원</div><div style="font-size:12px;color:#fff;font-weight:600">AC 100V ~ 240V</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ SPEC ══ -->
+<section class="sec sec-bg" id="sec-spec">
+  <div class="si">
+    <div class="sl">제품 사양</div>
+    <div class="st">SPECIFICATIONS</div>
+
+    <div class="prod-tabs">
+      <button class="ptb on" onclick="showProd('p-top', event)">🔊 패시브 어레이 (TOP)</button>
+      <button class="ptb" onclick="showProd('p-sub', event)">🔈 18" 액티브 서브우퍼 (SUB)</button>
+    </div>
+
+    <!-- TOP -->
+    <div class="prod-panel on" id="p-top">
+      <div class="spec-grid">
+        <div class="spec-img-wrap">
+          <img src="P118_02.jpg" alt="P118 패시브 어레이"
+               onerror="this.style.opacity='.3'">
+        </div>
+        <div>
+          <div class="prod-badge">Passive Array Full-Range Loudspeaker</div>
+          <div class="prod-h2" style="font-size:2.2rem;line-height:1">P118 Array</div>
+          <div class="prod-type">Passive Array Full-Range Loudspeaker</div>
+          <p class="prod-desc">4개의 5인치 네오디뮴 MLF 스피커와 16개의 1인치 돔 혼 HF로 구성된 캐비닛 어레이. 혼 HF 설계로 강한 투과력과 분석력을 자랑하며, 수직 각도 커버리지가 넓어 다양한 공간에서 균일한 음장을 제공합니다. 뉴매틱 리프팅 브라켓으로 높이를 자유롭게 조절할 수 있습니다.</p>
+          <div class="slbl">제품 사양</div>
+          <table class="sp">
+            <tr><td>MF 유닛</td><td>4 × 5" 네오디뮴 MLF 스피커</td></tr>
+            <tr><td>HF 유닛</td><td>16 × 1" 돔 혼 HF</td></tr>
+            <tr><td>커버리지 (H × V)</td><td>100° × 60°</td></tr>
+            <tr><td>높이 조절</td><td>뉴매틱 리프팅 브라켓 (무단 조절)</td></tr>
+            <tr><td>연결 방식</td><td>내부 소켓 배선 — 외부 케이블 불필요</td></tr>
+            <tr><td>제품 사이즈 (W×H×D)</td><td>198 × 736 × 339 mm</td></tr>
+            <tr><td>중량</td><td>12.1 kg</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- SUB -->
+    <div class="prod-panel" id="p-sub">
+      <div class="spec-grid">
+        <div class="spec-img-wrap">
+          <img src="P118_03.jpg" alt="P118 서브우퍼"
+               onerror="this.style.opacity='.3'">
+        </div>
+        <div>
+          <div class="prod-badge">18" Active Subwoofer</div>
+          <div class="prod-h2" style="font-size:2.2rem;line-height:1">18" Active SUB</div>
+          <div class="prod-type">18" Active Subwoofer with Integrated Mixer & DSP</div>
+          <p class="prod-desc">18인치 LF 스피커와 2×800W CLASS-D 앰프가 내장된 액티브 서브우퍼. 4채널 입력 믹서, 24비트 DSP, 0~100m 딜레이 DSP 설정을 탑재하여 단독으로 완전한 PA 시스템을 구성합니다. 위상 반전 설계와 캐스터로 이동과 세팅이 간편합니다.</p>
+          <div class="slbl">제품 사양</div>
+          <table class="sp">
+            <tr><td>LF 스피커</td><td>18" LF 스피커</td></tr>
+            <tr><td>앰프 출력</td><td>2 × 800W RMS (CLASS-D)</td></tr>
+            <tr class="sp-hl"><td>시스템 최대 음압</td><td>132 dB (peak)</td></tr>
+            <tr><td>주파수 응답</td><td>30Hz ~ 20kHz (-10dB)</td></tr>
+            <tr><td>입력 감도</td><td>0dBu</td></tr>
+            <tr><td>전원</td><td>AC 100V ~ 240V</td></tr>
+            <tr><td>믹서 입력</td><td>4채널 (Mic/Line×2, RCA 스테레오, HI-Z×1)</td></tr>
+            <tr><td>출력</td><td>XLR 라인 출력×2, MIX OUTPUT×1</td></tr>
+            <tr><td>DSP</td><td>24bit / 게인·EQ·크로스오버·딜레이(0~100m)·리미터</td></tr>
+            <tr><td>이동 편의</td><td>캐스터(바퀴) 내장</td></tr>
+            <tr><td>제품 사이즈 (W×H×D)</td><td>523 × 852 × 564 mm</td></tr>
+            <tr><td>중량</td><td>44.5 kg</td></tr>
+          </table>
+          <div class="price-box">
+            <div class="slbl">가격</div>
+            <div class="price-inquiry">견적문의</div>
+            <div class="price-note">※ 실제 판매가는 영업 문의를 통해 확인해 주세요.<br>※ 참고 소비자가: 8,000,000원 / 조 (VAT 포함)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══ MIXER ══ -->
+<section class="sec" id="sec-mixer">
+  <div class="si">
+    <div class="sl">내장 믹서</div>
+    <div class="st">BUILT-IN 4CH MIXER</div>
+    <p class="sd">별도의 믹서 없이 서브우퍼 상단 패널에서 직접 4채널 입력을 제어할 수 있습니다.</p>
+    <div class="mixer-grid">
+      <div class="mixer-img">
+        <img src="P118_01.jpg" alt="P118 믹서 패널"
+             style="width:100%;max-width:380px"
+             onerror="this.style.opacity='.3'">
+        <p style="font-size:11px;color:rgba(255,255,255,.4);margin-top:10px;text-align:center">서브우퍼 상단 컨트롤 패널</p>
+      </div>
+      <div class="mixer-channels">
+        <div class="mc"><div class="mc-num">1·2</div><div class="mc-info"><div class="mc-ttl">GAIN A·B — Mic/Line 입력</div><div class="mc-txt">XLR/6.35mm COMBO 소켓. LINE/MIC 선택 스위치로 라인·마이크 게인 별도 설정 가능</div></div></div>
+        <div class="mc"><div class="mc-num">3</div><div class="mc-info"><div class="mc-ttl">GAIN C HI-Z — 악기 입력</div><div class="mc-txt">6.35mm JACK. 어쿠스틱 기타 등 고임피던스 악기 직접 연결</div></div></div>
+        <div class="mc"><div class="mc-num">4</div><div class="mc-info"><div class="mc-ttl">GAIN D — 라인 입력</div><div class="mc-txt">RCA 스테레오 라인 입력. 음원 플레이어, 노트북 등 라인 레벨 기기 연결</div></div></div>
+        <div class="mc"><div class="mc-num">DSP</div><div class="mc-info"><div class="mc-ttl">DSP CONTROL</div><div class="mc-txt">LCD 디스플레이 + 로터리 노브로 EQ·크로스오버·딜레이(0~100m, 0.25m 단위)·리미터 설정</div></div></div>
+        <div class="mc"><div class="mc-num">SUB</div><div class="mc-info"><div class="mc-ttl">SUB LEVEL</div><div class="mc-txt">서브우퍼 음량을 독립적으로 조절. 저역 밸런스를 현장에 맞게 즉시 변경 가능</div></div></div>
+        <div class="mc"><div class="mc-num">OUT</div><div class="mc-info"><div class="mc-ttl">LINE LINK + MIX OUTPUT</div><div class="mc-txt">LINE LINK: 입력 1·2번 신호를 개별 출력. MIX OUTPUT: 믹스 신호 출력으로 추가 스피커 연결</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ FEATURES ══ -->
+<section class="sec sec-bg" id="sec-features">
+  <div class="si">
+    <div class="sl">주요 특징</div>
+    <div class="st">KEY FEATURES</div>
+    <div class="feat-grid">
+      <div class="feat"><div class="feat-icon">📦</div><div class="feat-ttl">완전 독립형 PA 시스템</div><div class="feat-txt">파워앰프, 믹서, DSP, 서브우퍼가 하나의 박스에 내장. 어레이 TOP을 꽂기만 하면 완전한 PA 시스템이 완성됩니다.</div></div>
+      <div class="feat"><div class="feat-icon">🎺</div><div class="feat-ttl">16×1" 돔 혼 HF 설계</div><div class="feat-txt">16개의 1인치 돔 혼 HF가 100°×60° 넓은 커버리지를 제공합니다. 강한 투과력과 분석력으로 원거리까지 선명한 사운드를 전달합니다.</div></div>
+      <div class="feat"><div class="feat-icon">⚙️</div><div class="feat-ttl">24bit DSP 내장</div><div class="feat-txt">게인, 크로스오버, EQ, 딜레이(0~100m, 0.25m 단위), 리미터, 프리셋 메모리를 LCD 패널에서 직접 설정합니다.</div></div>
+      <div class="feat"><div class="feat-icon">🔗</div><div class="feat-ttl">LINE LINK 스테레오 연결</div><div class="feat-txt">두 대의 P118을 LINE LINK 케이블로 연결하여 스테레오 시스템을 구성할 수 있습니다. 큰 공간에서 좌우 분리된 풍부한 스테레오 음장을 제공합니다.</div></div>
+      <div class="feat"><div class="feat-icon">🔧</div><div class="feat-ttl">뉴매틱 리프팅 브라켓</div><div class="feat-txt">공압식 리프팅 브라켓으로 어레이 TOP의 높이를 무단으로 조절합니다. TOP 내부에 이미 배선이 완료되어 있어 외부 케이블 연결이 불필요합니다.</div></div>
+      <div class="feat"><div class="feat-icon">🛞</div><div class="feat-ttl">캐스터 이동 설계</div><div class="feat-txt">서브우퍼 하단에 캐스터(바퀴)가 장착되어 현장 이동과 포지셔닝이 매우 간편합니다. 넓은 AC 100V~240V 전원 설계로 국내외 어디서나 사용 가능합니다.</div></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ INSTALL ══ -->
+<section class="sec" id="sec-install">
+  <div class="si">
+    <div class="sl">설치 방식</div>
+    <div class="st">INSTALLATION</div>
+    <p class="sd">현장 환경에 따라 4가지 설치 방식을 선택할 수 있습니다.</p>
+    <div class="install-grid">
+      <div class="inst"><div class="inst-icon">🏗</div><div class="inst-ttl">기본 스탠딩</div><div class="inst-txt">서브우퍼를 바닥에 놓고 뉴매틱 브라켓으로 어레이 TOP을 최적 높이로 세팅. 가장 빠른 기본 구성.</div></div>
+      <div class="inst"><div class="inst-icon">📐</div><div class="inst-ttl">틸팅 배치</div><div class="inst-txt">서브우퍼를 앞쪽으로 기울여 어레이 TOP의 커버리지 방향을 조절. 계단식 객석이나 경사 무대에 적합.</div></div>
+      <div class="inst"><div class="inst-icon">🔲</div><div class="inst-ttl">사이드 필</div><div class="inst-txt">메인 PA 시스템을 보조하는 사이드 필로 활용. MIX OUTPUT으로 메인 시스템과 신호 연동 가능.</div></div>
+      <div class="inst"><div class="inst-icon">🔗</div><div class="inst-ttl">멀티 링크</div><div class="inst-txt">두 대의 P118을 LINE LINK 케이블로 연결하여 스테레오 구성. 큰 공간에서 좌우 분리된 음장을 제공합니다.</div></div>
+    </div>
+
+    <div style="margin-top:32px;background:var(--bg);border-radius:12px;padding:24px">
+      <div class="slbl" style="margin-bottom:14px">적용 현장</div>
+      <div style="display:flex;flex-wrap:wrap;gap:10px">
+        <span style="background:#fff;border:1px solid var(--border);border-radius:20px;padding:6px 16px;font-size:12px;font-weight:600">🎤 소·중형 투어링 공연</span>
+        <span style="background:#fff;border:1px solid var(--border);border-radius:20px;padding:6px 16px;font-size:12px;font-weight:600">🎪 뮤직 페스티벌</span>
+        <span style="background:#fff;border:1px solid var(--border);border-radius:20px;padding:6px 16px;font-size:12px;font-weight:600">🥂 리셉션·연회</span>
+        <span style="background:#fff;border:1px solid var(--border);border-radius:20px;padding:6px 16px;font-size:12px;font-weight:600">🎭 다목적홀</span>
+        <span style="background:#fff;border:1px solid var(--border);border-radius:20px;padding:6px 16px;font-size:12px;font-weight:600">⛪ 교회·예배당</span>
+        <span style="background:#fff;border:1px solid var(--border);border-radius:20px;padding:6px 16px;font-size:12px;font-weight:600">🏢 기업 행사</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ ACCESSORIES ══ -->
+<section class="sec sec-bg" id="sec-acc">
+  <div class="si">
+    <div class="sl">악세사리</div>
+    <div class="st">ACCESSORIES & OPTIONS</div>
+    <p class="sd">P118 전용 악세사리로 이동 편의성과 장비 보호 성능을 높이세요.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px">
+
+      <div style="background:#fff;border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:all .2s">
+        <img src="STRATOS8000_02.png" alt="P118 소프트커버"
+             style="width:100%;height:200px;object-fit:contain;background:var(--bg);padding:20px;display:block"
+             onerror="this.style.display='none'">
+        <div style="padding:18px 20px">
+          <div style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--red);margin-bottom:6px">옵션 악세사리</div>
+          <div style="font-size:15px;font-weight:800;margin-bottom:8px">P118 전용 소프트커버</div>
+          <div style="font-size:12px;color:var(--light);line-height:1.8;margin-bottom:14px">
+            1세트 구성:<br>
+            TOP 커버 × 2 + POLE STAND 커버 × 2 + SUB 커버 × 2<br>
+            이동이 잦은 공연·행사에서 제품을 안전하게 보호
+          </div>
+          <div style="padding-top:12px;border-top:1px solid var(--border)">
+            <span style="font-size:20px;font-weight:900;color:var(--red)">250,000원</span>
+            <span style="font-size:12px;color:var(--light);margin-left:6px">/ 조 (VAT 포함)</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>경기도 평택시 도일유통길 39-9 (도일동) · ☎ 031-8054-0048<br>COPYRIGHT ⓒ HYUNDAI AUDIO VISUAL COMMUNICATIONS CO., LTD. ALL RIGHTS RESERVED.</footer>
+
+<script>
+const sections = ['sec-overview','sec-spec','sec-mixer','sec-features','sec-install','sec-acc'];
+function goTab(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  window.scrollTo({ top: el.getBoundingClientRect().top + window.pageYOffset - 120, behavior:'smooth' });
+}
+window.addEventListener('scroll', () => {
+  let cur = 0;
+  sections.forEach((id, i) => {
+    const el = document.getElementById(id);
+    if (el && el.getBoundingClientRect().top <= 130) cur = i;
+  });
+  document.querySelectorAll('.tb').forEach((b, i) => b.classList.toggle('on', i === cur));
+});
+function showProd(id, e) {
+  document.querySelectorAll('.prod-panel').forEach(p => p.classList.remove('on'));
+  document.querySelectorAll('.ptb').forEach(b => b.classList.remove('on'));
+  document.getElementById(id).classList.add('on');
+  e.target.classList.add('on');
+}
+</script>
+</body>
+</html>
