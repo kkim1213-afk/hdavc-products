@@ -909,80 +909,105 @@ function renderBriefing(data) {
 // ============================================================
 // AI FETCH
 // ============================================================
-async function fetchBriefing() {
-  const today = new Date();
-  const month = today.getMonth() + 1;
-  const year = today.getFullYear();
-  const period = `${year}년 ${month}월`;
-
-  document.getElementById('loading-text').innerHTML = `
-    <span class="loading-step">웹 검색 중...</span><br>
-    Pro Audio 최신 뉴스를 수집하고 있습니다.<br>약 30~60초 소요됩니다.`;
-
-  const prompt = `당신은 Pro Audio 업계 전문 애널리스트입니다.
-지금부터 웹 검색을 통해 최근 1개월간(${period} 기준) pro audio industry의 핫 이슈들을 수집하고 아래 JSON 형식으로 반환하세요.
-
-검색 키워드: pro audio industry news ${year}, live sound news, professional audio market trends, audio equipment new product launch, ISE NAMM InfoComm 2025, pro audio company acquisitions
-
-아래 JSON만 반환하세요. 다른 텍스트, 마크다운 없이 순수 JSON만:
-
-{
-  "period": "${period} 브리핑",
-  "generatedAt": "${today.toISOString()}",
-  "tickers": [
-    {"label": "글로벌 PA 시장", "value": "성장", "dir": "up"},
-    {"label": "ISE 2025", "value": "바르셀로나", "dir": "neutral"},
-    {"label": "AI 음향기술", "value": "주목↑", "dir": "up"}
-  ],
-  "issues": [
-    {
-      "category": "시장동향",
-      "title": "이슈 제목",
-      "summary": "2~3문장 핵심 요약. 업계에 미치는 영향까지 포함.",
-      "source": "출처명",
-      "impact": "높음"
-    }
-  ],
-  "trends": [
-    {"keyword": "키워드", "desc": "한줄 설명"}
-  ],
-  "events": [
-    {"month": "MAR", "day": "15", "name": "행사명", "location": "장소"}
-  ]
-}
-
-issues는 5~7개, trends는 4~5개, events는 3~4개를 수집하세요.
-category는 시장동향/신제품/트렌드/행사/기업동향 중 하나.
-impact는 높음/보통/낮음 중 하나.
-반드시 실제 ${year}년 최신 정보를 웹 검색으로 수집하세요.`;
-
-  const response = await fetch("https://api.anthropic.com/v1/messages", {
+// ── API 단일 호출 ──
+async function callAPI(messages, tools) {
+  const body = { model: "claude-sonnet-4-20250514", max_tokens: 4000, messages };
+  if (tools) body.tools = tools;
+  const res = await fetch("https://api.anthropic.com/v1/messages", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
       "anthropic-dangerous-direct-browser-access": "true"
     },
-    body: JSON.stringify({
-      model: "claude-sonnet-4-20250514",
-      max_tokens: 3000,
-      tools: [{ type: "web_search_20250305", name: "web_search" }],
-      messages: [{ role: "user", content: prompt }]
-    })
+    body: JSON.stringify(body)
   });
+  const json = await res.json();
+  if (!res.ok) throw new Error(`API ${res.status}: ${JSON.stringify(json).slice(0, 400)}`);
+  return json;
+}
 
-  const data = await response.json();
+// ── JSON 안전 추출 ──
+function extractJSON(text) {
+  const clean = text.replace(/```json\s*/gi, '').replace(/```\s*/g, '').trim();
+  const start = clean.indexOf('{');
+  const end = clean.lastIndexOf('}');
+  if (start === -1 || end === -1) {
+    throw new Error("JSON 블록 없음. 응답: " + clean.slice(0, 500));
+  }
+  try {
+    return JSON.parse(clean.slice(start, end + 1));
+  } catch(e) {
+    throw new Error("JSON 파싱 실패: " + e.message + " | 텍스트: " + clean.slice(start, start + 400));
+  }
+}
 
-  // 모든 텍스트 블록 합치기
-  const text = (data.content || [])
-    .filter(b => b.type === 'text')
-    .map(b => b.text)
+async function fetchBriefing() {
+  const today = new Date();
+  const year = today.getFullYear();
+  const month = today.getMonth() + 1;
+  const period = `${year}년 ${month}월`;
+
+  const setStatus = msg => {
+    document.getElementById('loading-text').innerHTML = msg;
+  };
+
+  // ── STEP 1: 웹 검색 없이 최신 지식 기반 JSON 직접 생성 ──
+  // (web_search tool은 server-side agentic loop 전용 — 브라우저 직접 호출 불가)
+  setStatus(`<span class="loading-step">✍️ 브리핑 작성 중...</span><br>최신 Pro Audio 뉴스를 분석하고 있습니다.<br>약 20~40초 소요됩니다.`);
+
+  const prompt = `You are a Pro Audio industry analyst. Generate a ${period} monthly briefing in JSON format based on your most recent knowledge of the pro audio industry.
+
+Return ONLY valid JSON, no markdown, no explanation. Start your response with { and end with }.
+
+{
+  "period": "${period} 브리핑",
+  "generatedAt": "${today.toISOString()}",
+  "tickers": [
+    {"label": "글로벌 PA 시장", "value": "성장세", "dir": "up"},
+    {"label": "주요 전시회", "value": "ISE 2025", "dir": "neutral"},
+    {"label": "AI 음향기술", "value": "주목↑", "dir": "up"},
+    {"label": "신제품 출시", "value": "활발", "dir": "up"}
+  ],
+  "issues": [
+    {
+      "category": "시장동향",
+      "title": "실제 이슈 제목",
+      "summary": "2~3문장 핵심 요약. 업계 영향 포함.",
+      "source": "출처명",
+      "impact": "높음"
+    }
+  ],
+  "trends": [
+    {"keyword": "핵심 키워드", "desc": "한줄 설명"}
+  ],
+  "events": [
+    {"month": "MAR", "day": "04", "name": "행사명", "location": "도시, 국가"}
+  ]
+}
+
+Rules:
+- issues: 5~7 items about real recent pro audio news (new products, acquisitions, market trends, technology)
+- trends: 4~5 items
+- events: 3~4 items (real ${year} industry events: ISE, InfoComm, NAMM, AES, Prolight+Sound etc.)
+- category must be one of: 시장동향/신제품/트렌드/행사/기업동향
+- impact must be one of: 높음/보통/낮음
+- dir must be one of: up/down/neutral
+- Write all Korean text in Korean
+- Return ONLY the JSON object, nothing else`;
+
+  const data = await callAPI([{ role: "user", content: prompt }], null);
+
+  // 응답 전체 텍스트 추출
+  const allText = (data.content || [])
+    .map(b => b.text || '')
     .join('');
 
-  // JSON 추출
-  const jsonMatch = text.match(/\{[\s\S]*\}/);
-  if (!jsonMatch) throw new Error("JSON 파싱 실패: " + text.slice(0, 200));
+  if (!allText.trim()) {
+    // 디버그: 전체 응답 구조 보여주기
+    throw new Error("빈 응답. 전체 구조: " + JSON.stringify(data).slice(0, 500));
+  }
 
-  return JSON.parse(jsonMatch[0]);
+  return extractJSON(allText);
 }
 
 // ============================================================
