@@ -77,9 +77,21 @@
   .price-num span { font-size:15px; font-weight:400; color:rgba(255,255,255,0.5); margin-left:3px; }
   .price-note { font-size:12px; color:var(--carol-blue); margin-top:4px; }
   .price-tag { background:var(--carol-blue); color:#fff; padding:10px 18px; border-radius:var(--radius); font-size:12px; font-weight:700; letter-spacing:1px; text-align:center; line-height:1.5; }
+  /* HERO SLIDER */
   .hero-img { display:flex; justify-content:center; align-items:center; position:relative; }
-  .hero-img::before { content:''; position:absolute; width:300px; height:300px; border-radius:50%; background:radial-gradient(circle, rgba(0,174,239,0.12) 0%, transparent 70%); }
-  .hero-img img { max-height:380px; max-width:100%; object-fit:contain; position:relative; z-index:1; filter:drop-shadow(0 20px 40px rgba(0,0,0,0.5)); }
+  .hero-img::before { content:''; position:absolute; width:300px; height:300px; border-radius:50%; background:radial-gradient(circle, rgba(0,174,239,0.12) 0%, transparent 70%); pointer-events:none; }
+  .hero-slider { position:relative; z-index:1; width:100%; max-width:420px; }
+  .hero-slides { position:relative; height:380px; }
+  .hero-slide { position:absolute; top:0; left:0; width:100%; height:100%; display:flex; align-items:center; justify-content:center; opacity:0; transition:opacity 0.5s ease; pointer-events:none; }
+  .hero-slide.active { opacity:1; pointer-events:auto; }
+  .hero-slide img { max-height:360px; max-width:100%; object-fit:contain; filter:drop-shadow(0 20px 40px rgba(0,0,0,0.5)); }
+  .slider-dots { display:flex; justify-content:center; gap:8px; margin-top:14px; }
+  .slider-dot { width:8px; height:8px; border-radius:50%; background:rgba(255,255,255,0.25); cursor:pointer; transition:all 0.2s; border:none; padding:0; }
+  .slider-dot.active { background:var(--carol-blue); transform:scale(1.2); }
+  .slider-arrows { position:absolute; top:50%; transform:translateY(-50%); width:100%; display:flex; justify-content:space-between; pointer-events:none; z-index:2; }
+  .slider-arrow { width:32px; height:32px; border-radius:50%; background:rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.3); color:#fff; font-size:14px; cursor:pointer; display:flex; align-items:center; justify-content:center; pointer-events:auto; transition:background 0.2s; }
+  .slider-arrow:hover { background:var(--carol-blue); }
+  .slider-label { text-align:center; margin-top:6px; font-size:11px; color:rgba(255,255,255,0.5); letter-spacing:1px; }
 
   /* STICKY NAV */
   .snav { position:sticky; top:64px; z-index:100; background:var(--carol-navy); border-bottom:3px solid var(--carol-blue); }
@@ -295,7 +307,27 @@
       </div>
     </div>
     <div class="hero-img">
-      <img src="GO-31_1.png" alt="CAROL GO-31 악기용 콘덴서 마이크">
+      <div class="hero-slider">
+        <div class="hero-slides">
+          <div class="hero-slide active"><img src="GO-31_1.png" alt="GO-31 악기용 콘덴서 마이크"></div>
+          <div class="hero-slide"><img src="GO-32.png" alt="GO-32 색소폰 클립"></div>
+          <div class="hero-slide"><img src="GO-33.png" alt="GO-33 바이올린 클립"></div>
+          <div class="hero-slide"><img src="GO-34.png" alt="GO-34 플루트 클립"></div>
+          <div class="hero-slide"><img src="GO-35.png" alt="GO-35 첼로 클립"></div>
+          <div class="slider-arrows">
+            <button class="slider-arrow" onclick="slideHero(-1)">&#8249;</button>
+            <button class="slider-arrow" onclick="slideHero(1)">&#8250;</button>
+          </div>
+        </div>
+        <div class="slider-dots">
+          <button class="slider-dot active" onclick="goHero(0)"></button>
+          <button class="slider-dot" onclick="goHero(1)"></button>
+          <button class="slider-dot" onclick="goHero(2)"></button>
+          <button class="slider-dot" onclick="goHero(3)"></button>
+          <button class="slider-dot" onclick="goHero(4)"></button>
+        </div>
+        <div class="slider-label" id="sliderLabel">GO-31 본체</div>
+      </div>
     </div>
   </div>
 </section>
@@ -336,7 +368,7 @@
         </div>
       </div>
       <div class="ov-img">
-        <img src="GO-31&GO-33.png" alt="GO-31 바이올린 클립 장착 예시">
+        <img src="go-31_clips.png" alt="GO-31 클립 구성">
       </div>
     </div>
   </div>
@@ -358,7 +390,7 @@
       <div class="clip-card sax">
         <div class="clip-hdr">Option 01 — Saxophone Clip</div>
         <div class="clip-body">
-          <div class="clip-imgw"><img src="GO-31&GO-32.png" alt="GO-32 색소폰 클립"></div>
+          <div class="clip-imgw"><img src="GO-32.png" alt="GO-32 색소폰 클립"></div>
           <div class="clip-info">
             <div class="clip-model">GO-32</div>
             <div class="clip-name">색소폰 클립</div>
@@ -376,7 +408,7 @@
       <div class="clip-card vln">
         <div class="clip-hdr">Option 02 — Violin Clip</div>
         <div class="clip-body">
-          <div class="clip-imgw"><img src="GO-31&GO-33.png" alt="GO-33 바이올린 클립"></div>
+          <div class="clip-imgw"><img src="GO-33.png" alt="GO-33 바이올린 클립"></div>
           <div class="clip-info">
             <div class="clip-model">GO-33</div>
             <div class="clip-name">바이올린 클립</div>
@@ -394,7 +426,7 @@
       <div class="clip-card flt">
         <div class="clip-hdr">Option 03 — Flute Clip</div>
         <div class="clip-body">
-          <div class="clip-imgw"><img src="GO-31&GO-34.png" alt="GO-34 플루트 클립"></div>
+          <div class="clip-imgw"><img src="GO-34.png" alt="GO-34 플루트 클립"></div>
           <div class="clip-info">
             <div class="clip-model">GO-34</div>
             <div class="clip-name">플루트 클립</div>
@@ -412,7 +444,7 @@
       <div class="clip-card clo">
         <div class="clip-hdr">Option 04 — Cello Clip</div>
         <div class="clip-body">
-          <div class="clip-imgw"><img src="GO-31&GO-35.png" alt="GO-35 첼로 클립"></div>
+          <div class="clip-imgw"><img src="GO-35.png" alt="GO-35 첼로 클립"></div>
           <div class="clip-info">
             <div class="clip-model">GO-35</div>
             <div class="clip-name">첼로 클립</div>
@@ -527,7 +559,7 @@
         </tbody>
       </table>
       <div class="freq-box">
-        <img src="GO-31_frequency_response.png" alt="GO-31 주파수 응답 특성">
+        <img src="GO-31_frequency%20response.png" alt="GO-31 주파수 응답 특성">
         <div class="freq-lbl">Typical Frequency Response</div>
       </div>
     </div>
@@ -640,6 +672,29 @@ function switchTab(type,btn){document.querySelectorAll('.ctab').forEach(t=>t.cla
 const sections=document.querySelectorAll('section[id]');const navLinks=document.querySelectorAll('.snav-in a');
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){navLinks.forEach(a=>a.classList.remove('active'));const l=document.querySelector(`.snav-in a[href="#${e.target.id}"]`);if(l)l.classList.add('active');}});},{rootMargin:'-30% 0px -60% 0px'});
 sections.forEach(s=>obs.observe(s));
+
+// Hero Slider
+const heroSlides = document.querySelectorAll('.hero-slide');
+const heroDots = document.querySelectorAll('.slider-dot');
+const sliderLabels = ['GO-31 본체', 'GO-32 색소폰 클립', 'GO-33 바이올린 클립', 'GO-34 플루트 클립', 'GO-35 첼로 클립'];
+let heroIdx = 0;
+let heroTimer;
+
+function goHero(n) {
+  heroSlides[heroIdx].classList.remove('active');
+  heroDots[heroIdx].classList.remove('active');
+  heroIdx = (n + heroSlides.length) % heroSlides.length;
+  heroSlides[heroIdx].classList.add('active');
+  heroDots[heroIdx].classList.add('active');
+  document.getElementById('sliderLabel').textContent = sliderLabels[heroIdx];
+  resetHeroTimer();
+}
+function slideHero(dir) { goHero(heroIdx + dir); }
+function resetHeroTimer() {
+  clearInterval(heroTimer);
+  heroTimer = setInterval(() => goHero(heroIdx + 1), 4000);
+}
+resetHeroTimer();
 </script>
 </body>
 </html>
