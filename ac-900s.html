@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CAROL AC-900S | 현대에이브이씨</title>
+<style>
+  :root {
+    --black: #0a0a0a;
+    --dark: #111111;
+    --dark2: #1a1a1a;
+    --dark3: #222222;
+    --border: #2a2a2a;
+    --border2: #333333;
+    --text: #e8e8e8;
+    --text-muted: #888888;
+    --text-dim: #555555;
+    --red: #e02020;
+    --red-dark: #b01818;
+    --white: #ffffff;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Pretendard', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+    background: var(--black);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ─── HEADER ─── */
+  .site-header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background: rgba(10,10,10,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    height: 60px;
+  }
+  .site-header .logo {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--white);
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  .site-header .back-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--text-muted);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    transition: color 0.2s;
+  }
+  .site-header .back-btn:hover { color: var(--white); }
+  .site-header .back-btn::before {
+    content: '←';
+    font-size: 14px;
+  }
+
+  /* ─── HERO ─── */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 60px;
+  }
+  .hero-left {
+    position: relative;
+    background: var(--dark2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .hero-left::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 60% 60% at 50% 50%, rgba(224,32,32,0.06) 0%, transparent 70%);
+  }
+  .hero-img-main {
+    width: 260px;
+    height: auto;
+    object-fit: contain;
+    position: relative;
+    z-index: 1;
+    filter: drop-shadow(0 20px 60px rgba(0,0,0,0.8));
+  }
+  /* thumbnail strip */
+  .thumb-strip {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 2;
+  }
+  .thumb-strip img {
+    width: 52px;
+    height: 52px;
+    object-fit: cover;
+    border: 1px solid var(--border2);
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.2s, border-color 0.2s;
+  }
+  .thumb-strip img:hover,
+  .thumb-strip img.active {
+    opacity: 1;
+    border-color: var(--red);
+  }
+
+  .hero-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 64px;
+    background: var(--dark);
+  }
+  .brand-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .brand-badge span {
+    color: var(--red);
+  }
+  .brand-badge::before {
+    content: '';
+    display: block;
+    width: 28px;
+    height: 1px;
+    background: var(--red);
+  }
+  .hero-model {
+    font-size: clamp(42px, 5vw, 64px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    color: var(--white);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .hero-sub {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-bottom: 28px;
+  }
+  .hero-tagline {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 40px;
+    max-width: 420px;
+    border-left: 2px solid var(--red);
+    padding-left: 16px;
+  }
+
+  /* KPI */
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    margin-bottom: 40px;
+  }
+  .kpi-item {
+    background: var(--dark2);
+    padding: 20px 16px;
+    text-align: center;
+  }
+  .kpi-value {
+    font-size: 22px;
+    font-weight: 900;
+    color: var(--white);
+    letter-spacing: -0.02em;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .kpi-value span {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-muted);
+  }
+  .kpi-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--text-dim);
+    text-transform: uppercase;
+  }
+
+  .price-area {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+  .price-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--text-dim);
+    text-transform: uppercase;
+  }
+  .price-value {
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--white);
+  }
+  .price-vat {
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+  .ahnc-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(224,32,32,0.12);
+    border: 1px solid rgba(224,32,32,0.3);
+    color: var(--red);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    margin-top: 16px;
+  }
+
+  /* ─── STICKY NAV ─── */
+  .sticky-nav {
+    position: sticky;
+    top: 60px;
+    z-index: 900;
+    background: var(--dark);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .sticky-nav::-webkit-scrollbar { display: none; }
+  .sticky-nav a {
+    flex-shrink: 0;
+    padding: 14px 28px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    text-decoration: none;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+    white-space: nowrap;
+  }
+  .sticky-nav a:hover,
+  .sticky-nav a.active {
+    color: var(--white);
+    border-bottom-color: var(--red);
+  }
+
+  /* ─── SECTIONS ─── */
+  .section {
+    padding: 80px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+  .section-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: var(--red);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .section-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--white);
+    letter-spacing: -0.01em;
+    margin-bottom: 40px;
+  }
+
+  /* ─── OVERVIEW ─── */
+  .overview-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+  .overview-desc {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.9;
+  }
+  .overview-desc p + p { margin-top: 1em; }
+  .feature-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .feature-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+  .feature-list li::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    min-width: 6px;
+    background: var(--red);
+    margin-top: 7px;
+  }
+
+  /* ─── IMAGE GALLERY ─── */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+  .gallery-grid img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    display: block;
+  }
+  .gallery-grid img:first-child {
+    grid-column: span 2;
+  }
+
+  /* ─── SPECS ─── */
+  .spec-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .spec-table tr {
+    border-bottom: 1px solid var(--border);
+  }
+  .spec-table tr:hover td {
+    background: var(--dark2);
+  }
+  .spec-table td {
+    padding: 14px 16px;
+    font-size: 14px;
+    transition: background 0.15s;
+  }
+  .spec-table td:first-child {
+    color: var(--text-dim);
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    width: 38%;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+  .spec-table td:last-child {
+    color: var(--text);
+  }
+  .spec-highlight {
+    color: var(--white) !important;
+    font-weight: 700;
+  }
+
+  /* ─── TECH FEATURES ─── */
+  .tech-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+    background: var(--border);
+  }
+  .tech-card {
+    background: var(--dark2);
+    padding: 36px 32px;
+  }
+  .tech-icon {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+  .tech-title {
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--white);
+    letter-spacing: 0.04em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  .tech-desc {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.75;
+  }
+  .tech-tag {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: var(--red);
+    text-transform: uppercase;
+    border: 1px solid rgba(224,32,32,0.3);
+    padding: 3px 8px;
+  }
+
+  /* ─── POLAR / FREQ ─── */
+  .polar-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+  .polar-img {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    object-fit: contain;
+    filter: brightness(0.9);
+  }
+  .polar-info h3 {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 12px;
+  }
+  .polar-info p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 16px;
+  }
+
+  /* ─── APPLICATIONS ─── */
+  .app-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    background: var(--border);
+  }
+  .app-card {
+    background: var(--dark2);
+    padding: 32px 28px;
+    position: relative;
+    overflow: hidden;
+  }
+  .app-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px;
+    height: 0;
+    background: var(--red);
+    transition: height 0.3s;
+  }
+  .app-card:hover::before { height: 100%; }
+  .app-num {
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--border2);
+    line-height: 1;
+    margin-bottom: 16px;
+    letter-spacing: -0.03em;
+  }
+  .app-title {
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 8px;
+  }
+  .app-desc {
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+
+  /* ─── ACCESSORIES ─── */
+  .acc-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    background: var(--border);
+  }
+  .acc-card {
+    background: var(--dark2);
+    padding: 28px;
+  }
+  .acc-name {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 6px;
+  }
+  .acc-desc {
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+  .acc-price {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--white);
+  }
+  .acc-price-label {
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--text-dim);
+    margin-right: 4px;
+  }
+
+  /* ─── FOOTER ─── */
+  .site-footer {
+    background: var(--dark2);
+    border-top: 1px solid var(--border);
+    padding: 40px;
+    text-align: center;
+  }
+  .site-footer .co-name {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .site-footer .co-info {
+    font-size: 11px;
+    color: var(--text-dim);
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-left { min-height: 360px; }
+    .hero-right { padding: 48px 28px; }
+    .overview-grid { grid-template-columns: 1fr; }
+    .tech-grid { grid-template-columns: 1fr; }
+    .polar-section { grid-template-columns: 1fr; }
+    .app-grid { grid-template-columns: 1fr 1fr; }
+    .gallery-grid { grid-template-columns: 1fr 1fr; }
+    .gallery-grid img:first-child { grid-column: span 1; }
+    .acc-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 600px) {
+    .container { padding: 0 20px; }
+    .hero-model { font-size: 36px; }
+    .kpi-grid { grid-template-columns: repeat(3,1fr); }
+    .app-grid { grid-template-columns: 1fr; }
+    .acc-grid { grid-template-columns: 1fr; }
+    .site-header { padding: 0 16px; }
+    .hero-right { padding: 36px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <a href="index.html" class="logo">HDAVC</a>
+  <a href="index.html" class="back-btn">카탈로그로 돌아가기</a>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <!-- 좌: 이미지 -->
+  <div class="hero-left">
+    <img class="hero-img-main" id="mainImg" src="AC-900S_GR.png" alt="CAROL AC-900S">
+    <div class="thumb-strip">
+      <img src="AC-900S_GR.png" alt="제품 이미지 1" class="active" onclick="changeImg(this)">
+      <img src="AC-900S_01.jpg" alt="제품 이미지 2" onclick="changeImg(this)">
+      <img src="AC-900S_02.jpg" alt="제품 이미지 3" onclick="changeImg(this)">
+      <img src="AC-900S_03.jpg" alt="제품 이미지 4" onclick="changeImg(this)">
+      <img src="AC-900S_04.jpg" alt="제품 이미지 5" onclick="changeImg(this)">
+    </div>
+  </div>
+
+  <!-- 우: 텍스트 -->
+  <div class="hero-right">
+    <div class="brand-badge"><span>CAROL</span> 유선 다이나믹 마이크</div>
+    <div class="hero-model">AC-900S</div>
+    <div class="hero-sub">Active Handling-Noise Cancelling Dynamic Microphone</div>
+    <p class="hero-tagline">
+      CAROL 독자 특허 AHNC 기술로 핸들링 노이즈를 능동적으로 제거.<br>
+      험버킹 코일로 EMI/RFI 노이즈까지 차단하는 프로 스테이지용 다이나믹 마이크.
+    </p>
+
+    <div class="kpi-grid">
+      <div class="kpi-item">
+        <div class="kpi-value">Super<span>cardioid</span></div>
+        <div class="kpi-label">지향성 패턴</div>
+      </div>
+      <div class="kpi-item">
+        <div class="kpi-value">50<span>Hz–18kHz</span></div>
+        <div class="kpi-label">주파수 응답</div>
+      </div>
+      <div class="kpi-item">
+        <div class="kpi-value">600<span>Ω</span></div>
+        <div class="kpi-label">임피던스</div>
+      </div>
+    </div>
+
+    <div class="price-area">
+      <span class="price-label">권장 소비자가</span>
+      <span class="price-value">132,000원</span>
+      <span class="price-vat">VAT 포함</span>
+    </div>
+    <div class="ahnc-badge">🏆 AHNC Technology — 국제 특허 취득 (US / TW / CN)</div>
+  </div>
+</section>
+
+<!-- STICKY NAV -->
+<nav class="sticky-nav" id="stickyNav">
+  <a href="#overview" class="active">개요</a>
+  <a href="#specs">사양</a>
+  <a href="#technology">핵심 기술</a>
+  <a href="#polar">지향 특성</a>
+  <a href="#applications">활용 분야</a>
+  <a href="#accessories">관련 액세서리</a>
+</nav>
+
+<!-- OVERVIEW -->
+<section class="section" id="overview">
+  <div class="container">
+    <div class="section-label">Product Overview</div>
+    <div class="section-title">스테이지를 위해 태어난 마이크</div>
+    <div class="overview-grid">
+      <div class="overview-desc">
+        <p>
+          CAROL AC-900S는 라이브 스테이지와 공연을 위한 최고급 다이나믹 보컬 마이크입니다.
+          CAROL이 독자 개발한 <strong style="color:var(--white)">AHNC(Active Handling-Noise Cancelling)</strong> 기술을 탑재하여
+          마이크를 쥐거나 움직일 때 발생하는 핸들링 노이즈를 능동적으로 억제합니다.
+        </p>
+        <p>
+          내장 험버킹 코일은 스튜디오 조명 등에서 발생하는 강한 험 필드(EMI/RFI 노이즈)에
+          대한 내성을 제공하여, 전문 공연 환경에서도 깨끗한 음질을 유지합니다.
+        </p>
+        <p>
+          슈퍼 카디오이드 지향 패턴은 측면 및 후방 소리를 강하게 차단하여
+          피드백 발생 전 더 높은 게인을 확보할 수 있게 해주며,
+          슬라이드 포텐셔미터 스위치는 조작 시 충격음이 발생하지 않아
+          무대 위 어떤 상황에서도 안정적인 퍼포먼스를 보장합니다.
+        </p>
+      </div>
+      <ul class="feature-list">
+        <li>AHNC 능동형 핸들링 노이즈 캔슬링 기술 — 국제 특허 (US 9578422 / TW I548285 / CN 106034275B)</li>
+        <li>내장 험버킹 코일 — EMI/RFI 노이즈 면역</li>
+        <li>슈퍼 카디오이드 패턴 — 피드백 제어 및 격리 우수</li>
+        <li>슬라이드 포텐셔미터 스위치 — 조작 충격음 없음</li>
+        <li>통합 성형 기술(Integrated Molding) — 카트리지 마그넷·요크·폴 일체화로 내구성 강화</li>
+        <li>XLR 3핀 커넥터 / 4.5m 케이블 포함</li>
+        <li>아연 합금 다이캐스팅 바디 — 견고한 스테이지 내구성</li>
+        <li>Taiwan Excellence 2019 수상</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- IMAGE GALLERY -->
+<section style="border-bottom:1px solid var(--border);">
+  <div class="gallery-grid">
+    <img src="AC-900S_05.jpg" alt="Studio Recording">
+    <img src="AC-900S_06.jpg" alt="Live Stage">
+    <img src="AC-900S_07.jpg" alt="Outdoor Performance">
+  </div>
+</section>
+
+<!-- SPECS -->
+<section class="section" id="specs">
+  <div class="container">
+    <div class="section-label">Technical Specifications</div>
+    <div class="section-title">제품 사양</div>
+    <table class="spec-table">
+      <tr>
+        <td>마이크 유형</td>
+        <td class="spec-highlight">다이나믹 (Dynamic)</td>
+      </tr>
+      <tr>
+        <td>지향성 패턴</td>
+        <td class="spec-highlight">슈퍼 카디오이드 (Super-cardioid)</td>
+      </tr>
+      <tr>
+        <td>주파수 응답</td>
+        <td>50Hz ~ 18,000Hz</td>
+      </tr>
+      <tr>
+        <td>출력 임피던스</td>
+        <td>600Ω ± 30% (at 1,000Hz)</td>
+      </tr>
+      <tr>
+        <td>감도</td>
+        <td>-54 ± 3dBV/Pa (at 1,000Hz, open circuit)</td>
+      </tr>
+      <tr>
+        <td>커넥터</td>
+        <td>XLR 3핀 프로페셔널 오디오 커넥터</td>
+      </tr>
+      <tr>
+        <td>케이블</td>
+        <td>Ø5.5mm × 4.5m (XLR to XLR)</td>
+      </tr>
+      <tr>
+        <td>스위치</td>
+        <td>슬라이드 포텐셔미터 타입</td>
+      </tr>
+      <tr>
+        <td>바디 소재</td>
+        <td>아연 합금 다이캐스팅</td>
+      </tr>
+      <tr>
+        <td>그릴 소재</td>
+        <td>브레이즈드 하드닝 스틸</td>
+      </tr>
+      <tr>
+        <td>크기</td>
+        <td>Ø54.9 × 181.2mm</td>
+      </tr>
+      <tr>
+        <td>중량 (케이블 제외)</td>
+        <td>302g</td>
+      </tr>
+      <tr>
+        <td>포함 구성품</td>
+        <td>마이크 본체, 케이블 (4.5m), 마이크 홀더 1개</td>
+      </tr>
+      <tr>
+        <td>캡슐</td>
+        <td>00165X012</td>
+      </tr>
+    </table>
+  </div>
+</section>
+
+<!-- TECHNOLOGY -->
+<section class="section" id="technology">
+  <div class="container">
+    <div class="section-label">Core Technology</div>
+    <div class="section-title">핵심 기술</div>
+    <div class="tech-grid">
+      <div class="tech-card">
+        <div class="tech-icon">🎙️</div>
+        <div class="tech-title">AHNC Technology</div>
+        <div class="tech-desc">
+          Active Handling-Noise Cancelling. CAROL 독자 개발·국제 특허 취득 기술.<br><br>
+          마이크 본체를 잡거나 움직일 때 발생하는 핸들링 노이즈를 능동형 충격 흡수 유닛이
+          감지·상쇄합니다. 기존 패시브 방식 대비 핸들링 노이즈를 현저히 낮은 수준으로 억제하며,
+          공연 중 자유로운 퍼포먼스를 가능하게 합니다.
+        </div>
+        <div class="tech-tag">Patent: US 9578422 / TW I548285 / CN 106034275B</div>
+      </div>
+      <div class="tech-card">
+        <div class="tech-icon">🔋</div>
+        <div class="tech-title">Hum-Bucking Coil</div>
+        <div class="tech-desc">
+          내장 험버킹 코일이 스튜디오 조명, 전력선, 무대 장비 등에서 발생하는
+          강한 EMI/RFI 험 필드에 대한 면역성을 제공합니다.<br><br>
+          어떤 환경에서도 잡음 없는 깨끗한 신호를 유지하여,
+          방송·레코딩·라이브 공연 모두에서 최고의 음질을 보장합니다.
+        </div>
+        <div class="tech-tag">EMI / RFI 면역</div>
+      </div>
+      <div class="tech-card">
+        <div class="tech-icon">⚙️</div>
+        <div class="tech-title">Integrated Molding Technique</div>
+        <div class="tech-desc">
+          카트리지의 마그넷, 요크, 폴 피스를 일체 성형 방식으로 결합하여
+          각 부품의 정밀한 정렬과 장기적인 내구성을 확보합니다.<br><br>
+          격렬한 스테이지 사용과 반복적인 충격에도 카트리지 성능이 장기간 안정적으로 유지됩니다.
+        </div>
+        <div class="tech-tag">고내구성 카트리지</div>
+      </div>
+      <div class="tech-card">
+        <div class="tech-icon">🎚️</div>
+        <div class="tech-title">Slide Potentiometer Switch</div>
+        <div class="tech-desc">
+          일반 토글 스위치와 달리 슬라이드 포텐셔미터 방식을 채택하여
+          스위치 조작 시 발생하는 충격음(팝 노이즈)을 원천 차단합니다.<br><br>
+          공연 도중에도 소리 없이 마이크를 ON/OFF 할 수 있으며,
+          10,000회 반복 테스트 기준 정상 동작을 보장하는 높은 스위치 수명을 제공합니다.
+        </div>
+        <div class="tech-tag">10,000회 동작 보증</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POLAR / FREQ -->
+<section class="section" id="polar">
+  <div class="container">
+    <div class="section-label">Polar Pattern &amp; Frequency Response</div>
+    <div class="section-title">지향 특성</div>
+    <div class="polar-section">
+      <div style="display:flex;align-items:center;justify-content:center;background:var(--dark2);padding:32px;border:1px solid var(--border);">
+        <img class="polar-img" src="AC-900S_04.jpg" alt="AC-900S 극좌표 및 주파수 응답">
+      </div>
+      <div class="polar-info">
+        <h3>슈퍼 카디오이드 패턴</h3>
+        <p>
+          AC-900S의 슈퍼 카디오이드 지향 특성은 정면 수음 범위를 집중시키고,
+          측면(90°) 및 후방 노이즈를 강하게 차단합니다. 1kHz 기준 18dB 이상의 측면 격리도를 제공하여
+          여러 마이크를 동시에 사용하는 환경에서 크로스 픽업을 최소화합니다.
+        </p>
+        <p>
+          50Hz~18kHz의 평탄한 주파수 응답은 보컬의 자연스러운 음색을 그대로 전달하며,
+          고역대의 존재감(presence) 부스트가 라이브 환경에서의 명료도를 높여줍니다.
+        </p>
+        <table class="spec-table" style="margin-top:16px;">
+          <tr>
+            <td>지향각 (1kHz 기준)</td>
+            <td>120° ± 15°</td>
+          </tr>
+          <tr>
+            <td>측면 격리도</td>
+            <td>18dB 이상 @ 1kHz</td>
+          </tr>
+          <tr>
+            <td>측정 기준</td>
+            <td>IEC 268-4</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPLICATIONS -->
+<section class="section" id="applications">
+  <div class="container">
+    <div class="section-label">Applications</div>
+    <div class="section-title">활용 분야</div>
+    <div class="app-grid">
+      <div class="app-card">
+        <div class="app-num">01</div>
+        <div class="app-title">라이브 공연</div>
+        <div class="app-desc">콘서트홀, 공연장, 클럽 등 다양한 라이브 무대에서 보컬 마이크로 최적화된 성능을 발휘합니다. AHNC 기술이 퍼포먼스 중 핸들링 노이즈를 실시간으로 억제합니다.</div>
+      </div>
+      <div class="app-card">
+        <div class="app-num">02</div>
+        <div class="app-title">스튜디오 레코딩</div>
+        <div class="app-desc">험버킹 코일의 EMI 차단 능력이 스튜디오의 다양한 전자기기 노이즈로부터 신호를 보호하며, 평탄한 주파수 응답이 레코딩 품질을 높여줍니다.</div>
+      </div>
+      <div class="app-card">
+        <div class="app-num">03</div>
+        <div class="app-title">야외 공연</div>
+        <div class="app-desc">아연 합금 다이캐스팅 바디의 높은 내구성과 험 차단 능력이 야외의 다양한 전자기 환경에서도 안정적인 퍼포먼스를 보장합니다.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACCESSORIES -->
+<section class="section" id="accessories">
+  <div class="container">
+    <div class="section-label">Accessories</div>
+    <div class="section-title">관련 액세서리</div>
+    <div class="acc-grid">
+      <div class="acc-card">
+        <div class="acc-name">B-6 마이크 홀더 (유선용)</div>
+        <div class="acc-desc">Newnabie / Ø27mm 규격 / Plastic+Metal 스크류</div>
+        <div class="acc-price"><span class="acc-price-label">권장가</span>2,500원</div>
+      </div>
+      <div class="acc-card">
+        <div class="acc-name">MC102 마이크 케이블 (CCAM)</div>
+        <div class="acc-desc">ADAM / XLR M to XLR F / Ø6mm<br>1.5M~10M 선택 가능</div>
+        <div class="acc-price"><span class="acc-price-label">권장가</span>8,800원~</div>
+      </div>
+      <div class="acc-card">
+        <div class="acc-name">MC103 마이크 케이블 (OFC)</div>
+        <div class="acc-desc">ADAM / XLR M to XLR F / OFC 고순도 동선<br>1.5M~10M 선택 가능</div>
+        <div class="acc-price"><span class="acc-price-label">권장가</span>13,200원~</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="co-name">(주)현대에이브이씨 HYUNDAI AUDIO VISUAL COMMUNICATIONS CO., LTD.</div>
+  <div class="co-info">경기도 평택시 도일유통길 39-9 (도일동) &nbsp;|&nbsp; TEL: 031-8054-0048</div>
+</footer>
+
+<script>
+  // 썸네일 이미지 교체
+  function changeImg(el) {
+    document.getElementById('mainImg').src = el.src;
+    document.querySelectorAll('.thumb-strip img').forEach(i => i.classList.remove('active'));
+    el.classList.add('active');
+  }
+
+  // Sticky Nav 활성화
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.sticky-nav a');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute('id');
+        navLinks.forEach(a => {
+          a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+        });
+      }
+    });
+  }, { rootMargin: '-30% 0px -60% 0px' });
+  sections.forEach(s => observer.observe(s));
+</script>
+</body>
+</html>
