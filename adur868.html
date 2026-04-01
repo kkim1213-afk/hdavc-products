@@ -1,952 +1,1163 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CAROL A dur-868 | 현대에이브이씨</title>
-<style>
-  :root {
-    --black: #0a0a0a;
-    --dark: #111111;
-    --dark2: #1a1a1a;
-    --dark3: #222222;
-    --border: #2a2a2a;
-    --border2: #333333;
-    --text: #e8e8e8;
-    --text-muted: #888888;
-    --text-dim: #555555;
-    --red: #e02020;
-    --red-dark: #b01818;
-    --white: #ffffff;
-  }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAROL A dur-868 다이나믹 보컬 마이크 - HDAVC Pro Audio</title>
+    <meta name="description" content="CAROL A dur-868 슈퍼 카디오이드 다이나믹 마이크. CSM-163 카퍼 보이스 코일, 슬라이드 스위치, 아연 합금 바디. 라이브 공연 및 악기 마이킹 최적화.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* ===== CSS VARIABLES — GO-31 LIGHT THEME ===== */
+        :root {
+            --carol-blue: #00AEEF;
+            --carol-blue2: #0090D0;
+            --carol-navy: #1a2b4a;
+            --carol-navy2: #243559;
+            --bg: #f5f7fa;
+            --bg2: #eef1f6;
+            --white: #ffffff;
+            --border: #dde2ea;
+            --text-dark: #1a1e2e;
+            --text-mid: #3d4660;
+            --text-gray: #6b7593;
+            --radius: 12px;
+            --radius-sm: 8px;
+            --radius-lg: 20px;
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --font-body: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
+            --max-width: 1200px;
+        }
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+        /* ===== RESET & BASE ===== */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; scroll-padding-top: 120px; }
+        body {
+            font-family: var(--font-body);
+            background: var(--bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+            word-break: keep-all;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+        img { max-width: 100%; height: auto; display: block; }
+        a { color: inherit; text-decoration: none; }
 
-  html { scroll-behavior: smooth; }
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
 
-  body {
-    font-family: 'Pretendard', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
-    background: var(--black);
-    color: var(--text);
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-  }
+        /* ===== BACK BUTTON ===== */
+        .back-nav {
+            position: fixed;
+            top: 16px;
+            left: 16px;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 18px;
+            background: rgba(26, 43, 74, 0.9);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: rgba(255,255,255,0.85);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .back-nav:hover {
+            color: #fff;
+            background: var(--carol-blue);
+        }
+        .back-nav svg { width: 16px; height: 16px; }
 
-  /* ─── HEADER ─── */
-  .site-header {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 1000;
-    background: rgba(10,10,10,0.92);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 32px;
-    height: 60px;
-  }
-  .site-header .logo {
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    color: var(--white);
-    text-decoration: none;
-    text-transform: uppercase;
-  }
-  .site-header .back-btn {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 12px;
-    color: var(--text-muted);
-    text-decoration: none;
-    letter-spacing: 0.05em;
-    transition: color 0.2s;
-  }
-  .site-header .back-btn:hover { color: var(--white); }
-  .site-header .back-btn::before {
-    content: '←';
-    font-size: 14px;
-  }
+        /* ===== HERO SECTION ===== */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--carol-navy) 0%, var(--carol-navy2) 60%, #1e3a6e 100%);
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -15%;
+            width: 700px;
+            height: 700px;
+            background: radial-gradient(circle, rgba(0, 174, 239, 0.12) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -20%;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(0, 174, 239, 0.06) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .hero-inner {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            width: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 120px 24px 80px;
+        }
+        .hero-content { animation: fadeInUp 0.8s ease-out; }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            background: rgba(0, 174, 239, 0.15);
+            border: 1px solid rgba(0, 174, 239, 0.3);
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--carol-blue);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 20px;
+        }
+        .hero-badge svg { width: 14px; height: 14px; }
+        .hero-brand {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: rgba(255,255,255,0.5);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+        .hero-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 900;
+            line-height: 1.05;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+            color: #fff;
+        }
+        .hero-title span {
+            background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 50%, var(--carol-blue) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-subtitle {
+            font-size: 1.05rem;
+            font-weight: 300;
+            color: rgba(255,255,255,0.7);
+            line-height: 1.7;
+            margin-bottom: 36px;
+            max-width: 480px;
+        }
+        .hero-image-area {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+        .hero-image-wrapper {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hero-image-wrapper::before {
+            content: '';
+            position: absolute;
+            width: 320px;
+            height: 320px;
+            background: radial-gradient(circle, rgba(0, 174, 239, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(40px);
+        }
+        .hero-product-img {
+            position: relative;
+            z-index: 2;
+            max-height: 500px;
+            width: auto;
+            filter: drop-shadow(0 20px 60px rgba(0,0,0,0.4));
+            transition: transform 0.6s ease;
+        }
+        .hero-product-img:hover {
+            transform: scale(1.03) translateY(-4px);
+        }
 
-  /* ─── HERO ─── */
-  .hero {
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding-top: 60px;
-  }
-  .hero-left {
-    position: relative;
-    background: var(--dark2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-  }
-  .hero-left::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(ellipse 60% 60% at 50% 50%, rgba(224,32,32,0.06) 0%, transparent 70%);
-  }
-  .hero-img-main {
-    width: 320px;
-    height: auto;
-    object-fit: contain;
-    position: relative;
-    z-index: 1;
-    filter: drop-shadow(0 20px 60px rgba(0,0,0,0.8));
-  }
-  /* thumbnail strip */
-  .thumb-strip {
-    position: absolute;
-    bottom: 24px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 6px;
-    z-index: 2;
-  }
-  .thumb-strip img {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-    object-position: center;
-    border: 1px solid var(--border2);
-    cursor: pointer;
-    opacity: 0.55;
-    transition: opacity 0.2s, border-color 0.2s;
-    background: var(--dark3);
-    padding: 4px;
-  }
-  .thumb-strip img:hover,
-  .thumb-strip img.active {
-    opacity: 1;
-    border-color: var(--red);
-  }
+        /* ===== KPI METRICS ===== */
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+        .kpi-card {
+            text-align: center;
+            padding: 18px 10px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: var(--radius);
+            transition: var(--transition);
+        }
+        .kpi-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255,255,255,0.2);
+        }
+        .kpi-icon {
+            width: 36px;
+            height: 36px;
+            margin: 0 auto 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 174, 239, 0.15);
+            border-radius: 10px;
+            color: var(--carol-blue);
+        }
+        .kpi-icon svg { width: 18px; height: 18px; }
+        .kpi-value {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #fff;
+            line-height: 1.1;
+            margin-bottom: 4px;
+        }
+        .kpi-unit {
+            font-size: 0.75rem;
+            font-weight: 400;
+            color: rgba(255,255,255,0.5);
+        }
+        .kpi-label {
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: rgba(255,255,255,0.4);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-top: 4px;
+        }
+        .hero-ahnc {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: rgba(0, 174, 239, 0.1);
+            border: 1px solid rgba(0, 174, 239, 0.25);
+            border-radius: 50px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--carol-blue);
+            letter-spacing: 0.02em;
+        }
+        .hero-ahnc svg { width: 16px; height: 16px; }
 
-  .hero-right {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 80px 64px;
-    background: var(--dark);
-  }
-  .brand-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.18em;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    margin-bottom: 20px;
-  }
-  .brand-badge span {
-    color: var(--red);
-  }
-  .brand-badge::before {
-    content: '';
-    display: block;
-    width: 28px;
-    height: 1px;
-    background: var(--red);
-  }
-  .hero-model {
-    font-size: clamp(42px, 5vw, 64px);
-    font-weight: 900;
-    letter-spacing: -0.02em;
-    color: var(--white);
-    line-height: 1;
-    margin-bottom: 8px;
-  }
-  .hero-sub {
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 0.14em;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    margin-bottom: 28px;
-  }
-  .hero-tagline {
-    font-size: 15px;
-    color: var(--text-muted);
-    line-height: 1.7;
-    margin-bottom: 40px;
-    max-width: 420px;
-    border-left: 2px solid var(--red);
-    padding-left: 16px;
-  }
+        /* ===== TAB NAVIGATION ===== */
+        .tab-nav {
+            position: sticky;
+            top: 0;
+            z-index: 900;
+            background: var(--carol-navy);
+            border-bottom: 3px solid var(--carol-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow-x: auto;
+            scrollbar-width: none;
+            transition: box-shadow 0.3s ease;
+        }
+        .tab-nav::-webkit-scrollbar { display: none; }
+        .tab-nav.scrolled {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+        .tab-btn {
+            flex-shrink: 0;
+            padding: 16px 28px;
+            font-family: var(--font-body);
+            font-size: 0.82rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            color: rgba(255,255,255,0.55);
+            background: none;
+            border: none;
+            border-bottom: 2px solid transparent;
+            cursor: pointer;
+            transition: var(--transition);
+            white-space: nowrap;
+        }
+        .tab-btn:hover {
+            color: rgba(255,255,255,0.85);
+        }
+        .tab-btn.active {
+            color: #fff;
+            border-bottom-color: var(--carol-blue);
+        }
 
-  /* KPI */
-  .kpi-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    background: var(--border);
-    border: 1px solid var(--border);
-    margin-bottom: 40px;
-  }
-  .kpi-item {
-    background: var(--dark2);
-    padding: 20px 16px;
-    text-align: center;
-  }
-  .kpi-value {
-    font-size: 22px;
-    font-weight: 900;
-    color: var(--white);
-    letter-spacing: -0.02em;
-    line-height: 1;
-    margin-bottom: 4px;
-  }
-  .kpi-value span {
-    font-size: 12px;
-    font-weight: 500;
-    color: var(--text-muted);
-  }
-  .kpi-label {
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    color: var(--text-dim);
-    text-transform: uppercase;
-  }
+        /* ===== SECTIONS ===== */
+        .section {
+            padding: 80px 0;
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .section-tag {
+            display: inline-block;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--carol-blue2);
+            margin-bottom: 10px;
+        }
+        .section-title {
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            font-weight: 800;
+            color: var(--text-dark);
+            letter-spacing: -0.02em;
+        }
 
-  .price-area {
-    display: flex;
-    align-items: baseline;
-    gap: 12px;
-    margin-bottom: 8px;
-  }
-  .price-label {
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    color: var(--text-dim);
-    text-transform: uppercase;
-  }
-  .price-value {
-    font-size: 28px;
-    font-weight: 900;
-    color: var(--white);
-  }
-  .price-vat {
-    font-size: 11px;
-    color: var(--text-muted);
-  }
-  .ahnc-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    background: rgba(224,32,32,0.12);
-    border: 1px solid rgba(224,32,32,0.3);
-    color: var(--red);
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    padding: 5px 10px;
-    margin-top: 16px;
-  }
+        /* ===== OVERVIEW ===== */
+        .overview-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+        .overview-text {
+            font-size: 0.95rem;
+            color: var(--text-mid);
+            line-height: 1.9;
+        }
+        .overview-text p + p {
+            margin-top: 1em;
+        }
+        .overview-features {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .overview-features li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 0.92rem;
+            color: var(--text-mid);
+            line-height: 1.6;
+            padding: 10px 14px;
+            background: var(--white);
+            border: 1.5px solid var(--border);
+            border-radius: var(--radius-sm);
+            transition: var(--transition);
+        }
+        .overview-features li:hover {
+            border-color: rgba(0, 174, 239, 0.3);
+        }
+        .overview-features li::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            min-width: 6px;
+            background: var(--carol-blue);
+            border-radius: 50%;
+            margin-top: 8px;
+        }
 
-  /* ─── STICKY NAV ─── */
-  .sticky-nav {
-    position: sticky;
-    top: 60px;
-    z-index: 900;
-    background: var(--dark);
-    border-bottom: 1px solid var(--border);
-    display: flex;
-    align-items: center;
-    overflow-x: auto;
-    scrollbar-width: none;
-  }
-  .sticky-nav::-webkit-scrollbar { display: none; }
-  .sticky-nav a {
-    flex-shrink: 0;
-    padding: 14px 28px;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    color: var(--text-muted);
-    text-decoration: none;
-    text-transform: uppercase;
-    border-bottom: 2px solid transparent;
-    transition: color 0.2s, border-color 0.2s;
-    white-space: nowrap;
-  }
-  .sticky-nav a:hover,
-  .sticky-nav a.active {
-    color: var(--white);
-    border-bottom-color: var(--red);
-  }
+        /* ===== SPEC TABLE ===== */
+        .spec-card {
+            background: var(--white);
+            border: 1.5px solid var(--border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+        }
+        .spec-card-img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .spec-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .spec-table thead th {
+            padding: 14px 20px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #fff;
+            background: var(--carol-navy);
+            text-align: left;
+        }
+        .spec-table tbody tr {
+            border-bottom: 1px solid var(--border);
+            transition: background 0.15s;
+        }
+        .spec-table tbody tr:nth-child(even) {
+            background: var(--bg);
+        }
+        .spec-table tbody tr:hover {
+            background: var(--bg2);
+        }
+        .spec-table td {
+            padding: 14px 20px;
+            font-size: 0.9rem;
+        }
+        .spec-table td:first-child {
+            color: var(--text-gray);
+            font-weight: 600;
+            width: 38%;
+        }
+        .spec-table td:last-child {
+            color: var(--text-dark);
+        }
+        .spec-highlight {
+            font-weight: 700 !important;
+            color: var(--carol-navy) !important;
+        }
 
-  /* ─── SECTIONS ─── */
-  .section {
-    padding: 80px 0;
-    border-bottom: 1px solid var(--border);
-  }
-  .container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 40px;
-  }
-  .section-label {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.2em;
-    color: var(--red);
-    text-transform: uppercase;
-    margin-bottom: 8px;
-  }
-  .section-title {
-    font-size: 28px;
-    font-weight: 800;
-    color: var(--white);
-    letter-spacing: -0.01em;
-    margin-bottom: 40px;
-  }
+        /* ===== FEATURE CARDS ===== */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+        .feature-card {
+            padding: 32px 28px;
+            background: var(--white);
+            border: 1.5px solid var(--border);
+            border-radius: var(--radius-lg);
+            transition: var(--transition);
+        }
+        .feature-card:hover {
+            border-color: rgba(0, 174, 239, 0.3);
+            box-shadow: 0 4px 20px rgba(0, 174, 239, 0.08);
+        }
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 174, 239, 0.1);
+            border: 1px solid rgba(0, 174, 239, 0.2);
+            border-radius: 14px;
+            margin-bottom: 18px;
+            color: var(--carol-blue);
+        }
+        .feature-icon svg { width: 24px; height: 24px; }
+        .feature-card h3 {
+            font-size: 1.02rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.3;
+            color: var(--text-dark);
+        }
+        .feature-card p {
+            font-size: 0.88rem;
+            color: var(--text-mid);
+            line-height: 1.7;
+        }
+        .tech-tag {
+            display: inline-block;
+            margin-top: 12px;
+            font-size: 0.68rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            color: var(--carol-blue2);
+            text-transform: uppercase;
+            border: 1px solid rgba(0, 174, 239, 0.3);
+            padding: 4px 10px;
+            border-radius: 50px;
+        }
 
-  /* ─── OVERVIEW ─── */
-  .overview-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: start;
-  }
-  .overview-desc {
-    font-size: 15px;
-    color: var(--text-muted);
-    line-height: 1.9;
-  }
-  .overview-desc p + p { margin-top: 1em; }
-  .feature-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-  .feature-list li {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    font-size: 14px;
-    color: var(--text-muted);
-    line-height: 1.6;
-  }
-  .feature-list li::before {
-    content: '';
-    width: 6px;
-    height: 6px;
-    min-width: 6px;
-    background: var(--red);
-    margin-top: 7px;
-  }
+        /* ===== POLAR PATTERN ===== */
+        .polar-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        .polar-chart {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 32px;
+            background: var(--white);
+            border: 1.5px solid var(--border);
+            border-radius: var(--radius-lg);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+        }
+        .polar-chart img {
+            width: 100%;
+            max-width: 380px;
+            height: auto;
+        }
+        .polar-info h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--text-dark);
+        }
+        .polar-info p {
+            font-size: 0.95rem;
+            color: var(--text-mid);
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+        .polar-stats {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .polar-stat {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            background: var(--white);
+            border: 1.5px solid var(--border);
+            border-radius: var(--radius-sm);
+        }
+        .polar-stat-label {
+            font-size: 0.8rem;
+            color: var(--text-gray);
+            min-width: 120px;
+        }
+        .polar-stat-value {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--carol-blue2);
+        }
 
-  /* ─── IMAGE GALLERY ─── */
-  .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2px;
-  }
-  .gallery-grid img {
-    width: 100%;
-    aspect-ratio: 16/9;
-    object-fit: cover;
-    display: block;
-  }
-  .gallery-grid img:first-child {
-    grid-column: span 2;
-  }
+        /* ===== APPLICATION SECTION ===== */
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+        .app-card {
+            position: relative;
+            background: var(--white);
+            border: 1.5px solid var(--border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        .app-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--carol-blue);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1;
+        }
+        .app-card:hover {
+            border-color: rgba(0, 174, 239, 0.3);
+            box-shadow: 0 4px 20px rgba(0, 174, 239, 0.08);
+        }
+        .app-card:hover::before { opacity: 1; }
+        .app-card-body {
+            padding: 28px;
+        }
+        .app-icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+        .app-card h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+        }
+        .app-card p {
+            font-size: 0.88rem;
+            color: var(--text-mid);
+            line-height: 1.7;
+        }
 
-  /* ─── SPECS ─── */
-  .spec-table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  .spec-table tr {
-    border-bottom: 1px solid var(--border);
-  }
-  .spec-table tr:hover td {
-    background: var(--dark2);
-  }
-  .spec-table td {
-    padding: 14px 16px;
-    font-size: 14px;
-    transition: background 0.15s;
-  }
-  .spec-table td:first-child {
-    color: var(--text-dim);
-    font-weight: 600;
-    letter-spacing: 0.03em;
-    width: 38%;
-    font-size: 12px;
-    text-transform: uppercase;
-  }
-  .spec-table td:last-child {
-    color: var(--text);
-  }
-  .spec-highlight {
-    color: var(--white) !important;
-    font-weight: 700;
-  }
+        /* ===== ACCESSORIES SECTION ===== */
+        .acc-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+        .acc-card {
+            padding: 28px;
+            background: var(--white);
+            border: 1.5px solid var(--border);
+            border-radius: var(--radius-lg);
+            transition: var(--transition);
+        }
+        .acc-card:hover {
+            border-color: var(--carol-blue);
+            box-shadow: 0 4px 16px rgba(0, 174, 239, 0.08);
+        }
+        .acc-name {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+        .acc-desc {
+            font-size: 0.85rem;
+            color: var(--text-mid);
+            line-height: 1.6;
+            margin-bottom: 14px;
+        }
+        .acc-price {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--carol-navy);
+        }
+        .acc-price-label {
+            font-size: 0.72rem;
+            font-weight: 500;
+            color: var(--text-gray);
+            margin-right: 4px;
+        }
 
-  /* ─── TECH FEATURES ─── */
-  .tech-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2px;
-    background: var(--border);
-  }
-  .tech-card {
-    background: var(--dark2);
-    padding: 36px 32px;
-  }
-  .tech-icon {
-    font-size: 28px;
-    margin-bottom: 16px;
-  }
-  .tech-title {
-    font-size: 14px;
-    font-weight: 800;
-    color: var(--white);
-    letter-spacing: 0.04em;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-  }
-  .tech-desc {
-    font-size: 13px;
-    color: var(--text-muted);
-    line-height: 1.75;
-  }
-  .tech-tag {
-    display: inline-block;
-    margin-top: 12px;
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: 0.15em;
-    color: var(--red);
-    text-transform: uppercase;
-    border: 1px solid rgba(224,32,32,0.3);
-    padding: 3px 8px;
-  }
+        /* ===== PACKAGE SECTION ===== */
+        .package-box {
+            display: flex;
+            gap: 32px;
+            padding: 40px;
+            background: var(--white);
+            border: 1.5px solid var(--border);
+            border-radius: var(--radius-lg);
+            align-items: center;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+        }
+        .package-list {
+            flex: 1;
+        }
+        .package-list h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+        .package-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.95rem;
+            color: var(--text-mid);
+        }
+        .package-item:last-child { border-bottom: none; }
+        .package-check {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 174, 239, 0.1);
+            border-radius: 50%;
+            color: var(--carol-blue);
+            flex-shrink: 0;
+        }
+        .package-check svg { width: 14px; height: 14px; }
 
-  /* ─── POLAR / FREQ ─── */
-  .polar-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
-  }
-  .polar-img {
-    width: 100%;
-    max-width: 380px;
-    height: auto;
-    object-fit: contain;
-    filter: brightness(0.9);
-  }
-  .polar-info h3 {
-    font-size: 18px;
-    font-weight: 800;
-    color: var(--white);
-    margin-bottom: 12px;
-  }
-  .polar-info p {
-    font-size: 14px;
-    color: var(--text-muted);
-    line-height: 1.8;
-    margin-bottom: 16px;
-  }
+        /* ===== FOOTER ===== */
+        .page-footer {
+            padding: 40px 0;
+            background: var(--carol-navy);
+            text-align: center;
+        }
+        .footer-brand {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: rgba(255,255,255,0.5);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+        .footer-text {
+            font-size: 0.78rem;
+            color: rgba(255,255,255,0.4);
+        }
+        .footer-text a {
+            color: var(--carol-blue);
+            transition: color 0.2s;
+        }
+        .footer-text a:hover { color: #fff; }
 
-  /* ─── APPLICATIONS ─── */
-  .app-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2px;
-    background: var(--border);
-  }
-  .app-card {
-    background: var(--dark2);
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-  }
-  .app-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%;
-    height: 3px;
-    background: var(--red);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s;
-    z-index: 1;
-  }
-  .app-card:hover::before { transform: scaleX(1); }
-  .app-card-img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: contain;
-    background: var(--black);
-    filter: brightness(0.85);
-    transition: filter 0.3s;
-  }
-  .app-card:hover .app-card-img { filter: brightness(1); }
-  .app-card-body {
-    padding: 36px 36px;
-    flex: 1;
-  }
-  .app-num {
-    font-size: 36px;
-    font-weight: 900;
-    color: var(--border2);
-    line-height: 1;
-    margin-bottom: 16px;
-    letter-spacing: -0.03em;
-  }
-  .app-title {
-    font-size: 13px;
-    font-weight: 800;
-    color: var(--white);
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    margin-bottom: 8px;
-  }
-  .app-desc {
-    font-size: 12px;
-    color: var(--text-muted);
-    line-height: 1.7;
-  }
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
-  /* ─── ACCESSORIES ─── */
-  .acc-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2px;
-    background: var(--border);
-  }
-  .acc-card {
-    background: var(--dark2);
-    padding: 28px;
-  }
-  .acc-name {
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--white);
-    margin-bottom: 6px;
-  }
-  .acc-desc {
-    font-size: 12px;
-    color: var(--text-muted);
-    line-height: 1.6;
-    margin-bottom: 12px;
-  }
-  .acc-price {
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--white);
-  }
-  .acc-price-label {
-    font-size: 10px;
-    font-weight: 500;
-    color: var(--text-dim);
-    margin-right: 4px;
-  }
-
-  /* ─── FOOTER ─── */
-  .site-footer {
-    background: var(--dark2);
-    border-top: 1px solid var(--border);
-    padding: 40px;
-    text-align: center;
-  }
-  .site-footer .co-name {
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    margin-bottom: 6px;
-  }
-  .site-footer .co-info {
-    font-size: 11px;
-    color: var(--text-dim);
-  }
-
-  /* ─── RESPONSIVE ─── */
-  @media (max-width: 900px) {
-    .hero { grid-template-columns: 1fr; min-height: auto; }
-    .hero-left { min-height: 360px; }
-    .hero-right { padding: 48px 28px; }
-    .overview-grid { grid-template-columns: 1fr; }
-    .tech-grid { grid-template-columns: 1fr; }
-    .polar-section { grid-template-columns: 1fr; }
-    .app-grid { grid-template-columns: 1fr; }
-    .app-card { flex-direction: column; }
-    .gallery-grid { grid-template-columns: 1fr 1fr; }
-    .gallery-grid img:first-child { grid-column: span 1; }
-    .acc-grid { grid-template-columns: 1fr 1fr; }
-  }
-  @media (max-width: 600px) {
-    .container { padding: 0 20px; }
-    .hero-model { font-size: 36px; }
-    .kpi-grid { grid-template-columns: repeat(3,1fr); }
-    .app-grid { grid-template-columns: 1fr; }
-    .acc-grid { grid-template-columns: 1fr; }
-    .site-header { padding: 0 16px; }
-    .hero-right { padding: 36px 20px; }
-  }
-</style>
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 900px) {
+            .hero-inner {
+                grid-template-columns: 1fr;
+                text-align: center;
+                padding: 100px 24px 60px;
+            }
+            .hero-content { order: 2; }
+            .hero-image-area { order: 1; }
+            .hero-subtitle { margin-left: auto; margin-right: auto; }
+            .hero-product-img { max-height: 340px; }
+            .kpi-grid { max-width: 400px; margin-left: auto; margin-right: auto; margin-bottom: 24px; }
+            .hero-ahnc { margin-bottom: 0; }
+            .overview-grid { grid-template-columns: 1fr; }
+            .feature-grid { grid-template-columns: 1fr; }
+            .polar-grid { grid-template-columns: 1fr; }
+            .app-grid { grid-template-columns: 1fr; }
+            .acc-grid { grid-template-columns: 1fr 1fr; }
+            .package-box { flex-direction: column; }
+        }
+        @media (max-width: 600px) {
+            .container { padding: 0 16px; }
+            .hero-title { font-size: 2.2rem; }
+            .kpi-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+            .kpi-value { font-size: 1.2rem; }
+            .acc-grid { grid-template-columns: 1fr; }
+            .tab-btn { padding: 14px 18px; font-size: 0.78rem; }
+        }
+    </style>
 </head>
 <body>
+    <!-- ===== BACK BUTTON ===== -->
+    <a href="index.html" class="back-nav">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        카탈로그
+    </a>
 
-<!-- HEADER -->
-<header class="site-header">
-  <a href="index.html" class="logo">HDAVC</a>
-  <a href="index.html" class="back-btn">카탈로그로 돌아가기</a>
-</header>
-
-<!-- HERO -->
-<section class="hero">
-  <!-- 좌: 이미지 -->
-  <div class="hero-left">
-    <img class="hero-img-main" id="mainImg" src="adur868_01.jpg" alt="CAROL A dur-868">
-    <div class="thumb-strip">
-      <img src="adur868_01.jpg" alt="제품 이미지 1" class="active" onclick="changeImg(this)">
-    </div>
-  </div>
-
-  <!-- 우: 텍스트 -->
-  <div class="hero-right">
-    <div class="brand-badge"><span>CAROL</span> 유선 다이나믹 마이크</div>
-    <div class="hero-model">A dur-868</div>
-    <div class="hero-sub">Super-Cardioid Dynamic Microphone</div>
-    <p class="hero-tagline">
-      슈퍼 카디오이드 패턴과 CSM-163 카퍼 보이스 코일로<br>
-      라이브 공연부터 다양한 악기 마이킹까지 폭넓게 활용되는 다이나믹 마이크.
-    </p>
-
-    <div class="kpi-grid">
-      <div class="kpi-item">
-        <div class="kpi-value">Super<span>cardioid</span></div>
-        <div class="kpi-label">지향성 패턴</div>
-      </div>
-      <div class="kpi-item">
-        <div class="kpi-value">50<span>Hz–16kHz</span></div>
-        <div class="kpi-label">주파수 응답</div>
-      </div>
-      <div class="kpi-item">
-        <div class="kpi-value">600<span>Ω</span></div>
-        <div class="kpi-label">임피던스</div>
-      </div>
-    </div>
-
-    <div class="price-area">
-      <span class="price-label">권장 소비자가</span>
-      <span class="price-value">80,300원</span>
-      <span class="price-vat">VAT 포함</span>
-    </div>
-    <div class="ahnc-badge">🎙️ Slide Potentiometer Switch — 조작 충격음 없는 스위치</div>
-  </div>
-</section>
-
-<!-- STICKY NAV -->
-<nav class="sticky-nav" id="stickyNav">
-  <a href="#overview" class="active">개요</a>
-  <a href="#specs">사양</a>
-  <a href="#technology">핵심 기술</a>
-  <a href="#polar">지향 특성</a>
-  <a href="#applications">활용 분야</a>
-  <a href="#accessories">관련 액세서리</a>
-</nav>
-
-<!-- OVERVIEW -->
-<section class="section" id="overview">
-  <div class="container">
-    <div class="section-label">Product Overview</div>
-    <div class="section-title">보컬과 악기 모두를 위한 마이크</div>
-    <div class="overview-grid">
-      <div class="overview-desc">
-        <p>
-          CAROL A dur-868는 라이브 공연과 오디오 레코딩, 악기 마이킹까지
-          폭넓게 활용할 수 있는 슈퍼 카디오이드 다이나믹 마이크입니다.
-          CSM-163 카퍼(동) 보이스 코일 카트리지를 탑재하여
-          따뜻하고 자연스러운 음색을 충실하게 재현합니다.
-        </p>
-        <p>
-          슈퍼 카디오이드 지향 패턴은 정면 수음에 집중하면서 측면 및 후방의
-          잡음과 피드백을 효과적으로 차단합니다. 여러 악기가 함께 연주되는
-          라이브 환경에서도 원하는 소리만 깔끔하게 포착할 수 있습니다.
-        </p>
-        <p>
-          슬라이드 포텐셔미터 타입 스위치는 조작 시 충격음이 발생하지 않으며,
-          아연 합금 다이캐스팅 바디가 스테이지의 거친 환경에서도
-          뛰어난 내구성을 제공합니다.
-        </p>
-      </div>
-      <ul class="feature-list">
-        <li>슈퍼 카디오이드 지향 패턴 — 피드백 억제 및 측후방 노이즈 차단</li>
-        <li>CSM-163 카퍼 보이스 코일 카트리지 — 따뜻하고 자연스러운 음색</li>
-        <li>슬라이드 포텐셔미터 스위치 — 조작 충격음 없음</li>
-        <li>아연 합금 다이캐스팅 바디 — 견고한 스테이지 내구성</li>
-        <li>XLR 3핀 커넥터 (케이블 별도)</li>
-        <li>활용 분야: 라이브 공연, 오디오 레코딩</li>
-        <li>악기 마이킹: 피아노, 바이올린, 첼로, 기타, 플룻, 클라리넷, 오보에, 프렌치 호른</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-
-
-<!-- SPECS -->
-<section class="section" id="specs">
-  <div class="container">
-    <div class="section-label">Technical Specifications</div>
-    <div class="section-title">제품 사양</div>
-    <table class="spec-table">
-      <tr>
-        <td>마이크 유형</td>
-        <td class="spec-highlight">다이나믹 (Dynamic)</td>
-      </tr>
-      <tr>
-        <td>지향성 패턴</td>
-        <td class="spec-highlight">슈퍼 카디오이드 (Super-cardioid)</td>
-      </tr>
-      <tr>
-        <td>주파수 응답</td>
-        <td>50Hz ~ 16,000Hz</td>
-      </tr>
-      <tr>
-        <td>출력 임피던스</td>
-        <td>600Ω ± 30% (at 1,000Hz)</td>
-      </tr>
-      <tr>
-        <td>감도</td>
-        <td>-72dB ± 3dB (at 1,000Hz, open circuit)</td>
-      </tr>
-      <tr>
-        <td>커넥터</td>
-        <td>XLR 3핀 프로페셔널 오디오 커넥터</td>
-      </tr>
-      <tr>
-        <td>스위치</td>
-        <td>슬라이드 포텐셔미터 타입</td>
-      </tr>
-      <tr>
-        <td>바디 소재</td>
-        <td>아연 합금 다이캐스팅</td>
-      </tr>
-      <tr>
-        <td>그릴 소재</td>
-        <td>브레이즈드 하드닝 스틸</td>
-      </tr>
-      <tr>
-        <td>크기</td>
-        <td>Ø52.8 × 185mm</td>
-      </tr>
-      <tr>
-        <td>중량 (케이블 제외)</td>
-        <td>290g</td>
-      </tr>
-      <tr>
-        <td>포함 구성품</td>
-        <td>마이크 본체, 마이크 홀더 1개</td>
-      </tr>
-      <tr>
-        <td>카트리지</td>
-        <td>CSM-163 (Copper voice coil)</td>
-      </tr>
-    </table>
-    <div style="margin-top:32px;border:1px solid var(--border);overflow:hidden;">
-      <img src="adur868_02.jpg" alt="A dur-868 상세 이미지" style="width:100%;height:auto;display:block;">
-    </div>
-  </div>
-</section>
-<section class="section" id="technology">
-  <div class="container">
-    <div class="section-label">Core Technology</div>
-    <div class="section-title">핵심 기술</div>
-    <div class="tech-grid">
-      <div class="tech-card">
-        <div class="tech-icon">🎵</div>
-        <div class="tech-title">CSM-163 카퍼 보이스 코일</div>
-        <div class="tech-desc">
-          카퍼(동) 소재 보이스 코일을 사용한 CSM-163 카트리지는
-          따뜻하고 자연스러운 음색 재현에 최적화되어 있습니다.<br><br>
-          보컬의 존재감을 살리면서도 피로감 없는 중·고역대 특성으로
-          라이브 공연과 악기 마이킹 모두에서 뛰어난 성능을 발휘합니다.
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    CAROL Wired Dynamic
+                </div>
+                <div class="hero-brand">CAROL</div>
+                <h1 class="hero-title"><span>A dur-868</span></h1>
+                <p class="hero-subtitle">
+                    슈퍼 카디오이드 패턴과 CSM-163 카퍼 보이스 코일로
+                    라이브 공연부터 다양한 악기 마이킹까지 폭넓게 활용되는 다이나믹 마이크.
+                </p>
+                <div class="kpi-grid">
+                    <div class="kpi-card">
+                        <div class="kpi-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>
+                        </div>
+                        <div class="kpi-value">Super<span class="kpi-unit">cardioid</span></div>
+                        <div class="kpi-label">지향성 패턴</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h4l3-9 4 18 3-9h4"/></svg>
+                        </div>
+                        <div class="kpi-value">16<span class="kpi-unit">kHz</span></div>
+                        <div class="kpi-label">주파수 응답</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                        </div>
+                        <div class="kpi-value">600<span class="kpi-unit">Ω</span></div>
+                        <div class="kpi-label">임피던스</div>
+                    </div>
+                </div>
+                <div class="hero-ahnc">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+                    Slide Potentiometer Switch — 조작 충격음 없는 스위치
+                </div>
+            </div>
+            <div class="hero-image-area">
+                <div class="hero-image-wrapper">
+                    <img class="hero-product-img" src="adur868_01.jpg" alt="CAROL A dur-868 다이나믹 마이크">
+                </div>
+            </div>
         </div>
-        <div class="tech-tag">CSM-163 Cartridge</div>
-      </div>
-      <div class="tech-card">
-        <div class="tech-icon">🎯</div>
-        <div class="tech-title">Super-Cardioid 지향 패턴</div>
-        <div class="tech-desc">
-          슈퍼 카디오이드 패턴은 정면 수음에 집중하면서 측면 및 후방의 잡음을
-          효과적으로 차단합니다.<br><br>
-          여러 악기와 마이크를 동시에 사용하는 라이브 환경에서도
-          크로스 픽업을 최소화하여 명료한 사운드를 유지합니다.
-        </div>
-        <div class="tech-tag">피드백 억제 / 측후방 차단</div>
-      </div>
-      <div class="tech-card">
-        <div class="tech-icon">🎚️</div>
-        <div class="tech-title">Slide Potentiometer Switch</div>
-        <div class="tech-desc">
-          슬라이드 포텐셔미터 타입 스위치는 조작 시 발생하는
-          충격음(팝 노이즈)을 원천 차단합니다.<br><br>
-          공연 도중에도 소리 없이 마이크를 ON/OFF 할 수 있어
-          무대 위 어떤 상황에서도 안정적인 퍼포먼스를 보장합니다.
-        </div>
-        <div class="tech-tag">조작 충격음 없음</div>
-      </div>
-      <div class="tech-card">
-        <div class="tech-icon">⚙️</div>
-        <div class="tech-title">아연 합금 다이캐스팅 바디</div>
-        <div class="tech-desc">
-          고강도 아연 합금 다이캐스팅으로 제작된 바디는
-          스테이지의 충격과 진동에도 내구성을 유지합니다.<br><br>
-          브레이즈드 하드닝 처리된 볼 그릴이 카트리지를 보호하며,
-          장기간 사용에도 외관과 성능을 안정적으로 유지합니다.
-        </div>
-        <div class="tech-tag">고내구성 바디</div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- POLAR / FREQ -->
-<section class="section" id="polar">
-  <div class="container">
-    <div class="section-label">Polar Pattern &amp; Frequency Response</div>
-    <div class="section-title">지향 특성</div>
-    <div class="polar-section">
-      <div style="display:flex;align-items:center;justify-content:center;background:var(--dark2);padding:32px;border:1px solid var(--border);">
-        <img class="polar-img" src="adur868_03.jpg" alt="A dur-868 지향 특성">
-      </div>
-      <div class="polar-info">
-        <h3>슈퍼 카디오이드 패턴</h3>
-        <p>
-          A dur-868의 슈퍼 카디오이드 지향 특성은 정면 수음을 집중시키고
-          측면(90°) 및 후방 노이즈를 강하게 차단합니다.
-          라이브 공연 환경에서 피드백 발생 전 더 높은 게인을 확보할 수 있으며,
-          여러 악기·마이크가 동시에 사용되는 환경에서도 크로스 픽업을 최소화합니다.
-        </p>
-        <p>
-          50Hz~16kHz의 주파수 응답과 4~5kHz 대역의 존재감 부스트가
-          라이브 환경에서의 보컬 명료도와 악기 선명도를 높여줍니다.
-        </p>
-        <table class="spec-table" style="margin-top:16px;">
-          <tr>
-            <td>지향각 (1kHz 기준)</td>
-            <td>슈퍼 카디오이드</td>
-          </tr>
-          <tr>
-            <td>측면 격리도</td>
-            <td>측면 잡음 강하게 차단</td>
-          </tr>
-          <tr>
-            <td>측정 기준</td>
-            <td>IEC 268-4</td>
-          </tr>
-        </table>
-      </div>
-    </div>
-  </div>
-</section>
+    <!-- ===== TAB NAVIGATION ===== -->
+    <nav class="tab-nav" id="tabNav">
+        <button class="tab-btn active" data-target="overview">제품 개요</button>
+        <button class="tab-btn" data-target="specs">사양</button>
+        <button class="tab-btn" data-target="technology">핵심 기술</button>
+        <button class="tab-btn" data-target="polar">지향 특성</button>
+        <button class="tab-btn" data-target="applications">활용 분야</button>
+        <button class="tab-btn" data-target="accessories">관련 액세서리</button>
+        <button class="tab-btn" data-target="package">구성품</button>
+    </nav>
 
-<!-- APPLICATIONS -->
-<section class="section" id="applications">
-  <div class="container">
-    <div class="section-label">Applications</div>
-    <div class="section-title">활용 분야</div>
-    <div class="app-grid">
-      <div class="app-card">
-        <div class="app-card-body">
-          <div class="app-num">01</div>
-          <div class="app-title">라이브 공연</div>
-          <div class="app-desc">슈퍼 카디오이드 지향 패턴이 측면 및 후방 잡음과 피드백을 효과적으로 억제하여, 무대 위 다양한 환경에서 보컬의 선명하고 안정적인 사운드를 전달합니다.</div>
+    <!-- ===== SECTION: 제품 개요 ===== -->
+    <section class="section" id="overview">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Product Overview</span>
+                <h2 class="section-title">보컬과 악기 모두를 위한 마이크</h2>
+            </div>
+            <div class="overview-grid reveal">
+                <div class="overview-text">
+                    <p>
+                        CAROL A dur-868는 라이브 공연과 오디오 레코딩, 악기 마이킹까지 폭넓게 활용할 수 있는 슈퍼 카디오이드 다이나믹 마이크입니다. CSM-163 카퍼(동) 보이스 코일 카트리지를 탑재하여 따뜻하고 자연스러운 음색을 충실하게 재현합니다.
+                    </p>
+                    <p>
+                        슈퍼 카디오이드 지향 패턴은 정면 수음에 집중하면서 측면 및 후방의 잡음과 피드백을 효과적으로 차단합니다. 여러 악기가 함께 연주되는 라이브 환경에서도 원하는 소리만 깔끔하게 포착할 수 있습니다.
+                    </p>
+                    <p>
+                        슬라이드 포텐셔미터 타입 스위치는 조작 시 충격음이 발생하지 않으며, 아연 합금 다이캐스팅 바디가 스테이지의 거친 환경에서도 뛰어난 내구성을 제공합니다.
+                    </p>
+                </div>
+                <ul class="overview-features">
+                    <li>슈퍼 카디오이드 지향 패턴 — 피드백 억제 및 측후방 노이즈 차단</li>
+                    <li>CSM-163 카퍼 보이스 코일 카트리지 — 따뜻하고 자연스러운 음색</li>
+                    <li>슬라이드 포텐셔미터 스위치 — 조작 충격음 없음</li>
+                    <li>아연 합금 다이캐스팅 바디 — 견고한 스테이지 내구성</li>
+                    <li>XLR 3핀 커넥터 (케이블 별도)</li>
+                    <li>활용 분야: 라이브 공연, 오디오 레코딩, 악기 마이킹</li>
+                    <li>악기: 피아노, 바이올린, 첼로, 기타, 플룻, 클라리넷, 오보에, 프렌치 호른</li>
+                </ul>
+            </div>
         </div>
-      </div>
-      <div class="app-card">
-        <div class="app-card-body">
-          <div class="app-num">02</div>
-          <div class="app-title">오디오 레코딩</div>
-          <div class="app-desc">CSM-163 카퍼 보이스 코일 카트리지의 따뜻하고 자연스러운 음색이 보컬 및 어쿠스틱 악기 레코딩에서 높은 품질의 결과물을 만들어냅니다.</div>
+    </section>
+
+    <!-- ===== SECTION: 사양 ===== -->
+    <section class="section" id="specs" style="background: var(--bg2);">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Technical Specifications</span>
+                <h2 class="section-title">제품 사양</h2>
+            </div>
+            <div class="spec-card reveal">
+                <table class="spec-table">
+                    <thead>
+                        <tr>
+                            <th>항목</th>
+                            <th>사양</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>마이크 유형</td>
+                            <td class="spec-highlight">다이나믹 (Dynamic)</td>
+                        </tr>
+                        <tr>
+                            <td>지향성 패턴</td>
+                            <td class="spec-highlight">슈퍼 카디오이드 (Super-cardioid)</td>
+                        </tr>
+                        <tr>
+                            <td>주파수 응답</td>
+                            <td>50Hz ~ 16,000Hz</td>
+                        </tr>
+                        <tr>
+                            <td>출력 임피던스</td>
+                            <td>600Ω ± 30% (at 1,000Hz)</td>
+                        </tr>
+                        <tr>
+                            <td>감도</td>
+                            <td>-72dB ± 3dB (at 1,000Hz, open circuit)</td>
+                        </tr>
+                        <tr>
+                            <td>커넥터</td>
+                            <td>XLR 3핀 프로페셔널 오디오 커넥터</td>
+                        </tr>
+                        <tr>
+                            <td>스위치</td>
+                            <td>슬라이드 포텐셔미터 타입</td>
+                        </tr>
+                        <tr>
+                            <td>바디 소재</td>
+                            <td>아연 합금 다이캐스팅</td>
+                        </tr>
+                        <tr>
+                            <td>그릴 소재</td>
+                            <td>브레이즈드 하드닝 스틸</td>
+                        </tr>
+                        <tr>
+                            <td>크기</td>
+                            <td>Ø52.8 × 185mm</td>
+                        </tr>
+                        <tr>
+                            <td>중량 (케이블 제외)</td>
+                            <td>290g</td>
+                        </tr>
+                        <tr>
+                            <td>카트리지</td>
+                            <td>CSM-163 (Copper voice coil)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <img class="spec-card-img" src="adur868_02.jpg" alt="A dur-868 상세 이미지" loading="lazy">
+            </div>
         </div>
-      </div>
-      <div class="app-card">
-        <div class="app-card-body">
-          <div class="app-num">03</div>
-          <div class="app-title">악기 마이킹</div>
-          <div class="app-desc">피아노, 바이올린, 첼로, 기타, 플룻, 클라리넷, 오보에, 프렌치 호른 등 다양한 악기에 최적화된 응답 특성으로 악기 본연의 음색을 충실하게 포착합니다.</div>
+    </section>
+
+    <!-- ===== SECTION: 핵심 기술 ===== -->
+    <section class="section" id="technology">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Core Technology</span>
+                <h2 class="section-title">핵심 기술</h2>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-card reveal">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+                    </div>
+                    <h3>CSM-163 카퍼 보이스 코일</h3>
+                    <p>카퍼(동) 소재 보이스 코일을 사용한 CSM-163 카트리지는 따뜻하고 자연스러운 음색 재현에 최적화되어 있습니다. 보컬의 존재감을 살리면서도 피로감 없는 중·고역대 특성으로 라이브 공연과 악기 마이킹 모두에서 뛰어난 성능을 발휘합니다.</p>
+                    <span class="tech-tag">CSM-163 Cartridge</span>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                    </div>
+                    <h3>Super-Cardioid 지향 패턴</h3>
+                    <p>슈퍼 카디오이드 패턴은 정면 수음에 집중하면서 측면 및 후방의 잡음을 효과적으로 차단합니다. 여러 악기와 마이크를 동시에 사용하는 라이브 환경에서도 크로스 픽업을 최소화하여 명료한 사운드를 유지합니다.</p>
+                    <span class="tech-tag">피드백 억제 / 측후방 차단</span>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="12" y1="4" x2="12" y2="20"/></svg>
+                    </div>
+                    <h3>Slide Potentiometer Switch</h3>
+                    <p>슬라이드 포텐셔미터 타입 스위치는 조작 시 발생하는 충격음(팝 노이즈)을 원천 차단합니다. 공연 도중에도 소리 없이 마이크를 ON/OFF 할 수 있어 무대 위 어떤 상황에서도 안정적인 퍼포먼스를 보장합니다.</p>
+                    <span class="tech-tag">조작 충격음 없음</span>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                    </div>
+                    <h3>아연 합금 다이캐스팅 바디</h3>
+                    <p>고강도 아연 합금 다이캐스팅으로 제작된 바디는 스테이지의 충격과 진동에도 내구성을 유지합니다. 브레이즈드 하드닝 처리된 볼 그릴이 카트리지를 보호하며, 장기간 사용에도 외관과 성능을 안정적으로 유지합니다.</p>
+                    <span class="tech-tag">고내구성 바디</span>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- ACCESSORIES -->
-<section class="section" id="accessories">
-  <div class="container">
-    <div class="section-label">Accessories</div>
-    <div class="section-title">관련 액세서리</div>
-    <div class="acc-grid">
-      <div class="acc-card">
-        <div class="acc-name">B-6 마이크 홀더 (유선용)</div>
-        <div class="acc-desc">Newnabie / Ø27mm 규격 / Plastic+Metal 스크류</div>
-        <div class="acc-price"><span class="acc-price-label">권장가</span>2,500원</div>
-      </div>
-      <div class="acc-card">
-        <div class="acc-name">MC102 마이크 케이블 (CCAM)</div>
-        <div class="acc-desc">ADAM / XLR M to XLR F / Ø6mm<br>1.5M~10M 선택 가능</div>
-        <div class="acc-price"><span class="acc-price-label">권장가</span>8,800원~</div>
-      </div>
-      <div class="acc-card">
-        <div class="acc-name">MC103 마이크 케이블 (OFC)</div>
-        <div class="acc-desc">ADAM / XLR M to XLR F / OFC 고순도 동선<br>1.5M~10M 선택 가능</div>
-        <div class="acc-price"><span class="acc-price-label">권장가</span>13,200원~</div>
-      </div>
-    </div>
-  </div>
-</section>
+    <!-- ===== SECTION: 지향 특성 ===== -->
+    <section class="section" id="polar" style="background: var(--bg2);">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Polar Pattern</span>
+                <h2 class="section-title">지향 특성</h2>
+            </div>
+            <div class="polar-grid reveal">
+                <div class="polar-chart">
+                    <img src="adur868_03.jpg" alt="A dur-868 지향 특성 차트" loading="lazy">
+                </div>
+                <div class="polar-info">
+                    <h3>슈퍼 카디오이드 패턴</h3>
+                    <p>
+                        A dur-868의 슈퍼 카디오이드 지향 특성은 정면 수음을 집중시키고 측면(90°) 및 후방 노이즈를 강하게 차단합니다. 라이브 공연 환경에서 피드백 발생 전 더 높은 게인을 확보할 수 있으며, 여러 악기·마이크가 동시에 사용되는 환경에서도 크로스 픽업을 최소화합니다.
+                    </p>
+                    <p>
+                        50Hz~16kHz의 주파수 응답과 4~5kHz 대역의 존재감 부스트가 라이브 환경에서의 보컬 명료도와 악기 선명도를 높여줍니다.
+                    </p>
+                    <div class="polar-stats">
+                        <div class="polar-stat">
+                            <span class="polar-stat-label">지향각 (1kHz 기준)</span>
+                            <span class="polar-stat-value">슈퍼 카디오이드</span>
+                        </div>
+                        <div class="polar-stat">
+                            <span class="polar-stat-label">측면 격리도</span>
+                            <span class="polar-stat-value">측면 잡음 강하게 차단</span>
+                        </div>
+                        <div class="polar-stat">
+                            <span class="polar-stat-label">측정 기준</span>
+                            <span class="polar-stat-value">IEC 268-4</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- FOOTER -->
-<footer class="site-footer">
-  <div class="co-name">(주)현대에이브이씨 HYUNDAI AUDIO VISUAL COMMUNICATIONS CO., LTD.</div>
-  <div class="co-info">경기도 평택시 도일유통길 39-9 (도일동) &nbsp;|&nbsp; TEL: 031-8054-0048</div>
-</footer>
+    <!-- ===== SECTION: 활용 분야 ===== -->
+    <section class="section" id="applications">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Applications</span>
+                <h2 class="section-title">활용 분야</h2>
+            </div>
+            <div class="app-grid">
+                <div class="app-card reveal">
+                    <div class="app-card-body">
+                        <div class="app-icon">🎤</div>
+                        <h3>라이브 공연</h3>
+                        <p>슈퍼 카디오이드 지향 패턴이 측면 및 후방 잡음과 피드백을 효과적으로 억제하여, 무대 위 다양한 환경에서 보컬의 선명하고 안정적인 사운드를 전달합니다.</p>
+                    </div>
+                </div>
+                <div class="app-card reveal">
+                    <div class="app-card-body">
+                        <div class="app-icon">🎧</div>
+                        <h3>오디오 레코딩</h3>
+                        <p>CSM-163 카퍼 보이스 코일 카트리지의 따뜻하고 자연스러운 음색이 보컬 및 어쿠스틱 악기 레코딩에서 높은 품질의 결과물을 만들어냅니다.</p>
+                    </div>
+                </div>
+                <div class="app-card reveal">
+                    <div class="app-card-body">
+                        <div class="app-icon">🎻</div>
+                        <h3>악기 마이킹</h3>
+                        <p>피아노, 바이올린, 첼로, 기타, 플룻, 클라리넷, 오보에, 프렌치 호른 등 다양한 악기에 최적화된 응답 특성으로 악기 본연의 음색을 충실하게 포착합니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<script>
-  // 썸네일 이미지 교체
-  function changeImg(el) {
-    document.getElementById('mainImg').src = el.src;
-    document.querySelectorAll('.thumb-strip img').forEach(i => i.classList.remove('active'));
-    el.classList.add('active');
-  }
+    <!-- ===== SECTION: 관련 액세서리 ===== -->
+    <section class="section" id="accessories" style="background: var(--bg2);">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Accessories</span>
+                <h2 class="section-title">관련 액세서리</h2>
+            </div>
+            <div class="acc-grid reveal">
+                <div class="acc-card">
+                    <div class="acc-name">B-6 마이크 홀더 (유선용)</div>
+                    <div class="acc-desc">Newnabie / Ø27mm 규격 / Plastic+Metal 스크류</div>
+                    <div class="acc-price"><span class="acc-price-label">권장가</span>2,500원</div>
+                </div>
+                <div class="acc-card">
+                    <div class="acc-name">MC102 마이크 케이블 (CCAM)</div>
+                    <div class="acc-desc">ADAM / XLR M to XLR F / Ø6mm<br>1.5M~10M 선택 가능</div>
+                    <div class="acc-price"><span class="acc-price-label">권장가</span>8,800원~</div>
+                </div>
+                <div class="acc-card">
+                    <div class="acc-name">MC103 마이크 케이블 (OFC)</div>
+                    <div class="acc-desc">ADAM / XLR M to XLR F / OFC 고순도 동선<br>1.5M~10M 선택 가능</div>
+                    <div class="acc-price"><span class="acc-price-label">권장가</span>13,200원~</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  // Sticky Nav 활성화
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.sticky-nav a');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const id = entry.target.getAttribute('id');
-        navLinks.forEach(a => {
-          a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+    <!-- ===== SECTION: 구성품 ===== -->
+    <section class="section" id="package">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">What's in the Box</span>
+                <h2 class="section-title">구성품</h2>
+            </div>
+            <div class="package-box reveal">
+                <div class="package-list">
+                    <h3>A dur-868 패키지 구성</h3>
+                    <div class="package-item">
+                        <div class="package-check">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <span>A dur-868 다이나믹 마이크 본체 × 1</span>
+                    </div>
+                    <div class="package-item">
+                        <div class="package-check">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <span>마이크 홀더 × 1</span>
+                    </div>
+                </div>
+                <div style="flex: 1; display: flex; justify-content: center; align-items: center; padding: 20px;">
+                    <div style="padding: 40px; background: var(--bg); border: 1.5px solid var(--border); border-radius: 16px; text-align: center;">
+                        <div style="font-size: 0.7rem; color: var(--text-gray); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">Manufacturer</div>
+                        <div style="font-size: 1.6rem; font-weight: 800; letter-spacing: 0.05em; margin-bottom: 4px; color: var(--carol-navy);">CAROL</div>
+                        <div style="font-size: 0.75rem; color: var(--text-gray);">Sound of Excellence</div>
+                        <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border);">
+                            <div style="font-size: 0.7rem; color: var(--text-gray); margin-bottom: 4px;">Taiwan Carol Electronics Co., Ltd.</div>
+                            <div style="font-size: 0.7rem; color: var(--text-gray);">Since 1975 · Taichung, Taiwan</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="page-footer">
+        <div class="container">
+            <div class="footer-brand">HDAVC Pro Audio</div>
+            <p class="footer-text">
+                (주)현대에이브이씨 | 경기도 평택시 도일유통길 39-9 | TEL: 031-8054-0048<br>
+                <a href="index.html">← 제품 카탈로그로 돌아가기</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        // === Scrollspy & Tab Navigation ===
+        const tabNav = document.getElementById('tabNav');
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const sections = document.querySelectorAll('.section[id]');
+
+        // Sticky nav shadow
+        window.addEventListener('scroll', () => {
+            tabNav.classList.toggle('scrolled', window.scrollY > 100);
+        }, { passive: true });
+
+        // Tab click → smooth scroll
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const target = document.getElementById(btn.dataset.target);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
         });
-      }
-    });
-  }, { rootMargin: '-30% 0px -60% 0px' });
-  sections.forEach(s => observer.observe(s));
-</script>
+
+        // Scrollspy — highlight active tab
+        const observerOptions = { rootMargin: '-80px 0px -60% 0px', threshold: 0 };
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    tabBtns.forEach(btn => {
+                        btn.classList.toggle('active', btn.dataset.target === entry.target.id);
+                    });
+                }
+            });
+        }, observerOptions);
+        sections.forEach(sec => sectionObserver.observe(sec));
+
+        // === Scroll Reveal Animation ===
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    </script>
 </body>
 </html>
