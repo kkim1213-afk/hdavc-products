@@ -4,10 +4,175 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CAROL AC-910S 다이나믹 보컬 마이크 - HDAVC Pro Audio</title>
-    <meta name="description" content="CAROL AC-910S AHNC 핸들링 노이즈 캡슐링 다이나믹 마이크. 카디오이드, 험버링 코일, 슬라이드 스위치. 라이브 스테이지 최적화.">
+    <meta name="description" content="CAROL AC-910S AHNC 핸들링 노이즈 캔슬링 다이나믹 마이크. 카디오이드, 험버킹 코일, 슬라이드 스위치. 라이브 스테이지 최적화.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> both;
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* ===== CSS VARIABLES — GO-31 LIGHT THEME ===== */
+        :root {
+            --carol-blue: #00AEEF;
+            --carol-blue2: #0090D0;
+            --carol-navy: #1a2b4a;
+            --carol-navy2: #243559;
+            --bg: #f5f7fa;
+            --bg2: #eef1f6;
+            --white: #ffffff;
+            --border: #dde2ea;
+            --text-dark: #1a1e2e;
+            --text-mid: #3d4660;
+            --text-gray: #6b7593;
+            --radius: 12px;
+            --radius-sm: 8px;
+            --radius-lg: 20px;
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --font-body: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
+            --max-width: 1200px;
+        }
+
+        /* ===== RESET & BASE ===== */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; scroll-padding-top: 120px; }
+        body {
+            font-family: var(--font-body);
+            background: var(--bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+            word-break: keep-all;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+        img { max-width: 100%; height: auto; display: block; }
+        a { color: inherit; text-decoration: none; }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ===== BACK BUTTON ===== */
+        .back-nav {
+            position: fixed;
+            top: 16px;
+            left: 16px;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 18px;
+            background: rgba(26, 43, 74, 0.9);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: rgba(255,255,255,0.85);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .back-nav:hover {
+            color: #fff;
+            background: var(--carol-blue);
+        }
+        .back-nav svg { width: 16px; height: 16px; }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--carol-navy) 0%, var(--carol-navy2) 60%, #1e3a6e 100%);
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -15%;
+            width: 700px;
+            height: 700px;
+            background: radial-gradient(circle, rgba(0, 174, 239, 0.12) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -20%;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(0, 174, 239, 0.06) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .hero-inner {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            width: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 120px 24px 80px;
+        }
+        .hero-content { animation: fadeInUp 0.8s ease-out; }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            background: rgba(0, 174, 239, 0.15);
+            border: 1px solid rgba(0, 174, 239, 0.3);
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--carol-blue);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 20px;
+        }
+        .hero-badge svg { width: 14px; height: 14px; }
+        .hero-brand {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: rgba(255,255,255,0.5);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+        .hero-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 900;
+            line-height: 1.05;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+            color: #fff;
+        }
+        .hero-title span {
+            background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 50%, var(--carol-blue) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-subtitle {
+            font-size: 1.05rem;
+            font-weight: 300;
+            color: rgba(255,255,255,0.7);
+            line-height: 1.7;
+            margin-bottom: 36px;
+            max-width: 480px;
+        }
+        .hero-image-area {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
         }
         .hero-image-wrapper {
             position: relative;
@@ -211,7 +376,8 @@
         }
         .feature-tag {
             display: inline-flex;
-            align-items: center;         gap: 6px;
+            align-items: center;
+            gap: 6px;
             padding: 8px 16px;
             background: rgba(0, 174, 239, 0.08);
             border: 1px solid rgba(0, 174, 239, 0.2);
@@ -621,7 +787,7 @@
     <!-- BACK NAVIGATION -->
     <a href="index.html" class="back-nav">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
-        카톨로그
+        카탈로그
     </a>
 
     <!-- ===== HERO SECTION ===== -->
@@ -636,7 +802,7 @@
                 <h1 class="hero-title"><span>AC-910S</span></h1>
                 <p class="hero-subtitle">
                     CAROL 독자 특허 AHNC 기술로 핸들링 노이즈를 능동적으로 제거.
-                    험버링 코일로 EMI/RFI 노이즈까지 차단하는 프로 스테이지용 다이나믹 마이크.
+                    험버킹 코일로 EMI/RFI 노이즈까지 차단하는 프로 스테이지용 다이나믹 마이크.
                 </p>
                 <div class="kpi-grid">
                     <div class="kpi-card">
@@ -661,7 +827,7 @@
                         <div class="kpi-label">임피던스</div>
                     </div>
                 </div>
-                <div class="ahnc-badge">🏆 AHNC Technology — 국제 특허 취득 (US / TW / CN)</div>
+                <div class="ahnc-badge">🏆 AHNC Technology — 국제 특허 취듍 (US / TW / CN)</div>
             </div>
             <div class="hero-image-area">
                 <div class="hero-image-wrapper">
@@ -698,27 +864,27 @@
                         마이크를 쥐거나 움직일 때 발생하는 핸들링 노이즈를 능동적으로 억제합니다.
                     </p>
                     <p>
-                        내장 <strong>험버링 코일</strong>은 스튜디오 조명 등에서 발생하는 강한 험 필드(EMI/RFI 노이즈)에 대한 면역성을 제공하여,
+                        내장 <strong>험버킹 코일</strong>은 스튜디오 조명 등에서 발생하는 강한 험 필드(EMI/RFI 노이즈)에 대한 면역성을 제공하여,
                         전문 공연 환경에서도 깨끗한 음질을 유지합니다.
                     </p>
                     <p>
                         <strong>카디오이드 지향 패턴</strong>은 정면 수음에 충실하면서도 자연스러운 음장을 형성하여 독창, 강연, 발표 등 다양한 상황에 폭넓게 활용할 수 있으며,
-                        <strong>슬라이드 포턴셔미터 스위치</strong>는 조작 시 충격음이 발생하지 않아 무대 위 어떤 상황에서도 안정적인 퍼포먼스를 보장합니다.
+                        <strong>슬라이드 포턴셔미터 스위치</strong>는 조작 시 충격음이 발생하지 않아 무대 어떤 상황에서도 안정적인 퍼포먼스를 보장합니다.
                     </p>
                     <div class="feature-tags">
                         <span class="feature-tag">AHNC 특허 기술</span>
-                        <span class="feature-tag">험버링 코일</span>
+                        <span class="feature-tag">험버킹 코일</span>
                         <span class="feature-tag">카디오이드</span>
                         <span class="feature-tag">슬라이드 스위치</span>
                         <span class="feature-tag">아연합금 바디</span>
                     </div>
                 </div>
                 <ul class="feature-list">
-                    <li>AHNC 능동형 핸들링 노이즈 캡슐링 기술 탑재</li>
-                    <li>내장 험버링 코일 — EMI/RFI 노이즈 면역</li>
+                    <li>AHNC 능동형 핸들링 노이즈 캔슬링 기술 탑재</li>
+                    <li>내장 험버킹 코일 — EMI/RFI 노이즈 면역</li>
                     <li>카디오이드 패턴 — 자연스러운 수음과 넓은 커버리지</li>
                     <li>슬라이드 포턴셔미터 스위치 — 조작 충격음 없음</li>
-                    <li>통합 성형 기술(Integrated Molding) — 카트리지 마그넷·요크·펠 일체화로 내구성 강화</li>
+                    <li>통합 성형 기술(Integrated Molding) — 카트리지 마그넷·요크·폴 일체화로 내구성 강화</li>
                     <li>XLR 3핀 커넥터 (케이블 별도)</li>
                     <li>아연 합금 다이캐스팅 바디 — 견고한 스테이지 내구성</li>
                     <li>Taiwan Excellence 2019 수상</li>
@@ -771,18 +937,18 @@
                     </tr>
                     <tr>
                         <td>그릴 소재</td>
-                        <td>브레이즈드 하드딩 스쿠</td>
+                        <td>브레이스드 하드닝 스틸</td>
                     </tr>
                     <tr class="spec-highlight">
                         <td>크기</td>
-                        <td>Φ48.2 × 181.2mm</td>
+                        <td>Ø48.2 × 181.2mm</td>
                     </tr>
                     <tr>
                         <td>중량 (케이블 제외)</td>
                         <td>258g</td>
                     </tr>
                     <tr>
-                        <td>캡슐</td>
+                        <td>캡율</td>
                         <td>00161X001</td>
                     </tr>
                 </table>
@@ -810,7 +976,7 @@
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/></svg>
                     </div>
                     <h3>AHNC Technology</h3>
-                    <p>Active Handling-Noise Cancelling. CAROL 독자 개발·국제 특허 취득 기술. 마이크 본체를 잡거나 움직일 때 발생하는 핸들링 노이즈를 능동형 충격 흡수 유닛이 감지·상쇄합니다. 기존 패시브 방식 대비 핸들링 노이즈를 현저히 낮은 수준으로 억제합니다.</p>
+                    <p>Active Handling-Noise Cancelling. CAROL 독자 개발·국제 특허 취듍 기술. 마이크 본체를 잡거나 움직일 때 발생하는 핸들링 노이즈를 능동형 충격 흡수 유닛이 감지·상쇄합니다. 기존 패시브 방식 대비 핸들링 노이즈를 현저히 낮은 수준으로 억제합니다.</p>
                     <div class="tech-tag">Patent: US 9578422 / TW I548285 / CN 106034275B</div>
                 </div>
                 <div class="feature-card reveal">
@@ -826,7 +992,7 @@
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                     </div>
                     <h3>Integrated Molding Technique</h3>
-                    <p>카트리지의 마그넷, 요크, 펠 피스를 일체 성형 방식으로 결합하여 각 부분의 정밀한 정렬과 장기적인 내구성을 확보합니다. 격렬한 스테이지 사용에도 카트리지 성능이 안정적으로 유지됩니다.</p>
+                    <p>카트리지의 마그넷, 요크, 폴 피스를 일체 성형 방식으로 결합하여 각 부딬의 정밀한 정렬과 장기적인 내구성을 확보합니다. 격렬한 스테이지 사용에도 카트리지 성능이 안정적으로 유지됩니다.</p>
                     <div class="tech-tag">고내구성 카트리지</div>
                 </div>
                 <div class="feature-card reveal">
@@ -860,7 +1026,7 @@
                         독창, 강연, 발표 등 다양한 환경에서 안정적으로 사용할 수 있습니다.
                     </p>
                     <p>
-                        50Hz~15kHz의 자연스러운 주파수 응답은 보컬의 따뜻하고 풍부한 음색을 그대로 전달하며,
+                        50Hz~15kHz의 자연스러운 주파수 응답은 보컬의 따뜻하고 풍부한 음색을 그대로 전달하면서,
                         중·고역대의 부드러운 특성이 장시간 청음에도 피로감을 줄여줍니다.
                     </p>
                     <div class="polar-stats">
@@ -904,7 +1070,7 @@
                     <div class="app-card-body">
                         <div class="app-icon">🎧</div>
                         <h3>스튜디오 레코딩</h3>
-                        <p>험버킹 코일의 EMI 차단 능력이 스튜디오의 다양한 전자기기 노이즈로부터 신호를 보호하며, 평탄한 주파수 응답이 레코딩 품질을 높여줍니다.</p>
+                        <p>험버킹 코일의 EMI 차단 능력이 스튜디오의 다양한 전자기기 노이즈로부터 신호를 보호하면서, 평탁한 주파수 응답이 레코딩 품질을 높여줍니다.</p>
                     </div>
                 </div>
                 <div class="app-card reveal">
@@ -929,12 +1095,12 @@
             <div class="acc-grid reveal">
                 <div class="acc-card">
                     <div class="acc-name">B-6 마이크 홀더 (유선용)</div>
-                    <div class="acc-desc">Newnabie / Φ27mm 규격 / Plastic+Metal 스크류</div>
+                    <div class="acc-desc">Newnabie / Ø27mm 규격 / Plastic+Metal 스크류</div>
                     <div class="acc-price"><span class="acc-price-label">권장가</span>2,500원</div>
                 </div>
                 <div class="acc-card">
                     <div class="acc-name">MC102 마이크 케이블 (CCAM)</div>
-                    <div class="acc-desc">ADAM / XLR M to XLR F / Φ6mm<br>1.5M~10M 선택 가능</div>
+                    <div class="acc-desc">ADAM / XLR M to XLR F / Ø6mm<br>1.5M~10M 선택 가능</div>
                     <div class="acc-price"><span class="acc-price-label">권장가</span>8,800원~</div>
                 </div>
                 <div class="acc-card">
@@ -989,8 +1155,8 @@
         <div class="container">
             <div class="footer-brand">HDAVC Pro Audio</div>
             <p class="footer-text">
-                (주)현대에이브이씨 | 경기도 평택시 도일유통길 39-9 | TEL: 031-8054-0048<br>
-                <a href="index.html">← 제품 카톨로그로 돌아가기</a>
+                (주)현대에이브이스 | 경기도 평태시 도일유통길 39-9 | TEL: 031-8054-0048<br>
+                <a href="index.html">← 제품 카탈로그로 돌아가기</a>
             </p>
         </div>
     </footer>
