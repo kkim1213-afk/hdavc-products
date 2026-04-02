@@ -817,7 +817,7 @@
                         <div class="kpi-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/></svg>
                         </div>
-                        <div class="kpi-value" data-count="-45">-45±3dBV/Pa</div>
+                        <div class="kpi-value">-45±3dBV/Pa</div>
                         <div class="kpi-label">감도</div>
                     </div>
                     <div class="kpi-card">
@@ -901,34 +901,7 @@
 
             <!-- Polar Pattern Sub-Section -->
             <div class="polar-section reveal">
-                <div class="polar-grid">
-                    <div class="polar-chart">
-                        <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Grid circles -->
-                            <circle cx="150" cy="150" r="120" fill="none" stroke="#dde2ea" stroke-width="1"/>
-                            <circle cx="150" cy="150" r="90" fill="none" stroke="#dde2ea" stroke-width="1"/>
-                            <circle cx="150" cy="150" r="60" fill="none" stroke="#dde2ea" stroke-width="1"/>
-                            <circle cx="150" cy="150" r="30" fill="none" stroke="#dde2ea" stroke-width="1"/>
-                            <!-- Grid lines -->
-                            <line x1="150" y1="20" x2="150" y2="280" stroke="#eef1f6" stroke-width="1"/>
-                            <line x1="20" y1="150" x2="280" y2="150" stroke="#eef1f6" stroke-width="1"/>
-                            <line x1="57" y1="57" x2="243" y2="243" stroke="#eef1f6" stroke-width="1"/>
-                            <line x1="243" y1="57" x2="57" y2="243" stroke="#eef1f6" stroke-width="1"/>
-                            <!-- Cardioid pattern -->
-                            <path d="M150,30 C200,30 260,70 270,150 C260,220 210,250 180,260 C160,268 150,270 150,270 C150,270 140,268 120,260 C90,250 40,220 30,150 C40,70 100,30 150,30Z"
-                                  fill="rgba(0,174,239,0.12)" stroke="#00AEEF" stroke-width="2"/>
-                            <!-- Labels -->
-                            <text x="150" y="15" text-anchor="middle" fill="#6b7593" font-size="11" font-family="Noto Sans KR">0°</text>
-                            <text x="285" y="154" text-anchor="start" fill="#6b7593" font-size="11" font-family="Noto Sans KR">90°</text>
-                            <text x="150" y="295" text-anchor="middle" fill="#6b7593" font-size="11" font-family="Noto Sans KR">180°</text>
-                            <text x="10" y="154" text-anchor="start" fill="#6b7593" font-size="11" font-family="Noto Sans KR">270°</text>
-                            <!-- dB labels -->
-                            <text x="155" y="42" fill="#6b7593" font-size="8" font-family="Noto Sans KR">0dB</text>
-                            <text x="155" y="72" fill="#6b7593" font-size="8" font-family="Noto Sans KR">-5dB</text>
-                            <text x="155" y="102" fill="#6b7593" font-size="8" font-family="Noto Sans KR">-10dB</text>
-                            <text x="155" y="132" fill="#6b7593" font-size="8" font-family="Noto Sans KR">-15dB</text>
-                        </svg>
-                    </div>
+                <div class="polar-grid" style="grid-template-columns:1fr;">
                     <div class="polar-info">
                         <h3>카디오이드 지향 패턴</h3>
                         <p>
@@ -983,7 +956,7 @@
                         </tr>
                         <tr class="spec-highlight">
                             <td>주파수 응답</td>
-                            <td>100Hz ~ 10,000Hz</td>
+                            <td>50Hz ~ 15,000Hz</td>
                         </tr>
                         <tr>
                             <td>감도</td>
@@ -1305,4 +1278,3 @@
         kpiValues.forEach(el => kpiObserver.observe(el));
     </script>
 </body>
-</html>
