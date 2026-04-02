@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAROL GODK-7 드럼 마이크 세트 - HDAVC Pro Audio</title>
+    <meta name="description" content="CAROL GODK-7 프로페셔널 드럼 마이크 7본 세트. GO-23 킥드럼, GO-24 스네어/탐, GO-25 콘덴서 오버헤드. 라이브·레코딩 최적화.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* ===== CSS VARIABLES — GO-31 LIGHT THEME ===== */
+        :root {
+            --carol-blue: #00AEEF;
+            --carol-blue2: #0090D0;
+            --carol-navy: #1a2b4a;
+            --carol-navy2: #243559;
+            --bg: #f5f7fa;
+            --bg2: #eef1f6;
+            --white: #ffffff;
+            --border: #dde2ea;
+            --text-dark: #1a1e2e;
+            --text-mid: #3d4660;
+            --text-gray: #6b7593;
+            --radius: 12px;
+            --radius-sm: 8px;
+            --radius-lg: 20px;
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --font-body: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
+            --max-width: 1200px;
+        }
+
+        /* ===== RESET & BASE ===== */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; scroll-padding-top: 120px; }
+        body {
+            font-family: var(--font-body);
+            background: var(--bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+            word-break: keep-all;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+        img { max-width: 100%; height: auto; display: block; }
+        a { color: inherit; text-decoration: none; }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ===== BACK BUTTON ===== */
+        .back-nav {
+            position: fixed;
+            top: 16px;
+            left: 16px;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 18px;
+            background: rgba(26, 43, 74, 0.9);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: rgba(255,255,255,0.85);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .back-nav:hover {
+            color: #fff;
+            background: var(--carol-blue);
+        }
+        .back-nav svg { width: 16px; height: 16px; }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--carol-navy) 0%, var(--carol-navy2) 60%, #1e3a6e 100%);
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -15%;
+            width: 700px;
+            height: 700px;
+            background: radial-gradient(circle, rgba(0, 174, 239, 0.12) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -20%;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(0, 174, 239, 0.06) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .hero-inner {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            width: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 120px 24px 80px;
+        }
+        .hero-content { animation: fadeInUp 0.8s ease-out; }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            background: rgba(0, 174, 239, 0.15);
+            border: 1px solid rgba(0, 174, 239, 0.3);
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--carol-blue);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 20px;
+        }
+        .hero-badge svg { width: 14px; height: 14px; }
+        .hero-brand {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: rgba(255,255,255,0.5);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+        .hero-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 900;
+            line-height: 1.05;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+            color: #fff;
+        }
+        .hero-title span {
+            background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 50%, var(--carol-blue) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-subtitle {
+            font-size: 1.05rem;
+            font-weight: 300;
+            color: rgba(255,255,255,0.7);
+            line-height: 1.7;
+            margin-bottom: 36px;
+            max-width: 480px;
+        }
+        .hero-image-area {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+        .hero-image-wrapper {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hero-image-wrapper::before {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(0, 174, 239, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(40px);
+        }
+        .hero-product-img {
+            position: relative;
+            z-index: 2;
+            max-height: 420px;
+            width: auto;
+            filter: drop-shadow(0 20px 60px rgba(0,0,0,0.4));
+            transition: transform 0.6s ease;
+            border-radius: var(--radius-lg);
+        }
+        .hero-product-img:hover {
+            transform: scale(1.03) translateY(-4px);
+        }
+
+        /* ===== KPI METRICS ===== */
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+        .kpi-card {
+            text-align: center;
+            padding: 18px 10px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: var(--radius);
+            transition: var(--transition);
+        }
+        .kpi-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255,255,255,0.2);
+        }
+        .kpi-icon {
+            width: 36px;
+            height: 36px;
+            margin: 0 auto 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 174, 239, 0.15);
+            border-radius: 10px;
+            color: var(--carol-blue);
+        }
+        .kpi-icon svg { width: 18px; height: 18px; }
+        .kpi-value {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #fff;
+            line-height: 1.1;
+            margin-bottom: 4px;
+        }
+        .kpi-label {
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: rgba(255,255,255,0.5);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        /* ===== STICKY TAB NAVIGATION ===== */
+        .tab-nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: var(--carol-navy);
+            border-bottom: 3px solid var(--carol-blue);
+            transition: box-shadow 0.3s ease;
+        }
+        .tab-nav.scrolled {
+            box-shadow: 0 4px 20px rgba(26, 43, 74, 0.3);
+        }
+        .tab-nav-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            gap: 0;
+            overflow-x: auto;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        .tab-nav-inner::-webkit-scrollbar { display: none; }
+        .tab-btn {
+            position: relative;
+            padding: 16px 24px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: rgba(255,255,255,0.6);
+            background: none;
+            border: none;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: color 0.3s ease;
+            font-family: var(--font-body);
+        }
+        .tab-btn:hover { color: rgba(255,255,255,0.85); }
+        .tab-btn.active {
+            color: #fff;
+            font-weight: 600;
+        }
+        .tab-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 28px;
+            height: 3px;
+            background: var(--carol-blue);
+            border-radius: 2px 2px 0 0;
+        }
+
+        /* ===== SECTION BASE ===== */
+        .section { padding: 80px 0; }
+        .section:nth-child(even) { background: var(--bg2); }
+        .section:nth-child(odd) { background: var(--white); }
+        .section-header { margin-bottom: 48px; }
+        .section-tag {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--carol-blue);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 12px;
+        }
+        .section-title {
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 12px;
+            color: var(--text-dark);
+        }
+        .section-desc {
+            font-size: 1rem;
+            color: var(--text-mid);
+            max-width: 640px;
+            line-height: 1.7;
+        }
+
+        /* ===== OVERVIEW ===== */
+        .overview-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+        .overview-text p {
+            font-size: 1rem;
+            color: var(--text-mid);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        .overview-text strong { color: var(--text-dark); }
+        .feature-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 24px;
+        }
+        .feature-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            background: rgba(0, 174, 239, 0.08);
+            border: 1px solid rgba(0, 174, 239, 0.2);
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--carol-blue2);
+        }
+        .feature-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .feature-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 0.92rem;
+            color: var(--text-mid);
+            line-height: 1.7;
+        }
+        .feature-list li::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            min-width: 8px;
+            background: var(--carol-blue);
+            border-radius: 50%;
+            margin-top: 8px;
+        }
+
+        /* ===== SPEC TABLE ===== */
+        .spec-tabs {
+            display: flex;
+            gap: 4px;
+            margin-bottom: 24px;
+            padding: 4px;
+            background: var(--bg2);
+            border-radius: var(--radius-sm);
+            width: fit-content;
+        }
+        .spec-tab {
+            padding: 10px 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--text-gray);
+            background: none;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: var(--font-body);
+        }
+        .spec-tab.active {
+            background: var(--carol-navy);
+            color: #fff;
+            font-weight: 600;
+        }
+        .spec-tab:hover:not(.active) {
+            color: var(--text-mid);
+            background: rgba(0,0,0,0.04);
+        }
+        .spec-panel { display: none; }
+        .spec-panel.active { display: block; }
+        .spec-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1.5px solid var(--border);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+        }
+        .spec-table thead th {
+            background: var(--carol-navy);
+            color: #fff;
+            padding: 14px 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-align: left;
+        }
+        .spec-table tbody tr:nth-child(odd) { background: var(--white); }
+        .spec-table tbody tr:nth-child(even) { background: #f0f2f5; }
+        .spec-table tbody tr:hover { background: #e8ebf0; }
+        .spec-table td {
+            padding: 14px 20px;
+            font-size: 0.9rem;
+            border-bottom: 1px solid var(--border);
+            vertical-align: middle;
+        }
+        .spec-table tr:last-child td { border-bottom: none; }
+        .spec-table td:first-child {
+            font-weight: 500;
+            color: var(--text-gray);
+            width: 200px;
+            font-size: 0.85rem;
+        }
+        .spec-table td:last-child {
+            font-weight: 600;
+            color: var(--text-dark);
+            font-size: 0.9rem;
+        }
+        .spec-highlight td {
+            background: rgba(0, 174, 239, 0.06) !important;
+            border-left: 3px solid var(--carol-blue);
+        }
+
+        /* ===== MIC LINEUP CARDS ===== */
+        .mic-lineup {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .mic-card {
+            background: var(--white);
+            border: 1.5px solid var(--border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        .mic-card:hover {
+            border-color: var(--carol-blue);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0, 174, 239, 0.1);
+        }
+        .mic-card-img-wrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 32px 24px;
+            background: var(--bg);
+            min-height: 220px;
+        }
+        .mic-card-img-wrap img {
+            max-height: 180px;
+            width: auto;
+            filter: drop-shadow(0 4px 12px rgba(0,0,0,0.15));
+        }
+        .mic-card-body {
+            padding: 24px;
+        }
+        .mic-card-badge {
+            display: inline-block;
+            font-size: 0.65rem;
+            font-weight: 700;
+            color: var(--carol-blue);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 4px 10px;
+            background: rgba(0, 174, 239, 0.08);
+            border: 1px solid rgba(0, 174, 239, 0.2);
+            border-radius: 50px;
+            margin-bottom: 10px;
+        }
+        .mic-card h3 {
+            font-size: 1.15rem;
+            font-weight: 800;
+            margin-bottom: 4px;
+            color: var(--text-dark);
+        }
+        .mic-card-sub {
+            font-size: 0.82rem;
+            color: var(--text-gray);
+            margin-bottom: 14px;
+        }
+        .mic-card-spec {
+            font-size: 0.82rem;
+            color: var(--text-mid);
+            line-height: 1.8;
+        }
+        .mic-card-spec strong {
+            color: var(--text-dark);
+        }
+        .mic-card-qty {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 12px;
+            padding: 6px 14px;
+            background: var(--carol-navy);
+            color: #fff;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        /* ===== FEATURE CARDS ===== */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+        .feature-card {
+            padding: 28px 24px;
+            background: var(--bg);
+            border: 1.5px solid var(--border);
+            border-radius: var(--radius-lg);
+            transition: var(--transition);
+        }
+        .feature-card:hover {
+            border-color: var(--carol-blue);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0, 174, 239, 0.1);
+        }
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 174, 239, 0.1);
+            border: 1px solid rgba(0, 174, 239, 0.2);
+            border-radius: 14px;
+            margin-bottom: 18px;
+            color: var(--carol-blue);
+        }
+        .feature-icon svg { width: 24px; height: 24px; }
+        .feature-card h3 {
+            font-size: 1.02rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.3;
+            color: var(--text-dark);
+        }
+        .feature-card p {
+            font-size: 0.88rem;
+            color: var(--text-mid);
+            line-height: 1.7;
+        }
+
+        /* ===== PACKAGE SECTION ===== */
+        .package-box {
+            display: flex;
+            gap: 32px;
+            padding: 40px;
+            background: var(--white);
+            border: 1.5px solid var(--border);
+            border-radius: var(--radius-lg);
+            align-items: center;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+        }
+        .package-list { flex: 1; }
+        .package-list h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+        .package-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.95rem;
+            color: var(--text-mid);
+        }
+        .package-item:last-child { border-bottom: none; }
+        .package-check {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 174, 239, 0.1);
+            border-radius: 50%;
+            color: var(--carol-blue);
+            flex-shrink: 0;
+        }
+        .package-check svg { width: 14px; height: 14px; }
+
+        /* ===== FOOTER ===== */
+        .page-footer {
+            padding: 40px 0;
+            background: var(--carol-navy);
+            text-align: center;
+        }
+        .footer-brand {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: rgba(255,255,255,0.5);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+        .footer-text {
+            font-size: 0.78rem;
+            color: rgba(255,255,255,0.4);
+        }
+        .footer-text a {
+            color: var(--carol-blue);
+            transition: color 0.2s;
+        }
+        .footer-text a:hover { color: #fff; }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 900px) {
+            .hero-inner { grid-template-columns: 1fr; text-align: center; padding-top: 100px; }
+            .hero-subtitle { margin: 0 auto 36px; }
+            .hero-image-area { order: -1; }
+            .hero-product-img { max-height: 300px; }
+            .kpi-grid { max-width: 500px; margin: 0 auto 24px; }
+            .overview-grid { grid-template-columns: 1fr; }
+            .mic-lineup { grid-template-columns: 1fr; }
+            .features-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 600px) {
+            .section { padding: 60px 0; }
+            .kpi-grid { grid-template-columns: repeat(3, 1fr); }
+            .mic-lineup { grid-template-columns: 1fr; }
+            .features-grid { grid-template-columns: 1fr; }
+            .back-nav { padding: 8px 14px; font-size: 0.78rem; }
+            .tab-btn { padding: 14px 16px; font-size: 0.8rem; }
+            .spec-table td:first-child { width: 140px; }
+            .package-box { flex-direction: column; }
+            .hero-product-img { max-height: 250px; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
+            .reveal { opacity: 1; transform: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- BACK NAVIGATION -->
+    <a href="index.html" class="back-nav">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+        카탈로그
+    </a>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="hero">
+        <div class="hero-inner">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg>
+                    Professional Drum Microphone Kit
+                </div>
+                <p class="hero-brand">CAROL</p>
+                <h1 class="hero-title"><span>GODK-7</span></h1>
+                <p class="hero-subtitle">
+                    드럼 연주의 모든 디테일을 포착하는 프로페셔널 7본 마이크 세트.
+                    킥드럼, 스네어/탐, 오버헤드 콘덴서까지 완벽한 드럼 마이킹 솔루션을 제공합니다.
+                </p>
+                <div class="kpi-grid">
+                    <div class="kpi-card">
+                        <div class="kpi-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/></svg>
+                        </div>
+                        <div class="kpi-value">7</div>
+                        <div class="kpi-label">마이크 구성</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+                        </div>
+                        <div class="kpi-value">3 Type</div>
+                        <div class="kpi-label">마이크 종류</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                        </div>
+                        <div class="kpi-value">Case</div>
+                        <div class="kpi-label">전용 캐리 케이스</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image-area">
+                <div class="hero-image-wrapper">
+                    <img src="GODK-7_01.jpg" alt="CAROL GODK-7 드럼 마이크 세트" class="hero-product-img" loading="eager">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== STICKY TAB NAVIGATION ===== -->
+    <nav class="tab-nav" id="tabNav">
+        <div class="tab-nav-inner">
+            <button class="tab-btn active" data-target="overview">제품 개요</button>
+            <button class="tab-btn" data-target="lineup">마이크 라인업</button>
+            <button class="tab-btn" data-target="specs">제품 사양</button>
+            <button class="tab-btn" data-target="features">핵심 특징</button>
+            <button class="tab-btn" data-target="package">구성품</button>
+        </div>
+    </nav>
+
+    <!-- ===== SECTION: 제품 개요 ===== -->
+    <section class="section" id="overview">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Product Overview</span>
+                <h2 class="section-title">올인원 드럼 마이킹 솔루션</h2>
+                <p class="section-desc">CAROL GODK-7은 드럼 녹음과 라이브 공연에 필요한 모든 마이크를 하나의 세트로 제공합니다.</p>
+            </div>
+            <div class="overview-grid reveal">
+                <div class="overview-text">
+                    <p>
+                        <strong>GODK-7</strong>은 킥드럼 전용 <strong>GO-23</strong>, 스네어/탐 전용 <strong>GO-24</strong>,
+                        오버헤드·하이햇 콘덴서 <strong>GO-25</strong> 총 7본의 마이크로 구성된 프로페셔널 드럼 마이크 세트입니다.
+                    </p>
+                    <p>
+                        각 마이크는 드럼 킷의 특성에 최적화된 주파수 응답과 지향 패턴을 갖추고 있어,
+                        킥의 펀치감, 스네어의 스냅, 탐의 깊이, 심벌의 디테일까지 놓치지 않고 수음합니다.
+                    </p>
+                    <p>
+                        견고한 <strong>전용 캐리 케이스</strong>에 마이크와 홀더가 정리되어 이동이 편리하며,
+                        <strong>Integrated Molding</strong> 기술로 내구성을 극대화한 카트리지가 무대 위 격한 환경에서도 안정적인 성능을 유지합니다.
+                    </p>
+                    <div class="feature-tags">
+                        <span class="feature-tag">킥드럼 마이크</span>
+                        <span class="feature-tag">스네어/탐 마이크</span>
+                        <span class="feature-tag">콘덴서 오버헤드</span>
+                        <span class="feature-tag">전용 케이스</span>
+                        <span class="feature-tag">홀더 포함</span>
+                    </div>
+                </div>
+                <ul class="feature-list">
+                    <li>GO-23 킥드럼 마이크 — 슈퍼 카디오이드, 50Hz~15kHz</li>
+                    <li>GO-24 스네어/탐 마이크 — 양지향성, 50Hz~10kHz, 케이블 포함</li>
+                    <li>GO-25 콘덴서 마이크 — 카디오이드, 100Hz~10kHz, 팬텀 파워</li>
+                    <li>각 마이크별 최적화된 주파수 응답 설계</li>
+                    <li>Integrated Molding 기술 — 카트리지 내구성 강화</li>
+                    <li>전용 하드 캐리 케이스로 안전한 운반</li>
+                    <li>마이크 홀더/클램프 일체 포함</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECTION: 마이크 라인업 ===== -->
+    <section class="section" id="lineup">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Microphone Lineup</span>
+                <h2 class="section-title">3종 마이크 구성</h2>
+                <p class="section-desc">킥드럼, 스네어/탐, 오버헤드 각각에 최적화된 마이크를 조합했습니다.</p>
+            </div>
+            <div class="mic-lineup">
+                <!-- GO-23 -->
+                <div class="mic-card reveal">
+                    <div class="mic-card-img-wrap">
+                        <img src="GO-23_01.jpg" alt="CAROL GO-23 킥드럼 마이크">
+                    </div>
+                    <div class="mic-card-body">
+                        <div class="mic-card-badge">Kick Drum</div>
+                        <h3>GO-23</h3>
+                        <div class="mic-card-sub">킥드럼 전용 다이나믹 마이크</div>
+                        <div class="mic-card-spec">
+                            <strong>타입:</strong> 다이나믹<br>
+                            <strong>지향성:</strong> 슈퍼 카디오이드<br>
+                            <strong>주파수:</strong> 50Hz ~ 15,000Hz<br>
+                            <strong>임피던스:</strong> 600Ω<br>
+                            <strong>감도:</strong> -72 ± 3dBV/μbar<br>
+                            <strong>크기:</strong> ø40 × 75.3 × 93mm<br>
+                            <strong>무게:</strong> 199g
+                        </div>
+                        <div class="mic-card-qty">× 1개 포함</div>
+                    </div>
+                </div>
+                <!-- GO-24 -->
+                <div class="mic-card reveal">
+                    <div class="mic-card-img-wrap">
+                        <img src="GO-24_01.jpg" alt="CAROL GO-24 스네어/탐 마이크">
+                    </div>
+                    <div class="mic-card-body">
+                        <div class="mic-card-badge">Snare / Tom</div>
+                        <h3>GO-24</h3>
+                        <div class="mic-card-sub">스네어·탐 전용 다이나믹 마이크</div>
+                        <div class="mic-card-spec">
+                            <strong>타입:</strong> 다이나믹<br>
+                            <strong>지향성:</strong> 양지향성 (Bi-directional)<br>
+                            <strong>주파수:</strong> 50Hz ~ 10,000Hz<br>
+                            <strong>임피던스:</strong> 300Ω<br>
+                            <strong>감도:</strong> -76 ± 3dBV/μbar<br>
+                            <strong>크기:</strong> ø50.5 × 113 × 80.5mm<br>
+                            <strong>무게:</strong> 279g
+                        </div>
+                        <div class="mic-card-qty">× 3개 포함</div>
+                    </div>
+                </div>
+                <!-- GO-25 -->
+                <div class="mic-card reveal">
+                    <div class="mic-card-img-wrap">
+                        <img src="GO-25_01.jpg" alt="CAROL GO-25 콘덴서 오버헤드 마이크">
+                    </div>
+                    <div class="mic-card-body">
+                        <div class="mic-card-badge">Overhead / Hi-Hat</div>
+                        <h3>GO-25</h3>
+                        <div class="mic-card-sub">콘덴서 인스트루먼트 마이크</div>
+                        <div class="mic-card-spec">
+                            <strong>타입:</strong> 콘덴서<br>
+                            <strong>지향성:</strong> 카디오이드<br>
+                            <strong>주파수:</strong> 100Hz ~ 10,000Hz<br>
+                            <strong>임피던스:</strong> 6.8KΩ ±30%<br>
+                            <strong>감도:</strong> -45 ± 3dBV/Pa<br>
+                            <strong>전원:</strong> 9~48V 팬텀 파워<br>
+                            <strong>크기:</strong> ø21.5 × 90.5mm<br>
+                            <strong>무게:</strong> 81g
+                        </div>
+                        <div class="mic-card-qty">× 3개 포함</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECTION: 제품 사양 ===== -->
+    <section class="section" id="specs">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Specifications</span>
+                <h2 class="section-title">상세 제품 사양</h2>
+                <p class="section-desc">각 마이크별 사양 비교</p>
+            </div>
+            <div class="reveal">
+                <div class="spec-tabs">
+                    <button class="spec-tab active" data-panel="spec-go23">GO-23 (킥드럼)</button>
+                    <button class="spec-tab" data-panel="spec-go24">GO-24 (스네어/탐)</button>
+                    <button class="spec-tab" data-panel="spec-go25">GO-25 (오버헤드)</button>
+                </div>
+                <div id="spec-go23" class="spec-panel active">
+                    <table class="spec-table">
+                        <thead><tr><th>항목</th><th>GO-23 사양</th></tr></thead>
+                        <tbody>
+                            <tr class="spec-highlight"><td>마이크 유형</td><td>다이나믹 (Dynamic)</td></tr>
+                            <tr><td>지향성 패턴</td><td>슈퍼 카디오이드 (Super-cardioid)</td></tr>
+                            <tr><td>주파수 응답</td><td>50Hz ~ 15,000Hz</td></tr>
+                            <tr><td>임피던스</td><td>600Ω</td></tr>
+                            <tr><td>감도</td><td>-72 ± 3dBV/μbar</td></tr>
+                            <tr><td>홀더</td><td>1pc 포함</td></tr>
+                            <tr><td>크기</td><td>ø40 × 75.3 × 93mm</td></tr>
+                            <tr><td>무게 (케이블 제외)</td><td>199g</td></tr>
+                            <tr><td>세트 내 수량</td><td>1개</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="spec-go24" class="spec-panel">
+                    <table class="spec-table">
+                        <thead><tr><th>항목</th><th>GO-24 사양</th></tr></thead>
+                        <tbody>
+                            <tr class="spec-highlight"><td>마이크 유형</td><td>다이나믹 (Dynamic)</td></tr>
+                            <tr><td>지향성 패턴</td><td>양지향성 (Bi-directional)</td></tr>
+                            <tr><td>주파수 응답</td><td>50Hz ~ 10,000Hz</td></tr>
+                            <tr><td>임피던스</td><td>300Ω</td></tr>
+                            <tr><td>감도</td><td>-76 ± 3dBV/μbar</td></tr>
+                            <tr><td>케이블</td><td>ø5mm × 4.5m, XLR to XLR</td></tr>
+                            <tr><td>홀더</td><td>1pc 포함 (각각)</td></tr>
+                            <tr><td>크기</td><td>ø50.5 × 113 × 80.5mm</td></tr>
+                            <tr><td>무게 (케이블 제외)</td><td>279g</td></tr>
+                            <tr><td>세트 내 수량</td><td>3개</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="spec-go25" class="spec-panel">
+                    <table class="spec-table">
+                        <thead><tr><th>항목</th><th>GO-25 사양</th></tr></thead>
+                        <tbody>
+                            <tr class="spec-highlight"><td>마이크 유형</td><td>콘덴서 (Condenser)</td></tr>
+                            <tr><td>지향성 패턴</td><td>카디오이드 (Cardioid)</td></tr>
+                            <tr><td>주파수 응답</td><td>100Hz ~ 10,000Hz</td></tr>
+                            <tr><td>임피던스</td><td>6.8KΩ ±30%</td></tr>
+                            <tr><td>감도</td><td>-45 ± 3dBV/Pa</td></tr>
+                            <tr><td>전원</td><td>9~48V 팬텀 파워</td></tr>
+                            <tr><td>크기</td><td>ø21.5 × 90.5mm</td></tr>
+                            <tr><td>무게</td><td>81g</td></tr>
+                            <tr><td>세트 내 수량</td><td>3개</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECTION: 핵심 특징 ===== -->
+    <section class="section" id="features">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Key Features</span>
+                <h2 class="section-title">드럼 마이킹에 최적화된 설계</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card reveal">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/></svg>
+                    </div>
+                    <h3>3종 전문 마이크 구성</h3>
+                    <p>킥드럼(GO-23), 스네어/탐(GO-24), 오버헤드/하이햇(GO-25) 각각의 용도에 맞게 설계된 전용 마이크로 드럼 킷 전체를 빈틈없이 수음합니다.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h3>Integrated Molding 기술</h3>
+                    <p>카트리지의 마그넷, 요크, 포트 피스를 일체 성형하여 견고하고 안정적인 내구성을 확보합니다. 격한 라이브 스테이지에서도 신뢰할 수 있는 성능을 유지합니다.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    </div>
+                    <h3>최적화된 지향 패턴</h3>
+                    <p>GO-23의 슈퍼 카디오이드는 킥드럼에 집중적 수음, GO-24의 양지향성은 스네어/탐의 어택과 톤을, GO-25의 카디오이드는 오버헤드 심벌을 자연스럽게 포착합니다.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                    </div>
+                    <h3>전용 하드 캐리 케이스</h3>
+                    <p>7본의 마이크와 홀더, 케이블이 각각의 폼 슬롯에 안전하게 수납됩니다. 이동이 잦은 공연 현장에서 편리하고 안전한 운반을 보장합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECTION: 구성품 ===== -->
+    <section class="section" id="package">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">What's in the Box</span>
+                <h2 class="section-title">구성품</h2>
+            </div>
+            <div class="package-box reveal">
+                <div class="package-list">
+                    <h3>GODK-7 패키지 구성</h3>
+                    <div class="package-item">
+                        <div class="package-check">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <span>GO-23 킥드럼 마이크 × 1</span>
+                    </div>
+                    <div class="package-item">
+                        <div class="package-check">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <span>GO-24 스네어/탐 마이크 × 3</span>
+                    </div>
+                    <div class="package-item">
+                        <div class="package-check">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <span>GO-25 콘덴서 오버헤드 마이크 × 3</span>
+                    </div>
+                    <div class="package-item">
+                        <div class="package-check">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <span>마이크 홀더 / 클램프 × 7</span>
+                    </div>
+                    <div class="package-item">
+                        <div class="package-check">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <span>전용 하드 캐리 케이스 × 1</span>
+                    </div>
+                </div>
+                <div style="flex: 1; display: flex; justify-content: center; align-items: center; padding: 20px;">
+                    <div style="padding: 40px; background: var(--bg); border: 1.5px solid var(--border); border-radius: 16px; text-align: center;">
+                        <div style="font-size: 0.7rem; color: var(--text-gray); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px;">Manufacturer</div>
+                        <img src="logo_carol.png" alt="CAROL" style="max-width: 160px; height: auto; margin: 0 auto 8px;">
+                        <div style="font-size: 0.75rem; color: var(--text-gray);">Sound of Excellence</div>
+                        <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border);">
+                            <div style="font-size: 0.7rem; color: var(--text-gray); margin-bottom: 4px;">Taiwan Carol Electronics Co., Ltd.</div>
+                            <div style="font-size: 0.7rem; color: var(--text-gray);">Since 1975 · Taichung, Taiwan</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="page-footer">
+        <div class="container">
+            <div class="footer-brand">HDAVC Pro Audio</div>
+            <p class="footer-text">
+                (주)현대에이브이씨 | 경기도 포천시 도이유통단지 39-9 | TEL: 031-8054-0048<br>
+                <a href="index.html">← 제품 카탈로그로 돌아가기</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        // === Scrollspy & Tab Navigation ===
+        const tabNav = document.getElementById('tabNav');
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const sections = document.querySelectorAll('.section[id]');
+
+        window.addEventListener('scroll', () => {
+            tabNav.classList.toggle('scrolled', window.scrollY > 100);
+        }, { passive: true });
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const target = document.getElementById(btn.dataset.target);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        const observerOptions = { rootMargin: '-80px 0px -60% 0px', threshold: 0 };
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    tabBtns.forEach(btn => {
+                        btn.classList.toggle('active', btn.dataset.target === entry.target.id);
+                    });
+                }
+            });
+        }, observerOptions);
+        sections.forEach(sec => sectionObserver.observe(sec));
+
+        // === Spec Tabs ===
+        const specTabs = document.querySelectorAll('.spec-tab');
+        const specPanels = document.querySelectorAll('.spec-panel');
+        specTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                specTabs.forEach(t => t.classList.remove('active'));
+                specPanels.forEach(p => p.classList.remove('active'));
+                tab.classList.add('active');
+                document.getElementById(tab.dataset.panel).classList.add('active');
+            });
+        });
+
+        // === Scroll Reveal Animation ===
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    </script>
+</body>
+</html>
