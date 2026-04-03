@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KT12M 12인치 패시브 동축 스테이지 모니터 | 현대에이브이씨</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--red:#e94560;--dark:#111;--mid:#444;--light:#888;--bg:#f5f5f7;--white:#fff;--border:#eee;--navy:#0d1117}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Sans KR',sans-serif;background:var(--white);color:var(--dark);line-height:1.6}
+img{max-width:100%}
+
+header{background:#fff;border-bottom:1px solid var(--border);padding:0 24px;height:60px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.logo a{display:flex;align-items:center;text-decoration:none}
+.logo img{height:36px;object-fit:contain}
+.back-btn{color:var(--light);text-decoration:none;font-size:13px;font-weight:500;transition:color .2s}
+.back-btn:hover{color:var(--red)}
+
+.bc{background:var(--bg);padding:10px 24px;border-bottom:1px solid var(--border);font-size:12px;color:var(--light)}
+.bc a{color:var(--light);text-decoration:none}.bc a:hover{color:var(--red)}
+.bc strong{color:var(--dark)}
+
+/* HERO */
+.hero{background:linear-gradient(160deg,#000 0%,#111 50%,#000 100%);color:#fff;overflow:hidden;position:relative}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 65% 40%,rgba(233,69,96,.08),transparent 60%)}
+.hero-inner{max-width:1200px;margin:0 auto;padding:64px 24px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;position:relative;z-index:1}
+.h-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(233,69,96,.12);border:1px solid rgba(233,69,96,.4);color:#fca5a5;font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:5px 14px;border-radius:2px;margin-bottom:16px}
+.h-dot{width:5px;height:5px;background:var(--red);border-radius:50%;animation:blink 1.8s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.h-brand{font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.35);text-transform:uppercase;margin-bottom:6px}
+.hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,6.5vw,5.5rem);line-height:.9;letter-spacing:.05em;color:#fff;margin-bottom:8px}
+.hero h1 .r{color:var(--red)}
+.h-sub{font-size:12px;color:rgba(255,255,255,.4);letter-spacing:.08em;text-transform:uppercase;margin-bottom:18px}
+.h-desc{font-size:14px;color:rgba(255,255,255,.65);line-height:1.85;margin-bottom:28px}
+.kpi-row{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:28px}
+.kpi{display:flex;flex-direction:column;gap:2px}
+.kv{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:#fff;line-height:1}
+.kv s{font-size:.9rem;color:rgba(255,255,255,.4);font-family:'Noto Sans KR',sans-serif;font-weight:300;text-decoration:none}
+.kl{font-size:10px;color:rgba(255,255,255,.35);letter-spacing:.1em;text-transform:uppercase}
+.h-tags{display:flex;flex-wrap:wrap;gap:7px}
+.tag{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.65);font-size:11px;padding:4px 11px;border-radius:20px}
+.tag.hot{background:rgba(233,69,96,.2);border-color:rgba(233,69,96,.5);color:#fca5a5}
+
+.hero-img{text-align:center}
+.hero-img img{width:100%;max-width:360px;filter:drop-shadow(0 16px 48px rgba(255,255,255,.08));border-radius:4px}
+.thumb-row{display:flex;gap:8px;justify-content:center;margin-top:12px}
+.thumb-btn{width:50px;height:50px;border-radius:8px;overflow:hidden;border:2px solid rgba(255,255,255,.15);cursor:pointer;background:rgba(255,255,255,.05);padding:4px;transition:border-color .2s}
+.thumb-btn.on{border-color:var(--red)}
+.thumb-btn img{width:100%;height:100%;object-fit:contain}
+.hero-img-cap{margin-top:8px;font-size:11px;color:rgba(255,255,255,.35);letter-spacing:.1em;text-transform:uppercase}
+
+/* TABS */
+.tab-wrap{background:#fff;border-bottom:2px solid var(--border);position:sticky;top:60px;z-index:100}
+.tabs{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tb{padding:15px 18px;border:none;background:none;font-size:13px;font-weight:500;color:var(--light);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-2px;white-space:nowrap;transition:all .2s;font-family:'Noto Sans KR',sans-serif}
+.tb.on,.tb:hover{color:var(--red);border-bottom-color:var(--red)}
+
+/* SECTIONS */
+.sec{padding:64px 24px}
+.si{max-width:1200px;margin:0 auto}
+.sl{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:8px}
+.sl.w{color:#fca5a5}
+.st{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.8rem,4vw,2.6rem);letter-spacing:.04em;color:var(--dark);margin-bottom:6px}
+.st.w{color:#fff}
+.sd{font-size:14px;color:var(--light);margin-bottom:36px;max-width:700px;line-height:1.8}
+.sec-bg{background:var(--bg)}
+.sec-dark{background:var(--navy)}
+
+/* OVERVIEW */
+.ov-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.ov-img{background:linear-gradient(135deg,#1a1a1a,#0a0a0a);border-radius:16px;padding:40px;text-align:center;border:1px solid rgba(255,255,255,.06)}
+.ov-img img{width:100%;max-width:320px;height:auto;object-fit:contain;filter:drop-shadow(0 8px 28px rgba(0,0,0,.6))}
+.ov-desc{font-size:14px;color:var(--mid);line-height:1.9;margin-bottom:24px}
+.ov-highlights{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ov-hl{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:14px 16px;display:flex;align-items:flex-start;gap:10px}
+.ov-hl-icon{font-size:18px;flex-shrink:0}
+.ov-hl-ttl{font-size:12px;font-weight:700;margin-bottom:2px}
+.ov-hl-txt{font-size:11px;color:var(--light);line-height:1.6}
+
+/* SPEC TABLE */
+.spec-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.spec-img-wrap{background:linear-gradient(135deg,#1a1a1a,#0a0a0a);border-radius:16px;padding:40px;text-align:center;position:sticky;top:130px;border:1px solid rgba(255,255,255,.06)}
+.spec-img-wrap img{width:100%;max-width:280px;height:280px;object-fit:contain;filter:drop-shadow(0 8px 28px rgba(0,0,0,.6))}
+.prod-badge{display:inline-block;background:#fff3f5;border:1px solid #ffd0d8;color:var(--red);font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+.prod-h2{font-family:'Bebas Neue',sans-serif;font-size:3rem;letter-spacing:.06em;line-height:.9;margin-bottom:6px}
+.prod-type{font-size:12px;color:var(--light);text-transform:uppercase;letter-spacing:.06em;margin-bottom:16px}
+.prod-desc{font-size:14px;color:var(--mid);line-height:1.9;margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid var(--border)}
+.slbl{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--light);margin-bottom:10px}
+table.sp{width:100%;border-collapse:collapse}
+table.sp tr{border-bottom:1px solid var(--border)}
+table.sp tr:last-child{border-bottom:none}
+table.sp td{padding:9px 0;font-size:13px;vertical-align:top;line-height:1.5}
+table.sp td:first-child{color:var(--light);font-weight:500;width:44%;padding-right:12px}
+table.sp td:last-child{color:var(--dark);font-weight:600}
+.sp-hl td:last-child{color:var(--red)!important;font-weight:800!important}
+.price-box{background:#fff;border:2px solid var(--red);border-radius:10px;padding:18px 22px;margin-top:24px}
+.price-val{font-size:26px;font-weight:900;color:var(--red)}
+.price-note{font-size:11px;color:var(--light);margin-top:8px;padding-top:8px;border-top:1px solid var(--border)}
+
+/* FEATURES */
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.feat{background:#fff;border:1px solid var(--border);border-radius:12px;padding:22px 18px;transition:all .25s;position:relative;overflow:hidden}
+.feat::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.feat:hover{border-color:rgba(233,69,96,.3);transform:translateY(-3px);box-shadow:0 8px 28px rgba(233,69,96,.08)}
+.feat:hover::before{transform:scaleX(1)}
+.feat-icon{font-size:24px;margin-bottom:10px}
+.feat-ttl{font-size:13px;font-weight:700;margin-bottom:7px}
+.feat-txt{font-size:12px;color:var(--light);line-height:1.75}
+
+/* MONITORING ANGLES */
+.angle-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+.angle-card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:24px;text-align:center;transition:all .25s}
+.angle-card:hover{border-color:rgba(233,69,96,.3);transform:translateY(-3px);box-shadow:0 8px 28px rgba(233,69,96,.08)}
+.angle-val{font-family:'Bebas Neue',sans-serif;font-size:3rem;color:var(--red);line-height:1}
+.angle-ttl{font-size:13px;font-weight:700;margin-top:8px;margin-bottom:4px}
+.angle-txt{font-size:12px;color:var(--light);line-height:1.7}
+
+/* APP */
+.app-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.app{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:18px;text-align:center;transition:all .2s}
+.app:hover{border-color:rgba(233,69,96,.5);background:rgba(233,69,96,.06)}
+.app-icon{font-size:26px;margin-bottom:8px}
+.app-name{font-size:13px;font-weight:700;color:#fff;margin-bottom:3px}
+.app-desc{font-size:11px;color:rgba(255,255,255,.4);line-height:1.6}
+
+footer{background:#111;color:#fff;padding:24px;font-size:11px;opacity:.5;text-align:center;line-height:1.8}
+
+@media(max-width:1024px){.hero-inner,.spec-grid,.ov-grid{grid-template-columns:1fr}.hero-img{display:none}.spec-img-wrap{position:static}}
+@media(max-width:768px){.feat-grid{grid-template-columns:1fr 1fr}.angle-grid{grid-template-columns:1fr}.app-grid{grid-template-columns:1fr 1fr}.ov-highlights{grid-template-columns:1fr}}
+@media(max-width:540px){.feat-grid,.app-grid{grid-template-columns:1fr}.hero-inner,.sec{padding-left:16px;padding-right:16px}.hero-inner{padding-top:40px;padding-bottom:40px}.sec{padding-top:44px;padding-bottom:44px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo"><a href="index.html"><img src="logo.png" alt="(주)현대에이브이씨"></a></div>
+  <a href="index.html" class="back-btn">← 제품 목록</a>
+</header>
+
+<div class="bc">
+  <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+    <a href="index.html">홈</a> › <a href="index.html">스피커</a> › <a href="index.html">모니터</a> › <strong>KT12M 12인치 패시브 동축 스테이지 모니터</strong>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="h-badge"><span class="h-dot"></span>Passive Coaxial Stage Monitor</div>
+      <div class="h-brand">Soundking · KT Series</div>
+      <h1>KT<span class="r">12M</span></h1>
+      <div class="h-sub">12" Coaxial 2-Way Stage Monitoring Loudspeaker</div>
+      <p class="h-desc">12인치 네오디뮴 동축 드라이버와 독창적인 웨지 형상으로 45°/20° 듀얼 모니터링 앵글을 제공하는 프로페셔널 스테이지 모니터. 1,200W 피크 파워와 127dB 최대 음압으로 대형 무대에서도 파워풀한 모니터링을 실현합니다.</p>
+      <div class="kpi-row">
+        <div class="kpi"><div class="kv">1200<s>W</s></div><div class="kl">Peak Power</div></div>
+        <div class="kpi"><div class="kv">127<s>dB</s></div><div class="kl">Max SPL</div></div>
+        <div class="kpi"><div class="kv">80°<s>×</s>80°</div><div class="kl">Coverage</div></div>
+        <div class="kpi"><div class="kv">17.5<s>kg</s></div><div class="kl">Weight</div></div>
+      </div>
+      <div class="h-tags">
+        <span class="tag hot">🔊 동축 드라이버</span>
+        <span class="tag">12" LF + 75mm HF</span>
+        <span class="tag">네오디뮴 마그넷</span>
+        <span class="tag">8Ω</span>
+        <span class="tag hot">📐 45°/20° 듀얼 앵글</span>
+        <span class="tag">4× Speakon</span>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img id="heroImg" src="KT12M_01.jpg" alt="Soundking KT12M"
+           onerror="this.style.display='none'">
+      <div class="thumb-row">
+        <div class="thumb-btn on" onclick="setHeroImg('KT12M_01.jpg',this)">
+          <img src="KT12M_01.jpg" onerror="this.parentElement.style.display='none'">
+        </div>
+        <div class="thumb-btn" onclick="setHeroImg('KT12M_02.jpg',this)">
+          <img src="KT12M_02.jpg" onerror="this.parentElement.style.display='none'">
+        </div>
+      </div>
+      <div class="hero-img-cap">KT12M Stage Monitor</div>
+    </div>
+  </div>
+</section>
+
+<!-- TABS -->
+<div class="tab-wrap">
+  <div class="tabs">
+    <button class="tb on" onclick="goTab('sec-overview')">제품 소개</button>
+    <button class="tb" onclick="goTab('sec-spec')">제품 사양</button>
+    <button class="tb" onclick="goTab('sec-features')">주요 특징</button>
+    <button class="tb" onclick="goTab('sec-angle')">모니터링 앵글</button>
+    <button class="tb" onclick="goTab('sec-app')">적용 분야</button>
+  </div>
+</div>
+
+
+<!-- ══ OVERVIEW ══ -->
+<section class="sec" id="sec-overview">
+  <div class="si">
+    <div class="sl">제품 소개</div>
+    <div class="st">KT12M COAXIAL STAGE MONITOR</div>
+    <p class="sd">네오디뮴 동축 드라이버 기술과 독창적인 웨지 디자인을 결합한 프로페셔널 스테이지 모니터. 45°와 20° 듀얼 모니터링 앵글로 다양한 무대 환경에 유연하게 대응합니다.</p>
+
+    <div class="ov-grid">
+      <div class="ov-img">
+        <img src="KT12M_02.jpg" alt="Soundking KT12M 측면"
+             onerror="this.style.opacity='.3'">
+      </div>
+      <div>
+        <p class="ov-desc">
+          KT12M은 12인치 LF 유닛(75mm 보이스 코일)과 75mm 컴프레션 드라이버(1.5" 출구)를 동축으로 배치한 2웨이 패시브 스테이지 모니터입니다. 네오디뮴 마그넷 동축 구조로 포인트 소스 방사를 구현하며, 80°×80° 균일한 커버리지를 제공합니다.
+        </p>
+        <p class="ov-desc">
+          독창적인 웨지 형상 캐비닛은 45°와 20° 두 가지 모니터링 앵글을 지원하여 연주자의 위치와 선호에 따라 유연하게 배치할 수 있습니다. 방수 도장 마감과 스틸 그릴로 투어링 환경에서의 내구성을 확보했습니다.
+        </p>
+
+        <div class="ov-highlights">
+          <div class="ov-hl">
+            <div class="ov-hl-icon">🎯</div>
+            <div>
+              <div class="ov-hl-ttl">동축 드라이버 구조</div>
+              <div class="ov-hl-txt">Nd 마그넷 LF/HF 동축 배치로 정확한 사운드 이미지</div>
+            </div>
+          </div>
+          <div class="ov-hl">
+            <div class="ov-hl-icon">📐</div>
+            <div>
+              <div class="ov-hl-ttl">45°/20° 듀얼 앵글</div>
+              <div class="ov-hl-txt">웨지 형상으로 두 가지 모니터링 각도 지원</div>
+            </div>
+          </div>
+          <div class="ov-hl">
+            <div class="ov-hl-icon">⚡</div>
+            <div>
+              <div class="ov-hl-ttl">1,200W 피크 파워</div>
+              <div class="ov-hl-txt">300W RMS · 127dB 최대 음압</div>
+            </div>
+          </div>
+          <div class="ov-hl">
+            <div class="ov-hl-icon">🛡</div>
+            <div>
+              <div class="ov-hl-ttl">방수 도장 · 스틸 그릴</div>
+              <div class="ov-hl-txt">투어링 환경 내구성 · PTC 보호 회로</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- KPI bar -->
+    <div style="background:linear-gradient(135deg,#1a1a1a,#0a0a0a);border-radius:16px;padding:28px;display:grid;grid-template-columns:repeat(5,1fr);gap:20px;border:1px solid rgba(255,255,255,.06);margin-top:40px">
+      <div style="text-align:center">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:2.3rem;color:#fff;line-height:1">127<span style="font-size:.9rem;font-family:'Noto Sans KR',sans-serif;font-weight:300;color:rgba(255,255,255,.4)">dB</span></div>
+        <div style="font-size:10px;color:rgba(255,255,255,.4);letter-spacing:.1em;text-transform:uppercase;margin-top:4px">Max SPL</div>
+      </div>
+      <div style="text-align:center;border-left:1px solid rgba(255,255,255,.08)">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:2.3rem;color:#fff;line-height:1">1200<span style="font-size:.9rem;font-family:'Noto Sans KR',sans-serif;font-weight:300;color:rgba(255,255,255,.4)">W</span></div>
+        <div style="font-size:10px;color:rgba(255,255,255,.4);letter-spacing:.1em;text-transform:uppercase;margin-top:4px">Peak Power</div>
+      </div>
+      <div style="text-align:center;border-left:1px solid rgba(255,255,255,.08)">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:#fff;line-height:1">55Hz~<br>20kHz</div>
+        <div style="font-size:10px;color:rgba(255,255,255,.4);letter-spacing:.1em;text-transform:uppercase;margin-top:4px">주파수 응답</div>
+      </div>
+      <div style="text-align:center;border-left:1px solid rgba(255,255,255,.08)">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:2.3rem;color:#fff;line-height:1">96<span style="font-size:.9rem;font-family:'Noto Sans KR',sans-serif;font-weight:300;color:rgba(255,255,255,.4)">dB</span></div>
+        <div style="font-size:10px;color:rgba(255,255,255,.4);letter-spacing:.1em;text-transform:uppercase;margin-top:4px">Sensitivity</div>
+      </div>
+      <div style="text-align:center;border-left:1px solid rgba(255,255,255,.08)">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:2.3rem;color:#fff;line-height:1">80°<span style="font-size:.9rem;font-family:'Noto Sans KR',sans-serif;font-weight:300;color:rgba(255,255,255,.4)">×80°</span></div>
+        <div style="font-size:10px;color:rgba(255,255,255,.4);letter-spacing:.1em;text-transform:uppercase;margin-top:4px">Coverage</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ SPEC ══ -->
+<section class="sec sec-bg" id="sec-spec">
+  <div class="si">
+    <div class="sl">제품 사양</div>
+    <div class="st">SPECIFICATIONS</div>
+
+    <div class="spec-grid">
+      <div class="spec-img-wrap">
+        <img src="KT12M_01.jpg" alt="Soundking KT12M"
+             onerror="this.style.opacity='.3'">
+      </div>
+      <div>
+        <div class="prod-badge">Passive Coaxial 2-Way Stage Monitor</div>
+        <div class="prod-h2">KT12M</div>
+        <div class="prod-type">12" Coaxial Monitoring Loudspeaker</div>
+        <p class="prod-desc">12인치 네오디뮴 LF 드라이버(75mm 보이스 코일)와 75mm 컴프레션 드라이버(1.5" 출구)를 동축으로 배치한 패시브 2웨이 스테이지 모니터. Ti/PK 컴파운드 다이어프램과 패시브 LC 크로스오버에 PTC 보호 회로를 탑재하여 안정적이고 파워풀한 모니터링 사운드를 전달합니다.</p>
+        <div class="slbl">제품 사양</div>
+        <table class="sp">
+          <tr><td>모델명</td><td>KT12M</td></tr>
+          <tr><td>타입</td><td>패시브 동축 2웨이 스테이지 모니터</td></tr>
+          <tr><td>주파수 응답</td><td>55Hz – 20kHz (±3dB)</td></tr>
+          <tr class="sp-hl"><td>감도 (1m/1W)</td><td>96dB</td></tr>
+          <tr><td>정격 임피던스</td><td>8Ω</td></tr>
+          <tr><td>출력 (RMS / Peak)</td><td>300W / 1,200W</td></tr>
+          <tr class="sp-hl"><td>최대 음압 (Max SPL)</td><td>127dB</td></tr>
+          <tr><td>크로스오버 주파수</td><td>1.2kHz</td></tr>
+          <tr><td>커버리지 (H × V)</td><td>80° × 80°</td></tr>
+          <tr><td>LF 드라이버</td><td>12" / 75mm 보이스 코일 / Nd 마그넷</td></tr>
+          <tr><td>HF 드라이버</td><td>75mm 컴프레션 / 1.5" 출구 / Nd 마그넷</td></tr>
+          <tr><td>다이어프램</td><td>Ti/PK 컴파운드</td></tr>
+          <tr><td>크로스오버 네트워크</td><td>패시브 LC / PTC 보호 회로</td></tr>
+          <tr><td>모니터링 앵글</td><td>45° / 20°</td></tr>
+          <tr><td>연결 단자</td><td>4× Speakon</td></tr>
+          <tr><td>캐비닛 크기 (W×H×D)</td><td>468 × 430 × 442 mm</td></tr>
+          <tr><td>무게</td><td>17.5 kg</td></tr>
+        </table>
+        <div class="price-box">
+          <div class="slbl">가격</div>
+          <div class="price-val">2,200,000원</div>
+          <div class="price-note">※ 참고 소비자가 기준 / 조 · VAT 포함</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ FEATURES ══ -->
+<section class="sec" id="sec-features">
+  <div class="si">
+    <div class="sl">주요 특징</div>
+    <div class="st">KEY FEATURES</div>
+    <div class="feat-grid">
+      <div class="feat"><div class="feat-icon">🧲</div><div class="feat-ttl">Nd 마그넷 동축 드라이버</div><div class="feat-txt">12인치 LF와 75mm HF 드라이버 모두 네오디뮴 마그넷을 적용하여 경량화와 고효율을 동시에 실현합니다. 동축 구조로 포인트 소스 방사를 구현하여 정확한 사운드 이미지를 전달합니다.</div></div>
+      <div class="feat"><div class="feat-icon">💎</div><div class="feat-ttl">Ti/PK 컴파운드 다이어프램</div><div class="feat-txt">티타늄/PK 컴파운드 소재 다이어프램은 높은 강성과 가벼운 무게를 결합하여 고역대의 해상도와 트랜지언트 응답을 극대화합니다. 선명하고 디테일한 모니터링이 가능합니다.</div></div>
+      <div class="feat"><div class="feat-icon">🔒</div><div class="feat-ttl">패시브 LC + PTC 보호</div><div class="feat-txt">패시브 LC 크로스오버 네트워크에 PTC 서미스터 보호 회로를 탑재하여 과부하 시 드라이버를 자동으로 보호합니다. 안정적인 장시간 운용이 가능합니다.</div></div>
+      <div class="feat"><div class="feat-icon">📐</div><div class="feat-ttl">45°/20° 듀얼 모니터링</div><div class="feat-txt">독창적인 웨지 형상 캐비닛으로 45°와 20° 두 가지 모니터링 앵글을 제공합니다. 연주자의 위치와 선호에 따라 유연하게 배치하여 최적의 모니터링 환경을 구축합니다.</div></div>
+      <div class="feat"><div class="feat-icon">🛡</div><div class="feat-ttl">방수 도장 · 스틸 그릴</div><div class="feat-txt">방수 도장(water-proof painting) 마감과 견고한 스틸 그릴을 적용하여 야외 공연이나 투어링 환경에서도 높은 내구성을 유지합니다. 혹독한 환경에서도 안정적으로 운용됩니다.</div></div>
+      <div class="feat"><div class="feat-icon">🔌</div><div class="feat-ttl">4× Speakon 커넥터</div><div class="feat-txt">4개의 Speakon 커넥터를 탑재하여 인/아웃 데이지 체인 연결이 가능합니다. 무대 위 복수 모니터 시스템 구성 시 깔끔하고 안정적인 배선을 지원합니다.</div></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ MONITORING ANGLES ══ -->
+<section class="sec sec-bg" id="sec-angle">
+  <div class="si">
+    <div class="sl">모니터링 앵글</div>
+    <div class="st">DUAL MONITORING ANGLES</div>
+    <p class="sd">독창적인 웨지 형상 디자인으로 45°와 20° 두 가지 모니터링 앵글을 제공합니다. 무대 위 연주자의 위치와 환경에 따라 최적의 각도를 선택할 수 있습니다.</p>
+    <div class="angle-grid">
+      <div class="angle-card">
+        <div class="angle-val">45°</div>
+        <div class="angle-ttl">스탠다드 모니터링</div>
+        <div class="angle-txt">일반적인 스테이지 모니터링 배치에 적합합니다. 연주자의 발 앞에 배치하여 자연스러운 모니터링 사운드를 전달합니다. 보컬, 기타, 키보드 등 대부분의 연주 환경에서 활용됩니다.</div>
+      </div>
+      <div class="angle-card">
+        <div class="angle-val">20°</div>
+        <div class="angle-ttl">로우 앵글 모니터링</div>
+        <div class="angle-txt">낮은 각도로 더 넓은 거리에서 모니터링이 필요한 환경에 적합합니다. 드러머나 무대 후방 연주자를 위한 원거리 모니터링, 또는 음향 반사를 최소화해야 하는 환경에서 활용됩니다.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ APPLICATIONS ══ -->
+<section class="sec sec-dark" id="sec-app">
+  <div class="si">
+    <div class="sl w">적용 분야</div>
+    <div class="st w">APPLICATIONS</div>
+    <p class="sd" style="color:rgba(255,255,255,.5)">프로페셔널 스테이지 모니터링에 최적화된 동축 웨지 모니터입니다.</p>
+    <div class="app-grid">
+      <div class="app"><div class="app-icon">🎤</div><div class="app-name">라이브 공연</div><div class="app-desc">보컬·악기 연주자를 위한 무대 모니터링</div></div>
+      <div class="app"><div class="app-icon">🥁</div><div class="app-name">드럼 모니터</div><div class="app-desc">20° 로우 앵글로 드러머 전용 모니터</div></div>
+      <div class="app"><div class="app-icon">🎸</div><div class="app-name">밴드 리허설</div><div class="app-desc">개인 모니터링으로 정확한 음향 확인</div></div>
+      <div class="app"><div class="app-icon">🏟</div><div class="app-name">페스티벌 · 투어</div><div class="app-desc">방수 마감으로 야외 투어링에 최적</div></div>
+    </div>
+  </div>
+</section>
+
+
+<footer>경기도 평택시 도일유통길 39-9 (도일동) · ☎ 031-8054-0048<br>COPYRIGHT ⓒ HYUNDAI AUDIO VISUAL COMMUNICATIONS CO., LTD. ALL RIGHTS RESERVED.</footer>
+
+<script>
+const sections = ['sec-overview','sec-spec','sec-features','sec-angle','sec-app'];
+function goTab(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  window.scrollTo({ top: el.getBoundingClientRect().top + window.pageYOffset - 120, behavior:'smooth' });
+}
+window.addEventListener('scroll', () => {
+  let cur = 0;
+  sections.forEach((id, i) => {
+    const el = document.getElementById(id);
+    if (el && el.getBoundingClientRect().top <= 130) cur = i;
+  });
+  document.querySelectorAll('.tb').forEach((b, i) => b.classList.toggle('on', i === cur));
+});
+function setHeroImg(src, el) {
+  document.getElementById('heroImg').src = src;
+  document.querySelectorAll('.thumb-btn').forEach(b => b.classList.remove('on'));
+  el.classList.add('on');
+}
+</script>
+</body>
+</html>
