@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KC12D 12인치 액티브 동축 모니터 | 현대에이브이씨</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--red:#e94560;--dark:#111;--mid:#444;--light:#888;--bg:#f5f5f7;--white:#fff;--border:#eee;--navy:#0d1117}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Sans KR',sans-serif;background:var(--white);color:var(--dark);line-height:1.6}
+img{max-width:100%}
+header{background:#fff;border-bottom:1px solid var(--border);padding:0 24px;height:60px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.logo a{display:flex;align-items:center;text-decoration:none}
+.logo img{height:36px;object-fit:contain}
+.back-btn{color:var(--light);text-decoration:none;font-size:13px;font-weight:500;transition:color .2s}
+.back-btn:hover{color:var(--red)}
+.bc{background:var(--bg);padding:10px 24px;border-bottom:1px solid var(--border);font-size:12px;color:var(--light)}
+.bc a{color:var(--light);text-decoration:none}.bc a:hover{color:var(--red)}
+.bc strong{color:var(--dark)}
+.hero{background:linear-gradient(160deg,#000 0%,#111 50%,#000 100%);color:#fff;overflow:hidden;position:relative}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 65% 40%,rgba(233,69,96,.08),transparent 60%)}
+.hero-inner{max-width:1200px;margin:0 auto;padding:64px 24px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;position:relative;z-index:1}
+.h-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(233,69,96,.12);border:1px solid rgba(233,69,96,.4);color:#fca5a5;font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:5px 14px;border-radius:2px;margin-bottom:16px}
+.h-dot{width:5px;height:5px;background:var(--red);border-radius:50%;animation:blink 1.8s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.h-brand{font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.35);text-transform:uppercase;margin-bottom:6px}
+.hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,6.5vw,5.5rem);line-height:.9;letter-spacing:.05em;color:#fff;margin-bottom:8px}
+.hero h1 .r{color:var(--red)}
+.h-sub{font-size:12px;color:rgba(255,255,255,.4);letter-spacing:.08em;text-transform:uppercase;margin-bottom:18px}
+.h-desc{font-size:14px;color:rgba(255,255,255,.65);line-height:1.85;margin-bottom:28px}
+.kpi-row{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:28px}
+.kpi{display:flex;flex-direction:column;gap:2px}
+.kv{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:#fff;line-height:1}
+.kv s{font-size:.9rem;color:rgba(255,255,255,.4);font-family:'Noto Sans KR',sans-serif;font-weight:300;text-decoration:none}
+.kl{font-size:10px;color:rgba(255,255,255,.35);letter-spacing:.1em;text-transform:uppercase}
+.h-tags{display:flex;flex-wrap:wrap;gap:7px}
+.tag{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.65);font-size:11px;padding:4px 11px;border-radius:20px}
+.tag.hot{background:rgba(233,69,96,.2);border-color:rgba(233,69,96,.5);color:#fca5a5}
+.hero-img{text-align:center}
+.hero-img img{width:100%;max-width:360px;filter:drop-shadow(0 16px 48px rgba(255,255,255,.08));border-radius:4px}
+.thumb-row{display:flex;gap:8px;justify-content:center;margin-top:12px}
+.thumb-btn{width:50px;height:50px;border-radius:8px;overflow:hidden;border:2px solid rgba(255,255,255,.15);cursor:pointer;background:rgba(255,255,255,.05);padding:4px;transition:border-color .2s}
+.thumb-btn.on{border-color:var(--red)}
+.thumb-btn img{width:100%;height:100%;object-fit:contain}
+.hero-img-cap{margin-top:8px;font-size:11px;color:rgba(255,255,255,.35);letter-spacing:.1em;text-transform:uppercase}
+.tab-wrap{background:#fff;border-bottom:2px solid var(--border);position:sticky;top:60px;z-index:100}
+.tabs{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tb{padding:15px 18px;border:none;background:none;font-size:13px;font-weight:500;color:var(--light);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-2px;white-space:nowrap;transition:all .2s;font-family:'Noto Sans KR',sans-serif}
+.tb.on,.tb:hover{color:var(--red);border-bottom-color:var(--red)}
+.sec{padding:64px 24px}
+.si{max-width:1200px;margin:0 auto}
+.sl{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:8px}
+.sl.w{color:#fca5a5}
+.st{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.8rem,4vw,2.6rem);letter-spacing:.04em;color:var(--dark);margin-bottom:6px}
+.st.w{color:#fff}
+.sd{font-size:14px;color:var(--light);margin-bottom:36px;max-width:700px;line-height:1.8}
+.sec-bg{background:var(--bg)}
+.sec-dark{background:var(--navy)}
+.ov-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.ov-img{background:linear-gradient(135deg,#1a1a1a,#0a0a0a);border-radius:16px;padding:40px;text-align:center;border:1px solid rgba(255,255,255,.06)}
+.ov-img img{width:100%;max-width:320px;height:auto;object-fit:contain;filter:drop-shadow(0 8px 28px rgba(0,0,0,.6))}
+.ov-desc{font-size:14px;color:var(--mid);line-height:1.9;margin-bottom:24px}
+.ov-highlights{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ov-hl{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:14px 16px;display:flex;align-items:flex-start;gap:10px}
+.ov-hl-icon{font-size:18px;flex-shrink:0}
+.ov-hl-ttl{font-size:12px;font-weight:700;margin-bottom:2px}
+.ov-hl-txt{font-size:11px;color:var(--light);line-height:1.6}
+.spec-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.spec-img-wrap{background:linear-gradient(135deg,#1a1a1a,#0a0a0a);border-radius:16px;padding:40px;text-align:center;position:sticky;top:130px;border:1px solid rgba(255,255,255,.06)}
+.spec-img-wrap img{width:100%;max-width:280px;height:280px;object-fit:contain;filter:drop-shadow(0 8px 28px rgba(0,0,0,.6))}
+.prod-badge{display:inline-block;background:#fff3f5;border:1px solid #ffd0d8;color:var(--red);font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+.prod-h2{font-family:'Bebas Neue',sans-serif;font-size:3rem;letter-spacing:.06em;line-height:.9;margin-bottom:6px}
+.prod-type{font-size:12px;color:var(--light);text-transform:uppercase;letter-spacing:.06em;margin-bottom:16px}
+.prod-desc{font-size:14px;color:var(--mid);line-height:1.9;margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid var(--border)}
+.slbl{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--light);margin-bottom:10px}
+table.sp{width:100%;border-collapse:collapse}
+table.sp tr{border-bottom:1px solid var(--border)}
+table.sp tr:last-child{border-bottom:none}
+table.sp td{padding:9px 0;font-size:13px;vertical-align:top;line-height:1.5}
+table.sp td:first-child{color:var(--light);font-weight:500;width:44%;padding-right:12px}
+table.sp td:last-child{color:var(--dark);font-weight:600}
+.sp-hl td:last-child{color:var(--red)!important;font-weight:800!important}
+.price-box{background:#fff;border:2px solid var(--red);border-radius:10px;padding:18px 22px;margin-top:24px}
+.price-val{font-size:26px;font-weight:900;color:var(--red)}
+.price-note{font-size:11px;color:var(--light);margin-top:8px;padding-top:8px;border-top:1px solid var(--border)}
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.feat{background:#fff;border:1px solid var(--border);border-radius:12px;padding:22px 18px;transition:all .25s;position:relative;overflow:hidden}
+.feat::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.feat:hover{border-color:rgba(233,69,96,.3);transform:translateY(-3px);box-shadow:0 8px 28px rgba(233,69,96,.08)}
+.feat:hover::before{transform:scaleX(1)}
+.feat-icon{font-size:24px;margin-bottom:10px}
+.feat-ttl{font-size:13px;font-weight:700;margin-bottom:7px}
+.feat-txt{font-size:12px;color:var(--light);line-height:1.75}
+.angle-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+.angle-card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:24px;text-align:center;transition:all .25s}
+.angle-card:hover{border-color:rgba(233,69,96,.3);transform:translateY(-3px);box-shadow:0 8px 28px rgba(233,69,96,.08)}
+.angle-val{font-family:'Bebas Neue',sans-serif;font-size:3rem;color:var(--red);line-height:1}
+.angle-ttl{font-size:13px;font-weight:700;margin-top:8px;margin-bottom:4px}
+.angle-txt{font-size:12px;color:var(--light);line-height:1.7}
+.app-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.app{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:18px;text-align:center;transition:all .2s}
+.app:hover{border-color:rgba(233,69,96,.5);background:rgba(233,69,96,.06)}
+.app-icon{font-size:26px;margin-bottom:8px}
+.app-name{font-size:13px;font-weight:700;color:#fff;margin-bottom:3px}
+.app-desc{font-size:11px;color:rgba(255,255,255,.4);line-height:1.6}
+footer{background:#111;color:#fff;padding:24px;font-size:11px;opacity:.5;text-align:center;line-height:1.8}
+@media(max-width:1024px){.hero-inner,.spec-grid,.ov-grid{grid-template-columns:1fr}.hero-img{display:none}.spec-img-wrap{position:static}}
+@media(max-width:768px){.feat-grid{grid-template-columns:1fr 1fr}.angle-grid{grid-template-columns:1fr}.app-grid{grid-template-columns:1fr 1fr}.ov-highlights{grid-template-columns:1fr}}
+@media(max-width:540px){.feat-grid,.app-grid{grid-template-columns:1fr}.hero-inner,.sec{padding-left:16px;padding-right:16px}.hero-inner{padding-top:40px;padding-bottom:40px}.sec{padding-top:44px;padding-bottom:44px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo"><a href="index.html"><img src="logo.png" alt="(주)현대에이브이씨"></a></div>
+  <a href="index.html" class="back-btn">← 제품 목록</a>
+</header>
+<div class="bc">
+  <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+    <a href="index.html">홈</a> › <a href="index.html">스피커</a> › <a href="index.html">모니터</a> › <strong>KC12D 12인치 액티브 동축 모니터</strong>
+  </div>
+</div>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="h-badge"><span class="h-dot"></span>Active Coaxial Monitor with DSP</div>
+      <div class="h-brand">Soundking · KC Series</div>
+      <h1>KC<span class="r">10D</span></h1>
+      <div class="h-sub">12" Active Coaxial 2-Way Monitor Loudspeaker</div>
+      <p class="h-desc">12인치 동축 드라이버와 Class D 앰프, 48kHz/24bit DSP를 통합한 액티브 스테이지 모니터. 128dB 최대 음압과 90°×90° 균일한 커버리지로 스테이지 모니터링과 근접 확성 양쪽 모두에 최적화된 콤팩트 액티브 솔루션입니다.</p>
+      <div class="kpi-row">
+        <div class="kpi"><div class="kv">350<s>W</s></div><div class="kl">Class D Power</div></div>
+        <div class="kpi"><div class="kv">126<s>dB</s></div><div class="kl">Max SPL</div></div>
+        <div class="kpi"><div class="kv">90°<s>×</s>90°</div><div class="kl">Coverage</div></div>
+        <div class="kpi"><div class="kv">14<s>kg</s></div><div class="kl">Weight</div></div>
+      </div>
+      <div class="h-tags">
+        <span class="tag hot">🎛 내장 DSP</span>
+        <span class="tag">12" LF + 1.73" HF</span>
+        <span class="tag">Class D 앰프</span>
+        <span class="tag hot">📐 53° 듀얼 모드</span>
+        <span class="tag">LCD 컨트롤</span>
+        <span class="tag">XLR · 콤보 입력</span>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img id="heroImg" src="KC12D_01.jpg" alt="Soundking KC12D"
+           onerror="this.style.display='none'">
+      <div class="thumb-row">
+        <div class="thumb-btn on" onclick="setHeroImg('KC12D_01.jpg',this)">
+          <img src="KC12D_01.jpg" onerror="this.parentElement.style.display='none'">
+        </div>
+        <div class="thumb-btn" onclick="setHeroImg('KC12D_02.jpg',this)">
+          <img src="KC12D_02.jpg" onerror="this.parentElement.style.display='none'">
+        </div>
+      </div>
+      <div class="hero-img-cap">KC12D Active Monitor</div>
+    </div>
+  </div>
+</section>
+<!-- TABS -->
+<div class="tab-wrap">
+  <div class="tabs">
+    <button class="tb on" onclick="goTab('sec-overview')">제품 소개</button>
+    <button class="tb" onclick="goTab('sec-spec')">제품 사양</button>
+    <button class="tb" onclick="goTab('sec-features')">주요 특징</button>
+    <button class="tb" onclick="goTab('sec-angle')">사용 모드</button>
+    <button class="tb" onclick="goTab('sec-app')">적용 분야</button>
+  </div>
+</div>
+<!-- ══ OVERVIEW ══ -->
+<section class="sec" id="sec-overview">
+  <div class="si">
+    <div class="sl">제품 소개</div>
+    <div class="st">KC12D ACTIVE COAXIAL MONITOR</div>
+    <p class="sd">12인치 동축 드라이버, Class D 앰프, 48kHz/24bit DSP를 하나의 콤팩트 캐비닛에 통합한 액티브 모니터. 스테이지 모니터링과 근접 확성 양쪽 모드를 모두 지원합니다.</p>
+    <div class="ov-grid">
+      <div class="ov-img">
+        <img src="KC12D_01.jpg" alt="Soundking KC12D 측면"
+             onerror="this.style.opacity='.3'">
+      </div>
+      <div>
+        <p class="ov-desc">
+          KC12D는 12인치 LF 유닛과 1.73" HF 컴프레션 드라이버를 동축으로 배치한 2웨이 액티브 스피커입니다. 동축 구조로 포인트 소스 방사를 구현하여 90°×90°의 균일한 커버리지와 정확한 사운드 이미지를 제공합니다.
+        </p>
+        <p class="ov-desc">
+          내장된 48kHz/24bit DSP는 LCD 화면을 통해 3밴드 EQ, 리미터, 딜레이, 볼륨을 직접 제어할 수 있으며, Class D 앰프와 결합하여 고효율·경량·고출력을 동시에 실현합니다. 53°의 웨지 각도로 스테이지 모니터링과 확성용 근접 사운드 시스템을 자유롭게 전환할 수 있습니다.
+        </p>
+        <div class="ov-highlights">
+          <div class="ov-hl">
+            <div class="ov-hl-icon">🎛</div>
+            <div>
+              <div class="ov-hl-ttl">48kHz/24bit DSP</div>
+              <div class="ov-hl-txt">3밴드 EQ · 리미터 · 딜레이 · LCD 컨트롤</div>
+            </div>
+          </div>
+          <div class="ov-hl">
+            <div class="ov-hl-icon">⚡</div>
+            <div>
+              <div class="ov-hl-ttl">Class D 앰프</div>
+              <div class="ov-hl-txt">350W 고효율 · 경량 · 안정적 출력</div>
+            </div>
+          </div>
+          <div class="ov-hl">
+            <div class="ov-hl-icon">🎯</div>
+            <div>
+              <div class="ov-hl-ttl">동축 드라이버</div>
+              <div class="ov-hl-txt">12" LF + 1.73" HF · 90°×90° 커버리지</div>
+            </div>
+          </div>
+          <div class="ov-hl">
+            <div class="ov-hl-icon">📐</div>
+            <div>
+              <div class="ov-hl-ttl">듀얼 모드 · 53°</div>
+              <div class="ov-hl-txt">스테이지 모니터 / 확성 모드 전환 가능</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- KPI bar -->
+    <div style="background:linear-gradient(135deg,#1a1a1a,#0a0a0a);border-radius:16px;padding:28px;display:grid;grid-template-columns:repeat(5,1fr);gap:20px;border:1px solid rgba(255,255,255,.06);margin-top:40px">
+      <div style="text-align:center">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:2.3rem;color:#fff;line-height:1">128dB<span style="font-size:.9rem;font-family:'Noto Sans KR',sans-serif;font-weight:300;color:rgba(255,255,255,.4)"></span></div>
+        <div style="font-size:10px;color:rgba(255,255,255,.4);letter-spacing:.1em;text-transform:uppercase;margin-top:4px">Max SPL</div>
+      </div>
+      <div style="text-align:center;border-left:1px solid rgba(255,255,255,.08)">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:2.3rem;color:#fff;line-height:1">350W<span style="font-size:.9rem;font-family:'Noto Sans KR',sans-serif;font-weight:300;color:rgba(255,255,255,.4)"></span></div>
+        <div style="font-size:10px;color:rgba(255,255,255,.4);letter-spacing:.1em;text-transform:uppercase;margin-top:4px">Class D Power</div>
+      </div>
+      <div style="text-align:center;border-left:1px solid rgba(255,255,255,.08)">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:#fff;line-height:1">55Hz~<br>20kHz</div>
+        <div style="font-size:10px;color:rgba(255,255,255,.4);letter-spacing:.1em;text-transform:uppercase;margin-top:4px">주파수 응답</div>
+      </div>
+      <div style="text-align:center;border-left:1px solid rgba(255,255,255,.08)">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:2.3rem;color:#fff;line-height:1">48kHz/24bit<span style="font-size:.9rem;font-family:'Noto Sans KR',sans-serif;font-weight:300;color:rgba(255,255,255,.4)"></span></div>
+        <div style="font-size:10px;color:rgba(255,255,255,.4);letter-spacing:.1em;text-transform:uppercase;margin-top:4px">DSP</div>
+      </div>
+      <div style="text-align:center;border-left:1px solid rgba(255,255,255,.08)">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:2.3rem;color:#fff;line-height:1">90°×90°<span style="font-size:.9rem;font-family:'Noto Sans KR',sans-serif;font-weight:300;color:rgba(255,255,255,.4)"></span></div>
+        <div style="font-size:10px;color:rgba(255,255,255,.4);letter-spacing:.1em;text-transform:uppercase;margin-top:4px">Coverage</div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ══ SPEC ══ -->
+<section class="sec sec-bg" id="sec-spec">
+  <div class="si">
+    <div class="sl">제품 사양</div>
+    <div class="st">SPECIFICATIONS</div>
+    <div class="spec-grid">
+      <div class="spec-img-wrap">
+        <img src="KC12D_01.jpg" alt="Soundking KC12D"
+             onerror="this.style.opacity='.3'">
+      </div>
+      <div>
+        <div class="prod-badge">Active Coaxial 2-Way Monitor</div>
+        <div class="prod-h2">KC12D</div>
+        <div class="prod-type">12" Coaxial Active Loudspeaker with DSP</div>
+        <p class="prod-desc">12인치 LF 드라이버와 1.73" HF 드라이버를 동축으로 배치한 액티브 2웨이 모니터. Class D 앰프(LF 300W + HF 50W)와 48kHz/24bit DSP가 내장되어 LCD 화면으로 3밴드 EQ, 리미터, 딜레이, 볼륨을 직접 조절할 수 있습니다. 스테이지 모니터링과 근접 확성 두 가지 모드를 모두 지원합니다.</p>
+        <div class="slbl">제품 사양</div>
+        <table class="sp">
+          <tr><td>모델명</td><td>KC12D</td></tr>
+          <tr><td>타입</td><td>액티브 동축 2웨이 모니터</td></tr>
+          <tr><td>주파수 응답</td><td>55Hz – 20kHz</td></tr>
+          <tr><td>출력 (LF / HF)</td><td>300W + 50W (Class D)</td></tr>
+          <tr class="sp-hl"><td>최대 음압 (Max SPL)</td><td>128dB</td></tr>
+          <tr><td>커버리지 (H × V)</td><td>90° × 90°</td></tr>
+          <tr><td>LF 드라이버</td><td>12" (1개)</td></tr>
+          <tr><td>HF 드라이버</td><td>1.73" 컴프레션 (1개)</td></tr>
+          <tr class="sp-hl"><td>내장 DSP</td><td>48kHz / 24bit · LCD 컨트롤</td></tr>
+          <tr><td>DSP 기능</td><td>3밴드 EQ · 리미터 · 딜레이 · 볼륨</td></tr>
+          <tr><td>모니터링 앵글</td><td>53° (듀얼 모드)</td></tr>
+          <tr><td>입력 단자</td><td>XLR-1/4" 콤보 · 3.5mm 보조</td></tr>
+          <tr><td>출력 단자</td><td>XLR Link Out</td></tr>
+          <tr><td>전원</td><td>AC 220V – 240V</td></tr>
+          <tr><td>캐비닛 재질</td><td>합판 (Plywood)</td></tr>
+          <tr><td>색상</td><td>블랙</td></tr>
+          <tr><td>크기 (H × W × D)</td><td>314 × 400 × 465 mm</td></tr>
+          <tr><td>무게</td><td>14 kg</td></tr>
+        </table>
+        <div class="price-box">
+          <div class="slbl">가격</div>
+          <div class="price-val">2,100,000원</div>
+          <div class="price-note">※ 참고 소비자가 기준 / 조 · VAT 포함</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ══ FEATURES ══ -->
+<section class="sec" id="sec-features">
+  <div class="si">
+    <div class="sl">주요 특징</div>
+    <div class="st">KEY FEATURES</div>
+    <div class="feat-grid">
+      <div class="feat"><div class="feat-icon">🎛</div><div class="feat-ttl">48kHz/24bit 내장 DSP</div><div class="feat-txt">고해상도 48kHz/24bit DSP를 내장하여 LCD 화면을 통해 3밴드 EQ, 리미터, 딜레이, 볼륨을 직접 조절할 수 있습니다. 외부 프로세서 없이도 정밀한 사운드 튜닝이 가능합니다.</div></div>
+      <div class="feat"><div class="feat-icon">⚡</div><div class="feat-ttl">Class D 앰프</div><div class="feat-txt">LF 300W + HF 50W의 Class D 앰프를 탑재하여 고효율과 콤팩트한 사이즈, 가벼운 무게, 안정적인 출력 성능을 동시에 실현합니다. 발열이 적고 깨끗한 사운드를 전달합니다.</div></div>
+      <div class="feat"><div class="feat-icon">🎯</div><div class="feat-ttl">12" 동축 드라이버</div><div class="feat-txt">12인치 LF와 1.73" HF 컴프레션 드라이버를 동축으로 배치한 포인트 소스 구조로, 90°×90°의 균일한 커버리지와 정확한 사운드 이미징을 구현합니다.</div></div>
+      <div class="feat"><div class="feat-icon">📐</div><div class="feat-ttl">듀얼 모드 · 53° 웨지</div><div class="feat-txt">53°의 웨지 형상 캐비닛으로 스테이지 모니터링과 근접 확성 두 가지 모드로 모두 활용할 수 있습니다. 한 대로 다양한 현장 요구를 충족합니다.</div></div>
+      <div class="feat"><div class="feat-icon">📊</div><div class="feat-ttl">LCD 컨트롤 패널</div><div class="feat-txt">후면 LCD 화면과 직관적인 조작계로 DSP 파라미터를 누구나 쉽게 조절할 수 있습니다. 사운드 엔지니어가 아니더라도 간편한 운용이 가능합니다.</div></div>
+      <div class="feat"><div class="feat-icon">🔌</div><div class="feat-ttl">다양한 입출력</div><div class="feat-txt">XLR-1/4" 콤보 입력, 3.5mm 보조 입력, XLR 링크 아웃을 제공하여 마이크부터 라인 레벨까지 폭넓은 소스 연결을 지원합니다.</div></div>
+    </div>
+  </div>
+</section>
+<!-- ══ DUAL MODE ══ -->
+<section class="sec sec-bg" id="sec-angle">
+  <div class="si">
+    <div class="sl">사용 모드</div>
+    <div class="st">DUAL APPLICATION MODES</div>
+    <p class="sd">53° 웨지 형상 캐비닛으로 스테이지 모니터링과 근접 확성 두 가지 모드를 모두 지원합니다. 한 대의 KC12D로 다양한 현장 요구에 유연하게 대응할 수 있습니다.</p>
+    <div class="angle-grid">
+      <div class="angle-card">
+        <div class="angle-val">53°</div>
+        <div class="angle-ttl">스테이지 모니터 모드</div>
+        <div class="angle-txt">웨지 형상으로 바닥에 눕혀 스테이지 모니터로 사용합니다. 53°의 최적화된 각도로 보컬과 연주자가 자연스럽고 정확한 모니터링 사운드를 들을 수 있습니다.</div>
+      </div>
+      <div class="angle-card">
+        <div class="angle-val">FOH</div>
+        <div class="angle-ttl">근접 확성 모드</div>
+        <div class="angle-txt">스탠드 마운트나 직립 배치로 근접 확성용 메인 스피커로 활용합니다. 90°×90°의 넓은 커버리지로 소규모 행사장과 회의실, 강의실에 최적입니다.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ══ APPLICATIONS ══ -->
+<section class="sec sec-dark" id="sec-app">
+  <div class="si">
+    <div class="sl w">적용 분야</div>
+    <div class="st w">APPLICATIONS</div>
+    <p class="sd" style="color:rgba(255,255,255,.5)">DSP 내장 액티브 동축 모니터로 모니터링과 확성 양쪽 환경에 모두 활용 가능합니다.</p>
+    <div class="app-grid">
+      <div class="app"><div class="app-icon">🎤</div><div class="app-name">스테이지 모니터</div><div class="app-desc">53° 웨지 모드로 보컬·연주자 모니터링</div></div>
+      <div class="app"><div class="app-icon">🏫</div><div class="app-name">강의실 · 회의실</div><div class="app-desc">근접 확성 모드로 명료한 음성 전달</div></div>
+      <div class="app"><div class="app-icon">🎸</div><div class="app-name">소규모 라이브</div><div class="app-desc">DSP 내장으로 원박스 PA 솔루션</div></div>
+      <div class="app"><div class="app-icon">⛪</div><div class="app-name">교회 · 행사장</div><div class="app-desc">콤팩트 사이즈와 고출력 양립</div></div>
+    </div>
+  </div>
+</section>
+<footer>경기도 평택시 도일유통길 39-9 (도일동) · ☎ 031-8054-0048<br>COPYRIGHT ⓒ HYUNDAI AUDIO VISUAL COMMUNICATIONS CO., LTD. ALL RIGHTS RESERVED.</footer>
+<script>
+const sections = ['sec-overview','sec-spec','sec-features','sec-angle','sec-app'];
+function goTab(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  window.scrollTo({ top: el.getBoundingClientRect().top + window.pageYOffset - 120, behavior:'smooth' });
+}
+window.addEventListener('scroll', () => {
+  let cur = 0;
+  sections.forEach((id, i) => {
+    const el = document.getElementById(id);
+    if (el && el.getBoundingClientRect().top <= 130) cur = i;
+  });
+  document.querySelectorAll('.tb').forEach((b, i) => b.classList.toggle('on', i === cur));
+});
+function setHeroImg(src, el) {
+  document.getElementById('heroImg').src = src;
+  document.querySelectorAll('.thumb-btn').forEach(b => b.classList.remove('on'));
+  el.classList.add('on');
+}
+</script>
+</body>
+</html>
