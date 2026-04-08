@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MIX 시리즈 미니 믹서 | 현대에이브이씨</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--red:#f08022;--dark:#111;--mid:#444;--light:#888;--bg:#f5f5f7;--white:#fff;--border:#eee;--navy:#0d1117;--accent-light:#fff3e6;--accent-border:#ffd4a8}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Sans KR',sans-serif;background:var(--white);color:var(--dark);line-height:1.6}
+img{max-width:100%}
+header{background:#fff;border-bottom:1px solid var(--border);padding:0 24px;height:60px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.logo img{height:36px;object-fit:contain}
+.back-btn{color:var(--light);text-decoration:none;font-size:13px;font-weight:500}
+.back-btn:hover{color:var(--red)}
+.bc{background:var(--bg);padding:10px 24px;border-bottom:1px solid var(--border);font-size:12px;color:var(--light)}
+.bc a{color:var(--light);text-decoration:none}.bc a:hover{color:var(--red)}
+.bc strong{color:var(--dark)}
+.hero{background:linear-gradient(160deg,#000 0%,#111 50%,#000 100%);color:#fff;overflow:hidden;position:relative}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 65% 40%,rgba(240,128,34,.1),transparent 60%)}
+.hero-inner{max-width:1200px;margin:0 auto;padding:64px 24px;display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center;position:relative;z-index:1}
+.h-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(240,128,34,.15);border:1px solid rgba(240,128,34,.5);color:#ffc185;font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:5px 14px;border-radius:2px;margin-bottom:16px}
+.h-dot{width:5px;height:5px;background:var(--red);border-radius:50%;animation:blink 1.8s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.h-brand{font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.35);text-transform:uppercase;margin-bottom:6px}
+.hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,6.5vw,5.5rem);line-height:.9;letter-spacing:.05em;color:#fff;margin-bottom:8px}
+.hero h1 .r{color:#ffb066}
+.h-sub{font-size:12px;color:rgba(255,255,255,.4);letter-spacing:.08em;text-transform:uppercase;margin-bottom:18px}
+.h-desc{font-size:14px;color:rgba(255,255,255,.65);line-height:1.85;margin-bottom:28px}
+.kpi-row{display:flex;gap:22px;flex-wrap:wrap;margin-bottom:28px}
+.kpi{display:flex;flex-direction:column;gap:2px}
+.kv{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:#fff;line-height:1}
+.kv s{font-size:.9rem;color:rgba(255,255,255,.4);font-family:'Noto Sans KR',sans-serif;font-weight:300;text-decoration:none}
+.kl{font-size:10px;color:rgba(255,255,255,.35);letter-spacing:.1em;text-transform:uppercase}
+.h-tags{display:flex;flex-wrap:wrap;gap:7px}
+.tag{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.65);font-size:11px;padding:4px 11px;border-radius:20px}
+.tag.hot{background:rgba(240,128,34,.2);border-color:rgba(240,128,34,.5);color:#ffc185}
+.hero-visual{text-align:center}
+.hero-visual-cap{margin-top:16px;font-size:11px;color:rgba(255,255,255,.35);letter-spacing:.1em;text-transform:uppercase}
+.tab-wrap{background:#fff;border-bottom:2px solid var(--border);position:sticky;top:60px;z-index:100}
+.tabs{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tb{padding:15px 18px;border:none;background:none;font-size:13px;font-weight:500;color:var(--light);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-2px;white-space:nowrap;transition:all .2s;font-family:'Noto Sans KR',sans-serif}
+.tb.on,.tb:hover{color:var(--red);border-bottom-color:var(--red)}
+.sec{padding:64px 24px}
+.si{max-width:1200px;margin:0 auto}
+.sl{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:8px}
+.sl.w{color:#ffc185}
+.st{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.8rem,4vw,2.6rem);letter-spacing:.04em;color:var(--dark);margin-bottom:6px}
+.st.w{color:#fff}
+.sd{font-size:14px;color:var(--light);margin-bottom:36px;max-width:760px;line-height:1.8}
+.sec-bg{background:var(--bg)}
+.sec-dark{background:var(--navy)}
+.ov-grid{display:grid;grid-template-columns:1fr;gap:40px;align-items:start}
+.ov-desc{font-size:14px;color:var(--mid);line-height:1.9;margin-bottom:20px}
+.ov-highlights{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.ov-hl{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:14px 16px;display:flex;align-items:flex-start;gap:10px}
+.ov-hl-icon{font-size:18px;flex-shrink:0}
+.ov-hl-ttl{font-size:12px;font-weight:700;margin-bottom:2px}
+.ov-hl-txt{font-size:11px;color:var(--light);line-height:1.6}
+.lineup-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;max-width:780px}
+.lc{background:#fff;border:1px solid var(--border);border-radius:14px;padding:24px 22px;transition:all .25s;position:relative;overflow:hidden}
+.lc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.lc:hover{border-color:rgba(240,128,34,.35);transform:translateY(-3px);box-shadow:0 10px 32px rgba(240,128,34,.1)}
+.lc:hover::before{transform:scaleX(1)}
+.lc-badge{display:inline-block;font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--red);background:var(--accent-light);border:1px solid var(--accent-border);padding:3px 9px;border-radius:20px;margin-bottom:10px}
+.lc-name{font-family:'Bebas Neue',sans-serif;font-size:2.2rem;letter-spacing:.04em;line-height:.95;margin-bottom:2px}
+.lc-sub{font-size:11px;color:var(--light);text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}
+.lc-row{display:flex;justify-content:space-between;align-items:baseline;padding:7px 0;border-bottom:1px dashed var(--border);font-size:12px}
+.lc-row:last-of-type{border-bottom:none}
+.lc-k{color:var(--light)}
+.lc-v{color:var(--dark);font-weight:700;font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:.03em}
+.sale{position:absolute;top:18px;right:18px;font-size:9px;font-weight:800;letter-spacing:.12em;padding:4px 9px;border-radius:20px;background:var(--red);color:#fff}
+.cmp-wrap{background:#fff;border:1px solid var(--border);border-radius:14px;overflow:auto}
+table.cmp{width:100%;border-collapse:collapse;min-width:560px}
+table.cmp th,table.cmp td{padding:12px 14px;font-size:12px;border-bottom:1px solid var(--border);text-align:center;white-space:nowrap}
+table.cmp thead th{background:var(--bg);font-weight:700;color:var(--dark);font-size:11px;letter-spacing:.05em;text-transform:uppercase}
+table.cmp tbody th{background:#fafafa;font-weight:500;color:var(--light);text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.05em}
+table.cmp tbody tr:hover td{background:#f4f9fe}
+table.cmp td.hl{color:var(--red);font-weight:800;font-family:'Bebas Neue',sans-serif;font-size:14px}
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.feat{background:#fff;border:1px solid var(--border);border-radius:12px;padding:22px 18px;transition:all .25s;position:relative;overflow:hidden}
+.feat::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.feat:hover{border-color:rgba(240,128,34,.35);transform:translateY(-3px);box-shadow:0 8px 28px rgba(240,128,34,.1)}
+.feat:hover::before{transform:scaleX(1)}
+.feat.hi{background:linear-gradient(135deg,var(--accent-light),#fff);border-color:var(--accent-border)}
+.feat-icon{font-size:24px;margin-bottom:10px}
+.feat-ttl{font-size:13px;font-weight:700;margin-bottom:7px}
+.feat-txt{font-size:12px;color:var(--light);line-height:1.75}
+.usb-banner{margin-bottom:36px;padding:28px 32px;background:linear-gradient(120deg,var(--accent-light) 0%,#fff 70%);border:1px solid var(--accent-border);border-left:5px solid var(--red);border-radius:14px;display:flex;gap:24px;align-items:center}
+.usb-banner .ic{font-size:48px;flex-shrink:0}
+.usb-banner h3{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:.04em;color:var(--red);margin-bottom:6px}
+.usb-banner p{font-size:13px;color:var(--mid);line-height:1.75}
+.common-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:860px}
+.common{display:flex;gap:12px;padding:14px 18px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px}
+.common-ic{font-size:20px;flex-shrink:0}
+.common-ttl{font-size:12px;color:#fff;font-weight:700;margin-bottom:2px}
+.common-txt{font-size:11px;color:rgba(255,255,255,.5);line-height:1.65}
+.app-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.app{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:18px;text-align:center;transition:all .2s}
+.app:hover{border-color:rgba(240,128,34,.5);background:rgba(240,128,34,.08)}
+.app-icon{font-size:26px;margin-bottom:8px}
+.app-name{font-size:13px;font-weight:700;color:#fff;margin-bottom:3px}
+.app-desc{font-size:11px;color:rgba(255,255,255,.4);line-height:1.6}
+footer{background:#111;color:#fff;padding:24px;font-size:11px;opacity:.5;text-align:center;line-height:1.8}
+@media(max-width:1024px){.hero-inner{grid-template-columns:1fr}.hero-visual{display:none}.common-grid{grid-template-columns:1fr}.ov-highlights{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){.feat-grid{grid-template-columns:1fr 1fr}.app-grid{grid-template-columns:1fr 1fr}.lineup-grid{grid-template-columns:1fr}.usb-banner{flex-direction:column;text-align:center}}
+@media(max-width:540px){.feat-grid,.app-grid,.ov-highlights{grid-template-columns:1fr}.hero-inner,.sec{padding-left:16px;padding-right:16px}.hero-inner{padding-top:40px;padding-bottom:40px}.sec{padding-top:44px;padding-bottom:44px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo"><a href="index.html"><img src="logo.png" alt="(주)현대에이브이씨"></a></div>
+  <a href="index.html" class="back-btn">← 제품 목록</a>
+</header>
+<div class="bc">
+  <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+    <a href="index.html">홈</a> › <a href="index.html">믹서</a> › <a href="index.html">미니 믹서</a> › <strong>Soundking MIX 시리즈 미니 믹서</strong>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="h-badge"><span class="h-dot"></span>Compact Mixing Console · USB Audio Interface</div>
+      <div class="h-brand">Soundking · MIX Series</div>
+      <h1>MIX<span class="r">Series</span></h1>
+      <div class="h-sub">Ultra-Compact Mixer · 4 / 6 CH · USB I/O · 48V Phantom · 2-Band EQ</div>
+      <p class="h-desc">손바닥 크기의 초소형 휴대용 미니 믹서. USB 포트를 통해 PC에 직접 연결하여 USB 오디오 인터페이스로도 활용할 수 있어, 홈레코딩·1인 방송·라이브 스트리밍에 최적화된 올인원 솔루션입니다. MIX02AU(4채널) · MIX04AU(6채널) 2개 모델로 제공됩니다.</p>
+      <div class="kpi-row">
+        <div class="kpi"><div class="kv">2<s>Models</s></div><div class="kl">Lineup</div></div>
+        <div class="kpi"><div class="kv">USB<s></s></div><div class="kl">Audio I/F</div></div>
+        <div class="kpi"><div class="kv">48<s>V</s></div><div class="kl">Phantom</div></div>
+        <div class="kpi"><div class="kv">68<s>mm</s></div><div class="kl">Slim Body</div></div>
+      </div>
+      <div class="h-tags">
+        <span class="tag hot">🎙 USB 오디오 인터페이스</span>
+        <span class="tag">+48V Phantom</span>
+        <span class="tag">2-Band EQ</span>
+        <span class="tag">XLR · TRS · RCA</span>
+        <span class="tag hot">📶 4-Band LED Meter</span>
+        <span class="tag">100–265V Universal</span>
+        <span class="tag">초경량 0.78–0.98kg</span>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="slideshow" style="position:relative;width:100%;max-width:460px;margin:0 auto;aspect-ratio:4/3">
+        <img class="ss-img" src="mix02au_01.jpg" alt="MIX02AU" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 16px 48px rgba(255,255,255,.08));border-radius:6px;opacity:1;transition:opacity .8s ease">
+        <img class="ss-img" src="mix04au_01.jpg" alt="MIX04AU" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 16px 48px rgba(255,255,255,.08));border-radius:6px;opacity:0;transition:opacity .8s ease">
+        <img class="ss-img" src="mix_01.jpg" alt="MIX Series" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 16px 48px rgba(255,255,255,.08));border-radius:6px;opacity:0;transition:opacity .8s ease">
+      </div>
+      <div class="hero-visual-cap">MIX Series · Compact Mixing Console</div>
+    </div>
+  </div>
+</section>
+
+<!-- TABS -->
+<div class="tab-wrap">
+  <div class="tabs">
+    <button class="tb on" onclick="goTab('sec-overview')">시리즈 소개</button>
+    <button class="tb" onclick="goTab('sec-lineup')">라인업</button>
+    <button class="tb" onclick="goTab('sec-spec')">스펙 비교</button>
+    <button class="tb" onclick="goTab('sec-features')">주요 특징</button>
+    <button class="tb" onclick="goTab('sec-common')">공통 사양</button>
+    <button class="tb" onclick="goTab('sec-app')">적용 분야</button>
+  </div>
+</div>
+
+<!-- OVERVIEW -->
+<section class="sec" id="sec-overview">
+  <div class="si">
+    <div class="sl">시리즈 소개</div>
+    <div class="st">MIX SERIES · COMPACT MIXING CONSOLE</div>
+    <p class="sd">Soundking MIX 시리즈는 소형·경량 설계와 USB 오디오 인터페이스 기능을 결합한 차세대 미니 믹서입니다. 콘덴서 마이크용 +48V 팬텀 파워, 2밴드 EQ, 4세그먼트 LED 레벨 미터, AUX 센드까지 라이브 현장과 스튜디오에서 필요한 핵심 기능을 빠짐없이 담았습니다.</p>
+    <div class="ov-grid">
+      <div>
+        <p class="ov-desc">
+          MIX02AU는 2개의 마이크/라인 입력과 2개의 스테레오 라인 입력으로 총 4채널 구성을, MIX04AU는 4개의 마이크/라인 입력과 2개의 스테레오 입력으로 총 6채널 구성을 제공합니다. 두 모델 모두 XLR 밸런스 마이크 입력, 1/4" TRS 라인 입력, RCA 2TK 입력/출력, AUX SEND, 헤드폰 출력, 메인 L/R 출력을 갖추고 있어 다양한 입출력 환경에 대응합니다.
+        </p>
+        <p class="ov-desc">
+          <strong style="color:var(--red)">USB 포트를 PC와 연결하면 USB 오디오 인터페이스로 동작</strong>하여, 별도의 오디오 카드 없이도 컴퓨터로 직접 다채널 신호를 입출력할 수 있습니다. Windows·macOS 표준 USB 오디오 클래스를 지원하므로 드라이버 설치 없이 곧바로 인식되며, DAW 소프트웨어와 결합해 홈 레코딩·팟캐스트·유튜브 라이브 스트리밍·줌 회의 등 다양한 콘텐츠 제작 환경에 최적입니다. 100~265V 와이드 외부 어댑터로 전 세계 어디서나 사용 가능합니다.
+        </p>
+        <div class="ov-highlights">
+          <div class="ov-hl"><div class="ov-hl-icon">🎙</div><div><div class="ov-hl-ttl">USB Audio I/F</div><div class="ov-hl-txt">PC 직결 · 드라이버 불필요</div></div></div>
+          <div class="ov-hl"><div class="ov-hl-icon">⚡</div><div><div class="ov-hl-ttl">+48V Phantom</div><div class="ov-hl-txt">콘덴서 마이크 지원</div></div></div>
+          <div class="ov-hl"><div class="ov-hl-icon">🎚</div><div><div class="ov-hl-ttl">2-Band EQ</div><div class="ov-hl-txt">Hi 12kHz · Lo 80Hz ±15dB</div></div></div>
+          <div class="ov-hl"><div class="ov-hl-icon">📐</div><div><div class="ov-hl-ttl">초소형 · 초경량</div><div class="ov-hl-txt">220mm · 1kg 미만</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LINEUP -->
+<section class="sec sec-bg" id="sec-lineup">
+  <div class="si">
+    <div class="sl">라인업</div>
+    <div class="st">2 MODELS · MIX02AU & MIX04AU</div>
+    <p class="sd">동일한 회로 플랫폼과 USB 오디오 인터페이스 기능 위에서, 마이크 입력 채널 수에 따라 두 가지 모델로 구성됩니다. 1~2명 보컬·악기 셋업에는 MIX02AU, 4명 풀밴드·다중 마이크 셋업에는 MIX04AU가 적합합니다.</p>
+    <div class="lineup-grid">
+
+      <div class="lc">
+        <span class="sale">판매중</span>
+        <span class="lc-badge">4-CHANNEL</span>
+        <div class="lc-name">MIX02AU</div>
+        <div class="lc-sub">Compact USB Mixing Console</div>
+        <div class="lc-row"><span class="lc-k">Mic 입력</span><span class="lc-v">2</span></div>
+        <div class="lc-row"><span class="lc-k">스테레오 입력</span><span class="lc-v">2</span></div>
+        <div class="lc-row"><span class="lc-k">AUX Send</span><span class="lc-v">1</span></div>
+        <div class="lc-row"><span class="lc-k">USB 오디오 I/F</span><span class="lc-v">YES</span></div>
+        <div class="lc-row"><span class="lc-k">+48V Phantom</span><span class="lc-v">YES</span></div>
+        <div class="lc-row"><span class="lc-k">무게</span><span class="lc-v">0.78 kg</span></div>
+        <div class="lc-row"><span class="lc-k">크기 (W×D×H)</span><span class="lc-v">220×160×68</span></div>
+      </div>
+
+      <div class="lc">
+        <span class="sale">판매중</span>
+        <span class="lc-badge">6-CHANNEL</span>
+        <div class="lc-name">MIX04AU</div>
+        <div class="lc-sub">Compact USB Mixing Console</div>
+        <div class="lc-row"><span class="lc-k">Mic 입력</span><span class="lc-v">4</span></div>
+        <div class="lc-row"><span class="lc-k">스테레오 입력</span><span class="lc-v">2</span></div>
+        <div class="lc-row"><span class="lc-k">AUX Send</span><span class="lc-v">1</span></div>
+        <div class="lc-row"><span class="lc-k">USB 오디오 I/F</span><span class="lc-v">YES</span></div>
+        <div class="lc-row"><span class="lc-k">+48V Phantom</span><span class="lc-v">YES</span></div>
+        <div class="lc-row"><span class="lc-k">무게</span><span class="lc-v">0.98 kg</span></div>
+        <div class="lc-row"><span class="lc-k">크기 (W×D×H)</span><span class="lc-v">220×220×68</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SPEC -->
+<section class="sec" id="sec-spec">
+  <div class="si">
+    <div class="sl">스펙 비교</div>
+    <div class="st">SPECIFICATION COMPARISON</div>
+    <p class="sd">2개 모델의 입출력 구성, 채널 수, 물리적 크기 비교표. 전기적 공통 특성(주파수 응답, 게인, EIN, 출력 레벨 등)은 하단 "공통 사양" 섹션을 참고하세요.</p>
+    <div class="cmp-wrap">
+      <table class="cmp">
+        <thead>
+          <tr>
+            <th>항목</th>
+            <th>MIX02AU</th>
+            <th>MIX04AU</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th>총 채널</th><td class="hl">4 CH</td><td class="hl">6 CH</td></tr>
+          <tr><th>Mic 입력</th><td>2</td><td>4</td></tr>
+          <tr><th>Stereo 입력</th><td>2</td><td>2</td></tr>
+          <tr><th>AUX Send</th><td>1</td><td>1</td></tr>
+          <tr><th>Stereo L/R Output</th><td>2</td><td>2</td></tr>
+          <tr><th>USB 오디오 인터페이스</th><td>YES</td><td>YES</td></tr>
+          <tr><th>+48V Phantom Power</th><td>YES</td><td>YES</td></tr>
+          <tr><th>Gain</th><td colspan="2">65 dB (Mic Main Output)</td></tr>
+          <tr><th>Mic CH EQ ±15dB</th><td colspan="2">Hi: 12 kHz · Lo: 80 Hz</td></tr>
+          <tr><th>Line CH EQ ±15dB</th><td colspan="2">Hi: 12 kHz · Lo: 80 Hz</td></tr>
+          <tr><th>주파수 응답</th><td colspan="2">20 Hz – 20 kHz (±1 dB)</td></tr>
+          <tr><th>EIN (등가 입력 잡음)</th><td colspan="2">−103 dB (Unweighted)</td></tr>
+          <tr><th>최대 출력 레벨</th><td colspan="2">+20 dBu</td></tr>
+          <tr><th>Distortion</th><td colspan="2">≤ 0.08 % (20 Hz – 20 kHz)</td></tr>
+          <tr><th>레벨 미터</th><td colspan="2">4-Segment LED (−20 dB ~ CLIP)</td></tr>
+          <tr><th>전원</th><td colspan="2">DC 12V 외장 어댑터 · 100–265 VAC</td></tr>
+          <tr><th>무게</th><td>0.78 kg</td><td>0.98 kg</td></tr>
+          <tr><th>크기 (W×D×H, mm)</th><td>220×160×68</td><td>220×220×68</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="margin-top:32px;text-align:center">
+      <img src="mix_01.jpg" alt="MIX Series Lineup" style="max-width:100%;width:auto;height:auto;border-radius:12px">
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="sec sec-bg" id="sec-features">
+  <div class="si">
+    <div class="sl">주요 특징</div>
+    <div class="st">KEY FEATURES</div>
+    <p class="sd">USB 오디오 인터페이스 · 팬텀 파워 · 컴팩트 디자인까지, MIX 시리즈를 규정하는 핵심 기술 포인트.</p>
+
+    <div class="usb-banner">
+      <div class="ic">🎙</div>
+      <div>
+        <h3>USB AUDIO INTERFACE 내장</h3>
+        <p>MIX02AU·MIX04AU의 USB 포트를 PC에 연결하면 즉시 USB 오디오 인터페이스로 동작합니다. Windows·macOS USB 오디오 클래스 표준을 지원하여 별도 드라이버 설치 없이 자동 인식되며, DAW(Cubase·Logic·Studio One·Reaper 등)와 줌·OBS·스트리밍 소프트웨어에서 입출력 디바이스로 즉시 선택해 사용할 수 있습니다. 별도의 외장 오디오 카드를 구입할 필요 없이 믹서 한 대로 마이크 프리앰프·EQ·믹싱·녹음·재생을 모두 처리할 수 있습니다.</p>
+      </div>
+    </div>
+
+    <div class="feat-grid">
+      <div class="feat"><div class="feat-icon">🎤</div><div class="feat-ttl">+48V Phantom Power</div><div class="feat-txt">콘덴서 마이크 사용을 위한 +48V 팬텀 파워를 내장하여, 보컬·어쿠스틱 악기 등 고품질 콘덴서 마이크를 별도 외장 전원 없이 직접 연결할 수 있습니다.</div></div>
+      <div class="feat"><div class="feat-icon">🎚</div><div class="feat-ttl">2-Band 채널 EQ</div><div class="feat-txt">전 채널에 Hi 12kHz · Lo 80Hz ±15dB의 2밴드 EQ를 탑재하여, 보컬과 악기의 톤 밸런스를 빠르고 직관적으로 다듬을 수 있습니다.</div></div>
+      <div class="feat"><div class="feat-icon">🔌</div><div class="feat-ttl">다양한 입출력 단자</div><div class="feat-txt">XLR 밸런스 마이크 입력, 1/4" TRS 라인 입력, RCA 2TK 입출력, AUX SEND, 헤드폰 출력, 메인 L/R 출력까지 풀 스펙 입출력을 콤팩트한 섀시에 통합했습니다.</div></div>
+      <div class="feat"><div class="feat-icon">📊</div><div class="feat-ttl">4-Segment LED 미터</div><div class="feat-txt">−20dB부터 CLIP까지 4단계 LED 레벨 미터를 좌·우 채널에 각각 탑재해, 라이브 현장에서도 한눈에 신호 상태를 파악할 수 있습니다.</div></div>
+      <div class="feat"><div class="feat-icon">📐</div><div class="feat-ttl">초컴팩트 · 초경량</div><div class="feat-txt">220×160(220)×68mm의 손바닥 크기, 1kg 미만의 초경량 알루미늄 섀시. 가방에 쏙 들어가 야외 촬영·출장 녹음·휴대용 라이브에 이상적입니다.</div></div>
+      <div class="feat"><div class="feat-icon">🌍</div><div class="feat-ttl">100–265V Universal</div><div class="feat-txt">DC 12V 외장 어댑터는 100~265V 와이드 입력에 대응해 국내외 어디서나 별도 변압기 없이 그대로 사용할 수 있습니다.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMON -->
+<section class="sec sec-dark" id="sec-common">
+  <div class="si">
+    <div class="sl w">공통 사양</div>
+    <div class="st w">COMMON SPECIFICATIONS</div>
+    <p class="sd" style="color:rgba(255,255,255,.5)">MIX02AU · MIX04AU 두 모델에 공통으로 적용되는 전기 특성 및 입출력 사양입니다.</p>
+    <div class="common-grid">
+      <div class="common"><div class="common-ic">🎚</div><div><div class="common-ttl">Gain</div><div class="common-txt">65 dB (Mic Main Output)</div></div></div>
+      <div class="common"><div class="common-ic">🎛</div><div><div class="common-ttl">Channel EQ</div><div class="common-txt">Hi 12 kHz · Lo 80 Hz · ±15 dB (Mic & Line)</div></div></div>
+      <div class="common"><div class="common-ic">〰</div><div><div class="common-ttl">주파수 응답</div><div class="common-txt">20 Hz – 20 kHz (±1 dB)</div></div></div>
+      <div class="common"><div class="common-ic">📉</div><div><div class="common-ttl">Distortion (THD)</div><div class="common-txt">≤ 0.08 % (20 Hz – 20 kHz)</div></div></div>
+      <div class="common"><div class="common-ic">🔇</div><div><div class="common-ttl">EIN (등가 입력 잡음)</div><div class="common-txt">−103 dB (Unweighted)</div></div></div>
+      <div class="common"><div class="common-ic">📤</div><div><div class="common-ttl">최대 출력 레벨</div><div class="common-txt">+20 dBu</div></div></div>
+      <div class="common"><div class="common-ic">📊</div><div><div class="common-ttl">레벨 미터</div><div class="common-txt">4-Segment LED · −20 dB ~ CLIP</div></div></div>
+      <div class="common"><div class="common-ic">🎤</div><div><div class="common-ttl">Phantom Power</div><div class="common-txt">+48V · 콘덴서 마이크 지원</div></div></div>
+      <div class="common"><div class="common-ic">🎙</div><div><div class="common-ttl">USB Audio Interface</div><div class="common-txt">USB 오디오 클래스 · 드라이버 불필요</div></div></div>
+      <div class="common"><div class="common-ic">🔌</div><div><div class="common-ttl">입출력</div><div class="common-txt">XLR · TRS · RCA · AUX · Phones</div></div></div>
+      <div class="common"><div class="common-ic">⚡</div><div><div class="common-ttl">전원</div><div class="common-txt">DC 12V 외장 어댑터 · 100–265 VAC</div></div></div>
+      <div class="common"><div class="common-ic">📐</div><div><div class="common-ttl">섀시 두께</div><div class="common-txt">68 mm 슬림 알루미늄 바디</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- APPLICATION -->
+<section class="sec sec-dark" id="sec-app">
+  <div class="si">
+    <div class="sl w">적용 분야</div>
+    <div class="st w">APPLICATION</div>
+    <p class="sd" style="color:rgba(255,255,255,.5)">USB 오디오 인터페이스 기능과 컴팩트한 크기 덕분에 1인 미디어부터 소규모 라이브, 출장 녹음까지 폭넓게 활용 가능합니다.</p>
+    <div class="app-grid">
+      <div class="app"><div class="app-icon">🎙</div><div class="app-name">팟캐스트 · 1인 방송</div><div class="app-desc">USB 직결 · DAW 즉시 녹음</div></div>
+      <div class="app"><div class="app-icon">🎬</div><div class="app-name">유튜브 · 스트리밍</div><div class="app-desc">OBS · 줌 · 라이브 송출</div></div>
+      <div class="app"><div class="app-icon">🏠</div><div class="app-name">홈 레코딩</div><div class="app-desc">콘덴서 마이크 · 어쿠스틱 녹음</div></div>
+      <div class="app"><div class="app-icon">💼</div><div class="app-name">화상 회의</div><div class="app-desc">Zoom · Teams · Webex</div></div>
+      <div class="app"><div class="app-icon">🎤</div><div class="app-name">소규모 라이브</div><div class="app-desc">버스킹 · 카페 공연</div></div>
+      <div class="app"><div class="app-icon">🎬</div><div class="app-name">출장 녹음</div><div class="app-desc">필드 레코딩 · 인터뷰</div></div>
+      <div class="app"><div class="app-icon">🏫</div><div class="app-name">강의 · 교육</div><div class="app-desc">온라인 클래스 · 웨비나</div></div>
+      <div class="app"><div class="app-icon">🎹</div><div class="app-name">악기 연습</div><div class="app-desc">키보드 · 일렉기타 모니터</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © (주)현대에이브이씨 HYUNDAI AUDIO VISUAL COMMUNICATIONS CO., LTD<br>
+  Soundking MIX Series · Compact USB Mixing Console · 공식 수입원
+</footer>
+
+<script>
+(function(){
+  const imgs=document.querySelectorAll('.slideshow .ss-img');
+  if(!imgs.length)return;
+  let i=0;
+  setInterval(()=>{
+    imgs[i].style.opacity=0;
+    i=(i+1)%imgs.length;
+    imgs[i].style.opacity=1;
+  },2500);
+})();
+function goTab(id){
+  document.querySelectorAll('.tb').forEach(b=>b.classList.remove('on'));
+  event.currentTarget.classList.add('on');
+  const el=document.getElementById(id);
+  if(el){window.scrollTo({top:el.offsetTop-120,behavior:'smooth'})}
+}
+</script>
+</body>
+</html>
