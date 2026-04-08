@@ -73,6 +73,13 @@ header{background:#fff;border-bottom:1px solid var(--border);padding:0 24px;heig
 .lc.off::before{display:none}
 .sale{position:absolute;top:18px;right:18px;font-size:9px;font-weight:800;letter-spacing:.12em;padding:4px 9px;border-radius:20px;background:var(--red);color:#fff}
 .sale.no{background:#bbb;color:#fff}
+.lc-price{margin-top:14px;padding-top:14px;border-top:2px solid var(--border);display:flex;justify-content:space-between;align-items:baseline}
+.lc-price .p{color:var(--red);font-weight:900;font-size:18px}
+.lc-price .u{font-size:11px;color:var(--light)}
+.rack-note{margin-top:28px;padding:18px 22px;background:linear-gradient(90deg,var(--accent-light),#fff);border:1px solid var(--accent-border);border-left:4px solid var(--red);border-radius:10px;display:flex;align-items:center;gap:14px}
+.rack-note .ic{font-size:26px}
+.rack-note .tt{font-size:13px;font-weight:800;color:var(--red);letter-spacing:.05em;margin-bottom:2px}
+.rack-note .tx{font-size:12px;color:var(--mid);line-height:1.6}
 .lc-name{font-family:'Bebas Neue',sans-serif;font-size:2.2rem;letter-spacing:.04em;line-height:.95;margin-bottom:2px}
 .lc-sub{font-size:11px;color:var(--light);text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}
 .lc-row{display:flex;justify-content:space-between;align-items:baseline;padding:7px 0;border-bottom:1px dashed var(--border);font-size:12px}
@@ -146,10 +153,16 @@ footer{background:#111;color:#fff;padding:24px;font-size:11px;opacity:.5;text-al
         <span class="tag">60mm 롱 페이더</span>
         <span class="tag hot">+48V Phantom</span>
         <span class="tag">100–240V</span>
+        <span class="tag hot">📦 랙마운트 키트 기본포함</span>
       </div>
     </div>
     <div class="hero-visual">
-      <img src="KG_01.jpg" alt="Soundking KG Series" style="width:100%;max-width:460px;filter:drop-shadow(0 16px 48px rgba(255,255,255,.08));border-radius:6px" onerror="this.style.display='none'">
+      <div class="slideshow" style="position:relative;width:100%;max-width:460px;margin:0 auto;aspect-ratio:4/3">
+        <img class="ss-img" src="kg08_01.jpg" alt="KG08" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 16px 48px rgba(255,255,255,.08));border-radius:6px;opacity:1;transition:opacity .8s ease">
+        <img class="ss-img" src="kg10_01.jpg" alt="KG10" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 16px 48px rgba(255,255,255,.08));border-radius:6px;opacity:0;transition:opacity .8s ease">
+        <img class="ss-img" src="kg12_01.jpg" alt="KG12" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 16px 48px rgba(255,255,255,.08));border-radius:6px;opacity:0;transition:opacity .8s ease">
+        <img class="ss-img" src="kg_01.jpg" alt="KG Series" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 16px 48px rgba(255,255,255,.08));border-radius:6px;opacity:0;transition:opacity .8s ease">
+      </div>
       <div class="hero-visual-cap">KG Series · Recording Mixing Console</div>
     </div>
   </div>
@@ -173,11 +186,7 @@ footer{background:#111;color:#fff;padding:24px;font-size:11px;opacity:.5;text-al
     <div class="sl">시리즈 소개</div>
     <div class="st">KG SERIES · RECORDING MIXING CONSOLE</div>
     <p class="sd">동급 가격대에서 요구되는 모든 기능과 스펙을 빠짐없이 담아낸 컴팩트 포터블 아날로그 믹서. 3밴드 EQ, 빌트인 채널 컴프레서, DSP 이펙트, 다용도 MP3/USB/SD 카드 재생·녹음 시스템을 하나의 콘솔에 통합했습니다.</p>
-    <div class="ov-grid">
-      <div class="ov-img">
-        <img src="KG_01.jpg" alt="Soundking KG Series" style="width:100%;max-width:420px;height:auto;object-fit:contain;filter:drop-shadow(0 8px 28px rgba(0,0,0,.6))" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-        <div class="ph" style="display:none">KG SERIES</div>
-      </div>
+    <div class="ov-grid" style="grid-template-columns:1fr">
       <div>
         <p class="ov-desc">
           KG 시리즈는 8·10·12 입력 3개 모델로 구성되어 있습니다. 8입력(KG08)은 4마이크 채널, 10입력(KG10)은 6마이크 채널, 12입력(KG12)은 8마이크 채널을 갖추고 있으며, 모든 모델이 2개의 스테레오 채널을 기본 제공합니다.
@@ -201,7 +210,7 @@ footer{background:#111;color:#fff;padding:24px;font-size:11px;opacity:.5;text-al
   <div class="si">
     <div class="sl">라인업</div>
     <div class="st">3 MODELS · 8 / 10 / 12 INPUTS</div>
-    <p class="sd">KG08 · KG10 · KG12 3개 모델. 공통 플랫폼 위에서 입력 채널 수와 섀시 크기만 달라지므로, 사용 환경에 맞춰 자유롭게 선택할 수 있습니다.</p>
+    <p class="sd">KG08 · KG10 · KG12 3개 모델. 공통 플랫폼 위에서 입력 채널 수와 섀시 크기만 달라지므로, 사용 환경에 맞춰 자유롭게 선택할 수 있습니다. <strong style="color:var(--red)">전 모델 19인치 랙마운트 키트(RM)가 기본 포함</strong>되어 별도 구매 없이 바로 랙 설치가 가능합니다.</p>
     <div class="lineup-grid">
 
       <div class="lc">
@@ -214,6 +223,8 @@ footer{background:#111;color:#fff;padding:24px;font-size:11px;opacity:.5;text-al
         <div class="lc-row"><span class="lc-k">스테레오 채널</span><span class="lc-v">2</span></div>
         <div class="lc-row"><span class="lc-k">USB / SD / BT</span><span class="lc-v">YES</span></div>
         <div class="lc-row"><span class="lc-k">크기 (W×H×D)</span><span class="lc-v">283×70×359</span></div>
+        <div class="lc-row"><span class="lc-k">랙마운트</span><span class="lc-v">기본포함</span></div>
+        <div class="lc-price"><span class="p">397,000원</span><span class="u">/ 개</span></div>
       </div>
 
       <div class="lc">
@@ -226,6 +237,8 @@ footer{background:#111;color:#fff;padding:24px;font-size:11px;opacity:.5;text-al
         <div class="lc-row"><span class="lc-k">스테레오 채널</span><span class="lc-v">2</span></div>
         <div class="lc-row"><span class="lc-k">USB / SD / BT</span><span class="lc-v">YES</span></div>
         <div class="lc-row"><span class="lc-k">크기 (W×H×D)</span><span class="lc-v">339×70×359</span></div>
+        <div class="lc-row"><span class="lc-k">랙마운트</span><span class="lc-v">기본포함</span></div>
+        <div class="lc-price"><span class="p">473,000원</span><span class="u">/ 개</span></div>
       </div>
 
       <div class="lc">
@@ -238,8 +251,17 @@ footer{background:#111;color:#fff;padding:24px;font-size:11px;opacity:.5;text-al
         <div class="lc-row"><span class="lc-k">스테레오 채널</span><span class="lc-v">2</span></div>
         <div class="lc-row"><span class="lc-k">USB / SD / BT</span><span class="lc-v">YES</span></div>
         <div class="lc-row"><span class="lc-k">크기 (W×H×D)</span><span class="lc-v">395×70×359</span></div>
+        <div class="lc-row"><span class="lc-k">랙마운트</span><span class="lc-v">기본포함</span></div>
+        <div class="lc-price"><span class="p">561,000원</span><span class="u">/ 개</span></div>
       </div>
 
+    </div>
+    <div class="rack-note">
+      <div class="ic">📦</div>
+      <div>
+        <div class="tt">19" 랙마운트 키트(RM) 기본 포함</div>
+        <div class="tx">KG08+RM · KG10+RM · KG12+RM 전 모델은 19인치 표준 랙마운트 브래킷이 기본 구성품으로 포함되어, 별도 옵션 구매 없이 바로 랙 설치형 시스템으로 운용할 수 있습니다.</div>
+      </div>
     </div>
   </div>
 </section>
@@ -284,6 +306,9 @@ footer{background:#111;color:#fff;padding:24px;font-size:11px;opacity:.5;text-al
           <tr><th>크기 (W×H×D, mm)</th><td>283×70×359</td><td>339×70×359</td><td>395×70×359</td></tr>
         </tbody>
       </table>
+    </div>
+    <div style="margin-top:32px;text-align:center">
+      <img src="kg_01.jpg" alt="KG Series Lineup" style="max-width:100%;width:auto;height:auto;border-radius:12px">
     </div>
   </div>
 </section>
@@ -353,6 +378,16 @@ footer{background:#111;color:#fff;padding:24px;font-size:11px;opacity:.5;text-al
 </footer>
 
 <script>
+(function(){
+  const imgs=document.querySelectorAll('.slideshow .ss-img');
+  if(!imgs.length)return;
+  let i=0;
+  setInterval(()=>{
+    imgs[i].style.opacity=0;
+    i=(i+1)%imgs.length;
+    imgs[i].style.opacity=1;
+  },2500);
+})();
 function goTab(id){
   document.querySelectorAll('.tb').forEach(b=>b.classList.remove('on'));
   event.currentTarget.classList.add('on');
