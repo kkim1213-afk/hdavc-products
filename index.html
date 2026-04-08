@@ -252,8 +252,8 @@ const products = [
   {cat:'스피커',sub:'모니터',name:'KC10D 10인치 액티브 동축 모니터',model:'KC10D',brand:'Soundking',icon:'🔉',spec:'350W Class D / 126dB / DSP 내장',price:1980000,unit:'조',img:'KC10D_01.jpg',page:'kc10d.html'},
   {cat:'스피커',sub:'모니터',name:'KC12D 12인치 액티브 동축 모니터',model:'KC12D',brand:'Soundking',icon:'🔉',spec:'350W Class D / 128dB / DSP 내장',price:2100000,unit:'조',img:'KC10D_01.jpg',page:'kc12d.html'},
   {cat:'스피커',sub:'모니터',name:'KC15D 15인치 액티브 동축 모니터',model:'KC15D',brand:'Soundking',icon:'🔉',spec:'350W Class D / 129dB / DSP 내장',price:2300000,unit:'조',img:'KC10D_01.jpg',page:'kc15d.html'},
-  {cat:'파워앰프',sub:'디지털 파워앰프 시리즈',name:'BA 시리즈 디지털 파워앰프',model:'BA2300/2500/21200/4300/4450/4600',brand:'Soundking',icon:'⚡',spec:'1RU Class D / 2CH·4CH 6종 / 최대 4×900W@4Ω',price:660000,unit:'개~',page:'ba-series.html',img:'BA_01.jpg',inquiry:true},
-  {cat:'파워앰프',sub:'디지털 파워앰프 시리즈',name:'BD 시리즈 디지털 파워앰프 (DSP 내장)',model:'BD2300/2500/21200/4300/4450/4600',brand:'Soundking',icon:'⚡',spec:'SoundNet DSP · AES67/Ravenna / 2CH·4CH 6종',price:935000,unit:'개~',page:'bd-series.html',img:'BD_01.jpg',inquiry:true},
+  {cat:'파워앰프',sub:'디지털 파워앰프 시리즈',name:'BA 시리즈 디지털 파워앰프',model:'BA2300/2500/21200/4300/4450/4600',brand:'Soundking',icon:'⚡',spec:'1RU Class D / 2CH·4CH 6종 / 최대 4×900W@4Ω',price:660000,unit:'개~',page:'ba-series.html',img:'BA_01.jpg',refPage:true},
+  {cat:'파워앰프',sub:'디지털 파워앰프 시리즈',name:'BD 시리즈 디지털 파워앰프 (DSP 내장)',model:'BD2300/2500/21200/4300/4450/4600',brand:'Soundking',icon:'⚡',spec:'SoundNet DSP · AES67/Ravenna / 2CH·4CH 6종',price:935000,unit:'개~',page:'bd-series.html',img:'BD_01.jpg',refPage:true},
   {cat:'믹서',sub:'아날로그 믹서',name:'KG08+RM 8채널 믹서',model:'KG08+RM',brand:'Soundking',icon:'🎛',spec:'8채널 / XLR출력 / SD·USB 레코딩',price:397000,unit:'개'},
   {cat:'믹서',sub:'아날로그 믹서',name:'KG10+RM 10채널 믹서',model:'KG10+RM',brand:'Soundking',icon:'🎛',spec:'10채널 / XLR출력 / SD·USB 레코딩',price:473000,unit:'개'},
   {cat:'믹서',sub:'아날로그 믹서',name:'KG12+RM 12채널 믹서',model:'KG12+RM',brand:'Soundking',icon:'🎛',spec:'12채널 / XLR출력 / SD·USB 레코딩',price:561000,unit:'개'},
@@ -333,7 +333,7 @@ function render(){
                 <div class="card-cat">${p.brand}</div>
                 <div class="card-name">${p.name}</div>
                 <div class="card-spec">${p.spec}</div>
-                <div class="card-price">${p.inquiry ? `<span style="color:#e94560;font-weight:900;font-size:14px">견적문의</span>` : `${priceFmt(p.price)}<span style="font-size:10px;font-weight:400;color:#888"> / ${p.unit}</span>`}</div>
+                <div class="card-price">${p.refPage ? `<span style="color:#e94560;font-weight:900;font-size:14px">상세페이지 참조</span>` : p.inquiry ? `<span style="color:#e94560;font-weight:900;font-size:14px">견적문의</span>` : `${priceFmt(p.price)}<span style="font-size:10px;font-weight:400;color:#888"> / ${p.unit}</span>`}</div>
                 ${p.page?`<div class="card-badge">📋 상세페이지</div>`:''}
                 ${p.badge?`<div class="card-badge blue">${p.badge}</div>`:''}
               </div>
