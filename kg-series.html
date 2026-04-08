@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KG 시리즈 아날로그 믹서 | 현대에이브이씨</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--red:#1e73be;--dark:#111;--mid:#444;--light:#888;--bg:#f5f5f7;--white:#fff;--border:#eee;--navy:#0d1117;--accent-light:#e8f1fa;--accent-border:#bcdcf5}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Sans KR',sans-serif;background:var(--white);color:var(--dark);line-height:1.6}
+img{max-width:100%}
+header{background:#fff;border-bottom:1px solid var(--border);padding:0 24px;height:60px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.logo img{height:36px;object-fit:contain}
+.back-btn{color:var(--light);text-decoration:none;font-size:13px;font-weight:500}
+.back-btn:hover{color:var(--red)}
+.bc{background:var(--bg);padding:10px 24px;border-bottom:1px solid var(--border);font-size:12px;color:var(--light)}
+.bc a{color:var(--light);text-decoration:none}.bc a:hover{color:var(--red)}
+.bc strong{color:var(--dark)}
+.hero{background:linear-gradient(160deg,#000 0%,#111 50%,#000 100%);color:#fff;overflow:hidden;position:relative}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 65% 40%,rgba(30,115,190,.1),transparent 60%)}
+.hero-inner{max-width:1200px;margin:0 auto;padding:64px 24px;display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center;position:relative;z-index:1}
+.h-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(30,115,190,.15);border:1px solid rgba(30,115,190,.5);color:#93c5fd;font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:5px 14px;border-radius:2px;margin-bottom:16px}
+.h-dot{width:5px;height:5px;background:var(--red);border-radius:50%;animation:blink 1.8s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.h-brand{font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.35);text-transform:uppercase;margin-bottom:6px}
+.hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,6.5vw,5.5rem);line-height:.9;letter-spacing:.05em;color:#fff;margin-bottom:8px}
+.hero h1 .r{color:#7ec5ff}
+.h-sub{font-size:12px;color:rgba(255,255,255,.4);letter-spacing:.08em;text-transform:uppercase;margin-bottom:18px}
+.h-desc{font-size:14px;color:rgba(255,255,255,.65);line-height:1.85;margin-bottom:28px}
+.kpi-row{display:flex;gap:22px;flex-wrap:wrap;margin-bottom:28px}
+.kpi{display:flex;flex-direction:column;gap:2px}
+.kv{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:#fff;line-height:1}
+.kv s{font-size:.9rem;color:rgba(255,255,255,.4);font-family:'Noto Sans KR',sans-serif;font-weight:300;text-decoration:none}
+.kl{font-size:10px;color:rgba(255,255,255,.35);letter-spacing:.1em;text-transform:uppercase}
+.h-tags{display:flex;flex-wrap:wrap;gap:7px}
+.tag{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.65);font-size:11px;padding:4px 11px;border-radius:20px}
+.tag.hot{background:rgba(30,115,190,.2);border-color:rgba(30,115,190,.5);color:#93c5fd}
+.hero-visual{text-align:center}
+.hero-visual-cap{margin-top:16px;font-size:11px;color:rgba(255,255,255,.35);letter-spacing:.1em;text-transform:uppercase}
+.tab-wrap{background:#fff;border-bottom:2px solid var(--border);position:sticky;top:60px;z-index:100}
+.tabs{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tb{padding:15px 18px;border:none;background:none;font-size:13px;font-weight:500;color:var(--light);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-2px;white-space:nowrap;transition:all .2s;font-family:'Noto Sans KR',sans-serif}
+.tb.on,.tb:hover{color:var(--red);border-bottom-color:var(--red)}
+.sec{padding:64px 24px}
+.si{max-width:1200px;margin:0 auto}
+.sl{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:8px}
+.sl.w{color:#93c5fd}
+.st{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.8rem,4vw,2.6rem);letter-spacing:.04em;color:var(--dark);margin-bottom:6px}
+.st.w{color:#fff}
+.sd{font-size:14px;color:var(--light);margin-bottom:36px;max-width:760px;line-height:1.8}
+.sec-bg{background:var(--bg)}
+.sec-dark{background:var(--navy)}
+.ov-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.ov-img{background:linear-gradient(135deg,#1a1a1a,#0a0a0a);border-radius:16px;padding:48px 36px;text-align:center;border:1px solid rgba(255,255,255,.06);display:flex;flex-direction:column;gap:12px;min-height:280px;justify-content:center}
+.ov-img .ph{font-family:'Bebas Neue',sans-serif;color:rgba(255,255,255,.25);font-size:2rem;letter-spacing:.1em}
+.ov-desc{font-size:14px;color:var(--mid);line-height:1.9;margin-bottom:20px}
+.ov-highlights{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ov-hl{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:14px 16px;display:flex;align-items:flex-start;gap:10px}
+.ov-hl-icon{font-size:18px;flex-shrink:0}
+.ov-hl-ttl{font-size:12px;font-weight:700;margin-bottom:2px}
+.ov-hl-txt{font-size:11px;color:var(--light);line-height:1.6}
+.lineup-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.lc{background:#fff;border:1px solid var(--border);border-radius:14px;padding:24px 22px;transition:all .25s;position:relative;overflow:hidden}
+.lc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.lc:hover{border-color:rgba(30,115,190,.35);transform:translateY(-3px);box-shadow:0 10px 32px rgba(30,115,190,.1)}
+.lc:hover::before{transform:scaleX(1)}
+.lc-badge{display:inline-block;font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--red);background:var(--accent-light);border:1px solid var(--accent-border);padding:3px 9px;border-radius:20px;margin-bottom:10px}
+.lc-badge.big{color:#6a5acd;background:#f1f0fb;border-color:#d9d6ef}
+.lc.off{opacity:.55}
+.lc.off:hover{transform:none;box-shadow:none;border-color:var(--border)}
+.lc.off::before{display:none}
+.sale{position:absolute;top:18px;right:18px;font-size:9px;font-weight:800;letter-spacing:.12em;padding:4px 9px;border-radius:20px;background:var(--red);color:#fff}
+.sale.no{background:#bbb;color:#fff}
+.lc-name{font-family:'Bebas Neue',sans-serif;font-size:2.2rem;letter-spacing:.04em;line-height:.95;margin-bottom:2px}
+.lc-sub{font-size:11px;color:var(--light);text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}
+.lc-row{display:flex;justify-content:space-between;align-items:baseline;padding:7px 0;border-bottom:1px dashed var(--border);font-size:12px}
+.lc-row:last-of-type{border-bottom:none}
+.lc-k{color:var(--light)}
+.lc-v{color:var(--dark);font-weight:700;font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:.03em}
+.cmp-wrap{background:#fff;border:1px solid var(--border);border-radius:14px;overflow:auto}
+table.cmp{width:100%;border-collapse:collapse;min-width:860px}
+table.cmp th,table.cmp td{padding:12px 14px;font-size:12px;border-bottom:1px solid var(--border);text-align:center;white-space:nowrap}
+table.cmp thead th{background:var(--bg);font-weight:700;color:var(--dark);font-size:11px;letter-spacing:.05em;text-transform:uppercase}
+table.cmp tbody th{background:#fafafa;font-weight:500;color:var(--light);text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.05em}
+table.cmp tbody tr:hover td{background:#f4f9fe}
+table.cmp td.hl{color:var(--red);font-weight:800;font-family:'Bebas Neue',sans-serif;font-size:14px}
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.feat{background:#fff;border:1px solid var(--border);border-radius:12px;padding:22px 18px;transition:all .25s;position:relative;overflow:hidden}
+.feat::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.feat:hover{border-color:rgba(30,115,190,.35);transform:translateY(-3px);box-shadow:0 8px 28px rgba(30,115,190,.1)}
+.feat:hover::before{transform:scaleX(1)}
+.feat-icon{font-size:24px;margin-bottom:10px}
+.feat-ttl{font-size:13px;font-weight:700;margin-bottom:7px}
+.feat-txt{font-size:12px;color:var(--light);line-height:1.75}
+.common-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:860px}
+.common{display:flex;gap:12px;padding:14px 18px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px}
+.common-ic{font-size:20px;flex-shrink:0}
+.common-ttl{font-size:12px;color:#fff;font-weight:700;margin-bottom:2px}
+.common-txt{font-size:11px;color:rgba(255,255,255,.5);line-height:1.65}
+.app-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.app{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:18px;text-align:center;transition:all .2s}
+.app:hover{border-color:rgba(30,115,190,.5);background:rgba(30,115,190,.08)}
+.app-icon{font-size:26px;margin-bottom:8px}
+.app-name{font-size:13px;font-weight:700;color:#fff;margin-bottom:3px}
+.app-desc{font-size:11px;color:rgba(255,255,255,.4);line-height:1.6}
+footer{background:#111;color:#fff;padding:24px;font-size:11px;opacity:.5;text-align:center;line-height:1.8}
+@media(max-width:1024px){.hero-inner,.ov-grid{grid-template-columns:1fr}.hero-visual{display:none}.lineup-grid{grid-template-columns:1fr 1fr}.common-grid{grid-template-columns:1fr}}
+@media(max-width:768px){.feat-grid{grid-template-columns:1fr 1fr}.app-grid{grid-template-columns:1fr 1fr}.ov-highlights{grid-template-columns:1fr}.lineup-grid{grid-template-columns:1fr}}
+@media(max-width:540px){.feat-grid,.app-grid{grid-template-columns:1fr}.hero-inner,.sec{padding-left:16px;padding-right:16px}.hero-inner{padding-top:40px;padding-bottom:40px}.sec{padding-top:44px;padding-bottom:44px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo"><a href="index.html"><img src="logo.png" alt="(주)현대에이브이씨"></a></div>
+  <a href="index.html" class="back-btn">← 제품 목록</a>
+</header>
+<div class="bc">
+  <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+    <a href="index.html">홈</a> › <a href="index.html">믹서</a> › <a href="index.html">아날로그 믹서</a> › <strong>Soundking KG 시리즈 레코딩 믹싱 콘솔</strong>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="h-badge"><span class="h-dot"></span>Recording Mixing Console</div>
+      <div class="h-brand">Soundking · KG Series</div>
+      <h1>KG<span class="r">Series</span></h1>
+      <div class="h-sub">Compact Analog Mixer · 5 / 6 / 8 / 10 / 12 / 16 CH · USB · SD · Bluetooth · DSP</div>
+      <p class="h-desc">컴팩트하고 휴대성이 뛰어난 Soundking KG 시리즈 레코딩 믹싱 콘솔. 3밴드 EQ, 채널 컴프레서, DSP 이펙트, USB·SD 카드 녹음/재생, Bluetooth 재생까지 동급 최고 수준의 기능을 합리적인 가격으로 제공합니다. 5·6·8·10·12·16 입력 6개 모델로 홈레코딩부터 라이브 SR, 설치 음향까지 모든 규모에 대응합니다.</p>
+      <div class="kpi-row">
+        <div class="kpi"><div class="kv">6<s>Models</s></div><div class="kl">Lineup</div></div>
+        <div class="kpi"><div class="kv">16<s>CH</s></div><div class="kl">Max Inputs</div></div>
+        <div class="kpi"><div class="kv">16<s>DSP</s></div><div class="kl">FX Programs</div></div>
+        <div class="kpi"><div class="kv">48<s>V</s></div><div class="kl">Phantom</div></div>
+      </div>
+      <div class="h-tags">
+        <span class="tag hot">🎚 3 Band EQ</span>
+        <span class="tag">Mic Compressor</span>
+        <span class="tag hot">🎵 USB · SD 녹음/재생</span>
+        <span class="tag">📶 Bluetooth</span>
+        <span class="tag">16 DSP Effects</span>
+        <span class="tag">60mm 롱 페이더</span>
+        <span class="tag hot">+48V Phantom</span>
+        <span class="tag">100–240V</span>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img src="KG_01.jpg" alt="Soundking KG Series" style="width:100%;max-width:460px;filter:drop-shadow(0 16px 48px rgba(255,255,255,.08));border-radius:6px" onerror="this.style.display='none'">
+      <div class="hero-visual-cap">KG Series · Recording Mixing Console</div>
+    </div>
+  </div>
+</section>
+
+<!-- TABS -->
+<div class="tab-wrap">
+  <div class="tabs">
+    <button class="tb on" onclick="goTab('sec-overview')">시리즈 소개</button>
+    <button class="tb" onclick="goTab('sec-lineup')">라인업</button>
+    <button class="tb" onclick="goTab('sec-spec')">스펙 비교</button>
+    <button class="tb" onclick="goTab('sec-features')">주요 특징</button>
+    <button class="tb" onclick="goTab('sec-common')">공통 사양</button>
+    <button class="tb" onclick="goTab('sec-app')">적용 분야</button>
+  </div>
+</div>
+
+<!-- OVERVIEW -->
+<section class="sec" id="sec-overview">
+  <div class="si">
+    <div class="sl">시리즈 소개</div>
+    <div class="st">KG SERIES · RECORDING MIXING CONSOLE</div>
+    <p class="sd">동급 가격대에서 요구되는 모든 기능과 스펙을 빠짐없이 담아낸 컴팩트 포터블 아날로그 믹서. 3밴드 EQ, 빌트인 채널 컴프레서, DSP 이펙트, 다용도 MP3/USB/SD 카드 재생·녹음 시스템을 하나의 콘솔에 통합했습니다.</p>
+    <div class="ov-grid">
+      <div class="ov-img">
+        <img src="KG_01.jpg" alt="Soundking KG Series" style="width:100%;max-width:420px;height:auto;object-fit:contain;filter:drop-shadow(0 8px 28px rgba(0,0,0,.6))" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <div class="ph" style="display:none">KG SERIES</div>
+      </div>
+      <div>
+        <p class="ov-desc">
+          KG 시리즈는 5·6·8·10·12·16 입력 6개 모델로 구성되어 있습니다. 5입력 모델은 1마이크 채널, 6입력은 2마이크 채널, 8입력은 4마이크 채널, 10입력은 6마이크 채널, 12입력은 8마이크 채널, 그리고 16입력 모델은 12마이크 채널을 갖추고 있으며, 모든 모델이 2개의 스테레오 채널을 기본 제공합니다.
+        </p>
+        <p class="ov-desc">
+          입력 채널에는 3밴드 EQ, 밸런스/언밸런스 Mic·Line 커넥터, 컴프레서 컨트롤과 채널 MUTE 스위치가 완비되어 있습니다. 메인 출력은 밸런스 XLR과 보조·컨트롤룸용 Jack 출력, RCA 폰 녹음/재생 단자를 함께 제공하며, USB·SD 카드 포트를 통한 스테레오 녹음과 재생, Bluetooth 무선 재생까지 지원합니다. 모든 모델은 +48V 팬텀 파워, 60mm 롱 스트로크 페이더, 16개 DSP 이펙트, 견고한 스위칭 모드 파워 서플라이를 탑재합니다.
+        </p>
+        <div class="ov-highlights">
+          <div class="ov-hl"><div class="ov-hl-icon">🎚</div><div><div class="ov-hl-ttl">3 Band EQ · Comp</div><div class="ov-hl-txt">모든 마이크 채널 · 채널 컴프레서</div></div></div>
+          <div class="ov-hl"><div class="ov-hl-icon">🎵</div><div><div class="ov-hl-ttl">USB · SD · BT</div><div class="ov-hl-txt">스테레오 녹음 · 재생 · 무선 입력</div></div></div>
+          <div class="ov-hl"><div class="ov-hl-icon">✨</div><div><div class="ov-hl-ttl">16 DSP 이펙트</div><div class="ov-hl-txt">리버브 · 딜레이 · 코러스 외</div></div></div>
+          <div class="ov-hl"><div class="ov-hl-icon">⚡</div><div><div class="ov-hl-ttl">+48V · SMPS</div><div class="ov-hl-txt">팬텀 파워 · 100–240V 와이드</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LINEUP -->
+<section class="sec sec-bg" id="sec-lineup">
+  <div class="si">
+    <div class="sl">라인업</div>
+    <div class="st">6 MODELS · 5 TO 16 INPUTS</div>
+    <p class="sd">KG05부터 플래그십 KG16까지 6개 모델. 공통 플랫폼 위에서 입력 채널 수와 섀시 크기만 달라지므로, 사용 환경에 맞춰 자유롭게 선택할 수 있습니다.</p>
+    <div class="lineup-grid">
+
+      <div class="lc off">
+        <span class="sale no">단종</span>
+        <span class="lc-badge">5-INPUT</span>
+        <div class="lc-name">KG05</div>
+        <div class="lc-sub">Compact Recording Mixer</div>
+        <div class="lc-row"><span class="lc-k">총 입력</span><span class="lc-v">5 CH</span></div>
+        <div class="lc-row"><span class="lc-k">마이크 채널</span><span class="lc-v">1</span></div>
+        <div class="lc-row"><span class="lc-k">스테레오 채널</span><span class="lc-v">2</span></div>
+        <div class="lc-row"><span class="lc-k">USB / SD / BT</span><span class="lc-v">YES</span></div>
+        <div class="lc-row"><span class="lc-k">크기 (W×H×D)</span><span class="lc-v">195×68×270</span></div>
+      </div>
+
+      <div class="lc off">
+        <span class="sale no">단종</span>
+        <span class="lc-badge">6-INPUT</span>
+        <div class="lc-name">KG06</div>
+        <div class="lc-sub">Compact Recording Mixer</div>
+        <div class="lc-row"><span class="lc-k">총 입력</span><span class="lc-v">6 CH</span></div>
+        <div class="lc-row"><span class="lc-k">마이크 채널</span><span class="lc-v">2</span></div>
+        <div class="lc-row"><span class="lc-k">스테레오 채널</span><span class="lc-v">2</span></div>
+        <div class="lc-row"><span class="lc-k">USB / SD / BT</span><span class="lc-v">YES</span></div>
+        <div class="lc-row"><span class="lc-k">크기 (W×H×D)</span><span class="lc-v">227×70×359</span></div>
+      </div>
+
+      <div class="lc">
+        <span class="sale">판매중</span>
+        <span class="lc-badge">8-INPUT</span>
+        <div class="lc-name">KG08</div>
+        <div class="lc-sub">Recording Mixing Console</div>
+        <div class="lc-row"><span class="lc-k">총 입력</span><span class="lc-v">8 CH</span></div>
+        <div class="lc-row"><span class="lc-k">마이크 채널</span><span class="lc-v">4</span></div>
+        <div class="lc-row"><span class="lc-k">스테레오 채널</span><span class="lc-v">2</span></div>
+        <div class="lc-row"><span class="lc-k">USB / SD / BT</span><span class="lc-v">YES</span></div>
+        <div class="lc-row"><span class="lc-k">크기 (W×H×D)</span><span class="lc-v">283×70×359</span></div>
+      </div>
+
+      <div class="lc">
+        <span class="sale">판매중</span>
+        <span class="lc-badge">10-INPUT</span>
+        <div class="lc-name">KG10</div>
+        <div class="lc-sub">Recording Mixing Console</div>
+        <div class="lc-row"><span class="lc-k">총 입력</span><span class="lc-v">10 CH</span></div>
+        <div class="lc-row"><span class="lc-k">마이크 채널</span><span class="lc-v">6</span></div>
+        <div class="lc-row"><span class="lc-k">스테레오 채널</span><span class="lc-v">2</span></div>
+        <div class="lc-row"><span class="lc-k">USB / SD / BT</span><span class="lc-v">YES</span></div>
+        <div class="lc-row"><span class="lc-k">크기 (W×H×D)</span><span class="lc-v">339×70×359</span></div>
+      </div>
+
+      <div class="lc">
+        <span class="sale">판매중</span>
+        <span class="lc-badge">12-INPUT</span>
+        <div class="lc-name">KG12</div>
+        <div class="lc-sub">Recording Mixing Console</div>
+        <div class="lc-row"><span class="lc-k">총 입력</span><span class="lc-v">12 CH</span></div>
+        <div class="lc-row"><span class="lc-k">마이크 채널</span><span class="lc-v">8</span></div>
+        <div class="lc-row"><span class="lc-k">스테레오 채널</span><span class="lc-v">2</span></div>
+        <div class="lc-row"><span class="lc-k">USB / SD / BT</span><span class="lc-v">YES</span></div>
+        <div class="lc-row"><span class="lc-k">크기 (W×H×D)</span><span class="lc-v">395×70×359</span></div>
+      </div>
+
+      <div class="lc off">
+        <span class="sale no">단종</span>
+        <span class="lc-badge big">16-INPUT</span>
+        <div class="lc-name">KG16</div>
+        <div class="lc-sub">Recording Mixing Console</div>
+        <div class="lc-row"><span class="lc-k">총 입력</span><span class="lc-v">16 CH</span></div>
+        <div class="lc-row"><span class="lc-k">마이크 채널</span><span class="lc-v">12</span></div>
+        <div class="lc-row"><span class="lc-k">스테레오 채널</span><span class="lc-v">2</span></div>
+        <div class="lc-row"><span class="lc-k">부가 기능</span><span class="lc-v">모니터 SW · 풋SW · AUX2</span></div>
+        <div class="lc-row"><span class="lc-k">크기 (W×H×D)</span><span class="lc-v">395×70×359</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SPEC -->
+<section class="sec" id="sec-spec">
+  <div class="si">
+    <div class="sl">스펙 비교</div>
+    <div class="st">SPECIFICATION COMPARISON</div>
+    <p class="sd">6개 모델의 입력 구성, 채널 EQ, 기능, 크기 비교표. 전기적 공통 특성(주파수 응답, THD, S/N, 출력 레벨 등)은 하단 "공통 사양" 섹션을 참고하세요.</p>
+    <div class="cmp-wrap">
+      <table class="cmp">
+        <thead>
+          <tr>
+            <th>항목</th>
+            <th>KG05</th>
+            <th>KG06</th>
+            <th>KG08</th>
+            <th>KG10</th>
+            <th>KG12</th>
+            <th>KG16</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th>총 입력</th><td class="hl">5</td><td class="hl">6</td><td class="hl">8</td><td class="hl">10</td><td class="hl">12</td><td class="hl">16</td></tr>
+          <tr><th>마이크 입력 채널</th><td>1</td><td>2</td><td>4</td><td>6</td><td>8</td><td>12</td></tr>
+          <tr><th>스테레오 입력 채널</th><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td></tr>
+          <tr><th>Mic Gain</th><td colspan="6">MIN–MAX · +6dB – +50dB</td></tr>
+          <tr><th>Line Gain</th><td colspan="6">+10dB – −34dB</td></tr>
+          <tr><th>EIN</th><td colspan="6">−100 dB</td></tr>
+          <tr><th>주파수 응답 (Mic)</th><td colspan="6">10 Hz – 20 kHz (+1 / −3 dB)</td></tr>
+          <tr><th>THD (Mic)</th><td colspan="6">≤ 0.03 %</td></tr>
+          <tr><th>S/N 비</th><td colspan="6">80 dB</td></tr>
+          <tr><th>출력 레벨</th><td colspan="6">MAX +27 dB (BAL) / +22 dB (UNBAL)</td></tr>
+          <tr><th>Hi EQ</th><td colspan="6">12 kHz</td></tr>
+          <tr><th>Mid EQ</th><td colspan="6">2.5 kHz</td></tr>
+          <tr><th>Lo EQ</th><td>—</td><td>80 Hz</td><td>80 Hz</td><td>80 Hz</td><td>80 Hz</td><td>45 Hz</td></tr>
+          <tr><th>Lo Cut</th><td>45 Hz</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+          <tr><th>MP3 / USB / SD 재생</th><td>YES</td><td>YES</td><td>YES</td><td>YES</td><td>YES</td><td>YES</td></tr>
+          <tr><th>USB / SD 오디오 녹음</th><td>YES</td><td>YES</td><td>YES</td><td>YES</td><td>YES</td><td>YES</td></tr>
+          <tr><th>Bluetooth 재생</th><td>YES</td><td>YES</td><td>YES</td><td>YES</td><td>YES</td><td>YES</td></tr>
+          <tr><th>16 DSP 이펙트</th><td>YES</td><td>YES</td><td>YES</td><td>YES</td><td>YES</td><td>YES</td></tr>
+          <tr><th>+48V 팬텀 파워</th><td colspan="6">YES (전 마이크 채널)</td></tr>
+          <tr><th>채널 컴프레서</th><td colspan="6">YES (전 마이크 채널)</td></tr>
+          <tr><th>CEHO 이펙트</th><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>NO</td></tr>
+          <tr><th>전원</th><td colspan="6">100 – 240 VAC · 스위칭 모드 파워 서플라이</td></tr>
+          <tr><th>크기 (W×H×D, mm)</th><td>195×68×270</td><td>227×70×359</td><td>283×70×359</td><td>339×70×359</td><td>395×70×359</td><td>395×70×359</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="sec sec-bg" id="sec-features">
+  <div class="si">
+    <div class="sl">주요 특징</div>
+    <div class="st">KEY FEATURES</div>
+    <p class="sd">3밴드 EQ · 채널 컴프레서 · DSP · USB/SD/BT · 팬텀 파워까지, KG 시리즈를 규정하는 핵심 기술 포인트.</p>
+    <div class="feat-grid">
+      <div class="feat"><div class="feat-icon">🎚</div><div class="feat-ttl">3 Band EQ · 전 마이크 채널</div><div class="feat-txt">Hi 12kHz · Mid 2.5kHz · Lo 45Hz/80Hz 3밴드 EQ를 전 마이크 채널에 탑재하여, 보컬과 악기의 톤을 정밀하게 다듬을 수 있습니다.</div></div>
+      <div class="feat"><div class="feat-icon">🎛</div><div class="feat-ttl">하이패스 필터 · 컴프레서</div><div class="feat-txt">모든 마이크 채널에 하이패스 필터와 조정 가능한 컴프레서를 내장하여, 별도 외장 기기 없이도 프로 수준의 다이내믹스 컨트롤이 가능합니다.</div></div>
+      <div class="feat"><div class="feat-icon">🎵</div><div class="feat-ttl">USB · SD 카드 녹음/재생</div><div class="feat-txt">USB·SD 카드를 통한 고품질 스테레오 녹음/재생을 지원합니다. 홈레코딩과 라이브 현장에서 바로 녹음하거나 백킹 트랙을 재생할 수 있습니다.</div></div>
+      <div class="feat"><div class="feat-icon">📶</div><div class="feat-ttl">Bluetooth 무선 재생</div><div class="feat-txt">Bluetooth 수신 기능을 내장하여 스마트폰·태블릿의 음원을 케이블 없이 바로 콘솔로 전송, 파티·이벤트·매장 음향에 이상적입니다.</div></div>
+      <div class="feat"><div class="feat-icon">✨</div><div class="feat-ttl">16 프로그램 DSP 이펙트</div><div class="feat-txt">고품질 16프로그램 DSP 이펙트 유닛을 내장하여, 리버브·딜레이·코러스 등 라이브 공연에 필요한 공간계 이펙트를 바로 사용할 수 있습니다.</div></div>
+      <div class="feat"><div class="feat-icon">⚡</div><div class="feat-ttl">+48V Phantom · 60mm 페이더</div><div class="feat-txt">전 마이크 채널 +48V 팬텀 파워, 고품질 60mm 롱 스트로크 스무스 페이더, 견고한 스위칭 모드 파워 서플라이로 설치형 운영에도 안정적입니다.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMON -->
+<section class="sec sec-dark" id="sec-common">
+  <div class="si">
+    <div class="sl w">공통 사양</div>
+    <div class="st w">COMMON SPECIFICATIONS</div>
+    <p class="sd" style="color:rgba(255,255,255,.5)">KG 시리즈 전 모델에 공통으로 적용되는 전기 특성 및 입출력 사양입니다.</p>
+    <div class="common-grid">
+      <div class="common"><div class="common-ic">🎚</div><div><div class="common-ttl">Mic Gain</div><div class="common-txt">MIN–MAX · +6 dB – +50 dB</div></div></div>
+      <div class="common"><div class="common-ic">🎛</div><div><div class="common-ttl">Line Gain</div><div class="common-txt">+10 dB – −34 dB</div></div></div>
+      <div class="common"><div class="common-ic">〰</div><div><div class="common-ttl">주파수 응답</div><div class="common-txt">10 Hz – 20 kHz (+1 / −3 dB, Mic Channel)</div></div></div>
+      <div class="common"><div class="common-ic">📉</div><div><div class="common-ttl">THD (Mic)</div><div class="common-txt">≤ 0.03 %</div></div></div>
+      <div class="common"><div class="common-ic">🔊</div><div><div class="common-ttl">S/N 비</div><div class="common-txt">80 dB</div></div></div>
+      <div class="common"><div class="common-ic">🧲</div><div><div class="common-ttl">EIN</div><div class="common-txt">−100 dB</div></div></div>
+      <div class="common"><div class="common-ic">📤</div><div><div class="common-ttl">출력 레벨</div><div class="common-txt">MAX +27 dB (BAL) / +22 dB (UNBAL)</div></div></div>
+      <div class="common"><div class="common-ic">🎚</div><div><div class="common-ttl">채널 EQ</div><div class="common-txt">Hi 12 kHz · Mid 2.5 kHz · Lo 45/80 Hz</div></div></div>
+      <div class="common"><div class="common-ic">🎤</div><div><div class="common-ttl">Phantom Power</div><div class="common-txt">+48V · 전 마이크 채널 공급</div></div></div>
+      <div class="common"><div class="common-ic">✨</div><div><div class="common-ttl">DSP 이펙트</div><div class="common-txt">16 프로그램 고품질 DSP FX</div></div></div>
+      <div class="common"><div class="common-ic">🎵</div><div><div class="common-ttl">재생 / 녹음</div><div class="common-txt">MP3 · USB · SD · Bluetooth 지원</div></div></div>
+      <div class="common"><div class="common-ic">⚡</div><div><div class="common-ttl">전원</div><div class="common-txt">100 – 240 VAC · SMPS (스위칭 모드)</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- APPLICATION -->
+<section class="sec sec-dark" id="sec-app">
+  <div class="si">
+    <div class="sl w">적용 분야</div>
+    <div class="st w">APPLICATION</div>
+    <p class="sd" style="color:rgba(255,255,255,.5)">컴팩트 · 경량 설계와 풍부한 기능으로 홈스튜디오부터 라이브 SR, 매장 BGM까지 폭넓게 활용 가능합니다.</p>
+    <div class="app-grid">
+      <div class="app"><div class="app-icon">🎤</div><div class="app-name">라이브 SR</div><div class="app-desc">밴드 공연 · 소규모 무대 PA</div></div>
+      <div class="app"><div class="app-icon">🎙</div><div class="app-name">홈 레코딩</div><div class="app-desc">USB 스테레오 녹음 · 프로젝트 스튜디오</div></div>
+      <div class="app"><div class="app-icon">🏫</div><div class="app-name">교육 · 강의</div><div class="app-desc">강당 · 세미나 · 학원 확성</div></div>
+      <div class="app"><div class="app-icon">🛐</div><div class="app-name">종교 시설</div><div class="app-desc">예배당 · 소예배실 음향</div></div>
+      <div class="app"><div class="app-icon">🎉</div><div class="app-name">파티 · 이벤트</div><div class="app-desc">Bluetooth 입력 · DJ 겸용</div></div>
+      <div class="app"><div class="app-icon">🏬</div><div class="app-name">매장 · 카페</div><div class="app-desc">BGM · 마이크 안내 방송</div></div>
+      <div class="app"><div class="app-icon">🎬</div><div class="app-name">방송 · 유튜브</div><div class="app-desc">1인 미디어 · 팟캐스트</div></div>
+      <div class="app"><div class="app-icon">🏢</div><div class="app-name">회의실</div><div class="app-desc">컨퍼런스 · 다자간 마이크</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © (주)현대에이브이씨 HYUNDAI AUDIO VISUAL COMMUNICATIONS CO., LTD<br>
+  Soundking KG Series · Recording Mixing Console · 공식 수입원
+</footer>
+
+<script>
+function goTab(id){
+  document.querySelectorAll('.tb').forEach(b=>b.classList.remove('on'));
+  event.currentTarget.classList.add('on');
+  const el=document.getElementById(id);
+  if(el){window.scrollTo({top:el.offsetTop-120,behavior:'smooth'})}
+}
+</script>
+</body>
+</html>
