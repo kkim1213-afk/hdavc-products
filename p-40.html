@@ -88,6 +88,8 @@ table.spec tbody tr:last-child th,table.spec tbody tr:last-child td{border-botto
 .app-name{font-size:13px;font-weight:700;color:#fff;margin-bottom:3px}
 .app-desc{font-size:11px;color:rgba(255,255,255,.4);line-height:1.6}
 footer{background:#111;color:#fff;padding:24px;font-size:11px;opacity:.5;text-align:center;line-height:1.8}
+.compat-link{display:block;text-decoration:none;color:inherit;background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px;text-align:center;transition:all .25s;cursor:pointer}
+.compat-link:hover{border-color:rgba(233,69,96,.35);transform:translateY(-3px);box-shadow:0 8px 28px rgba(233,69,96,.1)}
 @media(max-width:1024px){.hero-inner{grid-template-columns:1fr}.hero-visual{display:none}.ov-highlights{grid-template-columns:repeat(2,1fr)}.pkg-grid,.conn-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:768px){.feat-grid,.app-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:540px){.feat-grid,.app-grid,.pkg-grid,.ov-highlights,.conn-grid{grid-template-columns:1fr}.hero-inner,.sec{padding-left:16px;padding-right:16px}.hero-inner{padding-top:40px;padding-bottom:40px}.sec{padding-top:44px;padding-bottom:44px}}
@@ -144,6 +146,7 @@ footer{background:#111;color:#fff;padding:24px;font-size:11px;opacity:.5;text-al
     <button class="tb" onclick="goTab('sec-spec')">상세 사양</button>
     <button class="tb" onclick="goTab('sec-package')">구성품</button>
     <button class="tb" onclick="goTab('sec-usage')">사용 가이드</button>
+    <button class="tb" onclick="goTab('sec-compat')">호환 제품</button>
     <button class="tb" onclick="goTab('sec-app')">적용 분야</button>
   </div>
 </div>
@@ -251,6 +254,42 @@ footer{background:#111;color:#fff;padding:24px;font-size:11px;opacity:.5;text-al
       <div class="feat"><div class="feat-icon">🎛</div><div class="feat-ttl">하이패스 필터 설정</div><div class="feat-txt">슬라이드 스위치를 Low-frequency cut off(저역 잡음 차단)·Flat response(전대역 플랫)·POWER OFF(전원 끔) 중 상황에 맞게 선택합니다.</div></div>
       <div class="feat"><div class="feat-icon">📎</div><div class="feat-ttl">벨트 장착</div><div class="feat-txt">뒷면 벨트 클립을 이용해 허리 벨트·허릿단에 고정합니다. 마이크 케이블은 여유를 두어 잡아당겨지지 않도록 정리합니다.</div></div>
       <div class="feat"><div class="feat-icon">💧</div><div class="feat-ttl">습기 · 온도 주의</div><div class="feat-txt">40℃ 이상 고온과 과도한 습도, 직사광선 장시간 노출은 피하세요. 빗물·물·기타 액체에 노출하지 마시고, 플러그가 더러워지면 부드러운 마른 천으로 닦아 주세요.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPATIBLE PRODUCTS -->
+<section class="sec sec-bg" id="sec-compat">
+  <div class="si">
+    <div class="sl">호환 제품</div>
+    <div class="st">COMPATIBLE PRODUCTS</div>
+    <p class="sd">P-40 팬텀파워 아답터와 함께 사용할 수 있는 Sound+Music 마이크 제품입니다.</p>
+    <div class="pkg-grid" style="grid-template-columns:repeat(5,1fr);max-width:1100px">
+      <a href="hd-01s5.html" class="compat-link">
+        <img src="HD01S5_02.PNG" alt="HD-01S5" style="width:100%;height:120px;object-fit:contain;margin-bottom:10px">
+        <div class="pkg-name">HD-01S5</div>
+        <div class="pkg-desc">싱글 이어셋 마이크</div>
+      </a>
+      <a href="hd-05s.html" class="compat-link">
+        <img src="HD-05S_01.png" alt="HD-05S" style="width:100%;height:120px;object-fit:contain;margin-bottom:10px">
+        <div class="pkg-name">HD-05S</div>
+        <div class="pkg-desc">더블 이어셋 마이크</div>
+      </a>
+      <a href="cb-110.html" class="compat-link">
+        <img src="cb110_01.png" alt="CB-110" style="width:100%;height:120px;object-fit:contain;margin-bottom:10px">
+        <div class="pkg-name">CB-110</div>
+        <div class="pkg-desc">핀마이크 (공연용)</div>
+      </a>
+      <a href="cb-320.html" class="compat-link">
+        <img src="CB-320_01.png" alt="CB-320" style="width:100%;height:120px;object-fit:contain;margin-bottom:10px">
+        <div class="pkg-name">CB-320</div>
+        <div class="pkg-desc">핀마이크 (강의용)</div>
+      </a>
+      <a href="sa-60.html" class="compat-link">
+        <img src="SA60_01.png" alt="SA-60" style="width:100%;height:120px;object-fit:contain;margin-bottom:10px">
+        <div class="pkg-name">SA-60</div>
+        <div class="pkg-desc">클립 마이크 (관악기용)</div>
+      </a>
     </div>
   </div>
 </section>
