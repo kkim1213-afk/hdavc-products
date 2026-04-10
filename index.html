@@ -220,7 +220,7 @@ footer{background:#111;color:#fff;padding:24px 20px;font-size:11px;opacity:.6;te
       <button class="cat-btn" id="cat-파워앰프" onclick="filterCat('파워앰프',this)">⚡ 파워앰프</button>
       <button class="cat-btn" id="cat-믹서" onclick="filterCat('믹서',this)">🎛 믹서</button>
       <button class="cat-btn" id="cat-마이크" onclick="filterCat('마이크',this)">🎤 마이크</button>
-      <button class="cat-btn" id="cat-케이블" onclick="filterCat('케이블',this)">🔌 케이블</button>
+      <button class="cat-btn" id="cat-악세서리" onclick="filterCat('악세서리',this)">🔌 악세서리</button>
       <button class="cat-btn" id="cat-스탠드" onclick="filterCat('스탠드',this)">🏗 스탠드</button>
       <button class="cat-btn" id="cat-전자드럼" onclick="filterCat('전자드럼',this)">🥁 전자드럼</button>
     </div>
@@ -275,20 +275,21 @@ const products = [
   {cat:'마이크',sub:'액세서리',name:'C-Series 마이크로닷 컨넥터',model:'C-Series',brand:'Sound+Music',icon:'🔌',spec:'Microdot → SHURE / SENNHEISER / AKG / 3.5mm / MIPRO 5종',price:8800,unit:'개',page:'c-series.html',img:'C-SERIES_01.png'},
   {cat:'마이크',sub:'콘덴서',name:'GC-732C 구스넥 마이크 (21인치)',model:'GC-732C-21',brand:'Sound+Music',icon:'🎙',spec:'Cardioid / 54cm / XLR-M',price:132000,unit:'개',page:'gc-732c.html',img:'GC732_01.png'},
   {cat:'마이크',sub:'콘덴서',name:'GCL-949 구스넥 마이크 (15인치)',model:'GCL-949-15',brand:'Sound+Music',icon:'🎙',spec:'Uni-Directional / 38cm / LED 라이트',price:66000,unit:'개',page:'gcl-949.html',img:'GCL949_01.png'},
-  {cat:'케이블',sub:'마이크 케이블',name:'MC102 마이크케이블 CCAM',model:'MC102',brand:'ADAM',icon:'🔌',spec:'XLR M to XLR F / 1.5M~10M',price:8800,unit:'개~'},
-  {cat:'케이블',sub:'마이크 케이블',name:'MC103 마이크케이블 OFC',model:'MC103',brand:'ADAM',icon:'🔌',spec:'XLR M to XLR F / OFC / 1.5M~10M',price:13200,unit:'개~'},
-  {cat:'케이블',sub:'악기 케이블',name:'GC020 악기용 케이블 OFC',model:'GC020',brand:'ADAM',icon:'🔌',spec:'55TS(1자) to 55TS(ㄱ자) / 3M~10M',price:13200,unit:'개~'},
-  {cat:'케이블',sub:'악기 케이블',name:'GC023 악기용 케이블 OFC',model:'GC023',brand:'ADAM',icon:'🔌',spec:'55TS(1자) to 55TS(1자) / 3M~10M',price:13200,unit:'개~'},
-  {cat:'케이블',sub:'스피커 케이블',name:'AD100S2P15 스피커케이블 2P',model:'AD100S2P15',brand:'ADAM',icon:'🔌',spec:'100M 롤 / 2P / 1.5mm²',price:132000,unit:'롤'},
-  {cat:'케이블',sub:'멀티 케이블',name:'CXA031 4채널 케이블 익스텐더',model:'CXA031',brand:'Soundking',icon:'🔌',spec:'RJ45 to XLR Male / 팬텀파워 지원',price:60000,unit:'개',page:'cxa031.html',img:'CXA031_01.jpg'},
-  {cat:'케이블',sub:'멀티 케이블',name:'CXA032 4채널 케이블 익스텐더',model:'CXA032',brand:'Soundking',icon:'🔌',spec:'RJ45 to XLR Female / 팬텀파워 지원',price:60000,unit:'개',page:'cxa032.html',img:'CXA032_01.jpg'},
-  {cat:'케이블',sub:'멀티 케이블',name:'CXA046 8채널 케이블 익스텐더 (19인치 랙)',model:'CXA046',brand:'Soundking',icon:'🔌',spec:'4× XLR Female 입력 + 4× XLR Male 출력 / 8CH / 팬텀파워 지원',price:120000,unit:'개',page:'cxa046.html',img:'CXA046_01.jpg'},
-  {cat:'케이블',sub:'멀티 케이블',name:'CXA047 8채널 케이블 익스텐더 (19인치 랙)',model:'CXA047',brand:'Soundking',icon:'🔌',spec:'8× XLR Female / 8CH / 팬텀파워 지원',price:120000,unit:'개',page:'cxa047.html',img:'CXA047_01.jpg'},
-  {cat:'케이블',sub:'멀티 케이블',name:'CXA048 8채널 케이블 익스텐더 (19인치 랙)',model:'CXA048',brand:'Soundking',icon:'🔌',spec:'8× XLR Male / 8CH / Ground Switch ×2 / 팬텀파워 지원',price:120000,unit:'개',page:'cxa048.html',img:'CXA048_01.jpg'},
-  {cat:'케이블',sub:'멀티 케이블',name:'BK012 CAT6 SFTP 네트워크 케이블',model:'BK012',brand:'Soundking',icon:'🔌',spec:'RJ45 to RJ45(이더콘) / CAT6 SFTP / ≥10Gbps / 10M~50M',price:40000,unit:'개~',page:'bk012.html',img:'BK012_01.jpg'},
-  {cat:'케이블',sub:'멀티 케이블',name:'AI520 4채널 케이블 드럼 익스텐더',model:'AI520',brand:'Soundking',icon:'🔌',spec:'4× XLR Male + 4× XLR Female / 70M CAT5E SFTP / Ground Switch / Phantom',price:400000,unit:'개',page:'ai520.html',img:'ai520_01.jpg'},
-  {cat:'케이블',sub:'커넥터',name:'YS177 XLR Male 커넥터',model:'YS177',brand:'ADAM',icon:'🔌',spec:'XLR Male',price:3850,unit:'개'},
-  {cat:'케이블',sub:'커넥터',name:'YS176 XLR Female 커넥터',model:'YS176',brand:'ADAM',icon:'🔌',spec:'XLR Female',price:3850,unit:'개'},
+  {cat:'악세서리',sub:'케이블',name:'MC102 마이크케이블 CCAM',model:'MC102',brand:'ADAM',icon:'🔌',spec:'XLR M to XLR F / 1.5M~10M',price:8800,unit:'개~'},
+  {cat:'악세서리',sub:'케이블',name:'MC103 마이크케이블 OFC',model:'MC103',brand:'ADAM',icon:'🔌',spec:'XLR M to XLR F / OFC / 1.5M~10M',price:13200,unit:'개~'},
+  {cat:'악세서리',sub:'케이블',name:'GC020 악기용 케이블 OFC',model:'GC020',brand:'ADAM',icon:'🔌',spec:'55TS(1자) to 55TS(ㄱ자) / 3M~10M',price:13200,unit:'개~'},
+  {cat:'악세서리',sub:'케이블',name:'GC023 악기용 케이블 OFC',model:'GC023',brand:'ADAM',icon:'🔌',spec:'55TS(1자) to 55TS(1자) / 3M~10M',price:13200,unit:'개~'},
+  {cat:'악세서리',sub:'케이블',name:'AD100S2P15 스피커케이블 2P',model:'AD100S2P15',brand:'ADAM',icon:'🔌',spec:'100M 롤 / 2P / 1.5mm²',price:132000,unit:'롤'},
+  {cat:'악세서리',sub:'케이블',name:'CXA031 4채널 케이블 익스텐더',model:'CXA031',brand:'Soundking',icon:'🔌',spec:'RJ45 to XLR Male / 팬텀파워 지원',price:60000,unit:'개',page:'cxa031.html',img:'CXA031_01.jpg'},
+  {cat:'악세서리',sub:'케이블',name:'CXA032 4채널 케이블 익스텐더',model:'CXA032',brand:'Soundking',icon:'🔌',spec:'RJ45 to XLR Female / 팬텀파워 지원',price:60000,unit:'개',page:'cxa032.html',img:'CXA032_01.jpg'},
+  {cat:'악세서리',sub:'케이블',name:'CXA046 8채널 케이블 익스텐더 (19인치 랙)',model:'CXA046',brand:'Soundking',icon:'🔌',spec:'4× XLR Female 입력 + 4× XLR Male 출력 / 8CH / 팬텀파워 지원',price:120000,unit:'개',page:'cxa046.html',img:'CXA046_01.jpg'},
+  {cat:'악세서리',sub:'케이블',name:'CXA047 8채널 케이블 익스텐더 (19인치 랙)',model:'CXA047',brand:'Soundking',icon:'🔌',spec:'8× XLR Female / 8CH / 팬텀파워 지원',price:120000,unit:'개',page:'cxa047.html',img:'CXA047_01.jpg'},
+  {cat:'악세서리',sub:'케이블',name:'CXA048 8채널 케이블 익스텐더 (19인치 랙)',model:'CXA048',brand:'Soundking',icon:'🔌',spec:'8× XLR Male / 8CH / Ground Switch ×2 / 팬텀파워 지원',price:120000,unit:'개',page:'cxa048.html',img:'CXA048_01.jpg'},
+  {cat:'악세서리',sub:'케이블',name:'BK012 CAT6 SFTP 네트워크 케이블',model:'BK012',brand:'Soundking',icon:'🔌',spec:'RJ45 to RJ45(이더콘) / CAT6 SFTP / ≥10Gbps / 10M~50M',price:40000,unit:'개~',page:'bk012.html',img:'BK012_01.jpg'},
+  {cat:'악세서리',sub:'케이블',name:'AI520 4채널 케이블 드럼 익스텐더',model:'AI520',brand:'Soundking',icon:'🔌',spec:'4× XLR Male + 4× XLR Female / 70M CAT5E SFTP / Ground Switch / Phantom',price:400000,unit:'개',page:'ai520.html',img:'ai520_01.jpg'},
+  // sub:'악세서리' 항목은 여기(케이블↔커넥터 사이)에 추가
+  {cat:'악세서리',sub:'커넥터',name:'YS177 XLR Male 커넥터',model:'YS177',brand:'ADAM',icon:'🔌',spec:'XLR Male',price:3850,unit:'개'},
+  {cat:'악세서리',sub:'커넥터',name:'YS176 XLR Female 커넥터',model:'YS176',brand:'ADAM',icon:'🔌',spec:'XLR Female',price:3850,unit:'개'},
   {cat:'스탠드',sub:'스피커 스탠드',name:'SB400 스피커 스탠드',model:'SB400',brand:'Soundking',icon:'🏗',spec:'높이 1100-1680mm / 하중 40kg',price:96800,unit:'조'},
   {cat:'스탠드',sub:'스피커 스탠드',name:'NB-808 스피커 스탠드 핸드기어',model:'NB-808',brand:'Newnabie',icon:'🏗',spec:'높이 1300-2100mm / 하중 60kg',price:440000,unit:'조'},
   {cat:'스탠드',sub:'스피커 스탠드',name:'DB075 스피커 스탠드 폴마운트',model:'DB075',brand:'Soundking',icon:'🏗',spec:'높이 800-1340mm / M20 볼트 / 하중 80kg',price:30000,unit:'개'},
@@ -317,7 +318,7 @@ function priceFmt(p){return p.toLocaleString()+'원'}
 function render(){
   const wrap=document.getElementById('catalogWrap');
   const cats=currentCat==='전체'?[...new Set(products.map(p=>p.cat))]:[currentCat];
-  const emoji={스피커:'🔊',파워앰프:'⚡',믹서:'🎛',마이크:'🎤',케이블:'🔌',스탠드:'🏗',전자드럼:'🥁'};
+  const emoji={스피커:'🔊',파워앰프:'⚡',믹서:'🎛',마이크:'🎤',악세서리:'🔌',스탠드:'🏗',전자드럼:'🥁'};
   let html='', total=0;
 
   cats.forEach(cat=>{
