@@ -146,6 +146,7 @@ footer{background:#111;color:#fff;padding:24px;font-size:11px;opacity:.5;text-al
     <button class="tb" onclick="goTab('sec-conductor')">도체 비교</button>
     <button class="tb" onclick="goTab('sec-spec')">사양</button>
     <button class="tb" onclick="goTab('sec-app')">활용 분야</button>
+    <button class="tb" onclick="goTab('sec-balance')">밸런스드 비교</button>
     <button class="tb" onclick="goTab('sec-related')">관련 제품</button>
   </div>
 </div>
@@ -413,6 +414,127 @@ footer{background:#111;color:#fff;padding:24px;font-size:11px;opacity:.5;text-al
   </div>
 </section>
 
+<!-- BALANCED vs UNBALANCED -->
+<section class="sec" id="sec-balance">
+  <div class="si">
+    <div class="sl">밸런스드 vs 언밸런스드</div>
+    <div class="st">BALANCED vs UNBALANCED CABLE GUIDE</div>
+    <p class="sd">오디오 케이블의 신호 전송 방식에는 밸런스드(Balanced)와 언밸런스드(Unbalanced) 두 가지가 있습니다. MC103은 <strong>밸런스드(Balanced)</strong> 케이블입니다.</p>
+
+    <!-- Visual Comparison -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;max-width:900px;margin-bottom:40px;border-radius:16px;overflow:hidden;border:1px solid var(--border)">
+      <!-- Balanced -->
+      <div style="background:linear-gradient(180deg,#f0f5ff,#fff);padding:28px 22px;text-align:center;border-right:1px solid var(--border);position:relative;box-shadow:inset 0 3px 0 #4080e0">
+        <div style="font-size:11px;color:#4080e0;font-weight:600;letter-spacing:.1em;margin-bottom:8px">BALANCED</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:2.4rem;color:#4080e0;line-height:1">밸런스드</div>
+        <div style="font-size:11px;color:var(--light);margin-top:6px;line-height:1.5">평형 전송 방식<br>2코어 + 실드</div>
+        <div style="margin:18px auto;width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#6090e8,#4070d0);display:flex;align-items:center;justify-content:center;font-size:24px;color:#fff;font-weight:800">B</div>
+        <div style="position:absolute;top:8px;right:8px;background:#e94560;color:#fff;font-size:8px;font-weight:800;padding:2px 6px;border-radius:3px;letter-spacing:.05em">MC103</div>
+        <div style="background:#fff;border:1px solid #d0d8e8;border-radius:10px;padding:14px;margin:16px 0;text-align:left">
+          <div style="font-size:10px;font-weight:700;color:#4080e0;margin-bottom:8px;letter-spacing:.05em">신호선 구조</div>
+          <div style="display:flex;flex-direction:column;gap:5px">
+            <div style="display:flex;align-items:center;gap:8px"><div style="width:30px;height:4px;background:#e94560;border-radius:2px"></div><span style="font-size:11px;color:var(--mid)">Hot (+) 신호선</span></div>
+            <div style="display:flex;align-items:center;gap:8px"><div style="width:30px;height:4px;background:#4080e0;border-radius:2px"></div><span style="font-size:11px;color:var(--mid)">Cold (−) 신호선</span></div>
+            <div style="display:flex;align-items:center;gap:8px"><div style="width:30px;height:4px;background:#aaa;border-radius:2px"></div><span style="font-size:11px;color:var(--mid)">Shield (접지)</span></div>
+          </div>
+        </div>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;justify-content:center">
+          <span style="font-size:10px;padding:3px 8px;border-radius:12px;background:#e0e8f8;color:#4070c0">✓ 노이즈 제거</span>
+          <span style="font-size:10px;padding:3px 8px;border-radius:12px;background:#e0e8f8;color:#4070c0">✓ 장거리 전송</span>
+          <span style="font-size:10px;padding:3px 8px;border-radius:12px;background:#e0e8f8;color:#4070c0">✓ 2코어</span>
+        </div>
+      </div>
+      <!-- Unbalanced -->
+      <div style="background:linear-gradient(180deg,#fff8f0,#fff);padding:28px 22px;text-align:center;position:relative;box-shadow:inset 0 3px 0 #e08030">
+        <div style="font-size:11px;color:#e08030;font-weight:600;letter-spacing:.1em;margin-bottom:8px">UNBALANCED</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:2.4rem;color:#e08030;line-height:1">언밸런스드</div>
+        <div style="font-size:11px;color:var(--light);margin-top:6px;line-height:1.5">불평형 전송 방식<br>1코어 + 실드</div>
+        <div style="margin:18px auto;width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#f0a050,#d07020);display:flex;align-items:center;justify-content:center;font-size:24px;color:#fff;font-weight:800">U</div>
+        <div style="background:#fff;border:1px solid #e8d8c8;border-radius:10px;padding:14px;margin:16px 0;text-align:left">
+          <div style="font-size:10px;font-weight:700;color:#e08030;margin-bottom:8px;letter-spacing:.05em">신호선 구조</div>
+          <div style="display:flex;flex-direction:column;gap:5px">
+            <div style="display:flex;align-items:center;gap:8px"><div style="width:30px;height:4px;background:#e94560;border-radius:2px"></div><span style="font-size:11px;color:var(--mid)">Signal 신호선</span></div>
+            <div style="display:flex;align-items:center;gap:8px"><div style="width:30px;height:4px;background:#aaa;border-radius:2px"></div><span style="font-size:11px;color:var(--mid)">Shield (접지 겸 리턴)</span></div>
+          </div>
+        </div>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;justify-content:center">
+          <span style="font-size:10px;padding:3px 8px;border-radius:12px;background:#fef0d8;color:#a07020">✓ 단순 구조</span>
+          <span style="font-size:10px;padding:3px 8px;border-radius:12px;background:#fef0d8;color:#a07020">✓ 경제적</span>
+          <span style="font-size:10px;padding:3px 8px;border-radius:12px;background:#fef0d8;color:#a07020">✓ 1코어</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Detail Comparison Cards -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:900px;margin-bottom:36px">
+      <div style="background:#fff;border:1px solid var(--border);border-radius:12px;padding:22px;position:relative;overflow:hidden">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#6090e8,#4070d0)"></div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:1.5rem;color:#4080e0">BALANCED</div>
+          <div style="font-size:10px;color:var(--light);line-height:1.3">평형 전송 · 2코어</div>
+        </div>
+        <div style="font-size:12px;color:var(--mid);line-height:1.85;margin-bottom:14px">밸런스드 케이블은 Hot(+)과 Cold(−) 두 개의 신호선(2코어)과 별도의 실드(접지)로 구성됩니다. 수신 측에서 두 신호의 <strong>위상 차이를 이용해 외부 노이즈를 상쇄</strong>하는 CMRR(Common Mode Rejection Ratio) 원리를 적용합니다. 장거리 전송에서도 깨끗한 신호를 유지할 수 있습니다.</div>
+        <div style="font-size:11px;font-weight:700;color:#4080e0;margin-bottom:8px">주요 커넥터</div>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px">
+          <span style="font-size:10px;padding:4px 10px;border-radius:12px;background:#e0e8f8;color:#4070c0;font-weight:600">XLR (3핀)</span>
+          <span style="font-size:10px;padding:4px 10px;border-radius:12px;background:#e0e8f8;color:#4070c0;font-weight:600">TRS (55 스테레오)</span>
+        </div>
+        <div style="font-size:11px;font-weight:700;color:#4080e0;margin-bottom:8px">주요 활용</div>
+        <div style="font-size:11px;color:var(--light);line-height:1.8">· 마이크 → 믹서 연결 (XLR-XLR)<br>· 장거리 케이블 배선 (10M 이상)<br>· 프로 음향 현장 · 레코딩 스튜디오<br>· 멀티 케이블 · 스네이크 케이블</div>
+      </div>
+      <div style="background:#fff;border:1px solid var(--border);border-radius:12px;padding:22px;position:relative;overflow:hidden">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#f0a050,#d07020)"></div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:1.5rem;color:#e08030">UNBALANCED</div>
+          <div style="font-size:10px;color:var(--light);line-height:1.3">불평형 전송 · 1코어</div>
+        </div>
+        <div style="font-size:12px;color:var(--mid);line-height:1.85;margin-bottom:14px">언밸런스드 케이블은 1개의 신호선(1코어)과 실드(접지 겸 리턴)로 구성됩니다. 실드가 접지와 신호 리턴을 동시에 담당하므로 <strong>외부 노이즈가 신호에 직접 영향</strong>을 줄 수 있습니다. 짧은 거리(5M 이내 권장)에서 사용하거나, 노이즈가 적은 환경에서 사용하는 것이 적합합니다.</div>
+        <div style="font-size:11px;font-weight:700;color:#e08030;margin-bottom:8px">주요 커넥터</div>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px">
+          <span style="font-size:10px;padding:4px 10px;border-radius:12px;background:#fef0d8;color:#a07020;font-weight:600">55TS (6.35mm 모노)</span>
+          <span style="font-size:10px;padding:4px 10px;border-radius:12px;background:#fef0d8;color:#a07020;font-weight:600">RCA</span>
+        </div>
+        <div style="font-size:11px;font-weight:700;color:#e08030;margin-bottom:8px">주요 활용</div>
+        <div style="font-size:11px;color:var(--light);line-height:1.8">· 일렉기타 → 이펙터 → 앰프<br>· 키보드 · 신디사이저 출력<br>· DJ 장비 · 홈 오디오<br>· 짧은 거리 패치 연결</div>
+      </div>
+    </div>
+
+    <!-- Comparison Table -->
+    <div style="max-width:900px">
+      <div style="font-size:13px;font-weight:700;margin-bottom:12px;color:var(--dark)">상세 비교표</div>
+      <div style="background:#fff;border:1px solid var(--border);border-radius:14px;overflow:hidden">
+        <table style="width:100%;border-collapse:collapse">
+          <thead>
+            <tr>
+              <th style="padding:14px 18px;font-size:11px;font-weight:600;color:var(--mid);background:#fafafa;border-bottom:1px solid var(--border);text-align:left;width:28%;letter-spacing:.04em">항목</th>
+              <th style="padding:14px 18px;font-size:11px;font-weight:600;color:#4080e0;background:#f5f8ff;border-bottom:1px solid var(--border);text-align:center;width:36%;letter-spacing:.04em">BALANCED (밸런스드)</th>
+              <th style="padding:14px 18px;font-size:11px;font-weight:600;color:#e08030;background:#fffaf5;border-bottom:1px solid var(--border);text-align:center;width:36%;letter-spacing:.04em">UNBALANCED (언밸런스드)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td style="padding:12px 18px;font-size:12px;font-weight:600;color:var(--mid);border-bottom:1px solid var(--border)">신호선 구성</td><td style="padding:12px 18px;font-size:12px;color:var(--dark);text-align:center;border-bottom:1px solid var(--border)">Hot(+) + Cold(−) <strong>2코어</strong></td><td style="padding:12px 18px;font-size:12px;color:var(--dark);text-align:center;border-bottom:1px solid var(--border)">Signal <strong>1코어</strong></td></tr>
+            <tr><td style="padding:12px 18px;font-size:12px;font-weight:600;color:var(--mid);border-bottom:1px solid var(--border)">실드 역할</td><td style="padding:12px 18px;font-size:12px;color:var(--dark);text-align:center;border-bottom:1px solid var(--border)">접지 전용 (차폐)</td><td style="padding:12px 18px;font-size:12px;color:var(--dark);text-align:center;border-bottom:1px solid var(--border)">접지 + 신호 리턴 (겸용)</td></tr>
+            <tr><td style="padding:12px 18px;font-size:12px;font-weight:600;color:var(--mid);border-bottom:1px solid var(--border)">노이즈 제거</td><td style="padding:12px 18px;font-size:12px;color:#4080e0;text-align:center;border-bottom:1px solid var(--border);font-weight:600">CMRR 위상 반전 상쇄</td><td style="padding:12px 18px;font-size:12px;color:#e08030;text-align:center;border-bottom:1px solid var(--border)">실드 차폐에만 의존</td></tr>
+            <tr><td style="padding:12px 18px;font-size:12px;font-weight:600;color:var(--mid);border-bottom:1px solid var(--border)">권장 전송 거리</td><td style="padding:12px 18px;font-size:12px;color:var(--dark);text-align:center;border-bottom:1px solid var(--border)"><strong>제한 없음</strong> (수십~수백M)</td><td style="padding:12px 18px;font-size:12px;color:var(--dark);text-align:center;border-bottom:1px solid var(--border)"><strong>5M 이내</strong> 권장</td></tr>
+            <tr><td style="padding:12px 18px;font-size:12px;font-weight:600;color:var(--mid);border-bottom:1px solid var(--border)">대표 커넥터</td><td style="padding:12px 18px;font-size:12px;color:var(--dark);text-align:center;border-bottom:1px solid var(--border)">XLR 3핀, TRS</td><td style="padding:12px 18px;font-size:12px;color:var(--dark);text-align:center;border-bottom:1px solid var(--border)">55TS(6.35mm), RCA</td></tr>
+            <tr><td style="padding:12px 18px;font-size:12px;font-weight:600;color:var(--mid);border-bottom:1px solid var(--border)">주요 활용</td><td style="padding:12px 18px;font-size:12px;color:var(--dark);text-align:center;border-bottom:1px solid var(--border)">마이크, 프로 음향, 스튜디오</td><td style="padding:12px 18px;font-size:12px;color:var(--dark);text-align:center;border-bottom:1px solid var(--border)">악기, DJ, 홈 오디오</td></tr>
+            <tr><td style="padding:12px 18px;font-size:12px;font-weight:600;color:var(--mid)">ADAM 해당 모델</td><td style="padding:12px 18px;font-size:12px;color:#4080e0;text-align:center;font-weight:600"><a href="mc102.html" style="color:#4080e0;text-decoration:none">MC102</a> · <a href="mc103.html" style="color:#4080e0;text-decoration:none">MC103</a></td><td style="padding:12px 18px;font-size:12px;color:#e08030;text-align:center;font-weight:600"><a href="mc005.html" style="color:#e08030;text-decoration:none">MC005</a> · <a href="mc007.html" style="color:#e08030;text-decoration:none">MC007</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Tip Box -->
+    <div style="max-width:900px;margin-top:28px;background:linear-gradient(135deg,#f8f0ff,#f0f5ff);border:1px solid #d8d0e8;border-radius:12px;padding:22px 24px">
+      <div style="font-size:12px;font-weight:700;color:#6040a0;margin-bottom:8px">💡 선택 가이드</div>
+      <div style="font-size:12px;color:var(--mid);line-height:1.9">
+        <strong>밸런스드 케이블을 선택해야 하는 경우:</strong> 마이크 연결, 10M 이상 장거리 배선, 전자기 간섭이 많은 환경(조명 장비 인근 등), 프로 음향 현장에서는 밸런스드(XLR-XLR) 케이블을 사용하세요. → <a href="mc102.html" style="color:#4080e0;font-weight:600">MC102</a> · <a href="mc103.html" style="color:#4080e0;font-weight:600">MC103</a><br><br>
+        <strong>언밸런스드 케이블을 선택해야 하는 경우:</strong> 일렉기타·키보드 등 악기 연결, 짧은 거리 패치 연결, XLR ↔ 55TS 변환이 필요한 경우에는 언밸런스드 케이블로 충분합니다. → <a href="mc005.html" style="color:#e08030;font-weight:600">MC005</a>(XLR F) · <a href="mc007.html" style="color:#e08030;font-weight:600">MC007</a>(XLR M)
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- RELATED -->
 <section class="sec sec-bg" id="sec-related">
   <div class="si">
@@ -424,13 +546,13 @@ footer{background:#111;color:#fff;padding:24px;font-size:11px;opacity:.5;text-al
         <div class="pkg-name">MC102</div>
         <div class="pkg-desc">마이크케이블 CCAM<br>XLR M → XLR F / 3M~10M</div>
       </a>
-      <a href="index.html" class="compat-link">
+      <a href="mc005.html" class="compat-link">
         <div class="pkg-name">MC005</div>
-        <div class="pkg-desc">마이크케이블 CCAM<br>XLR F → 55TS M / 3M~10M</div>
+        <div class="pkg-desc">마이크케이블 CCAM<br>XLR F → 55TS M / 5M~10M</div>
       </a>
-      <a href="index.html" class="compat-link">
+      <a href="mc007.html" class="compat-link">
         <div class="pkg-name">MC007</div>
-        <div class="pkg-desc">마이크케이블 CCAM<br>XLR M → 55TS M / 10M</div>
+        <div class="pkg-desc">마이크케이블 CCAM<br><strong>XLR M</strong> → 55TS M / 10M</div>
       </a>
     </div>
   </div>
