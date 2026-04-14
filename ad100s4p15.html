@@ -84,10 +84,12 @@ table.spec tbody tr:last-child th,table.spec tbody tr:last-child td{border-botto
 .pkg-desc{font-size:11px;color:var(--light);line-height:1.6}
 .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:900px;margin-bottom:36px}
 .gallery img{width:100%;border-radius:12px;border:1px solid var(--border);object-fit:cover;aspect-ratio:1/1;background:#fafafa}
-.inquiry-box{background:linear-gradient(135deg,#fff5f7,#fff);border:1px solid var(--accent-border);border-radius:12px;padding:22px 26px;max-width:620px;display:flex;align-items:center;gap:18px;margin-bottom:20px}
-.inquiry-box .ib-ic{font-size:28px}
-.inquiry-box .ib-ttl{font-size:13px;font-weight:700;color:var(--dark);margin-bottom:3px}
-.inquiry-box .ib-txt{font-size:12px;color:var(--light);line-height:1.6}
+.price-table{background:#fff;border:1px solid var(--border);border-radius:14px;overflow:hidden;max-width:620px;margin-top:24px}
+.price-table table{width:100%;border-collapse:collapse}
+.price-table th,.price-table td{padding:13px 18px;font-size:13px;border-bottom:1px solid var(--border);text-align:center}
+.price-table thead th{background:#fafafa;font-weight:600;color:var(--mid);font-size:11px;text-transform:uppercase;letter-spacing:.06em}
+.price-table tbody td{color:var(--dark);font-weight:500}
+.price-table tbody tr:last-child td{border-bottom:none}
 footer{background:#111;color:#fff;padding:24px;font-size:11px;opacity:.5;text-align:center;line-height:1.8}
 @media(max-width:1024px){.hero-inner{grid-template-columns:1fr}.hero-visual{display:none}.ov-highlights{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:768px){.feat-grid,.app-grid,.gallery{grid-template-columns:1fr 1fr}}
@@ -158,12 +160,13 @@ footer{background:#111;color:#fff;padding:24px;font-size:11px;opacity:.5;text-al
     <div class="st">AD100S4P15 · CCAM BULK SPEAKER CABLE 4C × 1.5SQ / 100M</div>
     <p class="sd">CCAM 도체 100M 롤타입 4코어 스피커 케이블. 바이앰프 · Hi/Lo 분리 구동 · Speakon NL4(2±) 결선용.</p>
 
-    <div class="inquiry-box">
-      <div class="ib-ic">📞</div>
-      <div>
-        <div class="ib-ttl">가격 문의</div>
-        <div class="ib-txt">AD100S4P15 100M 롤타입 가격은 현대에이브이씨로 문의 바랍니다.</div>
-      </div>
+    <div class="price-table">
+      <table>
+        <thead><tr><th>길이</th><th>권장소비자가 (VAT 포함)</th><th>비고</th></tr></thead>
+        <tbody>
+          <tr><td>100M (1롤)</td><td>220,000원</td><td>커넥터 별도</td></tr>
+        </tbody>
+      </table>
     </div>
 
     <p class="ov-desc" style="margin-top:28px">
