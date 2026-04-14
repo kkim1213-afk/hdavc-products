@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Newnabie 마이크 홀더 B-6 · B-7 · B-29 (유선·무선·클립) | 현대에이브이씨</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--red:#2c5aa0;--dark:#111;--mid:#444;--light:#888;--bg:#f5f5f7;--white:#fff;--border:#eee;--navy:#0d1117;--accent-light:#eaf1fb;--accent-border:#b8cce8}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Sans KR',sans-serif;background:var(--white);color:var(--dark);line-height:1.6}
+img{max-width:100%}
+header{background:#fff;border-bottom:1px solid var(--border);padding:0 24px;height:60px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.logo img{height:36px;object-fit:contain}
+.back-btn{color:var(--light);text-decoration:none;font-size:13px;font-weight:500}
+.back-btn:hover{color:var(--red)}
+.bc{background:var(--bg);padding:10px 24px;border-bottom:1px solid var(--border);font-size:12px;color:var(--light)}
+.bc a{color:var(--light);text-decoration:none}.bc a:hover{color:var(--red)}
+.bc strong{color:var(--dark)}
+.hero{background:linear-gradient(160deg,#000 0%,#111 50%,#000 100%);color:#fff;overflow:hidden;position:relative}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 65% 40%,rgba(44,90,160,.12),transparent 60%)}
+.hero-inner{max-width:1200px;margin:0 auto;padding:64px 24px;display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center;position:relative;z-index:1}
+.h-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(44,90,160,.15);border:1px solid rgba(44,90,160,.5);color:#a8c0e0;font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:5px 14px;border-radius:2px;margin-bottom:16px}
+.h-dot{width:5px;height:5px;background:#5a8ad0;border-radius:50%;animation:blink 1.8s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.h-brand{font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.35);text-transform:uppercase;margin-bottom:6px}
+.hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.4rem,5.5vw,4.4rem);line-height:.95;letter-spacing:.04em;color:#fff;margin-bottom:8px}
+.hero h1 .r{color:#5a8ad0}
+.h-sub{font-size:12px;color:rgba(255,255,255,.4);letter-spacing:.08em;text-transform:uppercase;margin-bottom:18px}
+.h-desc{font-size:14px;color:rgba(255,255,255,.65);line-height:1.85;margin-bottom:28px}
+.kpi-row{display:flex;gap:22px;flex-wrap:wrap;margin-bottom:28px}
+.kpi{display:flex;flex-direction:column;gap:2px}
+.kv{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:#fff;line-height:1}
+.kv s{font-size:.9rem;color:rgba(255,255,255,.4);font-family:'Noto Sans KR',sans-serif;font-weight:300;text-decoration:none}
+.kl{font-size:10px;color:rgba(255,255,255,.35);letter-spacing:.1em;text-transform:uppercase}
+.h-tags{display:flex;flex-wrap:wrap;gap:7px}
+.tag{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.65);font-size:11px;padding:4px 11px;border-radius:20px}
+.tag.hot{background:rgba(44,90,160,.2);border-color:rgba(44,90,160,.5);color:#a8c0e0}
+.hero-visual{text-align:center}
+.hero-visual-cap{margin-top:16px;font-size:11px;color:rgba(255,255,255,.35);letter-spacing:.1em;text-transform:uppercase}
+.hero-ph{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:120px;color:rgba(255,255,255,.15)}
+.tab-wrap{background:#fff;border-bottom:2px solid var(--border);position:sticky;top:60px;z-index:100}
+.tabs{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tb{padding:15px 18px;border:none;background:none;font-size:13px;font-weight:500;color:var(--light);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-2px;white-space:nowrap;transition:all .2s;font-family:'Noto Sans KR',sans-serif}
+.tb.on,.tb:hover{color:var(--red);border-bottom-color:var(--red)}
+.sec{padding:64px 24px}
+.si{max-width:1200px;margin:0 auto}
+.sl{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:8px}
+.sl.w{color:#a8c0e0}
+.st{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.8rem,4vw,2.6rem);letter-spacing:.04em;color:var(--dark);margin-bottom:6px}
+.st.w{color:#fff}
+.sd{font-size:14px;color:var(--light);margin-bottom:36px;max-width:760px;line-height:1.8}
+.sec-bg{background:var(--bg)}
+.sec-dark{background:var(--navy)}
+.ov-desc{font-size:14px;color:var(--mid);line-height:1.9;margin-bottom:20px}
+.model-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px}
+.model-card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:24px;transition:all .25s;position:relative;overflow:hidden}
+.model-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.model-card:hover{border-color:rgba(44,90,160,.35);transform:translateY(-3px);box-shadow:0 8px 28px rgba(44,90,160,.12)}
+.model-card:hover::before{transform:scaleX(1)}
+.model-img{width:100%;aspect-ratio:1/1;object-fit:contain;background:#fafafa;border-radius:10px;margin-bottom:14px}
+.model-code{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:var(--red);letter-spacing:.05em;line-height:1;margin-bottom:4px}
+.model-ttl{font-size:14px;font-weight:700;color:var(--dark);margin-bottom:8px}
+.model-spec{font-size:12px;color:var(--light);line-height:1.75;margin-bottom:14px}
+.model-spec b{color:var(--mid);font-weight:600}
+.model-price{display:flex;align-items:baseline;gap:6px;padding-top:12px;border-top:1px dashed var(--border)}
+.model-price-label{font-size:10px;color:var(--light);letter-spacing:.05em}
+.model-price-val{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;color:var(--dark);line-height:1}
+.model-price-unit{font-size:11px;color:var(--light)}
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.feat{background:#fff;border:1px solid var(--border);border-radius:12px;padding:22px 18px;transition:all .25s;position:relative;overflow:hidden}
+.feat::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.feat:hover{border-color:rgba(44,90,160,.35);transform:translateY(-3px);box-shadow:0 8px 28px rgba(44,90,160,.1)}
+.feat:hover::before{transform:scaleX(1)}
+.feat-icon{font-size:24px;margin-bottom:10px}
+.feat-ttl{font-size:13px;font-weight:700;margin-bottom:7px}
+.feat-txt{font-size:12px;color:var(--light);line-height:1.75}
+.spec-wrap{background:#fff;border:1px solid var(--border);border-radius:14px;overflow:hidden;max-width:900px}
+table.spec{width:100%;border-collapse:collapse}
+table.spec th,table.spec td{padding:14px 18px;font-size:13px;border-bottom:1px solid var(--border);text-align:center}
+table.spec thead th{background:#fafafa;font-weight:700;color:var(--mid);font-size:11px;text-transform:uppercase;letter-spacing:.06em}
+table.spec tbody td{color:var(--dark);font-weight:500}
+table.spec tbody td:first-child{font-family:'Bebas Neue',sans-serif;font-size:1.1rem;color:var(--red);letter-spacing:.05em}
+table.spec tbody tr:last-child td{border-bottom:none}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:1100px;margin-bottom:20px}
+.gallery .g{background:#fafafa;border:1px solid var(--border);border-radius:12px;aspect-ratio:1/1;overflow:hidden;display:flex;align-items:center;justify-content:center;padding:10px}
+.gallery .g img{width:100%;height:100%;object-fit:contain}
+.gallery-cap{font-size:11px;color:var(--light);text-align:center;margin-top:4px;font-weight:500}
+.app-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.app{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:18px;text-align:center;transition:all .2s}
+.app:hover{border-color:rgba(44,90,160,.5);background:rgba(44,90,160,.08)}
+.app-icon{font-size:26px;margin-bottom:8px}
+.app-name{font-size:13px;font-weight:700;color:#fff;margin-bottom:3px}
+.app-desc{font-size:11px;color:rgba(255,255,255,.4);line-height:1.6}
+.compat-link{display:block;text-decoration:none;color:inherit;background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px;text-align:center;transition:all .25s;cursor:pointer}
+.compat-link:hover{border-color:rgba(44,90,160,.35);transform:translateY(-3px);box-shadow:0 8px 28px rgba(44,90,160,.1)}
+.pkg-name{font-size:13px;font-weight:700;margin-bottom:4px;color:var(--dark)}
+.pkg-desc{font-size:11px;color:var(--light);line-height:1.6}
+footer{background:#111;color:#fff;padding:24px;font-size:11px;opacity:.5;text-align:center;line-height:1.8}
+@media(max-width:1024px){.hero-inner{grid-template-columns:1fr}.hero-visual{display:none}.model-grid{grid-template-columns:repeat(2,1fr)}.gallery{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){.feat-grid,.app-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:540px){.model-grid,.feat-grid,.app-grid,.gallery{grid-template-columns:1fr}.hero-inner,.sec{padding-left:16px;padding-right:16px}.hero-inner{padding-top:40px;padding-bottom:40px}.sec{padding-top:44px;padding-bottom:44px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo"><a href="index.html"><img src="logo.png" alt="(주)현대에이브이씨"></a></div>
+  <a href="index.html" class="back-btn">← 제품 목록</a>
+</header>
+<div class="bc">
+  <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+    <a href="index.html">홈</a> › <a href="index.html">마이크</a> › <a href="index.html">마이크 액세서리</a> › <strong>마이크 홀더 B-6 · B-7 · B-29</strong>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="h-badge"><span class="h-dot"></span>Mic Holder Line-up · Wired · Wireless · Clip</div>
+      <div class="h-brand">Newnabie · Microphone Accessory</div>
+      <h1>MIC <span class="r">HOLDER</span><br>B-6 · B-7 · B-29</h1>
+      <div class="h-sub">Wired Ø27 · Wireless Ø33 · Clip Type · Plastic / Metal Screw</div>
+      <p class="h-desc">Newnabie 마이크 홀더 3종 라인업입니다. B-6(유선 마이크용 Ø27), B-7(무선 마이크용 Ø33), B-29(클립 타입)로 구성되어 일반 다이나믹 핸드헬드 마이크부터 무선 핸드헬드 송신기, 각종 콘덴서 마이크까지 모든 사이즈를 커버합니다. 마이크 스탠드 상단 Euro-thread 스크류에 직접 체결되는 표준형 홀더로 예배·강연·공연·방송 현장 어디서나 사용됩니다.</p>
+      <div class="kpi-row">
+        <div class="kpi"><div class="kv">3<s>종</s></div><div class="kl">Line-up</div></div>
+        <div class="kpi"><div class="kv">Ø27-33<s>mm</s></div><div class="kl">Mic Dia.</div></div>
+        <div class="kpi"><div class="kv">P+M</div><div class="kl">Plastic/Metal Screw</div></div>
+      </div>
+      <div class="h-tags">
+        <span class="tag hot">🎙 마이크 홀더 3종</span>
+        <span class="tag">B-6 유선 Ø27</span>
+        <span class="tag">B-7 무선 Ø33</span>
+        <span class="tag">B-29 클립</span>
+        <span class="tag">Plastic + Metal</span>
+        <span class="tag">스탠드 표준 호환</span>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div style="position:relative;width:100%;max-width:420px;margin:0 auto;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;background:#0a0a0a;border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.08)">
+        <img src="mic_holder_01.jpg" alt="Newnabie 마이크 홀더 B-6 B-7 B-29 라인업" style="width:100%;height:100%;object-fit:contain" onerror="this.outerHTML='<div class=&quot;hero-ph&quot;>🎙</div>'">
+      </div>
+      <div class="hero-visual-cap">Newnabie Mic Holder Line-up · B-6 / B-7 / B-29</div>
+    </div>
+  </div>
+</section>
+
+<!-- TABS -->
+<div class="tab-wrap">
+  <div class="tabs">
+    <button class="tb on" onclick="goTab('sec-overview')">제품 소개</button>
+    <button class="tb" onclick="goTab('sec-models')">모델 선택</button>
+    <button class="tb" onclick="goTab('sec-gallery')">제품 이미지</button>
+    <button class="tb" onclick="goTab('sec-features')">주요 특징</button>
+    <button class="tb" onclick="goTab('sec-spec')">사양 비교</button>
+    <button class="tb" onclick="goTab('sec-app')">활용 분야</button>
+    <button class="tb" onclick="goTab('sec-related')">관련 제품</button>
+  </div>
+</div>
+
+<!-- OVERVIEW -->
+<section class="sec" id="sec-overview">
+  <div class="si">
+    <div class="sl">제품 소개</div>
+    <div class="st">MICROPHONE HOLDER LINE-UP</div>
+    <p class="sd">Newnabie 마이크 홀더 3종(B-6 유선용 Ø27, B-7 무선용 Ø33, B-29 클립)은 마이크 스탠드의 Euro-thread 스크류에 체결해 마이크를 고정하는 표준 홀더입니다.</p>
+    <p class="ov-desc">
+      마이크 스탠드 위 마이크 고정은 단순해 보이지만, 마이크의 외경(body diameter)에 맞는 올바른 홀더를 선택해야만 흔들림 없이 안정적으로 고정됩니다. 일반 다이나믹 핸드헬드 마이크(Ø27 내외)와 무선 핸드헬드 송신기(Ø33 내외)는 외경이 다르므로 각각 전용 사이즈의 홀더를 사용해야 합니다. 또한 콘덴서 마이크·이어셋 마이크 클립처럼 바디 형상이 다른 마이크에는 클립형 홀더(B-29)가 사용됩니다.
+    </p>
+    <p class="ov-desc">
+      Newnabie B 시리즈 홀더는 국내 유통 표준 사이즈의 다이나믹·무선 마이크 대부분과 호환되며, Plastic+Metal 하이브리드 구조의 스크류로 마이크 스탠드 상단에 체결됩니다. 교회·학교·공연장·방송국 등 다수 마이크를 운용하는 현장에서 마이크 교체·추가 시 필수적으로 확보해야 하는 소모성 액세서리입니다.
+    </p>
+  </div>
+</section>
+
+<!-- MODELS -->
+<section class="sec sec-bg" id="sec-models">
+  <div class="si">
+    <div class="sl">모델 선택 가이드</div>
+    <div class="st">CHOOSE YOUR HOLDER</div>
+    <p class="sd">사용하시는 마이크 타입에 맞는 홀더를 선택하세요. 유선 다이나믹 마이크는 B-6, 무선 핸드헬드 송신기는 B-7, 콘덴서·소형 마이크는 B-29 클립을 권장합니다.</p>
+    <div class="model-grid">
+      <div class="model-card">
+        <img src="B6.png" alt="B-6 유선 마이크 홀더" class="model-img" onerror="this.outerHTML='<div style=&quot;aspect-ratio:1/1;background:#fafafa;border-radius:10px;margin-bottom:14px;display:flex;align-items:center;justify-content:center;font-size:60px&quot;>🎙</div>'">
+        <div class="model-code">B-6</div>
+        <div class="model-ttl">유선 마이크 홀더</div>
+        <div class="model-spec">
+          <b>사이즈</b>: Ø27 (내경)<br>
+          <b>스크류</b>: Plastic / Metal<br>
+          <b>적용</b>: 일반 다이나믹 핸드헬드 마이크
+        </div>
+        <div class="model-price">
+          <span class="model-price-label">권장소비자가</span>
+          <span class="model-price-val">2,500</span>
+          <span class="model-price-unit">원</span>
+        </div>
+      </div>
+      <div class="model-card">
+        <img src="B7.png" alt="B-7 무선 마이크 홀더" class="model-img" onerror="this.outerHTML='<div style=&quot;aspect-ratio:1/1;background:#fafafa;border-radius:10px;margin-bottom:14px;display:flex;align-items:center;justify-content:center;font-size:60px&quot;>📡</div>'">
+        <div class="model-code">B-7</div>
+        <div class="model-ttl">무선 마이크 홀더</div>
+        <div class="model-spec">
+          <b>사이즈</b>: Ø33 (내경)<br>
+          <b>스크류</b>: Plastic / Metal<br>
+          <b>적용</b>: 무선 핸드헬드 송신기
+        </div>
+        <div class="model-price">
+          <span class="model-price-label">권장소비자가</span>
+          <span class="model-price-val">3,000</span>
+          <span class="model-price-unit">원</span>
+        </div>
+      </div>
+      <div class="model-card">
+        <img src="B29.png" alt="B-29 클립형 마이크 홀더" class="model-img" onerror="this.outerHTML='<div style=&quot;aspect-ratio:1/1;background:#fafafa;border-radius:10px;margin-bottom:14px;display:flex;align-items:center;justify-content:center;font-size:60px&quot;>📎</div>'">
+        <div class="model-code">B-29</div>
+        <div class="model-ttl">클립형 마이크 홀더</div>
+        <div class="model-spec">
+          <b>타입</b>: 클립 (Clip-type)<br>
+          <b>스크류</b>: Plastic / Metal<br>
+          <b>적용</b>: 콘덴서·소형 마이크 등
+        </div>
+        <div class="model-price">
+          <span class="model-price-label">권장소비자가</span>
+          <span class="model-price-val">4,000</span>
+          <span class="model-price-unit">원</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="sec" id="sec-gallery">
+  <div class="si">
+    <div class="sl">제품 이미지</div>
+    <div class="st">PRODUCT GALLERY</div>
+    <p class="sd">Newnabie 마이크 홀더 3종의 제품 이미지입니다.</p>
+    <div class="gallery">
+      <div>
+        <div class="g"><img src="mic_holder_01.jpg" alt="Newnabie 마이크 홀더 라인업"></div>
+        <div class="gallery-cap">Line-up</div>
+      </div>
+      <div>
+        <div class="g"><img src="B6.png" alt="B-6 유선용"></div>
+        <div class="gallery-cap">B-6 (유선용)</div>
+      </div>
+      <div>
+        <div class="g"><img src="B7.png" alt="B-7 무선용"></div>
+        <div class="gallery-cap">B-7 (무선용)</div>
+      </div>
+      <div>
+        <div class="g"><img src="B29.png" alt="B-29 클립"></div>
+        <div class="gallery-cap">B-29 (클립)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="sec sec-bg" id="sec-features">
+  <div class="si">
+    <div class="sl">주요 특징</div>
+    <div class="st">KEY FEATURES</div>
+    <p class="sd">Newnabie 마이크 홀더 라인업의 공통 포인트입니다.</p>
+    <div class="feat-grid">
+      <div class="feat"><div class="feat-icon">🎙</div><div class="feat-ttl">마이크 타입별 최적화</div><div class="feat-txt">유선 다이나믹(Ø27) · 무선 핸드헬드(Ø33) · 클립 타입 3종 라인업으로 주요 마이크 규격을 모두 커버합니다.</div></div>
+      <div class="feat"><div class="feat-icon">🔩</div><div class="feat-ttl">Plastic + Metal 스크류</div><div class="feat-txt">플라스틱 하우징에 메탈 인서트 스크류를 결합한 하이브리드 구조로, 반복 체결·탈거에도 나사산이 마모되지 않습니다.</div></div>
+      <div class="feat"><div class="feat-icon">🏗</div><div class="feat-ttl">스탠드 표준 호환</div><div class="feat-txt">일반 마이크 스탠드 상단의 Euro-thread 규격(5/8") 및 3/8" 어댑터 환경 양쪽에 표준 호환되어 기존 스탠드에 그대로 장착됩니다.</div></div>
+      <div class="feat"><div class="feat-icon">💰</div><div class="feat-ttl">경제적인 소모성 액세서리</div><div class="feat-txt">마이크 추가·교체·대여 운영 현장에서 빈번하게 필요한 소모성 부품으로, 합리적인 가격에 다수 확보가 가능합니다.</div></div>
+      <div class="feat"><div class="feat-icon">🔒</div><div class="feat-ttl">안정적 고정</div><div class="feat-txt">적정 탄성의 하우징으로 마이크 바디를 감싸 안정적으로 고정하면서도 마이크 표면을 손상시키지 않습니다.</div></div>
+      <div class="feat"><div class="feat-icon">🔄</div><div class="feat-ttl">빠른 착탈</div><div class="feat-txt">리허설·셋업 중 마이크를 빠르게 분리·교체할 수 있어 다수 마이크 운용 현장에서 작업 효율을 높입니다.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SPEC COMPARISON -->
+<section class="sec" id="sec-spec">
+  <div class="si">
+    <div class="sl">사양 비교</div>
+    <div class="st">SPECIFICATION COMPARISON</div>
+    <p class="sd">B-6 · B-7 · B-29 3종 모델 사양 비교입니다.</p>
+    <div class="spec-wrap">
+      <table class="spec">
+        <thead>
+          <tr><th>모델</th><th>타입</th><th>사이즈 / 적용</th><th>스크류</th><th>권장소비자가</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>B-6</td><td>유선 마이크 홀더</td><td>Ø27 / 일반 다이나믹 핸드헬드</td><td>Plastic / Metal</td><td>2,500원</td></tr>
+          <tr><td>B-7</td><td>무선 마이크 홀더</td><td>Ø33 / 무선 핸드헬드 송신기</td><td>Plastic / Metal</td><td>3,000원</td></tr>
+          <tr><td>B-29</td><td>클립형 홀더</td><td>클립 / 콘덴서·소형 마이크</td><td>Plastic / Metal</td><td>4,000원</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="max-width:900px;margin-top:24px;padding:18px 22px;background:var(--accent-light);border:1px solid var(--accent-border);border-radius:10px;font-size:12px;color:var(--mid);line-height:1.8">
+      <strong style="color:var(--red)">📐 사이즈 선택 팁</strong> ─ 소지하신 마이크의 바디 외경(그립부)을 자로 측정한 후 선택하세요. 대부분의 유선 다이나믹 핸드헬드 마이크(SM58 스타일)는 Ø27 근처로 <strong>B-6</strong>, 무선 핸드헬드 송신기는 Ø33 근처로 <strong>B-7</strong>이 적합합니다. 일반 규격에서 벗어난 마이크는 <strong>B-29</strong> 클립형을 사용하거나 제품별 전용 홀더(동봉품)를 사용하세요.
+    </div>
+  </div>
+</section>
+
+<!-- APPLICATION -->
+<section class="sec sec-dark" id="sec-app">
+  <div class="si">
+    <div class="sl w">활용 분야</div>
+    <div class="st w">APPLICATION</div>
+    <p class="sd" style="color:rgba(255,255,255,.45)">Newnabie 마이크 홀더의 대표적인 활용 분야입니다.</p>
+    <div class="app-grid">
+      <div class="app"><div class="app-icon">⛪</div><div class="app-name">교회·예배당</div><div class="app-desc">설교·찬양 마이크 스탠드 고정</div></div>
+      <div class="app"><div class="app-icon">🏫</div><div class="app-name">학교·강당</div><div class="app-desc">강의·공연·방송 마이크 홀더</div></div>
+      <div class="app"><div class="app-icon">🎵</div><div class="app-name">공연장·이벤트</div><div class="app-desc">다수 마이크 셋업용 예비 홀더</div></div>
+      <div class="app"><div class="app-icon">📺</div><div class="app-name">방송·스튜디오</div><div class="app-desc">마이크 고정 · 교체용 소모품</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- RELATED -->
+<section class="sec sec-bg" id="sec-related">
+  <div class="si">
+    <div class="sl">관련 제품</div>
+    <div class="st">RELATED PRODUCTS</div>
+    <p class="sd">마이크 홀더와 함께 사용되는 마이크 스탠드 및 다이나믹 마이크 제품입니다.</p>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:1100px">
+      <a href="pro-5.html" class="compat-link">
+        <img src="pro5_1.jpg" alt="PRO 5" style="width:100%;aspect-ratio:1/1;object-fit:contain;border-radius:8px;margin-bottom:10px" onerror="this.outerHTML='<div style=\'aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;font-size:48px;color:#2c5aa0;margin-bottom:10px\'>🎤</div>'">
+        <div class="pkg-name">PRO 5</div>
+        <div class="pkg-desc">다이나믹 보컬 마이크<br>Super Cardioid · XLR 5M</div>
+      </a>
+      <a href="pro-10.html" class="compat-link">
+        <img src="pro10_1.jpg" alt="PRO 10" style="width:100%;aspect-ratio:1/1;object-fit:contain;border-radius:8px;margin-bottom:10px" onerror="this.outerHTML='<div style=\'aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;font-size:48px;color:#2c5aa0;margin-bottom:10px\'>🎤</div>'">
+        <div class="pkg-name">PRO 10</div>
+        <div class="pkg-desc">다이나믹 보컬 마이크<br>50Hz-15kHz · XLR-55 5M</div>
+      </a>
+      <a href="adur868.html" class="compat-link">
+        <img src="adur868_GR.jpg" alt="A dur-868" style="width:100%;aspect-ratio:1/1;object-fit:contain;border-radius:8px;margin-bottom:10px" onerror="this.outerHTML='<div style=\'aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;font-size:48px;color:#2c5aa0;margin-bottom:10px\'>🎤</div>'">
+        <div class="pkg-name">A dur-868</div>
+        <div class="pkg-desc">CAROL 다이나믹 마이크<br>Super Cardioid · 290g</div>
+      </a>
+      <a href="ac-900s.html" class="compat-link">
+        <img src="AC-900S_GR.png" alt="AC-900S" style="width:100%;aspect-ratio:1/1;object-fit:contain;border-radius:8px;margin-bottom:10px" onerror="this.outerHTML='<div style=\'aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;font-size:48px;color:#2c5aa0;margin-bottom:10px\'>🎤</div>'">
+        <div class="pkg-name">AC-900S</div>
+        <div class="pkg-desc">CAROL AHNC 다이나믹<br>Super Cardioid · 노이즈 캔슬링</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © (주)현대에이브이씨 HYUNDAI AUDIO VISUAL COMMUNICATIONS CO., LTD<br>
+  Newnabie 마이크 홀더 · B-6 · B-7 · B-29 · 공식 수입원
+</footer>
+
+<script>
+function goTab(id){
+  document.querySelectorAll('.tb').forEach(b=>b.classList.remove('on'));
+  event.currentTarget.classList.add('on');
+  const el=document.getElementById(id);
+  if(el){window.scrollTo({top:el.offsetTop-120,behavior:'smooth'})}
+}
+</script>
+</body>
+</html>
