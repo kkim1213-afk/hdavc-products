@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sound+Music B40SL 마이크 데스크 스탠드 (ON/OFF 스위치) | 현대에이브이씨</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--red:#e94560;--dark:#111;--mid:#444;--light:#888;--bg:#f5f5f7;--white:#fff;--border:#eee;--navy:#0d1117;--accent-light:#fff3f5;--accent-border:#ffd0d8}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Sans KR',sans-serif;background:var(--white);color:var(--dark);line-height:1.6}
+img{max-width:100%}
+header{background:#fff;border-bottom:1px solid var(--border);padding:0 24px;height:60px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.logo img{height:36px;object-fit:contain}
+.back-btn{color:var(--light);text-decoration:none;font-size:13px;font-weight:500}
+.back-btn:hover{color:var(--red)}
+.bc{background:var(--bg);padding:10px 24px;border-bottom:1px solid var(--border);font-size:12px;color:var(--light)}
+.bc a{color:var(--light);text-decoration:none}.bc a:hover{color:var(--red)}
+.bc strong{color:var(--dark)}
+.hero{background:linear-gradient(160deg,#000 0%,#111 50%,#000 100%);color:#fff;overflow:hidden;position:relative}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 65% 40%,rgba(233,69,96,.1),transparent 60%)}
+.hero-inner{max-width:1200px;margin:0 auto;padding:64px 24px;display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center;position:relative;z-index:1}
+.h-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(233,69,96,.15);border:1px solid rgba(233,69,96,.5);color:#fca5a5;font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:5px 14px;border-radius:2px;margin-bottom:16px}
+.h-dot{width:5px;height:5px;background:var(--red);border-radius:50%;animation:blink 1.8s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.h-brand{font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.35);text-transform:uppercase;margin-bottom:6px}
+.hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,6.5vw,5.5rem);line-height:.9;letter-spacing:.05em;color:#fff;margin-bottom:8px}
+.hero h1 .r{color:#ff8a9b}
+.h-sub{font-size:12px;color:rgba(255,255,255,.4);letter-spacing:.08em;text-transform:uppercase;margin-bottom:18px}
+.h-desc{font-size:14px;color:rgba(255,255,255,.65);line-height:1.85;margin-bottom:28px}
+.kpi-row{display:flex;gap:22px;flex-wrap:wrap;margin-bottom:28px}
+.kpi{display:flex;flex-direction:column;gap:2px}
+.kv{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:#fff;line-height:1}
+.kv s{font-size:.9rem;color:rgba(255,255,255,.4);font-family:'Noto Sans KR',sans-serif;font-weight:300;text-decoration:none}
+.kl{font-size:10px;color:rgba(255,255,255,.35);letter-spacing:.1em;text-transform:uppercase}
+.h-tags{display:flex;flex-wrap:wrap;gap:7px}
+.tag{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.65);font-size:11px;padding:4px 11px;border-radius:20px}
+.tag.hot{background:rgba(233,69,96,.2);border-color:rgba(233,69,96,.5);color:#fca5a5}
+.hero-visual{text-align:center}
+.hero-visual-cap{margin-top:16px;font-size:11px;color:rgba(255,255,255,.35);letter-spacing:.1em;text-transform:uppercase}
+.tab-wrap{background:#fff;border-bottom:2px solid var(--border);position:sticky;top:60px;z-index:100}
+.tabs{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tb{padding:15px 18px;border:none;background:none;font-size:13px;font-weight:500;color:var(--light);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-2px;white-space:nowrap;transition:all .2s;font-family:'Noto Sans KR',sans-serif}
+.tb.on,.tb:hover{color:var(--red);border-bottom-color:var(--red)}
+.sec{padding:64px 24px}
+.si{max-width:1200px;margin:0 auto}
+.sl{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:8px}
+.sl.w{color:#fca5a5}
+.st{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.8rem,4vw,2.6rem);letter-spacing:.04em;color:var(--dark);margin-bottom:6px}
+.st.w{color:#fff}
+.sd{font-size:14px;color:var(--light);margin-bottom:36px;max-width:760px;line-height:1.8}
+.sec-bg{background:var(--bg)}
+.sec-dark{background:var(--navy)}
+.ov-desc{font-size:14px;color:var(--mid);line-height:1.9;margin-bottom:20px}
+.ov-highlights{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.ov-hl{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:14px 16px;display:flex;align-items:flex-start;gap:10px}
+.ov-hl-icon{font-size:18px;flex-shrink:0}
+.ov-hl-ttl{font-size:12px;font-weight:700;margin-bottom:2px}
+.ov-hl-txt{font-size:11px;color:var(--light);line-height:1.6}
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.feat{background:#fff;border:1px solid var(--border);border-radius:12px;padding:22px 18px;transition:all .25s;position:relative;overflow:hidden}
+.feat::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.feat:hover{border-color:rgba(233,69,96,.35);transform:translateY(-3px);box-shadow:0 8px 28px rgba(233,69,96,.1)}
+.feat:hover::before{transform:scaleX(1)}
+.feat-icon{font-size:24px;margin-bottom:10px}
+.feat-ttl{font-size:13px;font-weight:700;margin-bottom:7px}
+.feat-txt{font-size:12px;color:var(--light);line-height:1.75}
+.spec-wrap{background:#fff;border:1px solid var(--border);border-radius:14px;overflow:hidden;max-width:820px}
+table.spec{width:100%;border-collapse:collapse}
+table.spec th,table.spec td{padding:14px 18px;font-size:13px;border-bottom:1px solid var(--border);text-align:left}
+table.spec tbody th{background:#fafafa;font-weight:500;color:var(--light);font-size:11px;text-transform:uppercase;letter-spacing:.06em;width:40%}
+table.spec tbody td{color:var(--dark);font-weight:500}
+table.spec tbody tr:last-child th,table.spec tbody tr:last-child td{border-bottom:none}
+.conn-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px;max-width:820px}
+.conn{background:#fff;border:1px solid var(--border);border-radius:10px;padding:16px 18px}
+.conn-l{font-size:10px;color:var(--red);font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:4px}
+.conn-v{font-size:14px;font-weight:700;color:var(--dark);margin-bottom:4px}
+.conn-d{font-size:11px;color:var(--light);line-height:1.6}
+.mount-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+.mount{background:#fff;border:1px solid var(--border);border-radius:12px;padding:20px;text-align:center}
+.mount-n{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;color:var(--red);line-height:1;margin-bottom:8px}
+.mount-t{font-size:13px;font-weight:700;margin-bottom:4px}
+.mount-d{font-size:11px;color:var(--light);line-height:1.6}
+.app-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.app{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:18px;text-align:center;transition:all .2s}
+.app:hover{border-color:rgba(233,69,96,.5);background:rgba(233,69,96,.08)}
+.app-icon{font-size:26px;margin-bottom:8px}
+.app-name{font-size:13px;font-weight:700;color:#fff;margin-bottom:3px}
+.app-desc{font-size:11px;color:rgba(255,255,255,.4);line-height:1.6}
+.price-box{display:inline-flex;align-items:baseline;gap:8px;background:rgba(233,69,96,.08);border:1px solid var(--accent-border);border-radius:10px;padding:14px 22px;margin-bottom:28px}
+.price-label{font-size:11px;color:var(--light);font-weight:500}
+.price-val{font-family:'Bebas Neue',sans-serif;font-size:2.2rem;color:var(--red);line-height:1}
+.price-unit{font-size:13px;color:var(--mid);font-weight:500}
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.rel-card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:20px;transition:all .25s;text-decoration:none;color:inherit;display:block}
+.rel-card:hover{border-color:rgba(233,69,96,.35);transform:translateY(-3px);box-shadow:0 8px 28px rgba(233,69,96,.08)}
+.rel-model{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;color:var(--red);margin-bottom:4px;letter-spacing:.03em}
+.rel-name{font-size:13px;font-weight:700;margin-bottom:6px}
+.rel-spec{font-size:11px;color:var(--light);line-height:1.6}
+footer{background:#111;color:#fff;padding:24px;font-size:11px;opacity:.5;text-align:center;line-height:1.8}
+@media(max-width:1024px){.hero-inner{grid-template-columns:1fr}.hero-visual{display:none}.ov-highlights{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){.feat-grid,.app-grid,.mount-grid,.rel-grid{grid-template-columns:1fr 1fr}.conn-grid{grid-template-columns:1fr}}
+@media(max-width:540px){.feat-grid,.app-grid,.ov-highlights,.mount-grid,.rel-grid{grid-template-columns:1fr}.hero-inner,.sec{padding-left:16px;padding-right:16px}.hero-inner{padding-top:40px;padding-bottom:40px}.sec{padding-top:44px;padding-bottom:44px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo"><a href="index.html"><img src="logo.png" alt="(주)현대에이브이씨"></a></div>
+  <a href="index.html" class="back-btn">← 제품 목록</a>
+</header>
+<div class="bc">
+  <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+    <a href="index.html">홈</a> › <a href="index.html">마이크</a> › <a href="index.html">액세서리</a> › <strong>B40SL 마이크 데스크 스탠드</strong>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="h-badge"><span class="h-dot"></span>Microphone Desk Stand</div>
+      <div class="h-brand">Sound+Music · Microphone Desk Stand</div>
+      <h1>B<span class="r">40SL</span></h1>
+      <div class="h-sub">Gooseneck Mic Desk Stand · ON/OFF Switch · XLR 3-pin</div>
+      <p class="h-desc">구스넥 마이크를 탁자·강대상·연단 위에 안정적으로 세울 수 있는 탁상형 마이크 데스크 스탠드. XLR 3핀 퀵 마운트 방식으로 마이크를 돌려 고정하며, 상단의 ON/OFF 스위치로 간편하게 음성을 제어할 수 있습니다. 충격과 진동을 차단하는 데스크 스탠드 구조로 테이블 접촉음을 최소화합니다.</p>
+      <div class="kpi-row">
+        <div class="kpi"><div class="kv">XLR<s>3P</s></div><div class="kl">퀵 마운트</div></div>
+        <div class="kpi"><div class="kv">ON<s>/</s>OFF</div><div class="kl">스위치 내장</div></div>
+        <div class="kpi"><div class="kv">Screw<s> </s>Lock</div><div class="kl">회전식 잠금</div></div>
+      </div>
+      <div class="h-tags">
+        <span class="tag hot">🎙 구스넥 마이크용</span>
+        <span class="tag">XLRF 입력 · XLRM 출력</span>
+        <span class="tag">ON/OFF 스위치</span>
+        <span class="tag">Screw lock (회전식 잠금)</span>
+        <span class="tag">강대상 · 회의 테이블</span>
+      </div>
+      <div style="display:inline-flex;align-items:baseline;gap:10px;background:rgba(233,69,96,.12);border:1px solid rgba(233,69,96,.4);border-radius:10px;padding:12px 20px;margin-top:20px">
+        <span style="font-size:11px;color:rgba(255,255,255,.6);font-weight:500">권장소비자가</span>
+        <span style="font-family:'Bebas Neue',sans-serif;font-size:1.9rem;color:#ff8a9b;line-height:1;letter-spacing:.02em">60,500</span>
+        <span style="font-size:12px;color:rgba(255,255,255,.5)">원 / 개</span>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div style="position:relative;width:100%;max-width:420px;margin:0 auto;aspect-ratio:1/1">
+        <img src="B40SL_01.png" alt="Sound+Music B40SL 마이크 데스크 스탠드" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 16px 48px rgba(255,255,255,.08))">
+      </div>
+      <div class="hero-visual-cap">Sound+Music B40SL · Microphone Desk Stand</div>
+    </div>
+  </div>
+</section>
+
+<!-- TABS -->
+<div class="tab-wrap">
+  <div class="tabs">
+    <button class="tb on" onclick="goTab('sec-overview')">제품 소개</button>
+    <button class="tb" onclick="goTab('sec-features')">주요 특징</button>
+    <button class="tb" onclick="goTab('sec-mount')">설치 방법</button>
+    <button class="tb" onclick="goTab('sec-spec')">사양</button>
+    <button class="tb" onclick="goTab('sec-app')">활용 분야</button>
+    <button class="tb" onclick="goTab('sec-rel')">관련 제품</button>
+  </div>
+</div>
+
+<!-- OVERVIEW -->
+<section class="sec" id="sec-overview">
+  <div class="si">
+    <div class="sl">제품 소개</div>
+    <div class="st">B40SL · MICROPHONE DESK STAND</div>
+    <p class="sd">구스넥 마이크 전용 탁상형 스탠드. XLR 3핀 퀵 마운트 구조와 ON/OFF 스위치, 회전 잠금 메커니즘을 갖추어 회의실·강단·방송 부스 등 고정 설치 환경에 최적화되어 있습니다.</p>
+    <p class="ov-desc">
+      B40SL은 탁자·연단·강대상·회의 테이블 등 평평한 표면에 두고 사용하는 마이크 데스크 스탠드입니다. 입력부에는 3핀 XLRF 리셉터클이, 출력부에는 3핀 XLRM 리셉터클이 탑재되어, 산업 표준 XLRM 3핀 방식의 구스넥 마이크를 위에서 꽂은 뒤 너트를 돌려 단단히 고정할 수 있습니다.
+    </p>
+    <p class="ov-desc">
+      상단의 빨간색 스퀘어 스위치는 ON/OFF 기능을 담당하여, 발언자가 마이크를 손으로 만지지 않고도 음성을 차단·개방할 수 있습니다. 바닥면에는 충격·진동을 흡수하는 구조가 적용되어 테이블에서 전달되는 기계적 소음을 효과적으로 줄여 줍니다. 강의·회의·예배 등 장시간 고정 수음이 필요한 환경에서 구스넥 마이크와 함께 사용하기에 이상적입니다.
+    </p>
+    <div class="ov-highlights">
+      <div class="ov-hl"><div class="ov-hl-icon">🎙</div><div><div class="ov-hl-ttl">XLR 3핀 퀵 마운트</div><div class="ov-hl-txt">XLRF 입력 · 돌려서 간편 고정</div></div></div>
+      <div class="ov-hl"><div class="ov-hl-icon">🔴</div><div><div class="ov-hl-ttl">ON/OFF 스위치</div><div class="ov-hl-txt">상단 사각 스위치로 음성 제어</div></div></div>
+      <div class="ov-hl"><div class="ov-hl-icon">🔒</div><div><div class="ov-hl-ttl">회전 잠금 구조</div><div class="ov-hl-txt">너트 체결로 마이크 이탈 방지</div></div></div>
+      <div class="ov-hl"><div class="ov-hl-icon">🛡</div><div><div class="ov-hl-ttl">진동 절연 설계</div><div class="ov-hl-txt">테이블 충격·기계 소음 억제</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="sec sec-bg" id="sec-features">
+  <div class="si">
+    <div class="sl">주요 특징</div>
+    <div class="st">KEY FEATURES</div>
+    <p class="sd">B40SL 데스크 스탠드의 핵심 포인트입니다.</p>
+    <div class="feat-grid">
+      <div class="feat"><div class="feat-icon">🎙</div><div class="feat-ttl">산업 표준 XLR 3핀 호환</div><div class="feat-txt">XLRM 3핀 타입의 산업 표준 커넥터를 사용하는 구스넥 마이크 및 퀵 마운트 타입 마이크와 호환됩니다. 국내외 대부분의 구스넥 마이크를 바로 체결할 수 있습니다.</div></div>
+      <div class="feat"><div class="feat-icon">🔴</div><div class="feat-ttl">상단 ON/OFF 스위치</div><div class="feat-txt">스탠드 상단의 빨간색 스퀘어 스위치로 마이크 음성을 즉시 ON/OFF 할 수 있어, 발언 전후 소음 유입을 차단하고 회의·강의 진행을 편리하게 만듭니다.</div></div>
+      <div class="feat"><div class="feat-icon">🔒</div><div class="feat-ttl">회전식 잠금 메커니즘</div><div class="feat-txt">마이크를 리셉터클에 꽂은 뒤 너트를 돌려 조이면 마이크가 견고하게 고정되어 움직이지 않습니다. 반대로 풀면 손쉽게 분리되는 직관적인 구조입니다.</div></div>
+      <div class="feat"><div class="feat-icon">🛡</div><div class="feat-ttl">진동 · 충격 절연 구조</div><div class="feat-txt">테이블·연단 표면에서 전달되는 충격과 기계적 진동을 효과적으로 차단하여, 마이크에 불필요한 저음 럼블이나 터치 노이즈가 실리는 것을 방지합니다.</div></div>
+      <div class="feat"><div class="feat-icon">🔌</div><div class="feat-ttl">XLRF 입력 + XLRM 출력</div><div class="feat-txt">입력부는 3핀 XLRF 리셉터클(마이크 연결), 출력부는 3핀 XLRM 리셉터클(믹서·앰프 연결)로 구성되어 일반적인 마이크 케이블을 그대로 사용할 수 있습니다.</div></div>
+      <div class="feat"><div class="feat-icon">🏛</div><div class="feat-ttl">탁상 · 연단 전용 베이스</div><div class="feat-txt">연단·강대상·회의 테이블 등 평평한 표면에 안정적으로 놓이는 무게감 있는 베이스. 떨어뜨리면 파손될 수 있으므로 고정 설치 환경에 권장됩니다.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- MOUNT / CONNECTIONS -->
+<section class="sec" id="sec-mount">
+  <div class="si">
+    <div class="sl">설치 · 연결</div>
+    <div class="st">MOUNTING &amp; CONNECTIONS</div>
+    <p class="sd">B40SL은 간단한 3단계로 마이크 체결과 신호 연결을 완료할 수 있습니다.</p>
+
+    <div class="mount-grid">
+      <div class="mount">
+        <div class="mount-n">STEP 1</div>
+        <div class="mount-t">마이크 연결</div>
+        <div class="mount-d">구스넥 마이크를 XLRF 리셉터클에 맞춰 꽂은 뒤, 너트를 돌려 마이크가 움직이지 않도록 고정합니다.</div>
+      </div>
+      <div class="mount">
+        <div class="mount-n">STEP 2</div>
+        <div class="mount-t">케이블 연결</div>
+        <div class="mount-d">스탠드 하단의 XLRM 출력 포트에 마이크 케이블(XLRF ↔ XLRM)의 XLRF 측을 연결하고, 반대편을 믹서·앰프·오디오 인터페이스에 연결합니다.</div>
+      </div>
+      <div class="mount">
+        <div class="mount-n">STEP 3</div>
+        <div class="mount-t">분리 방법</div>
+        <div class="mount-d">마이크를 분리할 때는 너트를 반대로 돌려 풀어 준 뒤 마이크를 위로 빼냅니다.</div>
+      </div>
+    </div>
+
+    <div class="conn-grid">
+      <div class="conn">
+        <div class="conn-l">Input Port</div>
+        <div class="conn-v">3-pin XLRF (Female)</div>
+        <div class="conn-d">구스넥 마이크의 XLRM 커넥터를 꽂아 고정하는 상단 리셉터클</div>
+      </div>
+      <div class="conn">
+        <div class="conn-l">Output Port</div>
+        <div class="conn-v">3-pin XLRM (Male)</div>
+        <div class="conn-d">믹서·앰프 측으로 신호를 보내는 출력 포트. 일반 XLR 마이크 케이블 사용</div>
+      </div>
+    </div>
+
+    <div style="background:#fff3f5;border:1px solid var(--accent-border);border-radius:10px;padding:14px 18px;margin-top:20px;font-size:12px;color:var(--mid);line-height:1.7">
+      <b style="color:var(--red)">⚠ 사용 주의</b> &nbsp; 낙하·충격 시 파손 및 상해 위험이 있습니다. · 비·물·액체에 노출하지 마십시오. · 임의로 분해·수리하지 말고 공식 서비스에 의뢰하세요.
+    </div>
+  </div>
+</section>
+
+<!-- SPEC -->
+<section class="sec sec-bg" id="sec-spec">
+  <div class="si">
+    <div class="sl">사양</div>
+    <div class="st">SPECIFICATIONS</div>
+    <p class="sd">B40SL의 상세 사양입니다.</p>
+    <div class="spec-wrap">
+      <table class="spec">
+        <tbody>
+          <tr><th>모델명</th><td>B40SL</td></tr>
+          <tr><th>타입</th><td>Microphone Desk Stand (탁상형 마이크 스탠드)</td></tr>
+          <tr><th>호환 마이크</th><td>XLRM 3핀 타입 구스넥 마이크 / 퀵 마운트형 마이크</td></tr>
+          <tr><th>입력 포트</th><td>3-pin XLRF 리셉터클 (상단)</td></tr>
+          <tr><th>출력 포트</th><td>3-pin XLRM 리셉터클 (하단)</td></tr>
+          <tr><th>스위치</th><td>ON/OFF 스퀘어 스위치 (상단)</td></tr>
+          <tr><th>고정 방식</th><td>Screw lock · 회전식 나사 잠금 (Rotate to Lock / Unscrew to Unlock)</td></tr>
+          <tr><th>설치 환경</th><td>연단·강대상·회의 테이블 등 평평한 표면</td></tr>
+          <tr><th>색상</th><td>블랙</td></tr>
+          <tr><th>권장소비자가</th><td>60,500원 / 개 (VAT 포함)</td></tr>
+          <tr><th>매뉴얼 버전</th><td>VER 1.2</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:14px;font-size:11px;color:var(--light);max-width:820px;line-height:1.7">※ 본 표는 제조사 공식 매뉴얼(VER 1.2)의 기재 사항을 기준으로 작성되었습니다. 치수·중량 등 비기재 항목은 별도 문의 바랍니다.</p>
+  </div>
+</section>
+
+<!-- APPLICATION -->
+<section class="sec sec-dark" id="sec-app">
+  <div class="si">
+    <div class="sl w">활용 분야</div>
+    <div class="st w">APPLICATION</div>
+    <p class="sd" style="color:rgba(255,255,255,.45)">B40SL 데스크 스탠드의 대표적인 설치 환경입니다.</p>
+    <div class="app-grid">
+      <div class="app"><div class="app-icon">🏛</div><div class="app-name">회의실 · 컨퍼런스</div><div class="app-desc">테이블 고정 설치로 발언자 음성을 안정적으로 수음</div></div>
+      <div class="app"><div class="app-icon">⛪</div><div class="app-name">교회 · 강대상</div><div class="app-desc">ON/OFF 스위치로 설교·사회 진행 편의성 향상</div></div>
+      <div class="app"><div class="app-icon">🎤</div><div class="app-name">강연 · 세미나</div><div class="app-desc">연단에 고정 설치하여 장시간 강의에도 흔들림 없이 사용</div></div>
+      <div class="app"><div class="app-icon">🏦</div><div class="app-name">관공서 · 의회</div><div class="app-desc">본회의장·민원실 등 구스넥 마이크와 결합 설치</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- RELATED -->
+<section class="sec" id="sec-rel">
+  <div class="si">
+    <div class="sl">관련 제품</div>
+    <div class="st">RELATED PRODUCTS</div>
+    <p class="sd">B40SL과 함께 사용하면 좋은 Sound+Music 구스넥 마이크 및 액세서리입니다.</p>
+    <div class="rel-grid">
+      <a href="gc-732c.html" class="rel-card">
+        <div class="rel-model">GC-732C</div>
+        <div class="rel-name">21" 구스넥 콘덴서 마이크</div>
+        <div class="rel-spec">Cardioid · 54cm · 16~52V 팬텀 · XLR-M</div>
+      </a>
+      <a href="gcl-949.html" class="rel-card">
+        <div class="rel-model">GCL-949</div>
+        <div class="rel-name">15" 구스넥 마이크 (LED)</div>
+        <div class="rel-spec">Uni-Directional · 38cm · LED 라이트</div>
+      </a>
+      <a href="mc102.html" class="rel-card">
+        <div class="rel-model">MC102</div>
+        <div class="rel-name">마이크 케이블 (CCAM)</div>
+        <div class="rel-spec">XLR M → XLR F · 3M~10M</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © (주)현대에이브이씨 HYUNDAI AUDIO VISUAL COMMUNICATIONS CO., LTD<br>
+  Sound+Music B40SL · Microphone Desk Stand · 공식 수입원
+</footer>
+
+<script>
+function goTab(id){
+  document.querySelectorAll('.tb').forEach(b=>b.classList.remove('on'));
+  event.currentTarget.classList.add('on');
+  const el=document.getElementById(id);
+  if(el){window.scrollTo({top:el.offsetTop-120,behavior:'smooth'})}
+}
+</script>
+</body>
+</html>
