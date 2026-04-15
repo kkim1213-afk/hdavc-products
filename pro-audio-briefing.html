@@ -6,9 +6,10 @@
 <title>Pro Audio 월간 브리핑 | 현대에이브이씨</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@300;400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0a0c10;--surface:#111318;--surface2:#181c24;--border:#1e2430;--accent:#e8a020;--accent2:#ff6b35;--text:#e8eaf0;--muted:#6b7280;--dim:#3d4452;--green:#22c55e;--red:#ef4444;--blue:#3b82f6}
+:root{--bg:#0a0c10;--surface:#111318;--surface2:#181c24;--border:#1e2430;--accent:#e8a020;--accent2:#ff6b35;--text:#e8eaf0;--muted:#6b7280;--dim:#3d4452;--green:#22c55e;--red:#ef4444;--blue:#3b82f6;--purple:#a855f7}
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:var(--bg);color:var(--text);font-family:'Noto Sans KR',sans-serif;min-height:100vh;overflow-x:hidden}
+a{color:inherit}
 
 /* HEADER */
 .hdr{background:var(--surface);border-bottom:1px solid var(--border);padding:0 2rem;height:64px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
@@ -32,6 +33,12 @@ body{background:var(--bg);color:var(--text);font-family:'Noto Sans KR',sans-seri
 .hmv{font-size:.88rem;font-weight:500;color:var(--text)}
 #disp-date{color:var(--accent)}
 
+/* NOTICE */
+.notice{max-width:1200px;margin:0 auto 0;padding:0 2rem}
+.notice-box{background:rgba(59,130,246,.06);border:1px solid rgba(59,130,246,.25);border-radius:4px;padding:1rem 1.2rem;font-size:.78rem;color:#b3cbef;line-height:1.7;display:flex;gap:.8rem;align-items:flex-start}
+.notice-box b{color:#dbe7fa;font-weight:700}
+.notice-box code{background:rgba(59,130,246,.12);padding:.05rem .4rem;border-radius:2px;font-size:.72rem;font-family:'Space Mono',monospace}
+
 /* CONTENT */
 .content{max-width:1200px;margin:0 auto;padding:2rem}
 
@@ -44,10 +51,12 @@ body{background:var(--bg);color:var(--text);font-family:'Noto Sans KR',sans-seri
 /* TICKER */
 .ticker{background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:1rem 1.5rem;display:flex;gap:2.5rem;overflow-x:auto;scrollbar-width:none;margin-bottom:1.5rem}
 .ticker::-webkit-scrollbar{display:none}
-.t-item{display:flex;flex-direction:column;gap:.2rem;flex-shrink:0}
+.t-item{display:flex;flex-direction:column;gap:.2rem;flex-shrink:0;text-decoration:none}
+.t-item:hover .t-val{text-decoration:underline}
 .t-label{font-family:'Space Mono',monospace;font-size:.58rem;color:var(--dim);text-transform:uppercase;letter-spacing:.1em}
 .t-val{font-family:'Space Mono',monospace;font-size:.83rem;font-weight:700}
 .t-val.up{color:var(--green)}.t-val.down{color:var(--red)}.t-val.neutral{color:var(--muted)}
+.t-note{font-size:.62rem;color:var(--dim);font-family:'Space Mono',monospace}
 
 /* GRID */
 .brief-grid{display:grid;gap:1.5rem}
@@ -55,47 +64,88 @@ body{background:var(--bg);color:var(--text);font-family:'Noto Sans KR',sans-seri
 .sec-label{font-family:'Space Mono',monospace;font-size:.63rem;letter-spacing:.15em;text-transform:uppercase;color:var(--dim);margin-bottom:1rem;display:flex;align-items:center;gap:.5rem}
 .sec-label::after{content:'';flex:1;height:1px;background:var(--border)}
 
-/* ISSUE CARD */
-.icard{background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:1.4rem;transition:border-color .2s,transform .2s;position:relative;overflow:hidden;margin-bottom:1rem}
-.icard::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent2));transform:scaleX(0);transform-origin:left;transition:transform .3s}
-.icard:hover{border-color:rgba(232,160,32,.3);transform:translateY(-2px)}
+/* ISSUE CARD (anchor) */
+.icard{background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:0;transition:border-color .2s,transform .2s;position:relative;overflow:hidden;margin-bottom:1rem;display:block;text-decoration:none;color:inherit}
+.icard::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent2));transform:scaleX(0);transform-origin:left;transition:transform .3s;z-index:2}
+.icard:hover{border-color:rgba(232,160,32,.4);transform:translateY(-2px)}
 .icard:hover::before{transform:scaleX(1)}
-.icard-num{font-family:'Bebas Neue',sans-serif;font-size:3.5rem;line-height:1;color:var(--dim);position:absolute;top:.8rem;right:1.2rem;opacity:.35}
-.icat{display:inline-block;font-family:'Space Mono',monospace;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;padding:.22rem .55rem;border-radius:2px;margin-bottom:.65rem}
-.cm{background:rgba(59,130,246,.15);color:var(--blue)}.cp{background:rgba(232,160,32,.15);color:var(--accent)}.ct{background:rgba(34,197,94,.15);color:var(--green)}.ce{background:rgba(255,107,53,.15);color:var(--accent2)}.cc{background:rgba(168,85,247,.15);color:#a855f7}
-.ititle{font-size:1.05rem;font-weight:700;line-height:1.4;margin-bottom:.65rem;padding-right:2.8rem}
-.isummary{font-size:.83rem;color:#9ca3af;line-height:1.7}
-.ifoot{display:flex;align-items:center;justify-content:space-between;margin-top:1.1rem;padding-top:.9rem;border-top:1px solid var(--border)}
-.isrc{font-family:'Space Mono',monospace;font-size:.62rem;color:var(--dim);text-transform:uppercase;letter-spacing:.08em}
-.iimp{font-size:.68rem;font-family:'Space Mono',monospace;display:flex;align-items:center;gap:.25rem}
+.icard-thumb{width:100%;aspect-ratio:16/9;background:#000 center/cover no-repeat;border-bottom:1px solid var(--border)}
+.icard-body{padding:1.3rem 1.4rem 1.2rem;position:relative}
+.icard-head{display:flex;align-items:center;gap:.7rem;margin-bottom:.9rem}
+.src-logo{width:24px;height:24px;border-radius:3px;background:var(--surface2);flex-shrink:0}
+.src-meta{flex:1;min-width:0;display:flex;flex-direction:column;gap:.1rem}
+.src-name{font-size:.75rem;font-weight:700;color:var(--text);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.src-detail{font-family:'Space Mono',monospace;font-size:.62rem;color:var(--dim);letter-spacing:.04em}
+.src-tier{font-family:'Space Mono',monospace;font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;padding:.22rem .5rem;border-radius:2px;flex-shrink:0;font-weight:700}
+.src-tier.t1{background:rgba(34,197,94,.14);color:var(--green)}
+.src-tier.t2{background:rgba(232,160,32,.14);color:var(--accent)}
+.src-tier.t3{background:rgba(107,114,128,.14);color:var(--muted)}
+.icat{display:inline-block;font-family:'Space Mono',monospace;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;padding:.22rem .55rem;border-radius:2px;margin-bottom:.7rem}
+.cm{background:rgba(59,130,246,.15);color:var(--blue)}.cp{background:rgba(232,160,32,.15);color:var(--accent)}.ct{background:rgba(34,197,94,.15);color:var(--green)}.ce{background:rgba(255,107,53,.15);color:var(--accent2)}.cc{background:rgba(168,85,247,.15);color:var(--purple)}
+.ititle{font-size:1.05rem;font-weight:700;line-height:1.45;margin-bottom:.75rem;color:var(--text)}
+.ititle .ext{opacity:.4;font-size:.85rem;margin-left:.3rem}
+.iquote{border-left:2px solid var(--accent);background:rgba(232,160,32,.05);padding:.7rem .9rem;margin-bottom:.9rem;font-size:.82rem;color:#d8c89c;line-height:1.75;font-style:italic;position:relative}
+.iquote::before{content:'📄 원문 인용';display:block;font-style:normal;font-family:'Space Mono',monospace;font-size:.58rem;color:var(--accent);letter-spacing:.12em;margin-bottom:.35rem;font-weight:700}
+.isummary{font-size:.82rem;color:#9ca3af;line-height:1.75;background:rgba(255,255,255,.02);padding:.7rem .9rem;border-radius:3px;margin-bottom:1rem}
+.isummary::before{content:'🤖 AI 요약';display:block;font-family:'Space Mono',monospace;font-size:.58rem;color:var(--muted);letter-spacing:.12em;margin-bottom:.35rem;font-weight:700}
+.itags{display:flex;gap:.35rem;flex-wrap:wrap;margin-bottom:.9rem}
+.tag{font-family:'Space Mono',monospace;font-size:.62rem;color:var(--dim);background:var(--surface2);padding:.15rem .45rem;border-radius:2px;letter-spacing:.03em}
+.ifoot{display:flex;align-items:center;justify-content:space-between;margin-top:.9rem;padding-top:.85rem;border-top:1px solid var(--border);gap:.7rem;flex-wrap:wrap}
+.iimp-wrap{display:flex;flex-direction:column;gap:.25rem;min-width:130px}
+.iimp-row{display:flex;align-items:center;gap:.4rem;font-family:'Space Mono',monospace;font-size:.63rem}
+.imp-bar{position:relative;height:4px;background:var(--border);border-radius:2px;overflow:hidden;flex:1}
+.imp-bar i{position:absolute;left:0;top:0;bottom:0;border-radius:2px;display:block}
+.ih .imp-bar i{background:var(--accent2)}.im .imp-bar i{background:var(--accent)}.il .imp-bar i{background:var(--green)}
 .ih{color:var(--accent2)}.im{color:var(--accent)}.il{color:var(--green)}
+.iimp-reason{font-size:.7rem;color:var(--dim);line-height:1.5}
+.view-src{font-family:'Space Mono',monospace;font-size:.68rem;color:var(--accent);letter-spacing:.05em;font-weight:700;padding:.45rem .8rem;border:1px solid rgba(232,160,32,.3);border-radius:3px;transition:all .2s}
+.icard:hover .view-src{background:var(--accent);color:#000}
+.icard-num{font-family:'Bebas Neue',sans-serif;font-size:3rem;line-height:1;color:var(--dim);position:absolute;top:.6rem;right:1.1rem;opacity:.25;pointer-events:none}
+.report-btn{position:absolute;bottom:.6rem;left:.8rem;font-family:'Space Mono',monospace;font-size:.58rem;color:var(--dim);background:transparent;border:none;cursor:pointer;letter-spacing:.05em;padding:.2rem .4rem;border-radius:2px;z-index:3}
+.report-btn:hover{color:var(--red);background:rgba(239,68,68,.08)}
 
 /* SIDE */
 .side{display:flex;flex-direction:column;gap:1.5rem}
 .side-card{background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:1.2rem}
 .trend-list{list-style:none}
-.trend-item{display:flex;align-items:flex-start;gap:.7rem;padding:.65rem 0;border-bottom:1px solid var(--border)}
+.trend-item{display:flex;align-items:center;gap:.7rem;padding:.7rem 0;border-bottom:1px solid var(--border);text-decoration:none;color:inherit}
 .trend-item:last-child{border-bottom:none}
-.trank{font-family:'Bebas Neue',sans-serif;font-size:1.35rem;color:var(--dim);line-height:1;min-width:22px}
-.ttext{font-size:.8rem;color:var(--text);line-height:1.5}
-.ttext small{display:block;color:var(--dim);font-size:.7rem;margin-top:.15rem}
-.ev-item{display:flex;gap:.9rem;padding:.65rem 0;border-bottom:1px solid var(--border)}
+.trank{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;color:var(--dim);line-height:1;min-width:22px}
+.ttext{flex:1;font-size:.8rem;color:var(--text);line-height:1.5;min-width:0}
+.ttext small{display:block;color:var(--dim);font-size:.68rem;margin-top:.15rem;line-height:1.5;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ttext a{color:var(--accent);text-decoration:none}
+.ttext a:hover{text-decoration:underline}
+.tspark{width:54px;height:18px;flex-shrink:0}
+.tchange{font-family:'Space Mono',monospace;font-size:.68rem;font-weight:700;min-width:44px;text-align:right}
+.tchange.up{color:var(--green)}.tchange.down{color:var(--red)}.tchange.neutral{color:var(--muted)}
+
+.ev-item{display:flex;gap:.9rem;padding:.75rem 0;border-bottom:1px solid var(--border);text-decoration:none;color:inherit}
 .ev-item:last-child{border-bottom:none}
-.ev-date{display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--surface2);border:1px solid var(--border);border-radius:3px;padding:.35rem .55rem;min-width:46px}
+.ev-date{display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--surface2);border:1px solid var(--border);border-radius:3px;padding:.35rem .55rem;min-width:46px;flex-shrink:0}
 .ev-mo{font-family:'Space Mono',monospace;font-size:.52rem;color:var(--accent);text-transform:uppercase;letter-spacing:.1em}
 .ev-dy{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;line-height:1.1}
-.ev-name{font-size:.8rem;font-weight:600;margin-bottom:.18rem}
-.ev-loc{font-size:.7rem;color:var(--dim);font-family:'Space Mono',monospace}
+.ev-info{flex:1;min-width:0}
+.ev-name{font-size:.8rem;font-weight:600;margin-bottom:.18rem;line-height:1.4}
+.ev-name .flag{margin-right:.3rem}
+.ev-loc{font-size:.68rem;color:var(--dim);font-family:'Space Mono',monospace;display:flex;gap:.5rem;flex-wrap:wrap;align-items:center}
+.dday{background:rgba(232,160,32,.15);color:var(--accent);padding:.12rem .38rem;border-radius:2px;font-weight:700}
 
 /* REST GRID */
 .rest-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.rest-grid .icard{margin-bottom:0}
+
+/* CORRECTIONS */
+.corr-card{background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:1.2rem;margin-top:1.5rem}
+.corr-item{font-size:.75rem;color:var(--muted);padding:.5rem 0;border-bottom:1px dashed var(--border);line-height:1.6}
+.corr-item:last-child{border-bottom:none}
+.corr-date{font-family:'Space Mono',monospace;font-size:.62rem;color:var(--dim)}
 
 /* LOADING */
 .loading{display:none;position:fixed;inset:0;background:rgba(10,12,16,.92);z-index:1000;align-items:center;justify-content:center;flex-direction:column;gap:1.5rem}
 .loading.on{display:flex}
 .spinner{width:46px;height:46px;border:2px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin .8s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
-.load-txt{font-family:'Space Mono',monospace;font-size:.78rem;color:var(--muted);text-align:center;line-height:1.9}
+.load-txt{font-family:'Space Mono',monospace;font-size:.78rem;color:var(--muted);text-align:center;line-height:1.9;max-width:380px}
 .load-step{color:var(--accent);font-weight:700}
 
 /* ADMIN BTN */
@@ -103,13 +153,15 @@ body{background:var(--bg);color:var(--text);font-family:'Noto Sans KR',sans-seri
 #adm-btn:hover{border-color:var(--accent);color:var(--accent);transform:scale(1.08)}
 
 /* MODALS */
-.backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.72);z-index:500;align-items:center;justify-content:center}
+.backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.78);z-index:500;align-items:center;justify-content:center;padding:2rem}
 .backdrop.on{display:flex}
-.mbox{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:2rem;width:90%;max-width:420px}
+.mbox{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:2rem;width:100%;max-width:420px;max-height:92vh;overflow-y:auto}
+.mbox.wide{max-width:960px}
 .mbox h3{font-family:'Space Mono',monospace;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:.6rem}
 .mbox .mdesc{font-size:.75rem;color:var(--muted);margin-bottom:1.3rem;font-family:'Space Mono',monospace;line-height:1.7}
-.minput{width:100%;background:var(--bg);border:1px solid var(--border);border-radius:3px;padding:.72rem 1rem;color:var(--text);font-family:'Space Mono',monospace;font-size:.88rem;letter-spacing:.08em;outline:none;transition:border-color .2s;margin-bottom:1.2rem}
-.minput:focus{border-color:var(--accent)}
+.minput,.mtextarea{width:100%;background:var(--bg);border:1px solid var(--border);border-radius:3px;padding:.72rem 1rem;color:var(--text);font-family:'Space Mono',monospace;font-size:.88rem;letter-spacing:.08em;outline:none;transition:border-color .2s;margin-bottom:1.2rem}
+.mtextarea{font-family:'Noto Sans KR',sans-serif;letter-spacing:0;font-size:.82rem;resize:vertical;min-height:70px}
+.minput:focus,.mtextarea:focus{border-color:var(--accent)}
 .mcheck{display:flex;align-items:center;gap:.5rem;margin-bottom:1.2rem}
 .mcheck input{cursor:pointer;accent-color:var(--accent)}
 .mcheck label{font-size:.7rem;color:var(--muted);cursor:pointer;font-family:'Space Mono',monospace}
@@ -119,15 +171,46 @@ body{background:var(--bg);color:var(--text);font-family:'Noto Sans KR',sans-seri
 .mbtn-ok:hover{background:#f0b030}
 .mbtn-cancel{background:transparent;border:1px solid var(--border);color:var(--muted)}
 .mbtn-cancel:hover{border-color:var(--muted)}
+.mbtn-danger{background:var(--red);color:#fff;font-weight:700}
+.mbtn-danger:hover{background:#dc2626}
 .merr{font-size:.72rem;color:var(--red);font-family:'Space Mono',monospace;margin-top:.7rem;display:none}
+
+/* REVIEW MODAL */
+.review-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.2rem;flex-wrap:wrap;gap:.5rem}
+.review-stats{display:flex;gap:1.2rem;font-family:'Space Mono',monospace;font-size:.7rem}
+.review-stats b{color:var(--text)}
+.review-rejected{background:rgba(239,68,68,.06);border:1px solid rgba(239,68,68,.25);border-radius:3px;padding:.8rem 1rem;font-size:.72rem;color:#fca5a5;margin-bottom:1rem;line-height:1.7;max-height:140px;overflow-y:auto}
+.review-rejected b{color:#fff}
+.review-list{display:flex;flex-direction:column;gap:.8rem;max-height:55vh;overflow-y:auto;padding-right:.4rem}
+.rv-card{background:var(--bg);border:1px solid var(--border);border-radius:3px;padding:1rem;position:relative}
+.rv-card.approved{border-color:rgba(34,197,94,.4);background:rgba(34,197,94,.03)}
+.rv-card.rejected{border-color:rgba(239,68,68,.3);background:rgba(239,68,68,.03);opacity:.6}
+.rv-card.editing{border-color:var(--accent)}
+.rv-head{display:flex;gap:.5rem;align-items:center;margin-bottom:.5rem;font-size:.68rem;font-family:'Space Mono',monospace;color:var(--dim);flex-wrap:wrap}
+.rv-title{font-size:.88rem;font-weight:600;margin-bottom:.4rem;line-height:1.45}
+.rv-quote{font-size:.73rem;color:#d8c89c;font-style:italic;border-left:2px solid var(--accent);padding:.3rem .6rem;margin-bottom:.4rem;background:rgba(232,160,32,.05)}
+.rv-summary{font-size:.73rem;color:#9ca3af;margin-bottom:.6rem;line-height:1.7}
+.rv-url{font-size:.68rem;color:var(--accent);word-break:break-all;display:block;margin-bottom:.7rem;text-decoration:none}
+.rv-url:hover{text-decoration:underline}
+.rv-actions{display:flex;gap:.4rem;flex-wrap:wrap}
+.rv-btn{font-family:'Space Mono',monospace;font-size:.65rem;padding:.35rem .7rem;border-radius:2px;border:1px solid var(--border);background:transparent;cursor:pointer;color:var(--muted);letter-spacing:.05em;transition:all .2s}
+.rv-btn.ok{border-color:rgba(34,197,94,.4);color:var(--green)}
+.rv-btn.ok:hover,.rv-btn.ok.on{background:var(--green);color:#000;font-weight:700}
+.rv-btn.no{border-color:rgba(239,68,68,.4);color:var(--red)}
+.rv-btn.no:hover,.rv-btn.no.on{background:var(--red);color:#fff;font-weight:700}
+.rv-btn.ed{border-color:rgba(232,160,32,.4);color:var(--accent)}
+.rv-btn.ed:hover,.rv-btn.ed.on{background:var(--accent);color:#000;font-weight:700}
+.rv-edit{display:none;margin-top:.7rem;padding-top:.7rem;border-top:1px dashed var(--border)}
+.rv-card.editing .rv-edit{display:block}
+.rv-edit label{display:block;font-family:'Space Mono',monospace;font-size:.6rem;color:var(--dim);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.25rem;margin-top:.6rem}
 
 /* FOOTER */
 footer{max-width:1200px;margin:3.5rem auto 2rem;padding:2rem;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
 footer p{font-size:.72rem;color:var(--dim);font-family:'Space Mono',monospace}
-.fnote{max-width:380px;text-align:right;line-height:1.6}
+.fnote{max-width:420px;text-align:right;line-height:1.7}
 
 @media(max-width:900px){.top-row{grid-template-columns:1fr}.rest-grid{grid-template-columns:1fr}}
-@media(max-width:600px){.hero{padding:2rem 1rem 1rem}.content{padding:1rem}.hero-meta{gap:1rem}.hdr-sub{display:none}}
+@media(max-width:600px){.hero{padding:2rem 1rem 1rem}.content{padding:1rem}.notice{padding:0 1rem}.hero-meta{gap:1rem}.hdr-sub{display:none}}
 </style>
 </head>
 <body>
@@ -142,27 +225,40 @@ footer p{font-size:.72rem;color:var(--dim);font-family:'Space Mono',monospace}
 </header>
 
 <section class="hero">
-  <div class="hero-tag"><span class="live-dot"></span>Monthly Intelligence Report</div>
+  <div class="hero-tag"><span class="live-dot"></span>Monthly Intelligence Report · Source-Verified</div>
   <h1>PRO AUDIO<br><span>BRIEFING</span></h1>
   <div class="hero-meta">
     <div class="hero-meta-item"><span class="hml">최근 업데이트</span><span class="hmv" id="disp-date">—</span></div>
     <div class="hero-meta-item"><span class="hml">수집 기간</span><span class="hmv" id="disp-period">—</span></div>
-    <div class="hero-meta-item"><span class="hml">핵심 이슈</span><span class="hmv" id="disp-count">—</span></div>
+    <div class="hero-meta-item"><span class="hml">검증 통과</span><span class="hmv" id="disp-count">—</span></div>
+    <div class="hero-meta-item"><span class="hml">총 출처</span><span class="hmv" id="disp-sources">—</span></div>
   </div>
 </section>
+
+<div class="notice">
+  <div class="notice-box">
+    <span style="font-size:1rem">🛡️</span>
+    <div>
+      <b>검증된 출처만 게재합니다.</b>
+      모든 항목은 <code>화이트리스트 도메인 → 자동 검증 → 관리자 승인</code> 3단계를 통과한 내용입니다.
+      각 카드의 <b>📄 원문 인용</b>은 기사 원문에서 그대로 가져온 문장이며, <b>🤖 AI 요약</b>은 해당 원문만을 근거로 작성됩니다.
+      사실과 다른 내용이 있다면 카드 좌하단의 <b>⚑ 신고</b>로 알려주세요.
+    </div>
+  </div>
+</div>
 
 <main class="content">
   <div class="empty" id="el-empty">
     <div class="empty-icon">📡</div>
     <h3>아직 브리핑 데이터가 없습니다</h3>
-    <p>우측 하단 ⚙ 버튼 → PIN → API 키 입력 후 수집을 시작하세요.<br>저장된 내용은 방문자 누구나 바로 열람할 수 있습니다.</p>
+    <p>우측 하단 ⚙ 버튼 → PIN → API 키 입력 후 수집을 시작하세요.<br>수집된 내용은 관리자 승인을 거친 뒤에만 공개됩니다.</p>
   </div>
   <div id="el-content" style="display:none;"></div>
 </main>
 
 <footer>
-  <p>© 2025 HYUNDAI AUDIO VISUAL COMMUNICATIONS CO., LTD.</p>
-  <p class="fnote">본 브리핑은 AI가 요약한 정보입니다.<br>정확한 정보는 원 출처를 확인하세요.</p>
+  <p>© 2026 HYUNDAI AUDIO VISUAL COMMUNICATIONS CO., LTD.</p>
+  <p class="fnote">본 브리핑은 허용 매체의 최근 기사를 기반으로 작성되며, AI가 원문을 요약한 텍스트에는 🤖 표시가 됩니다. 원문 인용(📄)과 원문 링크를 함께 제공합니다.</p>
 </footer>
 
 <!-- 관리자 버튼 -->
@@ -186,7 +282,7 @@ footer p{font-size:.72rem;color:var(--dim);font-family:'Space Mono',monospace}
 <div class="backdrop" id="m-apikey">
   <div class="mbox">
     <h3>🔑 API 키 입력</h3>
-    <p class="mdesc">Anthropic API 키를 입력하세요.<br>키는 저장되지 않으며 이번 수집에만 사용됩니다.</p>
+    <p class="mdesc">Anthropic API 키를 입력하세요.<br>키는 저장되지 않으며 이번 수집에만 사용됩니다.<br>web_search 툴이 활성화된 키여야 합니다.</p>
     <input type="password" class="minput" id="inp-apikey" placeholder="sk-ant-api03-..." autocomplete="off" style="letter-spacing:.04em;font-size:.8rem">
     <div class="mcheck">
       <input type="checkbox" id="chk-show">
@@ -200,18 +296,115 @@ footer p{font-size:.72rem;color:var(--dim);font-family:'Space Mono',monospace}
   </div>
 </div>
 
+<!-- MODAL 3: REVIEW -->
+<div class="backdrop" id="m-review">
+  <div class="mbox wide">
+    <h3>✅ 관리자 검토 · 게재 승인</h3>
+    <p class="mdesc">각 항목을 개별 승인/거절/수정하세요. <b style="color:var(--accent)">승인(ACCEPT)한 항목만 공개 게시됩니다.</b></p>
+    <div class="review-head">
+      <div class="review-stats">
+        <span>검증 통과 <b id="rv-passed">0</b></span>
+        <span>거절됨 <b id="rv-rejected">0</b></span>
+        <span>선택된 승인 <b id="rv-selected">0</b></span>
+      </div>
+      <div>
+        <button class="rv-btn ok" id="rv-all">전체 승인</button>
+        <button class="rv-btn no" id="rv-none">전체 거절</button>
+      </div>
+    </div>
+    <div class="review-rejected" id="rv-rej-list" style="display:none"></div>
+    <div class="review-list" id="rv-list"></div>
+    <div class="mbtns" style="margin-top:1.5rem">
+      <button class="mbtn mbtn-ok" id="btn-publish">승인 항목만 게시</button>
+      <button class="mbtn mbtn-cancel" id="btn-review-cancel">취소 (저장 안함)</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL 4: REPORT -->
+<div class="backdrop" id="m-report">
+  <div class="mbox">
+    <h3>⚑ 사실 오류 신고</h3>
+    <p class="mdesc">이 카드의 어느 부분이 사실과 다른지 알려주세요. 관리자가 확인 후 즉시 조치합니다.</p>
+    <div id="rp-target" style="font-size:.75rem;color:var(--muted);margin-bottom:1rem;padding:.7rem;background:var(--bg);border:1px solid var(--border);border-radius:3px;line-height:1.6"></div>
+    <textarea class="mtextarea" id="inp-report" placeholder="예: 제품 출시일이 실제와 다릅니다. 정확한 날짜는 ..."></textarea>
+    <div class="mbtns">
+      <button class="mbtn mbtn-danger" id="btn-report-ok">신고 접수 (관리자 확인 후 숨김)</button>
+      <button class="mbtn mbtn-cancel" id="btn-report-cancel">취소</button>
+    </div>
+    <p class="mdesc" style="margin-top:1rem;margin-bottom:0;font-size:.68rem">※ 신고 접수 시 관리자 PIN이 필요하며, 즉시 해당 카드는 숨김 처리됩니다.</p>
+  </div>
+</div>
+
 <!-- LOADING -->
 <div class="loading" id="el-loading">
   <div class="spinner"></div>
   <div class="load-txt" id="el-load-txt">
-    <span class="load-step">✍️ 브리핑 작성 중...</span><br>
-    Pro Audio 최신 동향을 분석하고 있습니다.<br>약 20~30초 소요됩니다.
+    <span class="load-step">🔍 검증된 출처에서 수집 중...</span><br>
+    화이트리스트 매체(soundonsound, Pro Sound Network 등)를 직접 검색하여<br>
+    최근 30~45일 기사만 가져옵니다. 약 40~60초 소요.
   </div>
 </div>
 
 <script>
 // ─── CONFIG ───────────────────────────────────────────
 const ADMIN_PIN = "1234"; // 변경 가능
+
+// ─── MODEL (항상 최신) ────────────────────────────────
+// Anthropic alias는 날짜 접미사 없는 형태를 사용하면 해당 세대의 최신 스냅샷을 자동 추종합니다.
+// 예: 'claude-opus-4-6' → Opus 4.6 최신 / 'claude-sonnet-4-6' → Sonnet 4.6 최신
+// 더 상위 세대가 출시되면 이 한 줄만 교체하세요. (예: claude-opus-5, claude-opus-5-x 등)
+const MODEL_ID = 'claude-opus-4-6';
+
+// 화이트리스트: 검색 허용 및 검증 통과 도메인
+const ALLOWED_DOMAINS = [
+  // Tier 1 — 국제 프로오디오 전문 매체
+  'soundonsound.com','prosoundnetwork.com','mixonline.com','avnetwork.com',
+  'tpimagazine.com','proaudio-central.com','fohonline.com','livesoundint.com',
+  'psneurope.com','performermag.com','tvbeurope.com','installation-international.com',
+  'svconline.com','residentialsystems.com','systemscontractor.com',
+  // Tier 1 — 제조사 공식 (보도자료/제품 발표)
+  'shure.com','sennheiser.com','audio-technica.com','neumann.com','dpamicrophones.com',
+  'yamaha.com','yamahaproaudio.com','bose.com','bosepro.com','jblpro.com','harman.com',
+  'qsc.com','rcf.it','danley.com','lacoustics.com','meyer-sound.com','d-and-b.com',
+  'adamhall.com','soundking.com','dbtechnologies.com','rode.com','rodemic.com',
+  'avid.com','presonus.com','solid-state-logic.com','focusrite.com',
+  'allen-heath.com','midasconsoles.com','digico.biz','ssl.com',
+  'behringer.com','mackie.com','tannoy.com','genelec.com','adam-audio.com',
+  // Tier 1 — 국내 매체·협회
+  'kaps.or.kr','kata.or.kr','mmjmagazine.com','dailysound.co.kr',
+  // Tier 2 — 일반 뉴스 포털 (조심해서 사용)
+  'news.naver.com','news.daum.net'
+];
+
+const TIER_MAP = {
+  t1: ['soundonsound.com','prosoundnetwork.com','mixonline.com','avnetwork.com',
+       'tpimagazine.com','proaudio-central.com','fohonline.com','livesoundint.com',
+       'psneurope.com','performermag.com','tvbeurope.com','installation-international.com',
+       'svconline.com','residentialsystems.com','systemscontractor.com',
+       'shure.com','sennheiser.com','audio-technica.com','neumann.com','dpamicrophones.com',
+       'yamaha.com','yamahaproaudio.com','bose.com','bosepro.com','jblpro.com','harman.com',
+       'qsc.com','rcf.it','danley.com','lacoustics.com','meyer-sound.com','d-and-b.com',
+       'adamhall.com','soundking.com','dbtechnologies.com','rode.com','rodemic.com',
+       'avid.com','presonus.com','solid-state-logic.com','focusrite.com',
+       'allen-heath.com','midasconsoles.com','digico.biz','ssl.com',
+       'behringer.com','mackie.com','tannoy.com','genelec.com','adam-audio.com',
+       'kaps.or.kr','kata.or.kr','mmjmagazine.com','dailysound.co.kr'],
+  t2: ['news.naver.com','news.daum.net']
+};
+const tierOf = (host) => {
+  const h = host.replace(/^www\./,'');
+  if (TIER_MAP.t1.some(d => h.endsWith(d))) return {cls:'t1',label:'T1 · 검증매체'};
+  if (TIER_MAP.t2.some(d => h.endsWith(d))) return {cls:'t2',label:'T2 · 포털뉴스'};
+  return {cls:'t3',label:'T3 · 기타'};
+};
+const domainOf = (url) => {
+  try { return new URL(url).hostname.replace(/^www\./,''); } catch { return ''; }
+};
+const allowed = (url) => {
+  const h = domainOf(url);
+  return h && ALLOWED_DOMAINS.some(d => h.endsWith(d));
+};
 
 // ─── STORAGE (JSONBin) ────────────────────────────────
 const BIN_ID      = '69c8af4d5fdde574550d4379';
@@ -236,17 +429,10 @@ async function loadData() {
     const res = await fetch(BIN_URL + '/latest', {
       headers: { 'X-Master-Key': BIN_MASTER }
     });
-    if (!res.ok) {
-      const errText = await res.text();
-      console.error('JSONBin 읽기 실패:', res.status, errText);
-      return null;
-    }
+    if (!res.ok) return null;
     const json = await res.json();
     const data = json.record;
-    if (!data || !data.issues) {
-      console.warn('JSONBin 데이터 없음:', json);
-      return null;
-    }
+    if (!data || !data.issues) return null;
     return data;
   } catch(e) {
     console.error('loadData 오류:', e);
@@ -254,7 +440,113 @@ async function loadData() {
   }
 }
 
+// ─── VALIDATION ───────────────────────────────────────
+function validateBriefing(d) {
+  const rejected = [];
+  const today = Date.now();
+
+  // 이슈 검증
+  const validIssues = (d.issues||[]).filter(iss => {
+    if (!iss.title || !iss.summary || !iss.sourceUrl || !iss.quote || !iss.publishedDate) {
+      rejected.push({item:iss.title||'(제목 없음)', reason:'필수 필드 누락 (sourceUrl/quote/publishedDate 중)'});
+      return false;
+    }
+    if (!allowed(iss.sourceUrl)) {
+      rejected.push({item:iss.title, reason:'도메인 화이트리스트 불일치: '+domainOf(iss.sourceUrl)});
+      return false;
+    }
+    const days = (today - new Date(iss.publishedDate).getTime())/86400000;
+    if (isNaN(days) || days < 0 || days > 60) {
+      rejected.push({item:iss.title, reason:'발행일 범위 벗어남: '+iss.publishedDate});
+      return false;
+    }
+    if (iss.quote.length < 15) {
+      rejected.push({item:iss.title, reason:'원문 인용이 너무 짧음 (15자 미만)'});
+      return false;
+    }
+    if (iss.summary.length < 30) {
+      rejected.push({item:iss.title, reason:'요약이 너무 짧음 (30자 미만)'});
+      return false;
+    }
+    // source/domain 자동 채움
+    iss.sourceDomain = domainOf(iss.sourceUrl);
+    if (!iss.source) iss.source = iss.sourceDomain;
+    return true;
+  });
+
+  // 트렌드 검증 (relatedUrl 권장)
+  const validTrends = (d.trends||[]).filter(t => {
+    if (!t.keyword || !t.desc) {
+      rejected.push({item:t.keyword||'(트렌드)', reason:'필수 필드 누락'});
+      return false;
+    }
+    if (t.relatedUrl && !allowed(t.relatedUrl)) {
+      rejected.push({item:t.keyword, reason:'트렌드 URL 도메인 불일치: '+domainOf(t.relatedUrl)});
+      delete t.relatedUrl;
+    }
+    return true;
+  });
+
+  // 행사 검증
+  const validEvents = (d.events||[]).filter(e => {
+    if (!e.name || !e.month || !e.day || !e.location) {
+      rejected.push({item:e.name||'(행사)', reason:'필수 필드 누락'});
+      return false;
+    }
+    if (e.url && !allowed(e.url)) {
+      rejected.push({item:e.name, reason:'행사 URL 도메인 불일치: '+domainOf(e.url)});
+      delete e.url;
+    }
+    return true;
+  });
+
+  // 티커 검증 (url 선택)
+  const validTickers = (d.tickers||[]).filter(t => t.label && t.value);
+
+  return {
+    valid: {
+      ...d,
+      issues: validIssues,
+      trends: validTrends,
+      events: validEvents,
+      tickers: validTickers
+    },
+    rejected,
+    counts: { passed: validIssues.length, rejected: rejected.length }
+  };
+}
+
 // ─── RENDER ───────────────────────────────────────────
+function sparkline(points, w=54, h=18) {
+  if (!Array.isArray(points) || points.length < 2) return '';
+  const min = Math.min(...points), max = Math.max(...points), range = max-min || 1;
+  const step = w/(points.length-1);
+  const pts = points.map((v,i)=>`${(i*step).toFixed(1)},${(h-(v-min)/range*h).toFixed(1)}`).join(' ');
+  const up = points[points.length-1] >= points[0];
+  const color = up ? '#22c55e' : '#ef4444';
+  return `<svg class="tspark" viewBox="0 0 ${w} ${h}"><polyline points="${pts}" fill="none" stroke="${color}" stroke-width="1.5"/></svg>`;
+}
+
+function flagOf(country) {
+  if (!country) return '';
+  // ISO 2글자 국가코드 → 국기 이모지
+  const c = country.toUpperCase();
+  if (c.length !== 2) return '';
+  return String.fromCodePoint(...[...c].map(x=>0x1F1E6 + x.charCodeAt(0) - 65));
+}
+
+function ddayOf(month, day) {
+  const MO = {JAN:0,FEB:1,MAR:2,APR:3,MAY:4,JUN:5,JUL:6,AUG:7,SEP:8,OCT:9,NOV:10,DEC:11};
+  const m = MO[month?.toUpperCase()];
+  if (m === undefined) return '';
+  const now = new Date();
+  let y = now.getFullYear();
+  let d = new Date(y, m, parseInt(day));
+  if (d < now) d = new Date(y+1, m, parseInt(day));
+  const diff = Math.ceil((d - now)/86400000);
+  return diff >= 0 ? 'D-'+diff : '';
+}
+
 function render(d) {
   document.getElementById('el-empty').style.display = 'none';
   document.getElementById('el-content').style.display = 'block';
@@ -263,44 +555,92 @@ function render(d) {
   document.getElementById('disp-date').textContent = dt.toLocaleDateString('ko-KR',{year:'numeric',month:'long',day:'numeric'});
   document.getElementById('disp-period').textContent = d.period || '최근 1개월';
   document.getElementById('disp-count').textContent = (d.issues?.length||0) + '건';
+  const uniqSrc = new Set((d.issues||[]).map(i=>i.sourceDomain).filter(Boolean));
+  document.getElementById('disp-sources').textContent = uniqSrc.size + '개 매체';
 
   const wrap = document.getElementById('el-content');
 
   const catCls = c => ({'시장동향':'cm','신제품':'cp','트렌드':'ct','행사':'ce','기업동향':'cc'}[c]||'cm');
   const impCls = v => v==='높음'?'ih':v==='보통'?'im':'il';
+  const impPct = v => v==='높음'?100:v==='보통'?60:30;
+  const esc = s => (s||'').replace(/[<>&"]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c]));
 
-  const card = (iss, n) => `
-    <div class="icard">
-      <span class="icard-num">${String(n).padStart(2,'0')}</span>
-      <span class="icat ${catCls(iss.category)}">${iss.category}</span>
-      <div class="ititle">${iss.title}</div>
-      <div class="isummary">${iss.summary}</div>
-      <div class="ifoot">
-        <span class="isrc">${iss.source||'Industry News'}</span>
-        <span class="iimp ${impCls(iss.impact)}">● 영향도 ${iss.impact||'보통'}</span>
+  const card = (iss, n) => {
+    const host = iss.sourceDomain || domainOf(iss.sourceUrl);
+    const tier = tierOf(host);
+    const favicon = `https://www.google.com/s2/favicons?domain=${host}&sz=64`;
+    const tagHTML = (iss.tags||[]).slice(0,5).map(t=>`<span class="tag">#${esc(t)}</span>`).join('');
+    return `
+    <a class="icard" href="${esc(iss.sourceUrl)}" target="_blank" rel="noopener" data-id="${n}">
+      ${iss.imageUrl?`<div class="icard-thumb" style="background-image:url('${esc(iss.imageUrl)}')"></div>`:''}
+      <div class="icard-body">
+        <span class="icard-num">${String(n).padStart(2,'0')}</span>
+        <div class="icard-head">
+          <img class="src-logo" src="${favicon}" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+          <div class="src-meta">
+            <div class="src-name">${esc(iss.source)}</div>
+            <div class="src-detail">${esc(host)} · ${esc(iss.publishedDate||'')}</div>
+          </div>
+          <span class="src-tier ${tier.cls}">${tier.label}</span>
+        </div>
+        <span class="icat ${catCls(iss.category)}">${esc(iss.category||'')}</span>
+        <div class="ititle">${esc(iss.title)} <span class="ext">↗</span></div>
+        <blockquote class="iquote">${esc(iss.quote)}</blockquote>
+        <p class="isummary">${esc(iss.summary)}</p>
+        ${tagHTML?`<div class="itags">${tagHTML}</div>`:''}
+        <div class="ifoot">
+          <div class="iimp-wrap">
+            <div class="iimp-row ${impCls(iss.impact)}">● 영향도 ${esc(iss.impact||'보통')}<span class="imp-bar"><i style="width:${impPct(iss.impact)}%"></i></span></div>
+            ${iss.impactReason?`<div class="iimp-reason">${esc(iss.impactReason)}</div>`:''}
+          </div>
+          <span class="view-src">원문 보기 ↗</span>
+        </div>
       </div>
-    </div>`;
+      <button class="report-btn" onclick="event.preventDefault();event.stopPropagation();openReport(${n})">⚑ 신고</button>
+    </a>`;
+  };
 
   const ticker = (d.tickers||[]).map(t=>`
-    <div class="t-item">
-      <span class="t-label">${t.label}</span>
-      <span class="t-val ${t.dir}">${t.value}</span>
-    </div>`).join('');
+    ${t.url?`<a class="t-item" href="${esc(t.url)}" target="_blank" rel="noopener">`:`<div class="t-item">`}
+      <span class="t-label">${esc(t.label)}</span>
+      <span class="t-val ${esc(t.dir||'neutral')}">${esc(t.value)}</span>
+      ${t.note?`<span class="t-note">${esc(t.note)}</span>`:''}
+    ${t.url?`</a>`:`</div>`}`).join('');
 
-  const trends = (d.trends||[]).map((t,i)=>`
-    <li class="trend-item">
+  const trends = (d.trends||[]).map((t,i)=>{
+    const pts = Array.isArray(t.sparkline)?t.sparkline:[];
+    const change = t.change||'';
+    const dir = change.startsWith('+')?'up':change.startsWith('-')?'down':'neutral';
+    const inner = `
       <span class="trank">${String(i+1).padStart(2,'0')}</span>
-      <div class="ttext">${t.keyword}<small>${t.desc}</small></div>
-    </li>`).join('');
+      <div class="ttext">${esc(t.keyword)}<small>${esc(t.desc)}</small></div>
+      ${pts.length?sparkline(pts):''}
+      ${change?`<span class="tchange ${dir}">${esc(change)}</span>`:''}`;
+    return t.relatedUrl
+      ? `<a class="trend-item" href="${esc(t.relatedUrl)}" target="_blank" rel="noopener">${inner}</a>`
+      : `<li class="trend-item">${inner}</li>`;
+  }).join('');
 
-  const events = (d.events||[]).map(e=>`
-    <div class="ev-item">
-      <div class="ev-date"><span class="ev-mo">${e.month}</span><span class="ev-dy">${e.day}</span></div>
-      <div><div class="ev-name">${e.name}</div><div class="ev-loc">${e.location}</div></div>
-    </div>`).join('');
+  const events = (d.events||[]).map(e=>{
+    const dd = ddayOf(e.month, e.day);
+    const flag = flagOf(e.country);
+    const inner = `
+      <div class="ev-date"><span class="ev-mo">${esc(e.month)}</span><span class="ev-dy">${esc(e.day)}</span></div>
+      <div class="ev-info">
+        <div class="ev-name">${flag?`<span class="flag">${flag}</span>`:''}${esc(e.name)}</div>
+        <div class="ev-loc"><span>${esc(e.location)}</span>${dd?`<span class="dday">${dd}</span>`:''}</div>
+      </div>`;
+    return e.url
+      ? `<a class="ev-item" href="${esc(e.url)}" target="_blank" rel="noopener">${inner}</a>`
+      : `<div class="ev-item">${inner}</div>`;
+  }).join('');
 
   const issues = d.issues||[];
+  window._lastIssues = issues;
   const rest = issues.slice(3).map((iss,i)=>card(iss,i+4)).join('');
+
+  const corrections = (d.corrections||[]).map(c=>`
+    <div class="corr-item"><span class="corr-date">${esc(c.date||'')}</span> · ${esc(c.note)}</div>`).join('');
 
   wrap.innerHTML = `
     ${ticker?`<div class="ticker">${ticker}</div>`:''}
@@ -316,10 +656,11 @@ function render(d) {
         </div>
       </div>
       ${rest?`<div><div class="sec-label">추가 동향</div><div class="rest-grid">${rest}</div></div>`:''}
+      ${corrections?`<div class="corr-card"><div class="sec-label">수정·철회 이력</div>${corrections}</div>`:''}
     </div>`;
 }
 
-// ─── FETCH ────────────────────────────────────────────
+// ─── FETCH (with web_search + whitelist) ──────────────
 async function fetchBriefing(apiKey) {
   const now = new Date();
   const yr = now.getFullYear();
@@ -327,7 +668,44 @@ async function fetchBriefing(apiKey) {
   const moNames = ['January','February','March','April','May','June','July','August','September','October','November','December'];
 
   document.getElementById('el-load-txt').innerHTML =
-    '<span class="load-step">✍️ 브리핑 작성 중...</span><br>Pro Audio 최신 동향을 분석하고 있습니다.<br>약 20~30초 소요됩니다.';
+    '<span class="load-step">🔍 검증된 출처에서 수집 중...</span><br>화이트리스트 매체를 직접 검색하여 최근 30~45일 기사만 가져옵니다.<br>약 40~60초 소요.';
+
+  const prompt =
+    `Generate a Pro Audio industry briefing for ${moNames[mo-1]} ${yr} based ONLY on articles you retrieve via the web_search tool from the allowed domains listed in the tool configuration.
+
+CRITICAL RULES — you MUST obey every one:
+1. Every "issue" MUST have a "sourceUrl" pointing to a specific article page you actually retrieved.
+2. The "quote" field MUST be a verbatim substring (30~150 chars) copied EXACTLY from the retrieved article — do NOT paraphrase inside quote.
+3. The "summary" (2-3 sentences, Korean) MUST only contain claims directly supported by the quote or by the retrieved article. If a fact is not in the retrieved page, OMIT it.
+4. "publishedDate" MUST be the article's actual publish date in YYYY-MM-DD format, within the last 45 days.
+5. If you cannot find enough verified articles, return fewer items. DO NOT pad the array with speculative or generic content.
+6. Never invent product names, prices, release dates, or company statements.
+7. If a fact is uncertain, exclude the item entirely.
+
+Return a raw JSON object (no markdown, no code fences, no prose) with these exact keys:
+{
+  "period": "${yr}년 ${mo}월 브리핑",
+  "generatedAt": "${now.toISOString()}",
+  "tickers": [ /* 4 items, each: {label:string(Korean), value:string, dir:"up"|"down"|"neutral", note?:string, url?:string} — use KRW/USD, KRW/JPY, DRAM price, Baltic Dry Index or similar real indicators with URL when possible */ ],
+  "issues": [ /* up to 6 items, each: {
+      category: one of "시장동향"/"신제품"/"트렌드"/"행사"/"기업동향",
+      title: string(Korean, 20-50자),
+      summary: string(Korean, 2-3 문장, only facts from the source),
+      source: string(매체명, e.g. "Sound on Sound"),
+      sourceUrl: string(REQUIRED, exact article URL from allowed_domains),
+      sourceDomain: string(e.g. "soundonsound.com"),
+      quote: string(REQUIRED, 30-150 chars, verbatim from article — may be English if the source is English),
+      publishedDate: string(YYYY-MM-DD, REQUIRED, within last 45 days),
+      imageUrl: string(optional, og:image or article image URL from same domain),
+      tags: [string] (optional, 2-4 Korean tags),
+      impact: "높음"|"보통"|"낮음",
+      impactReason: string(Korean, 영향도 판단 근거 한 줄)
+    } */ ],
+  "trends": [ /* up to 5 items, each: {keyword:string(Korean), desc:string(Korean), change:string(e.g. "+18%"), sparkline:[7 numbers], relatedUrl?:string(from allowed domain)} */ ],
+  "events": [ /* up to 4 items, each: {month:"MAR", day:"04", name:string(Korean), location:string, country:string(ISO2), url?:string(from allowed domain)} */ ]
+}
+
+Output raw JSON only. Empty arrays are acceptable if verified data is insufficient — do NOT hallucinate.`;
 
   const res = await fetch('https://api.anthropic.com/v1/messages', {
     method: 'POST',
@@ -338,64 +716,215 @@ async function fetchBriefing(apiKey) {
       'anthropic-dangerous-direct-browser-access': 'true'
     },
     body: JSON.stringify({
-      model: 'claude-sonnet-4-20250514',
-      max_tokens: 4000,
-      system: 'You are a Pro Audio industry analyst. Respond with ONLY a valid raw JSON object. No markdown, no code fences, no explanation. Output must be directly parseable by JSON.parse().',
-      messages: [{
-        role: 'user',
-        content: 'Generate a Pro Audio industry briefing for ' + moNames[mo-1] + ' ' + yr + '. ' +
-          'Return a JSON object with these exact keys: ' +
-          '"period" (string, e.g. "' + yr + '년 ' + mo + '월 브리핑"), ' +
-          '"generatedAt" (string, ISO date "' + now.toISOString() + '"), ' +
-          '"tickers" (array of 4 items, each: {label:string, value:string, dir:"up"|"down"|"neutral"}), ' +
-          '"issues" (array of 6 items, each: {category: one of "시장동향"/"신제품"/"트렌드"/"행사"/"기업동향", title:string(Korean), summary:string(2-3 sentences Korean), source:string, impact: "높음"/"보통"/"낮음"}), ' +
-          '"trends" (array of 5 items, each: {keyword:string(Korean), desc:string(Korean)}), ' +
-          '"events" (array of 4 items, each: {month:string(3-letter e.g."MAR"), day:string(2-digit e.g."04"), name:string(Korean), location:string}). ' +
-          'Use real recent pro audio industry knowledge. All Korean fields in Korean. Output raw JSON only.'
-      }]
+      model: MODEL_ID,
+      max_tokens: 8000,
+      tools: [{
+        type: 'web_search_20250305',
+        name: 'web_search',
+        max_uses: 10,
+        allowed_domains: ALLOWED_DOMAINS,
+        user_location: { type:'approximate', country:'KR', timezone:'Asia/Seoul' }
+      }],
+      system: 'You are a Pro Audio industry analyst for a Korean distributor. You MUST cite every claim by retrieving the actual article via web_search and copying a verbatim quote. Never fabricate sources, product names, prices, or quotes. If unverified, omit the item. Output raw JSON only in the final message.',
+      messages: [{ role: 'user', content: prompt }]
     })
   });
 
   const data = await res.json();
-
   if (!res.ok) {
-    throw new Error('API 오류 ' + res.status + ': ' + (data.error?.message || JSON.stringify(data).slice(0,200)));
+    throw new Error('API 오류 ' + res.status + ': ' + (data.error?.message || JSON.stringify(data).slice(0,300)));
   }
 
+  // 최종 text 블록(도구 호출 후 모델의 요약 응답)만 추출
   const raw = (data.content||[]).filter(b=>b.type==='text').map(b=>b.text).join('');
-
   if (!raw.trim()) throw new Error('빈 응답. stop_reason: ' + data.stop_reason);
 
-  // 코드펜스 제거
   const cleaned = raw.replace(/```json\s*/gi,'').replace(/```/g,'').trim();
   const s = cleaned.indexOf('{');
   const e = cleaned.lastIndexOf('}');
-  if (s === -1 || e <= s) throw new Error('JSON 없음. 응답: ' + raw.slice(0,300));
-
+  if (s === -1 || e <= s) throw new Error('JSON 없음. 응답 앞부분: ' + raw.slice(0,400));
   return JSON.parse(cleaned.slice(s, e+1));
 }
+
+// ─── REVIEW MODAL (Admin Approval Gate) ───────────────
+let _reviewData = null;
+let _reviewState = {}; // { [idx]: 'ok'|'no'|null, edits: {...} }
+
+function openReview(valid, rejected) {
+  _reviewData = valid;
+  _reviewState = {};
+  (valid.issues||[]).forEach((_,i)=> _reviewState[i] = {status:'ok', edits:null});
+
+  document.getElementById('rv-passed').textContent = valid.issues?.length || 0;
+  document.getElementById('rv-rejected').textContent = rejected.length;
+
+  const rejBox = document.getElementById('rv-rej-list');
+  if (rejected.length) {
+    rejBox.style.display = 'block';
+    rejBox.innerHTML = '<b>자동 검증 거절 ('+rejected.length+'건):</b><br>' +
+      rejected.map(r=>`• <b>${r.item}</b> — ${r.reason}`).join('<br>');
+  } else {
+    rejBox.style.display = 'none';
+  }
+
+  renderReviewList();
+  updateReviewStats();
+  document.getElementById('m-review').classList.add('on');
+}
+
+function renderReviewList() {
+  const list = document.getElementById('rv-list');
+  list.innerHTML = (_reviewData.issues||[]).map((iss,i)=>{
+    const st = _reviewState[i];
+    const cls = st.status==='ok'?'approved':st.status==='no'?'rejected':'';
+    const host = iss.sourceDomain || domainOf(iss.sourceUrl);
+    return `
+    <div class="rv-card ${cls}" data-idx="${i}">
+      <div class="rv-head">
+        <span>#${i+1}</span><span>·</span>
+        <span>${host}</span><span>·</span>
+        <span>${iss.publishedDate||'-'}</span><span>·</span>
+        <span>${iss.category||'-'}</span>
+      </div>
+      <div class="rv-title">${iss.title}</div>
+      <div class="rv-quote">📄 ${iss.quote}</div>
+      <div class="rv-summary">🤖 ${iss.summary}</div>
+      <a class="rv-url" href="${iss.sourceUrl}" target="_blank" rel="noopener">🔗 원문 확인: ${iss.sourceUrl}</a>
+      <div class="rv-actions">
+        <button class="rv-btn ok ${st.status==='ok'?'on':''}" onclick="setReview(${i},'ok')">✓ 승인</button>
+        <button class="rv-btn no ${st.status==='no'?'on':''}" onclick="setReview(${i},'no')">✗ 거절</button>
+        <button class="rv-btn ed" onclick="toggleEdit(${i})">✎ 수정</button>
+      </div>
+      <div class="rv-edit">
+        <label>제목</label>
+        <input class="minput" id="ed-title-${i}" value="${(iss.title||'').replace(/"/g,'&quot;')}">
+        <label>원문 인용</label>
+        <textarea class="mtextarea" id="ed-quote-${i}">${iss.quote||''}</textarea>
+        <label>AI 요약</label>
+        <textarea class="mtextarea" id="ed-summary-${i}">${iss.summary||''}</textarea>
+        <label>영향도 판단 근거</label>
+        <input class="minput" id="ed-ireason-${i}" value="${(iss.impactReason||'').replace(/"/g,'&quot;')}">
+        <button class="rv-btn ok" onclick="saveEdit(${i})">저장</button>
+      </div>
+    </div>`;
+  }).join('') || '<div style="color:var(--muted);font-size:.8rem;padding:2rem;text-align:center">검증 통과한 이슈가 없습니다. 다시 수집해주세요.</div>';
+}
+
+function setReview(i, status) {
+  _reviewState[i].status = status;
+  document.querySelector(`.rv-card[data-idx="${i}"]`).classList.remove('approved','rejected','editing');
+  if (status === 'ok') document.querySelector(`.rv-card[data-idx="${i}"]`).classList.add('approved');
+  if (status === 'no') document.querySelector(`.rv-card[data-idx="${i}"]`).classList.add('rejected');
+  document.querySelector(`.rv-card[data-idx="${i}"] .rv-btn.ok`).classList.toggle('on', status==='ok');
+  document.querySelector(`.rv-card[data-idx="${i}"] .rv-btn.no`).classList.toggle('on', status==='no');
+  updateReviewStats();
+}
+function toggleEdit(i) {
+  document.querySelector(`.rv-card[data-idx="${i}"]`).classList.toggle('editing');
+}
+function saveEdit(i) {
+  const iss = _reviewData.issues[i];
+  iss.title = document.getElementById('ed-title-'+i).value.trim() || iss.title;
+  iss.quote = document.getElementById('ed-quote-'+i).value.trim() || iss.quote;
+  iss.summary = document.getElementById('ed-summary-'+i).value.trim() || iss.summary;
+  iss.impactReason = document.getElementById('ed-ireason-'+i).value.trim() || iss.impactReason;
+  document.querySelector(`.rv-card[data-idx="${i}"]`).classList.remove('editing');
+  renderReviewList();
+}
+function updateReviewStats() {
+  const sel = Object.values(_reviewState).filter(s=>s.status==='ok').length;
+  document.getElementById('rv-selected').textContent = sel;
+}
+window.setReview = setReview;
+window.toggleEdit = toggleEdit;
+window.saveEdit = saveEdit;
+
+document.getElementById('rv-all').onclick = () => {
+  Object.keys(_reviewState).forEach(k => _reviewState[k].status='ok');
+  renderReviewList(); updateReviewStats();
+};
+document.getElementById('rv-none').onclick = () => {
+  Object.keys(_reviewState).forEach(k => _reviewState[k].status='no');
+  renderReviewList(); updateReviewStats();
+};
+document.getElementById('btn-review-cancel').onclick = () => {
+  document.getElementById('m-review').classList.remove('on');
+  _reviewData = null;
+};
+document.getElementById('btn-publish').onclick = async () => {
+  const approvedIssues = (_reviewData.issues||[]).filter((_,i)=>_reviewState[i].status==='ok');
+  if (!approvedIssues.length) {
+    if (!confirm('승인된 이슈가 없습니다. 그래도 빈 브리핑을 게시하시겠습니까?')) return;
+  }
+  const toSave = {
+    ..._reviewData,
+    issues: approvedIssues,
+    publishedAt: new Date().toISOString(),
+    corrections: _reviewData.corrections || []
+  };
+  try {
+    await saveData(toSave);
+    document.getElementById('m-review').classList.remove('on');
+    render(toSave);
+    alert('✅ 게시 완료: ' + approvedIssues.length + '건 공개');
+  } catch(err) {
+    alert('❌ 저장 오류: ' + err.message);
+  }
+};
+
+// ─── REPORT MODAL ─────────────────────────────────────
+let _reportIdx = null;
+window.openReport = (idx) => {
+  _reportIdx = idx - 1;
+  const iss = (window._lastIssues||[])[_reportIdx];
+  if (!iss) return;
+  document.getElementById('rp-target').innerHTML =
+    `<b>신고 대상:</b> ${iss.title}<br><small style="color:var(--dim)">${iss.sourceDomain||''} · ${iss.publishedDate||''}</small>`;
+  document.getElementById('inp-report').value = '';
+  document.getElementById('m-report').classList.add('on');
+};
+
+document.getElementById('btn-report-cancel').onclick = () => {
+  document.getElementById('m-report').classList.remove('on');
+};
+document.getElementById('btn-report-ok').onclick = async () => {
+  const note = document.getElementById('inp-report').value.trim();
+  if (!note) { alert('신고 내용을 입력해주세요.'); return; }
+  const pin = prompt('관리자 PIN을 입력하세요 (신고 즉시 해당 카드를 숨기려면):');
+  if (pin !== ADMIN_PIN) { alert('PIN 불일치. 신고가 접수되지 않았습니다.'); return; }
+  const cur = await loadData();
+  if (!cur) { alert('데이터를 불러올 수 없습니다.'); return; }
+  const iss = cur.issues[_reportIdx];
+  if (!iss) return;
+  cur.issues.splice(_reportIdx, 1);
+  cur.corrections = cur.corrections || [];
+  cur.corrections.unshift({
+    date: new Date().toISOString().slice(0,10),
+    note: `[철회] "${iss.title}" — ${note}`
+  });
+  try {
+    await saveData(cur);
+    document.getElementById('m-report').classList.remove('on');
+    render(cur);
+    alert('✅ 신고 접수 완료. 카드가 즉시 숨김 처리되었습니다.');
+  } catch(err) {
+    alert('❌ 저장 오류: ' + err.message);
+  }
+};
 
 // ─── MODAL LOGIC ──────────────────────────────────────
 const $ = id => document.getElementById(id);
 
-// ⚙ 버튼 → PIN 모달
 $('adm-btn').onclick = () => {
   $('inp-pin').value = '';
   $('err-pin').style.display = 'none';
   $('m-pin').classList.add('on');
   setTimeout(() => $('inp-pin').focus(), 80);
 };
-
-// PIN 취소
-$('btn-pin-cancel').onclick = () => {
-  $('m-pin').classList.remove('on');
-};
-
-// PIN 확인 → API키 모달
+$('btn-pin-cancel').onclick = () => $('m-pin').classList.remove('on');
 $('btn-pin-ok').onclick = () => {
   if ($('inp-pin').value !== ADMIN_PIN) {
-    $('err-pin').style.display = 'block';
-    return;
+    $('err-pin').style.display = 'block'; return;
   }
   $('m-pin').classList.remove('on');
   $('inp-apikey').value = '';
@@ -406,43 +935,27 @@ $('btn-pin-ok').onclick = () => {
   setTimeout(() => $('inp-apikey').focus(), 80);
 };
 $('inp-pin').onkeydown = e => { if(e.key==='Enter') $('btn-pin-ok').click(); };
-
-// 키 표시 토글
 $('chk-show').onchange = function() {
   $('inp-apikey').type = this.checked ? 'text' : 'password';
 };
-
-// API키 취소
 $('btn-api-cancel').onclick = () => {
   $('m-apikey').classList.remove('on');
   $('inp-apikey').value = '';
 };
-
-// API키 확인 → 수집
 $('btn-api-ok').onclick = async () => {
   const key = $('inp-apikey').value.trim();
-  if (!key.startsWith('sk-')) {
-    $('err-api').style.display = 'block';
-    return;
-  }
+  if (!key.startsWith('sk-')) { $('err-api').style.display = 'block'; return; }
   $('m-apikey').classList.remove('on');
   $('el-loading').classList.add('on');
-
   try {
     const briefing = await fetchBriefing(key);
+    const { valid, rejected } = validateBriefing(briefing);
     $('el-loading').classList.remove('on');
-    try {
-      await saveData(briefing);
-      render(briefing);
-      alert('✅ 브리핑이 업데이트되었습니다!');
-    } catch(saveErr) {
-      render(briefing);
-      alert('⚠️ 브리핑 생성 완료, 저장 오류:\n' + saveErr.message);
-    }
+    openReview(valid, rejected);
   } catch(err) {
     $('el-loading').classList.remove('on');
     console.error(err);
-    alert('❌ 오류: ' + err.message);
+    alert('❌ 수집 오류: ' + err.message);
   } finally {
     $('inp-apikey').value = '';
   }
