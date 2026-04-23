@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Newnabie NB-808 스피커 스탠드 핸드기어 (BY-808) | 현대에이브이씨</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--red:#e94560;--dark:#111;--mid:#444;--light:#888;--bg:#f5f5f7;--white:#fff;--border:#eee;--navy:#0d1117;--accent-light:#fff3f5;--accent-border:#ffd0d8}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Sans KR',sans-serif;background:var(--white);color:var(--dark);line-height:1.6}
+img{max-width:100%}
+header{background:#fff;border-bottom:1px solid var(--border);padding:0 24px;height:60px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.logo img{height:36px;object-fit:contain}
+.back-btn{color:var(--light);text-decoration:none;font-size:13px;font-weight:500}
+.back-btn:hover{color:var(--red)}
+.bc{background:var(--bg);padding:10px 24px;border-bottom:1px solid var(--border);font-size:12px;color:var(--light)}
+.bc a{color:var(--light);text-decoration:none}.bc a:hover{color:var(--red)}
+.bc strong{color:var(--dark)}
+.hero{background:linear-gradient(160deg,#000 0%,#111 50%,#000 100%);color:#fff;overflow:hidden;position:relative}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 65% 40%,rgba(233,69,96,.1),transparent 60%)}
+.hero-inner{max-width:1200px;margin:0 auto;padding:64px 24px;display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center;position:relative;z-index:1}
+.h-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(233,69,96,.15);border:1px solid rgba(233,69,96,.5);color:#fca5a5;font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:5px 14px;border-radius:2px;margin-bottom:16px}
+.h-dot{width:5px;height:5px;background:var(--red);border-radius:50%;animation:blink 1.8s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.h-brand{font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.35);text-transform:uppercase;margin-bottom:6px}
+.hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,6.5vw,5.5rem);line-height:.9;letter-spacing:.05em;color:#fff;margin-bottom:8px}
+.hero h1 .r{color:#ff8a9b}
+.h-sub{font-size:12px;color:rgba(255,255,255,.4);letter-spacing:.08em;text-transform:uppercase;margin-bottom:18px}
+.h-desc{font-size:14px;color:rgba(255,255,255,.65);line-height:1.85;margin-bottom:28px}
+.kpi-row{display:flex;gap:22px;flex-wrap:wrap;margin-bottom:28px}
+.kpi{display:flex;flex-direction:column;gap:2px}
+.kv{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:#fff;line-height:1}
+.kv s{font-size:.9rem;color:rgba(255,255,255,.4);font-family:'Noto Sans KR',sans-serif;font-weight:300;text-decoration:none}
+.kl{font-size:10px;color:rgba(255,255,255,.35);letter-spacing:.1em;text-transform:uppercase}
+.h-tags{display:flex;flex-wrap:wrap;gap:7px}
+.tag{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.65);font-size:11px;padding:4px 11px;border-radius:20px}
+.tag.hot{background:rgba(233,69,96,.2);border-color:rgba(233,69,96,.5);color:#fca5a5}
+.hero-visual{text-align:center}
+.hero-visual-cap{margin-top:16px;font-size:11px;color:rgba(255,255,255,.35);letter-spacing:.1em;text-transform:uppercase}
+.tab-wrap{background:#fff;border-bottom:2px solid var(--border);position:sticky;top:60px;z-index:100}
+.tabs{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tb{padding:15px 18px;border:none;background:none;font-size:13px;font-weight:500;color:var(--light);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-2px;white-space:nowrap;transition:all .2s;font-family:'Noto Sans KR',sans-serif}
+.tb.on,.tb:hover{color:var(--red);border-bottom-color:var(--red)}
+.sec{padding:64px 24px}
+.si{max-width:1200px;margin:0 auto}
+.sl{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:8px}
+.sl.w{color:#fca5a5}
+.st{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.8rem,4vw,2.6rem);letter-spacing:.04em;color:var(--dark);margin-bottom:6px}
+.st.w{color:#fff}
+.sd{font-size:14px;color:var(--light);margin-bottom:36px;max-width:760px;line-height:1.8}
+.sec-bg{background:var(--bg)}
+.sec-dark{background:var(--navy)}
+.ov-desc{font-size:14px;color:var(--mid);line-height:1.9;margin-bottom:20px}
+.ov-highlights{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.ov-hl{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:14px 16px;display:flex;align-items:flex-start;gap:10px}
+.ov-hl-icon{font-size:18px;flex-shrink:0}
+.ov-hl-ttl{font-size:12px;font-weight:700;margin-bottom:2px}
+.ov-hl-txt{font-size:11px;color:var(--light);line-height:1.6}
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.feat{background:#fff;border:1px solid var(--border);border-radius:12px;padding:22px 18px;transition:all .25s;position:relative;overflow:hidden}
+.feat::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.feat:hover{border-color:rgba(233,69,96,.35);transform:translateY(-3px);box-shadow:0 8px 28px rgba(233,69,96,.1)}
+.feat:hover::before{transform:scaleX(1)}
+.feat-icon{font-size:24px;margin-bottom:10px}
+.feat-ttl{font-size:13px;font-weight:700;margin-bottom:7px}
+.feat-txt{font-size:12px;color:var(--light);line-height:1.75}
+.spec-wrap{background:#fff;border:1px solid var(--border);border-radius:14px;overflow:hidden;max-width:820px}
+table.spec{width:100%;border-collapse:collapse}
+table.spec th,table.spec td{padding:14px 18px;font-size:13px;border-bottom:1px solid var(--border);text-align:left}
+table.spec tbody th{background:#fafafa;font-weight:500;color:var(--light);font-size:11px;text-transform:uppercase;letter-spacing:.06em;width:40%}
+table.spec tbody td{color:var(--dark);font-weight:500}
+table.spec tbody tr:last-child th,table.spec tbody tr:last-child td{border-bottom:none}
+.app-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.app{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:18px;text-align:center;transition:all .2s}
+.app:hover{border-color:rgba(233,69,96,.5);background:rgba(233,69,96,.08)}
+.app-icon{font-size:26px;margin-bottom:8px}
+.app-name{font-size:13px;font-weight:700;color:#fff;margin-bottom:3px}
+.app-desc{font-size:11px;color:rgba(255,255,255,.4);line-height:1.6}
+footer{background:#111;color:#fff;padding:24px;font-size:11px;opacity:.5;text-align:center;line-height:1.8}
+@media(max-width:1024px){.hero-inner{grid-template-columns:1fr}.hero-visual{display:none}.ov-highlights{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){.feat-grid,.app-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:540px){.feat-grid,.app-grid,.ov-highlights{grid-template-columns:1fr}.hero-inner,.sec{padding-left:16px;padding-right:16px}.hero-inner{padding-top:40px;padding-bottom:40px}.sec{padding-top:44px;padding-bottom:44px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo"><a href="index.html"><img src="logo.png" alt="(주)현대에이브이씨"></a></div>
+  <a href="index.html" class="back-btn">← 제품 목록</a>
+</header>
+<div class="bc">
+  <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+    <a href="index.html">홈</a> › <a href="index.html">스탠드</a> › <a href="index.html">스피커 스탠드</a> › <strong>NB-808 스피커 스탠드 핸드기어</strong>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="h-badge"><span class="h-dot"></span>Hand-Crank Speaker Stand · Heavy-Duty</div>
+      <div class="h-brand">Newnabie · Hand-Crank Speaker Stand (Boyong BY-808)</div>
+      <h1>NB-<span class="r">808</span></h1>
+      <div class="h-sub">Hand-Crank (One-Hand Adjustable) · 1300–2100 mm · 60 kg Load</div>
+      <p class="h-desc">Newnabie NB-808은 Boyong(博洋) 공장의 BY-808 원형을 기반으로 한 핸드 크랭크(One-Hand Adjustable) 방식의 대형 스피커 스탠드입니다. 크랭크 핸들 한 손 조작으로 1300–2100 mm 높이 범위를 자유롭게 조절할 수 있어, 중대형 라이브 PA 현장에서 한 사람이 무거운 스피커를 안전하게 올릴 수 있습니다. 철제 튜브 + 플라스틱 조인트 구조로 반복 이동·해체에도 내구성을 유지하며, 60 kg의 넉넉한 허용 하중으로 라인어레이 TOP, 대형 액티브 스피커에도 대응합니다.</p>
+      <div class="kpi-row">
+        <div class="kpi"><div class="kv">1300–2100</div><div class="kl">Height (mm)</div></div>
+        <div class="kpi"><div class="kv">60<s>kg</s></div><div class="kl">Load Capacity</div></div>
+        <div class="kpi"><div class="kv">One-Hand</div><div class="kl">Crank Operation</div></div>
+        <div class="kpi"><div class="kv">4.7<s>kg</s></div><div class="kl">Net Weight</div></div>
+      </div>
+      <div class="h-tags">
+        <span class="tag hot">⚙ Hand-Crank</span>
+        <span class="tag">One-Hand Adjustable</span>
+        <span class="tag hot">60 kg 대하중</span>
+        <span class="tag">2100 mm 최대 높이</span>
+        <span class="tag hot">Iron Tube + Plastic Joint</span>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div style="position:relative;width:100%;max-width:420px;margin:0 auto;aspect-ratio:1/1">
+        <img src="NB-808_01.jpg" alt="Newnabie NB-808 Hand-Crank Speaker Stand" style="width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 16px 48px rgba(255,255,255,.08))">
+      </div>
+      <div class="hero-visual-cap">Newnabie NB-808 · Hand-Crank Speaker Stand</div>
+    </div>
+  </div>
+</section>
+
+<!-- TABS -->
+<div class="tab-wrap">
+  <div class="tabs">
+    <button class="tb on" onclick="goTab('sec-overview')">제품 소개</button>
+    <button class="tb" onclick="goTab('sec-features')">주요 특징</button>
+    <button class="tb" onclick="goTab('sec-spec')">상세 사양</button>
+    <button class="tb" onclick="goTab('sec-app')">적용 분야</button>
+  </div>
+</div>
+
+<!-- OVERVIEW -->
+<section class="sec" id="sec-overview">
+  <div class="si">
+    <div class="sl">제품 소개</div>
+    <div class="st">NB-808 · HAND-CRANK SPEAKER STAND</div>
+    <p class="sd">한 손 조작으로 중대형 스피커를 손쉽게 올리고 내릴 수 있는 핸드 크랭크 방식의 대형 스피커 스탠드. 1300–2100 mm 높이 범위와 60 kg 허용 하중으로 중대형 라이브·이동형 PA 현장에 최적화되어 있습니다.</p>
+    <p class="ov-desc">
+      NB-808은 Boyong(博洋) 본사 카탈로그상 BY-808 원형 제품으로, "One-Hand Adjustable Speaker Stand"라는 공식 명칭이 붙은 핸드 크랭크 타입의 대형 스피커 스탠드입니다. 크랭크 핸들을 돌리는 선형 구동 방식이어서 무거운 스피커를 한 사람이 혼자서도 힘을 분산해 들어 올릴 수 있으며, 안전 핀 삽입만으로 높이를 쉽게 직관적으로 고정할 수 있는 일반 트라이포드 스탠드 대비 설치 피로도가 크게 낮습니다.
+    </p>
+    <p class="ov-desc">
+      높이 조절 범위는 1300 mm에서 2100 mm로, 일반 트라이포드 스탠드의 최대 높이(1600–1800 mm)를 크게 상회하여 관객 밀집 구간에서도 스피커 축을 머리 위로 충분히 띄울 수 있습니다. 본체는 철제(Iron) 튜브와 플라스틱 조인트의 조합으로, 강성과 경량성의 균형을 맞췄고 60 kg의 넉넉한 허용 하중으로 중형 라인어레이 TOP과 대형 액티브 스피커까지 안정적으로 지지합니다.
+    </p>
+    <div class="ov-highlights">
+      <div class="ov-hl"><div class="ov-hl-icon">⚙</div><div><div class="ov-hl-ttl">One-Hand Crank</div><div class="ov-hl-txt">한 손으로 정밀 높이 조절</div></div></div>
+      <div class="ov-hl"><div class="ov-hl-icon">📏</div><div><div class="ov-hl-ttl">최대 2100 mm</div><div class="ov-hl-txt">관객 밀집 구간도 커버</div></div></div>
+      <div class="ov-hl"><div class="ov-hl-icon">💪</div><div><div class="ov-hl-ttl">60 kg Load</div><div class="ov-hl-txt">라인어레이 TOP 지지</div></div></div>
+      <div class="ov-hl"><div class="ov-hl-icon">🔩</div><div><div class="ov-hl-ttl">Iron + Plastic Joint</div><div class="ov-hl-txt">강성·경량성 균형</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="sec sec-bg" id="sec-features">
+  <div class="si">
+    <div class="sl">주요 특징</div>
+    <div class="st">KEY FEATURES</div>
+    <p class="sd">제조사(Boyong) BY-808 공식 자료가 강조하는 핵심 포인트입니다.</p>
+    <div class="feat-grid">
+      <div class="feat"><div class="feat-icon">⚙</div><div class="feat-ttl">One-Hand Adjustable 크랭크</div><div class="feat-txt">한 손으로 크랭크 핸들을 회전시켜 스피커 높이를 정밀하게 조절합니다. 안전 핀 방식 대비 훨씬 적은 힘으로 무거운 스피커를 혼자서도 안전하게 올리고 내릴 수 있습니다.</div></div>
+      <div class="feat"><div class="feat-icon">📏</div><div class="feat-ttl">1300–2100 mm 광역 조절</div><div class="feat-txt">일반 트라이포드 스탠드를 상회하는 최대 2100 mm의 높이로, 관객이 많거나 무대가 낮은 환경에서도 스피커 축을 머리 위로 충분히 띄워 직접음 비율을 확보합니다.</div></div>
+      <div class="feat"><div class="feat-icon">💪</div><div class="feat-ttl">60 kg 대하중 설계</div><div class="feat-txt">일반 PA 액티브 스피커는 물론 중소형 라인어레이 TOP까지 안정적으로 지지할 수 있는 60 kg 허용 하중으로 현장 활용도가 넓습니다.</div></div>
+      <div class="feat"><div class="feat-icon">🔩</div><div class="feat-ttl">Iron Tube + Plastic Joint</div><div class="feat-txt">강성을 담당하는 철제(Iron) 튜브와 연결·마찰 부위의 플라스틱 조인트 조합으로, 금속 간 긁힘·소음을 줄이면서도 구조적 강도를 유지합니다.</div></div>
+      <div class="feat"><div class="feat-icon">🛡</div><div class="feat-ttl">낙하 방지 안전 구조</div><div class="feat-txt">크랭크 구동부는 역회전을 방지하는 기어 구조로 설계되어 있어, 핸들에서 손을 떼어도 스피커가 급낙하하지 않고 현재 높이를 유지합니다.</div></div>
+      <div class="feat"><div class="feat-icon">🧳</div><div class="feat-ttl">이동 · 운용 편의성</div><div class="feat-txt">다리부 접이식 트라이포드 구조로 보관·운송 시 부피를 줄일 수 있어, 이동형 PA 렌탈·공연 투어 운영 환경에 적합합니다.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SPEC -->
+<section class="sec" id="sec-spec">
+  <div class="si">
+    <div class="sl">상세 사양</div>
+    <div class="st">TECHNICAL SPECIFICATIONS</div>
+    <p class="sd">Boyong BY-808 기준 기본 사양 및 수입원(현대에이브이씨) 유통 기준 사양입니다.</p>
+    <div class="spec-wrap">
+      <table class="spec">
+        <tbody>
+          <tr><th>모델명</th><td>NB-808 (제조사 원형: Boyong BY-808)</td></tr>
+          <tr><th>타입</th><td>Hand-Crank Speaker Stand (One-Hand Adjustable)</td></tr>
+          <tr><th>Height</th><td>1300 – 2100 mm</td></tr>
+          <tr><th>Load Capacity</th><td>60 kg</td></tr>
+          <tr><th>Material</th><td>Steel (Iron Tube) + Plastic Joint</td></tr>
+          <tr><th>조작 방식</th><td>크랭크 핸들 회전식(One-Hand Adjustable)</td></tr>
+          <tr><th>Net Weight</th><td>4.7 kg</td></tr>
+          <tr><th>권장소비자가</th><td>440,000 원 / 조 (VAT 포함)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:14px;font-size:11px;color:var(--light);max-width:820px;line-height:1.7">※ 본 사양은 제조사 Boyong(博洋) 공식 사이트(ep-boyong.com) BY-808 등재 자료를 기준으로 정리되었습니다. 단가는 수입원(현대에이브이씨) 2026-01-01 스탠드 가격표 기준 권장소비자가(VAT 포함)입니다.</p>
+  </div>
+</section>
+
+<!-- APPLICATION -->
+<section class="sec sec-dark" id="sec-app">
+  <div class="si">
+    <div class="sl w">적용 분야</div>
+    <div class="st w">APPLICATION</div>
+    <p class="sd" style="color:rgba(255,255,255,.5)">고점 높이와 대하중이 요구되는 중대형 PA 현장 · 라이브 공연 · 이동형 렌탈 환경에 적합합니다.</p>
+    <div class="app-grid">
+      <div class="app"><div class="app-icon">🎤</div><div class="app-name">중대형 라이브</div><div class="app-desc">라인어레이 TOP · 메인 PA</div></div>
+      <div class="app"><div class="app-icon">🎉</div><div class="app-name">이벤트 · 페스티벌</div><div class="app-desc">야외 대형 행사</div></div>
+      <div class="app"><div class="app-icon">🏛</div><div class="app-name">강당 · 컨벤션</div><div class="app-desc">상설·이동형 겸용 설치</div></div>
+      <div class="app"><div class="app-icon">🚛</div><div class="app-name">렌탈 · 투어</div><div class="app-desc">반복 이동 운영 환경</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © (주)현대에이브이씨 HYUNDAI AUDIO VISUAL COMMUNICATIONS CO., LTD<br>
+  Newnabie NB-808 · Hand-Crank Speaker Stand (Boyong BY-808) · 공식 수입원
+</footer>
+
+<script>
+function goTab(id){
+  document.querySelectorAll('.tb').forEach(b=>b.classList.remove('on'));
+  event.currentTarget.classList.add('on');
+  const el=document.getElementById(id);
+  if(el){window.scrollTo({top:el.offsetTop-120,behavior:'smooth'})}
+}
+</script>
+</body>
+</html>
