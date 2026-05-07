@@ -10,17 +10,14 @@
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Noto Sans KR',sans-serif;background:var(--white);color:var(--dark);line-height:1.6}
 img{max-width:100%}
-
 header{background:#fff;border-bottom:1px solid var(--border);padding:0 24px;height:60px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200;box-shadow:0 2px 8px rgba(0,0,0,.06)}
 .logo a{display:flex;align-items:center;text-decoration:none}
 .logo img{height:36px;object-fit:contain}
 .back-btn{color:var(--light);text-decoration:none;font-size:13px;font-weight:500;transition:color .2s}
 .back-btn:hover{color:var(--red)}
-
 .bc{background:var(--bg);padding:10px 24px;border-bottom:1px solid var(--border);font-size:12px;color:var(--light)}
 .bc a{color:var(--light);text-decoration:none}.bc a:hover{color:var(--red)}
 .bc strong{color:var(--dark)}
-
 .hero{background:linear-gradient(160deg,#000 0%,#111 50%,#000 100%);color:#fff;overflow:hidden;position:relative}
 .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 65% 40%,rgba(233,69,96,.08),transparent 60%)}
 .hero-inner{max-width:1200px;margin:0 auto;padding:64px 24px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;position:relative;z-index:1}
@@ -40,7 +37,6 @@ header{background:#fff;border-bottom:1px solid var(--border);padding:0 24px;heig
 .h-tags{display:flex;flex-wrap:wrap;gap:7px}
 .tag{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.65);font-size:11px;padding:4px 11px;border-radius:20px}
 .tag.hot{background:rgba(233,69,96,.2);border-color:rgba(233,69,96,.5);color:#fca5a5}
-
 .hero-img{text-align:center}
 .hero-img img{width:100%;max-width:360px;filter:drop-shadow(0 16px 48px rgba(255,255,255,.08));border-radius:4px}
 .thumb-row{display:flex;gap:8px;justify-content:center;margin-top:12px}
@@ -48,13 +44,11 @@ header{background:#fff;border-bottom:1px solid var(--border);padding:0 24px;heig
 .thumb-btn.on{border-color:var(--red)}
 .thumb-btn img{width:100%;height:100%;object-fit:contain}
 .hero-img-cap{margin-top:8px;font-size:11px;color:rgba(255,255,255,.35);letter-spacing:.1em;text-transform:uppercase}
-
 .tab-wrap{background:#fff;border-bottom:2px solid var(--border);position:sticky;top:60px;z-index:100}
 .tabs{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;overflow-x:auto;scrollbar-width:none}
 .tabs::-webkit-scrollbar{display:none}
 .tb{padding:15px 18px;border:none;background:none;font-size:13px;font-weight:500;color:var(--light);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-2px;white-space:nowrap;transition:all .2s;font-family:'Noto Sans KR',sans-serif}
 .tb.on,.tb:hover{color:var(--red);border-bottom-color:var(--red)}
-
 .sec{padding:64px 24px}
 .si{max-width:1200px;margin:0 auto}
 .sl{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:8px}
@@ -64,7 +58,6 @@ header{background:#fff;border-bottom:1px solid var(--border);padding:0 24px;heig
 .sd{font-size:14px;color:var(--light);margin-bottom:36px;max-width:700px;line-height:1.8}
 .sec-bg{background:var(--bg)}
 .sec-dark{background:var(--navy)}
-
 .ov-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
 .ov-img{background:linear-gradient(135deg,#1a1a1a,#0a0a0a);border-radius:16px;padding:40px;text-align:center;border:1px solid rgba(255,255,255,.06)}
 .ov-img img{width:100%;max-width:320px;height:auto;object-fit:contain;filter:drop-shadow(0 8px 28px rgba(0,0,0,.6))}
@@ -74,7 +67,6 @@ header{background:#fff;border-bottom:1px solid var(--border);padding:0 24px;heig
 .ov-hl-icon{font-size:18px;flex-shrink:0}
 .ov-hl-ttl{font-size:12px;font-weight:700;margin-bottom:2px}
 .ov-hl-txt{font-size:11px;color:var(--light);line-height:1.6}
-
 .spec-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
 .spec-img-wrap{background:linear-gradient(135deg,#1a1a1a,#0a0a0a);border-radius:16px;padding:40px;text-align:center;position:sticky;top:130px;border:1px solid rgba(255,255,255,.06)}
 .spec-img-wrap img{width:100%;max-width:280px;height:280px;object-fit:contain;filter:drop-shadow(0 8px 28px rgba(0,0,0,.6))}
@@ -93,7 +85,6 @@ table.sp td:last-child{color:var(--dark);font-weight:600}
 .price-box{background:#fff;border:2px solid var(--red);border-radius:10px;padding:18px 22px;margin-top:24px}
 .price-val{font-size:26px;font-weight:900;color:var(--red)}
 .price-note{font-size:11px;color:var(--light);margin-top:8px;padding-top:8px;border-top:1px solid var(--border)}
-
 .feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .feat{background:#fff;border:1px solid var(--border);border-radius:12px;padding:22px 18px;transition:all .25s;position:relative;overflow:hidden}
 .feat::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .3s}
@@ -102,41 +93,55 @@ table.sp td:last-child{color:var(--dark);font-weight:600}
 .feat-icon{font-size:24px;margin-bottom:10px}
 .feat-ttl{font-size:13px;font-weight:700;margin-bottom:7px}
 .feat-txt{font-size:12px;color:var(--light);line-height:1.75}
-
 .angle-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
 .angle-card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:24px;text-align:center;transition:all .25s}
 .angle-card:hover{border-color:rgba(233,69,96,.3);transform:translateY(-3px);box-shadow:0 8px 28px rgba(233,69,96,.08)}
 .angle-val{font-family:'Bebas Neue',sans-serif;font-size:3rem;color:var(--red);line-height:1}
 .angle-ttl{font-size:13px;font-weight:700;margin-top:8px;margin-bottom:4px}
 .angle-txt{font-size:12px;color:var(--light);line-height:1.7}
-
 .app-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
 .app{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:18px;text-align:center;transition:all .2s}
 .app:hover{border-color:rgba(233,69,96,.5);background:rgba(233,69,96,.06)}
 .app-icon{font-size:26px;margin-bottom:8px}
 .app-name{font-size:13px;font-weight:700;color:#fff;margin-bottom:3px}
 .app-desc{font-size:11px;color:rgba(255,255,255,.4);line-height:1.6}
-
 footer{background:#111;color:#fff;padding:24px;font-size:11px;opacity:.5;text-align:center;line-height:1.8}
-
 @media(max-width:1024px){.hero-inner,.spec-grid,.ov-grid{grid-template-columns:1fr}.hero-img{display:none}.spec-img-wrap{position:static}}
 @media(max-width:768px){.feat-grid{grid-template-columns:1fr 1fr}.angle-grid{grid-template-columns:1fr}.app-grid{grid-template-columns:1fr 1fr}.ov-highlights{grid-template-columns:1fr}}
 @media(max-width:540px){.feat-grid,.app-grid{grid-template-columns:1fr}.hero-inner,.sec{padding-left:16px;padding-right:16px}.hero-inner{padding-top:40px;padding-bottom:40px}.sec{padding-top:44px;padding-bottom:44px}}
+
+/* WHITE-HERO-OVERRIDE-V1 */
+.hero{background:#ffffff !important;color:#111 !important}
+.hero::before{display:none !important}
+.h-badge{background:#fff3f5 !important;border-color:#ffd0d8 !important;color:#e94560 !important}
+.h-brand{color:rgba(0,0,0,.5) !important}
+.hero h1{color:#111 !important}
+.hero h1 .r{color:#e94560 !important}
+.h-sub{color:rgba(0,0,0,.55) !important}
+.h-desc{color:rgba(0,0,0,.72) !important}
+.h-desc strong{color:#e94560 !important}
+.kv{color:#111 !important}
+.kv s{color:rgba(0,0,0,.5) !important}
+.kl{color:rgba(0,0,0,.55) !important}
+.tag{background:#f5f5f7 !important;border-color:#e5e7eb !important;color:rgba(0,0,0,.75) !important}
+.tag.hot{background:#fff3f5 !important;border-color:#ffd0d8 !important;color:#e94560 !important}
+.tag.blue{background:#eff6ff !important;border-color:#bfdbfe !important;color:#2563eb !important}
+.hero-img-cap,.hero-visual-cap{color:rgba(0,0,0,.5) !important}
+.h-price-lbl{color:rgba(0,0,0,.7) !important}
+.h-price-u{color:rgba(0,0,0,.5) !important}
+.hero-img img,.hero-visual img{filter:drop-shadow(0 8px 24px rgba(0,0,0,.18)) !important}
 </style>
 </head>
 <body>
-
 <header>
   <div class="logo"><a href="index.html"><img src="logo.png" alt="(주)현대에이브이씨"></a></div>
   <a href="index.html" class="back-btn">← 제품 목록</a>
 </header>
-
 <div class="bc">
   <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:6px;flex-wrap:wrap">
     <a href="index.html">홈</a> › <a href="index.html">스피커</a> › <a href="index.html">모니터</a> › <strong>KC10D 10인치 액티브 동축 모니터</strong>
   </div>
 </div>
-
 <!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
@@ -176,7 +181,6 @@ footer{background:#111;color:#fff;padding:24px;font-size:11px;opacity:.5;text-al
     </div>
   </div>
 </section>
-
 <!-- TABS -->
 <div class="tab-wrap">
   <div class="tabs">
@@ -187,15 +191,12 @@ footer{background:#111;color:#fff;padding:24px;font-size:11px;opacity:.5;text-al
     <button class="tb" onclick="goTab('sec-app')">적용 분야</button>
   </div>
 </div>
-
-
 <!-- ══ OVERVIEW ══ -->
 <section class="sec" id="sec-overview">
   <div class="si">
     <div class="sl">제품 소개</div>
     <div class="st">KC10D ACTIVE COAXIAL MONITOR</div>
     <p class="sd">10인치 동축 드라이버, Class D 앰프, 48kHz/24bit DSP를 하나의 콤팩트 캐비닛에 통합한 액티브 모니터. 스테이지 모니터링과 근접 확성 양쪽 모드를 모두 지원합니다.</p>
-
     <div class="ov-grid">
       <div class="ov-img">
         <img src="KC10D_01.jpg" alt="Soundking KC10D 측면"
@@ -208,7 +209,6 @@ footer{background:#111;color:#fff;padding:24px;font-size:11px;opacity:.5;text-al
         <p class="ov-desc">
           내장된 48kHz/24bit DSP는 LCD 화면을 통해 3밴드 EQ, 리미터, 딜레이, 볼륨을 직접 제어할 수 있으며, Class D 앰프와 결합하여 고효율·경량·고출력을 동시에 실현합니다. 53°의 웨지 각도로 스테이지 모니터링과 확성용 근접 사운드 시스템을 자유롭게 전환할 수 있습니다.
         </p>
-
         <div class="ov-highlights">
           <div class="ov-hl">
             <div class="ov-hl-icon">🎛</div>
@@ -241,7 +241,6 @@ footer{background:#111;color:#fff;padding:24px;font-size:11px;opacity:.5;text-al
         </div>
       </div>
     </div>
-
     <!-- KPI bar -->
     <div style="background:linear-gradient(135deg,#1a1a1a,#0a0a0a);border-radius:16px;padding:28px;display:grid;grid-template-columns:repeat(5,1fr);gap:20px;border:1px solid rgba(255,255,255,.06);margin-top:40px">
       <div style="text-align:center">
@@ -267,14 +266,11 @@ footer{background:#111;color:#fff;padding:24px;font-size:11px;opacity:.5;text-al
     </div>
   </div>
 </section>
-
-
 <!-- ══ SPEC ══ -->
 <section class="sec sec-bg" id="sec-spec">
   <div class="si">
     <div class="sl">제품 사양</div>
     <div class="st">SPECIFICATIONS</div>
-
     <div class="spec-grid">
       <div class="spec-img-wrap">
         <img src="KC10D_01.jpg" alt="Soundking KC10D"
@@ -315,8 +311,6 @@ footer{background:#111;color:#fff;padding:24px;font-size:11px;opacity:.5;text-al
     </div>
   </div>
 </section>
-
-
 <!-- ══ FEATURES ══ -->
 <section class="sec" id="sec-features">
   <div class="si">
@@ -332,8 +326,6 @@ footer{background:#111;color:#fff;padding:24px;font-size:11px;opacity:.5;text-al
     </div>
   </div>
 </section>
-
-
 <!-- ══ DUAL MODE ══ -->
 <section class="sec sec-bg" id="sec-angle">
   <div class="si">
@@ -354,8 +346,6 @@ footer{background:#111;color:#fff;padding:24px;font-size:11px;opacity:.5;text-al
     </div>
   </div>
 </section>
-
-
 <!-- ══ APPLICATIONS ══ -->
 <section class="sec sec-dark" id="sec-app">
   <div class="si">
@@ -370,10 +360,7 @@ footer{background:#111;color:#fff;padding:24px;font-size:11px;opacity:.5;text-al
     </div>
   </div>
 </section>
-
-
 <footer>경기도 평택시 도일유통길 39-9 (도일동) · ☎ 031-8054-0048<br>COPYRIGHT ⓒ HYUNDAI AUDIO VISUAL COMMUNICATIONS CO., LTD. ALL RIGHTS RESERVED.</footer>
-
 <script>
 const sections = ['sec-overview','sec-spec','sec-features','sec-angle','sec-app'];
 function goTab(id) {
