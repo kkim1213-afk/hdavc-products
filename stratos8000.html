@@ -45,6 +45,12 @@ header{background:#fff;border-bottom:1px solid var(--border);padding:0 24px;heig
 .hero-img{text-align:center}
 .hero-img img{width:100%;max-width:320px;filter:drop-shadow(0 16px 48px rgba(232,120,42,.25));border-radius:4px}
 .hero-img-cap{margin-top:12px;font-size:11px;color:rgba(255,255,255,.35);letter-spacing:.1em;text-transform:uppercase}
+/* HERO IMAGE CROSS-FADE SLIDER */
+.hero-slider{position:relative;width:100%;max-width:360px;height:380px;margin:0 auto}
+.hero-slider .hs-img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;animation:stratosfade 7s infinite ease-in-out}
+.hero-slider .hs-a{animation-delay:0s}
+.hero-slider .hs-b{animation-delay:3.5s}
+@keyframes stratosfade{0%,42%{opacity:1}50%,92%{opacity:0}100%{opacity:1}}
 
 /* TABS */
 .tab-wrap{background:#fff;border-bottom:2px solid var(--border);position:sticky;top:60px;z-index:100}
@@ -102,6 +108,8 @@ table.sp td:last-child{color:var(--dark);font-weight:600}
 .sp-hl td:last-child{color:var(--red)!important;font-weight:800!important}
 .price-box{background:#fff;border:2px solid var(--red);border-radius:10px;padding:18px 22px;margin-top:24px}
 .price-inquiry{font-size:22px;font-weight:900;color:var(--red)}
+.price-main{font-size:22px;font-weight:900;color:var(--dark)}
+.price-main small{font-size:12px;font-weight:400;color:var(--light)}
 .price-note{font-size:11px;color:var(--light);margin-top:8px;padding-top:8px;border-top:1px solid var(--border)}
 
 /* FEATURES */
@@ -220,8 +228,12 @@ footer{background:#111;color:#fff;padding:24px;font-size:11px;opacity:.5;text-al
       </div>
     </div>
     <div class="hero-img">
-      <img src="STRATOS8000_1.jpg" alt="STRATOS 8000"
-           onerror="this.style.display='none'">
+      <div class="hero-slider">
+        <img src="STRATOS8000_1.jpg"  alt="STRATOS 8000 시스템 1" class="hs-img hs-a"
+             onerror="this.style.display='none'">
+        <img src="STRATOS8000_01.png" alt="STRATOS 8000 시스템 2" class="hs-img hs-b"
+             onerror="this.style.display='none'">
+      </div>
       <div class="hero-img-cap">STRATOS 8000 Portable Line Array System</div>
     </div>
   </div>
@@ -320,76 +332,54 @@ footer{background:#111;color:#fff;padding:24px;font-size:11px;opacity:.5;text-al
   <div class="si">
     <div class="sl">제품 사양</div>
     <div class="st">SPECIFICATIONS</div>
+    <p class="sd">패시브 어레이 TOP과 15인치 액티브 서브우퍼의 사양을 한눈에 비교할 수 있습니다.</p>
 
-    <div class="prod-tabs">
-      <button class="ptb on" onclick="showProd('p-top', event)">🔊 어레이 TOP (패시브)</button>
-      <button class="ptb" onclick="showProd('p-sub', event)">🔈 15" 액티브 서브우퍼</button>
-    </div>
+    <div class="spec-grid">
+      <!-- TOP — 패시브 어레이 -->
+      <div>
+        <div class="prod-badge">Passive Line Array Full-Range Speaker</div>
+        <div class="prod-h2">STRATOS 8000</div>
+        <div class="prod-type">Passive 3-Way Line Array Full-Range Speaker</div>
+        <p class="prod-desc">3개의 8인치 네오디뮴 풀레인지 스피커와 12개의 1인치 돔 트위터로 구성된 패시브 어레이 캐비넷. 수평 100°×수직 70°의 와이드 앵글 커버리지로 넓은 청중 영역을 커버하며, 수직 라인 음원의 좁은 커버리지 문제를 효과적으로 해결합니다. 텔레스코픽 스탠드에 꽂아 높이를 조절하면 최적의 음장을 구현할 수 있습니다.</p>
+        <div class="slbl">제품 사양</div>
+        <table class="sp">
+          <tr><td>MF 유닛</td><td>3 × 8" 네오디뮴 풀레인지 스피커</td></tr>
+          <tr><td>HF 유닛</td><td>12 × 1" 돔 트위터</td></tr>
+          <tr><td>커버리지 (H × V)</td><td>100° × 70° (-10dB)</td></tr>
+          <tr><td>출력 (RMS)</td><td>400W</td></tr>
+          <tr><td>임피던스</td><td>4Ω</td></tr>
+          <tr><td>높이 조절</td><td>텔레스코픽 스탠드 (서브우퍼 포함)</td></tr>
+          <tr><td>연결 방식</td><td>내부 소켓 배선 — 외부 케이블 불필요</td></tr>
+          <tr><td>제품 사이즈 (W×H×D)</td><td>255 × 729 × 400 mm</td></tr>
+        </table>
+      </div>
 
-    <!-- TOP -->
-    <div class="prod-panel on" id="p-top">
-      <div class="spec-grid">
-        <div class="spec-img-wrap">
-          <img src="STRATOS8000_4.jpg"
-               alt="STRATOS 8000 어레이"
-               onerror="this.style.opacity='.3'">
-        </div>
-        <div>
-          <div class="prod-badge">Passive Line Array Full-Range Speaker</div>
-          <div class="prod-h2">STRATOS 8000</div>
-          <div class="prod-type">Passive 3-Way Line Array Full-Range Speaker</div>
-          <p class="prod-desc">3개의 8인치 네오디뮴 풀레인지 스피커와 12개의 1인치 돔 트위터로 구성된 패시브 어레이 캐비넷. 수평 100°×수직 70°의 와이드 앵글 커버리지로 넓은 청중 영역을 커버하며, 수직 라인 음원의 좁은 커버리지 문제를 효과적으로 해결합니다. 텔레스코픽 스탠드에 꽂아 높이를 조절하면 최적의 음장을 구현할 수 있습니다.</p>
-          <div class="slbl">제품 사양</div>
-          <table class="sp">
-            <tr><td>MF 유닛</td><td>3 × 8" 네오디뮴 풀레인지 스피커</td></tr>
-            <tr><td>HF 유닛</td><td>12 × 1" 돔 트위터</td></tr>
-            <tr><td>커버리지 (H × V)</td><td>100° × 70° (-10dB)</td></tr>
-            <tr><td>출력 (RMS)</td><td>400W</td></tr>
-            <tr><td>임피던스</td><td>4Ω</td></tr>
-            <tr><td>높이 조절</td><td>텔레스코픽 스탠드 (서브우퍼 포함)</td></tr>
-            <tr><td>연결 방식</td><td>내부 소켓 배선 — 외부 케이블 불필요</td></tr>
-            <tr><td>제품 사이즈 (W×H×D)</td><td>255 × 729 × 400 mm</td></tr>
-          </table>
+      <!-- SUB — 15" 액티브 서브우퍼 -->
+      <div>
+        <div class="prod-badge">15" Active Subwoofer with Mixer &amp; DSP</div>
+        <div class="prod-h2" style="font-size:2.2rem;line-height:1">15" Active SUB</div>
+        <div class="prod-type">15" Active Subwoofer with Built-in 4CH Mixer &amp; DSP</div>
+        <p class="prod-desc">15인치 LF 스피커와 700W+400W CLASS-D 듀얼 채널 앰프가 내장된 액티브 서브우퍼. 4채널 입력 믹서와 24비트 DSP를 탑재하여 단독으로 완전한 PA 시스템을 구성합니다. 위상 반전 설계와 높이 조절 텔레스코픽 스탠드가 포함되어 어떤 현장에서도 빠른 세팅이 가능합니다.</p>
+        <div class="slbl">제품 사양</div>
+        <table class="sp">
+          <tr><td>LF 스피커</td><td>1 × 15인치 LF 스피커</td></tr>
+          <tr><td>앰프 출력</td><td>700W (SUB) + 400W (TOP) CLASS-D</td></tr>
+          <tr class="sp-hl"><td>시스템 최대 음압</td><td>126 dB</td></tr>
+          <tr><td>임피던스</td><td>4Ω</td></tr>
+          <tr><td>전원</td><td>AC 220V ~ 240V</td></tr>
+          <tr><td>믹서 입력</td><td>4채널 (Mic/Line×2, RCA 스테레오, HI-Z×1)</td></tr>
+          <tr><td>출력</td><td>XLR 라인 출력×2, MIX OUTPUT×1</td></tr>
+          <tr><td>DSP</td><td>24bit / 게인·EQ·크로스오버·딜레이(0~100m)·리미터</td></tr>
+          <tr><td>블루투스</td><td>TWS 스테레오 모드 지원 (두 대 페어링 시 스테레오 구성)</td></tr>
+          <tr><td>포함 구성품</td><td>텔레스코픽 높이조절 스탠드 × 1</td></tr>
+          <tr><td>제품 사이즈 (W×H×D)</td><td>485 × 695 × 585 mm</td></tr>
+        </table>
+        <div class="price-box">
+          <div class="slbl">권장 소비자가 (VAT 포함)</div>
+          <div class="price-main">6,000,000<small>원 / 조</small></div>
         </div>
       </div>
     </div>
-
-    <!-- SUB -->
-    <div class="prod-panel" id="p-sub">
-      <div class="spec-grid">
-        <div class="spec-img-wrap">
-          <img src="STRATOS8000_2.jpg"
-               alt="STRATOS 8000 서브우퍼"
-               onerror="this.style.opacity='.3'">
-        </div>
-        <div>
-          <div class="prod-badge">15" Active Subwoofer with Mixer & DSP</div>
-          <div class="prod-h2" style="font-size:2.2rem;line-height:1">15" Active SUB</div>
-          <div class="prod-type">15" Active Subwoofer with Built-in 4CH Mixer & DSP</div>
-          <p class="prod-desc">15인치 LF 스피커와 700W+400W CLASS-D 듀얼 채널 앰프가 내장된 액티브 서브우퍼. 4채널 입력 믹서와 24비트 DSP를 탑재하여 단독으로 완전한 PA 시스템을 구성합니다. 위상 반전 설계와 높이 조절 텔레스코픽 스탠드가 포함되어 어떤 현장에서도 빠른 세팅이 가능합니다.</p>
-          <div class="slbl">제품 사양</div>
-          <table class="sp">
-            <tr><td>LF 스피커</td><td>1 × 15인치 LF 스피커</td></tr>
-            <tr><td>앰프 출력</td><td>700W (SUB) + 400W (TOP) CLASS-D</td></tr>
-            <tr class="sp-hl"><td>시스템 최대 음압</td><td>126 dB</td></tr>
-            <tr><td>임피던스</td><td>4Ω</td></tr>
-            <tr><td>전원</td><td>AC 220V ~ 240V</td></tr>
-            <tr><td>믹서 입력</td><td>4채널 (Mic/Line×2, RCA 스테레오, HI-Z×1)</td></tr>
-            <tr><td>출력</td><td>XLR 라인 출력×2, MIX OUTPUT×1</td></tr>
-            <tr><td>DSP</td><td>24bit / 게인·EQ·크로스오버·딜레이(0~100m)·리미터</td></tr>
-            <tr><td>블루투스</td><td>TWS 스테레오 모드 지원 (두 대 페어링 시 스테레오 구성)</td></tr>
-            <tr><td>포함 구성품</td><td>텔레스코픽 높이조절 스탠드 × 1</td></tr>
-            <tr><td>제품 사이즈 (W×H×D)</td><td>485 × 695 × 585 mm</td></tr>
-          </table>
-          <div class="price-box">
-            <div class="slbl">가격</div>
-            <div class="price-inquiry">견적문의</div>
-            <div class="price-note">※ 참고 소비자가: 6,000,000원 / 조 (VAT 포함)</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
   </div>
 </section>
 
@@ -400,22 +390,13 @@ footer{background:#111;color:#fff;padding:24px;font-size:11px;opacity:.5;text-al
     <div class="sl">내장 믹서 & 패널</div>
     <div class="st">BUILT-IN 4CH MIXER</div>
     <p class="sd">별도 믹서 없이 서브우퍼 상단 패널에서 4채널 입력을 직접 제어합니다.</p>
-    <div class="mixer-grid">
-      <div class="mixer-img">
-        <img src="STRATOS8000_3.jpg"
-             alt="STRATOS 8000 믹서 패널"
-             style="width:100%;max-width:400px"
-             onerror="this.style.opacity='.3'">
-        <p style="font-size:11px;color:rgba(255,255,255,.4);margin-top:10px;text-align:center">서브우퍼 상단 컨트롤 패널</p>
-      </div>
-      <div class="mixer-channels">
-        <div class="mc"><div class="mc-num">①②</div><div><div class="mc-ttl">GAIN A·B — Mic/Line 입력</div><div class="mc-txt">XLR/6.35mm COMBO 소켓. LINE/MIC 선택 스위치로 라인·마이크 게인 별도 설정</div></div></div>
-        <div class="mc"><div class="mc-num">③</div><div><div class="mc-ttl">6.35mm JACK — 악기 입력</div><div class="mc-txt">고임피던스 악기(어쿠스틱 기타 등) 직접 연결 가능</div></div></div>
-        <div class="mc"><div class="mc-num">④</div><div><div class="mc-ttl">DSP CONTROL</div><div class="mc-txt">LCD 디스플레이 + 로터리 노브로 EQ·크로스오버·딜레이(0~100m, 0.25m 단위)·리미터 설정</div></div></div>
-        <div class="mc"><div class="mc-num">⑤</div><div><div class="mc-ttl">LINE INPUT / BLUETOOTH</div><div class="mc-txt">RCA 스테레오 라인 입력 또는 TWS 블루투스 연결. 두 대를 TWS 모드로 페어링하여 스테레오 구성 가능</div></div></div>
-        <div class="mc"><div class="mc-num">⑥⑦</div><div><div class="mc-ttl">MIX OUTPUT + SUB LEVEL</div><div class="mc-txt">MIX OUTPUT: 믹스 신호 출력. SUB LEVEL: 서브우퍼 음량 독립 조절</div></div></div>
-        <div class="mc"><div class="mc-num">⑧⑨</div><div><div class="mc-ttl">LINE LINK + INPUT SOCKET</div><div class="mc-txt">LINE LINK: 입력 1·2번 신호 출력. INPUT SOCKET: XLR/6.35mm COMBO</div></div></div>
-      </div>
+    <div class="mixer-channels" style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+      <div class="mc"><div class="mc-num">①②</div><div><div class="mc-ttl">GAIN A·B — Mic/Line 입력</div><div class="mc-txt">XLR/6.35mm COMBO 소켓. LINE/MIC 선택 스위치로 라인·마이크 게인 별도 설정</div></div></div>
+      <div class="mc"><div class="mc-num">③</div><div><div class="mc-ttl">6.35mm JACK — 악기 입력</div><div class="mc-txt">고임피던스 악기(어쿠스틱 기타 등) 직접 연결 가능</div></div></div>
+      <div class="mc"><div class="mc-num">④</div><div><div class="mc-ttl">DSP CONTROL</div><div class="mc-txt">LCD 디스플레이 + 로터리 노브로 EQ·크로스오버·딜레이(0~100m, 0.25m 단위)·리미터 설정</div></div></div>
+      <div class="mc"><div class="mc-num">⑤</div><div><div class="mc-ttl">LINE INPUT / BLUETOOTH</div><div class="mc-txt">RCA 스테레오 라인 입력 또는 TWS 블루투스 연결. 두 대를 TWS 모드로 페어링하여 스테레오 구성 가능</div></div></div>
+      <div class="mc"><div class="mc-num">⑥⑦</div><div><div class="mc-ttl">MIX OUTPUT + SUB LEVEL</div><div class="mc-txt">MIX OUTPUT: 믹스 신호 출력. SUB LEVEL: 서브우퍼 음량 독립 조절</div></div></div>
+      <div class="mc"><div class="mc-num">⑧⑨</div><div><div class="mc-ttl">LINE LINK + INPUT SOCKET</div><div class="mc-txt">LINE LINK: 입력 1·2번 신호 출력. INPUT SOCKET: XLR/6.35mm COMBO</div></div></div>
     </div>
   </div>
 </section>
