@@ -254,9 +254,9 @@ footer{background:#111;color:#fff;padding:24px;font-size:11px;opacity:.5;text-al
 <div class="tab-wrap">
   <div class="tabs">
     <button class="tb on" onclick="goTab('sys-img')">시스템 소개</button>
+    <button class="tb" onclick="goTab('features')">주요 특징</button>
     <button class="tb" onclick="goTab('spec')">제품 사양</button>
     <button class="tb" onclick="goTab('install')">설치 방식</button>
-    <button class="tb" onclick="goTab('features')">주요 특징</button>
     <button class="tb" onclick="goTab('quote')">견적 계산기</button>
   </div>
 </div>
@@ -274,87 +274,86 @@ footer{background:#111;color:#fff;padding:24px;font-size:11px;opacity:.5;text-al
 </section>
 
 
+<!-- ══ FEATURES ══ -->
+<section class="sec sec-bg" id="features">
+  <div class="si">
+    <div class="sl">주요 특징</div>
+    <div class="st">KEY FEATURES</div>
+    <div class="feat-grid">
+      <div class="feat"><div class="feat-icon">🎯</div><div class="feat-ttl">동축(Coaxial) 트위터 배열</div><div class="feat-txt">8개의 트위터가 MF 유닛 위에 동축으로 배열되어 포인트 소스처럼 작동합니다. 원거리 음장 균일성과 오디오-비디오 포지셔닝 정확도가 크게 향상됩니다.</div></div>
+      <div class="feat"><div class="feat-icon">🛡</div><div class="feat-ttl">폴리우레아 캐비넷 마감</div><div class="feat-txt">일반 파우더 코팅 대비 충격·마모·방수·UV 내구성 대폭 향상. 투어링과 야외 공연에서 캐비넷을 장기간 안전하게 보호합니다.</div></div>
+      <div class="feat"><div class="feat-icon">⚙️</div><div class="feat-ttl">내장 24비트 DSP</div><div class="feat-txt">게인, EQ, 딜레이, 리미터, 프리셋 메모리를 패널 LCD에서 직접 조작하거나 RS-485 네트워크로 전체 시스템을 원격 통합 제어합니다.</div></div>
+      <div class="feat"><div class="feat-icon">🔌</div><div class="feat-ttl">RS-485 네트워크 통합 제어</div><div class="feat-txt">다수의 GL26A-T / GL26SA-T를 RS-485 네트워크로 연결하여 하나의 인터페이스에서 시스템 전체를 온라인 제어합니다.</div></div>
+      <div class="feat"><div class="feat-icon">🔧</div><div class="feat-ttl">다양한 설치 유연성</div><div class="feat-txt">스택, 서스펜션(Hanging), 폴 마운트(Supported), 풀 서스펜션 등 4가지 설치 방식. 3개 행잉 포인트로 안정적인 플라잉 운용 가능.</div></div>
+      <div class="feat"><div class="feat-icon">▶️</div><div class="feat-ttl">플러그 앤 플레이</div><div class="feat-txt">다수의 기본 프리셋 내장으로 전문 엔지니어 없이도 즉시 운용 가능. 소규모 행사부터 중형 투어링까지 빠른 현장 셋업이 이루어집니다.</div></div>
+    </div>
+  </div>
+</section>
+
+
 <!-- ══ SPEC ══ -->
-<section class="sec sec-bg" id="spec">
+<section class="sec" id="spec">
   <div class="si">
     <div class="sl">제품 사양</div>
     <div class="st">SPECIFICATIONS</div>
+    <p class="sd">GL26A-T 탑 스피커와 GL26SA-T 서브우퍼의 사양을 한눈에 비교할 수 있습니다.</p>
 
-    <div class="prod-tabs">
-      <button class="ptb on" onclick="showProd('p-a')">🔊 GL26A-T (TOP)</button>
-      <button class="ptb" onclick="showProd('p-sa')">🔈 GL26SA-T (SUB)</button>
-    </div>
-
-    <!-- GL26A-T -->
-    <div class="prod-panel on" id="p-a">
-      <div class="spec-grid">
-        <div class="spec-img-wrap">
-          <img src="https://www.soundking.com/data/upload/20230228/GL26A490_490.webp" alt="GL26A-T"
-               onerror="this.style.opacity='.3'">
-        </div>
-        <div>
-          <div class="prod-badge">Active Coaxial Line Array</div>
-          <div class="prod-h2">GL26A-T</div>
-          <div class="prod-type">Active Coaxial 2-Way Full-Range Line Array Speaker</div>
-          <p class="prod-desc">8개의 1인치 네오디뮴 도메 트위터와 2개의 6.5인치 네오디뮴 미드-베이스 드라이버. 트위터가 MF 스피커 위에 동축 배열되어 포인트 소스처럼 작동, 원거리 음장 균일성과 선명도를 극대화합니다. 내장 24비트 DSP, RS-485 네트워크 제어, 폴리우레아 마감 적용.</p>
-          <div class="slbl">제품 사양</div>
-          <table class="sp">
-            <tr><td>타입</td><td>액티브 동축 2웨이 풀레인지 라인어레이</td></tr>
-            <tr><td>재생주파수</td><td>70Hz ~ 20kHz (-10dB)</td></tr>
-            <tr><td>수평 커버리지</td><td>120°</td></tr>
-            <tr><td>수직 커버리지 / 엘리먼트 각도</td><td>8°</td></tr>
-            <tr><td>HF 유닛</td><td>8 × 1" 네오디뮴 도메 트위터 (동축)</td></tr>
-            <tr><td>MF/LF 유닛</td><td>2 × 6.5" 네오디뮴 미드-베이스</td></tr>
-            <tr><td>앰프 출력</td><td>400W (MF/LF) + 150W (HF) Class D</td></tr>
-            <tr class="sp-hl"><td>최대 음압 (SPL)</td><td>129 dB @ 1m</td></tr>
-            <tr><td>전원</td><td>230V / 115V</td></tr>
-            <tr><td>행잉 포인트</td><td>3개</td></tr>
-            <tr><td>하우징</td><td>플라이우드 + 폴리우레아 페인팅</td></tr>
-            <tr><td>DSP / 인터페이스</td><td>24bit DSP / LCD · Line Input · RS-485 · AC</td></tr>
-            <tr><td>제품 사이즈 (W×H×D)</td><td>205 × 354 × 340 mm</td></tr>
-            <tr><td>중량</td><td>8.5 kg</td></tr>
-          </table>
-          <div class="price-box">
-            <div class="slbl">권장 소비자가 (VAT 포함)</div>
-            <div class="price-main">2,200,000<small>원 / 개</small></div>
-            <div class="price-note">※ 실제 판매가는 구매처에 따라 다를 수 있습니다.</div>
-          </div>
+    <div class="spec-grid">
+      <!-- GL26A-T -->
+      <div>
+        <div class="prod-badge">Active Coaxial Line Array</div>
+        <div class="prod-h2">GL26A-T</div>
+        <div class="prod-type">Active Coaxial 2-Way Full-Range Line Array Speaker</div>
+        <p class="prod-desc">8개의 1인치 네오디뮴 도메 트위터와 2개의 6.5인치 네오디뮴 미드-베이스 드라이버. 트위터가 MF 스피커 위에 동축 배열되어 포인트 소스처럼 작동, 원거리 음장 균일성과 선명도를 극대화합니다. 내장 24비트 DSP, RS-485 네트워크 제어, 폴리우레아 마감 적용.</p>
+        <div class="slbl">제품 사양</div>
+        <table class="sp">
+          <tr><td>타입</td><td>액티브 동축 2웨이 풀레인지 라인어레이</td></tr>
+          <tr><td>재생주파수</td><td>70Hz ~ 20kHz (-10dB)</td></tr>
+          <tr><td>수평 커버리지</td><td>120°</td></tr>
+          <tr><td>수직 커버리지 / 엘리먼트 각도</td><td>8°</td></tr>
+          <tr><td>HF 유닛</td><td>8 × 1" 네오디뮴 도메 트위터 (동축)</td></tr>
+          <tr><td>MF/LF 유닛</td><td>2 × 6.5" 네오디뮴 미드-베이스</td></tr>
+          <tr><td>앰프 출력</td><td>400W (MF/LF) + 150W (HF) Class D</td></tr>
+          <tr class="sp-hl"><td>최대 음압 (SPL)</td><td>129 dB @ 1m</td></tr>
+          <tr><td>전원</td><td>230V / 115V</td></tr>
+          <tr><td>행잉 포인트</td><td>3개</td></tr>
+          <tr><td>하우징</td><td>플라이우드 + 폴리우레아 페인팅</td></tr>
+          <tr><td>DSP / 인터페이스</td><td>24bit DSP / LCD · Line Input · RS-485 · AC</td></tr>
+          <tr><td>제품 사이즈 (W×H×D)</td><td>205 × 354 × 340 mm</td></tr>
+          <tr><td>중량</td><td>8.5 kg</td></tr>
+        </table>
+        <div class="price-box">
+          <div class="slbl">권장 소비자가 (VAT 포함)</div>
+          <div class="price-main">2,200,000<small>원 / 개</small></div>
+          <div class="price-note">※ 실제 판매가는 구매처에 따라 다를 수 있습니다.</div>
         </div>
       </div>
-    </div>
 
-    <!-- GL26SA-T -->
-    <div class="prod-panel" id="p-sa">
-      <div class="spec-grid">
-        <div class="spec-img-wrap">
-          <img src="https://www.soundking.com/data/upload/20230228/GL206SA490_490.webp" alt="GL26SA-T"
-               onerror="this.style.opacity='.3'">
-        </div>
-        <div>
-          <div class="prod-badge">Active Line Array Subwoofer</div>
-          <div class="prod-h2">GL26SA-T</div>
-          <div class="prod-type">Active Single 15" Line Array Subwoofer</div>
-          <p class="prod-desc">GL26A-T와 함께 운용하는 1,200W 15인치 액티브 서브우퍼. 40Hz의 깊은 저역으로 시스템을 완성합니다. 독립형 DSP와 앰프, RS-485 네트워크 통합 제어, 정밀 서스펜션 시스템, 양측 매립형 손잡이 탑재. 폴리우레아 마감 적용.</p>
-          <div class="slbl">제품 사양</div>
-          <table class="sp">
-            <tr><td>타입</td><td>액티브 싱글 15인치 서브우퍼</td></tr>
-            <tr><td>재생주파수</td><td>40Hz ~ 150Hz (-10dB)</td></tr>
-            <tr><td>우퍼 유닛</td><td>1 × 15" 페라이트 우퍼</td></tr>
-            <tr><td>앰프 출력</td><td>1,200W</td></tr>
-            <tr class="sp-hl"><td>최대 음압 (SPL)</td><td>130 dB @ 1m</td></tr>
-            <tr><td>전원</td><td>230V</td></tr>
-            <tr><td>행잉 포인트</td><td>3개</td></tr>
-            <tr><td>하우징</td><td>플라이우드 + 폴리우레아 페인팅</td></tr>
-            <tr><td>손잡이</td><td>양측 매립형</td></tr>
-            <tr><td>DSP / 인터페이스</td><td>내장 DSP / LCD · Line Input · RS-485 · AC</td></tr>
-            <tr><td>제품 사이즈 (W×H×D)</td><td>474 × 506 × 673 mm</td></tr>
-            <tr><td>중량</td><td>41 kg</td></tr>
-          </table>
-          <div class="price-box">
-            <div class="slbl">권장 소비자가 (VAT 포함)</div>
-            <div class="price-main">2,900,000<small>원 / 개</small></div>
-            <div class="price-note">※ 실제 판매가는 구매처에 따라 다를 수 있습니다.</div>
-          </div>
+      <!-- GL26SA-T -->
+      <div>
+        <div class="prod-badge">Active Line Array Subwoofer</div>
+        <div class="prod-h2">GL26SA-T</div>
+        <div class="prod-type">Active Single 15" Line Array Subwoofer</div>
+        <p class="prod-desc">GL26A-T와 함께 운용하는 1,200W 15인치 액티브 서브우퍼. 40Hz의 깊은 저역으로 시스템을 완성합니다. 독립형 DSP와 앰프, RS-485 네트워크 통합 제어, 정밀 서스펜션 시스템, 양측 매립형 손잡이 탑재. 폴리우레아 마감 적용.</p>
+        <div class="slbl">제품 사양</div>
+        <table class="sp">
+          <tr><td>타입</td><td>액티브 싱글 15인치 서브우퍼</td></tr>
+          <tr><td>재생주파수</td><td>40Hz ~ 150Hz (-10dB)</td></tr>
+          <tr><td>우퍼 유닛</td><td>1 × 15" 페라이트 우퍼</td></tr>
+          <tr><td>앰프 출력</td><td>1,200W</td></tr>
+          <tr class="sp-hl"><td>최대 음압 (SPL)</td><td>130 dB @ 1m</td></tr>
+          <tr><td>전원</td><td>230V</td></tr>
+          <tr><td>행잉 포인트</td><td>3개</td></tr>
+          <tr><td>하우징</td><td>플라이우드 + 폴리우레아 페인팅</td></tr>
+          <tr><td>손잡이</td><td>양측 매립형</td></tr>
+          <tr><td>DSP / 인터페이스</td><td>내장 DSP / LCD · Line Input · RS-485 · AC</td></tr>
+          <tr><td>제품 사이즈 (W×H×D)</td><td>474 × 506 × 673 mm</td></tr>
+          <tr><td>중량</td><td>41 kg</td></tr>
+        </table>
+        <div class="price-box">
+          <div class="slbl">권장 소비자가 (VAT 포함)</div>
+          <div class="price-main">2,900,000<small>원 / 개</small></div>
+          <div class="price-note">※ 실제 판매가는 구매처에 따라 다를 수 있습니다.</div>
         </div>
       </div>
     </div>
@@ -371,17 +370,12 @@ footer{background:#111;color:#fff;padding:24px;font-size:11px;opacity:.5;text-al
 
     <!-- Overview 이미지 -->
     <div class="sl" style="margin-bottom:12px">설치 모드 Overview</div>
-    <img src="gl26_2.jpg" alt="Stacked / Hanging / Supported 설치 방식"
-         style="width:100%;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,.1);margin-bottom:40px"
+    <img src="gl26_3.png" alt="GL26 설치 방식 도해 — 스택·서스펜션·폴마운트·풀서스펜션"
+         style="width:100%;border-radius:12px;background:#fff;padding:20px;box-shadow:0 4px 20px rgba(0,0,0,.08);margin-bottom:40px"
          onerror="this.style.display='none'">
 
-    <!-- 도해 + 설명 카드 -->
-    <div class="install-layout">
-      <div>
-        <img src="gl26_3.png" alt="GL26 설치 방식 도해 — 스택·서스펜션·폴마운트·풀서스펜션"
-             style="width:100%;border-radius:12px;background:#fff;padding:20px;box-shadow:0 4px 20px rgba(0,0,0,.08)"
-             onerror="this.style.display='none'">
-      </div>
+    <!-- 설명 카드 -->
+    <div class="install-layout" style="grid-template-columns:1fr">
       <div class="inst-modes">
         <div class="inst">
           <div class="inst-num">01</div>
@@ -404,23 +398,6 @@ footer{background:#111;color:#fff;padding:24px;font-size:11px;opacity:.5;text-al
           <div class="inst-txt">GL26A 범퍼와 GL26SA 범퍼를 모두 사용하여 서브우퍼와 탑 스피커를 완전히 에어리얼로 구성합니다.</div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ══ FEATURES ══ -->
-<section class="sec sec-bg" id="features">
-  <div class="si">
-    <div class="sl">주요 특징</div>
-    <div class="st">KEY FEATURES</div>
-    <div class="feat-grid">
-      <div class="feat"><div class="feat-icon">🎯</div><div class="feat-ttl">동축(Coaxial) 트위터 배열</div><div class="feat-txt">8개의 트위터가 MF 유닛 위에 동축으로 배열되어 포인트 소스처럼 작동합니다. 원거리 음장 균일성과 오디오-비디오 포지셔닝 정확도가 크게 향상됩니다.</div></div>
-      <div class="feat"><div class="feat-icon">🛡</div><div class="feat-ttl">폴리우레아 캐비넷 마감</div><div class="feat-txt">일반 파우더 코팅 대비 충격·마모·방수·UV 내구성 대폭 향상. 투어링과 야외 공연에서 캐비넷을 장기간 안전하게 보호합니다.</div></div>
-      <div class="feat"><div class="feat-icon">⚙️</div><div class="feat-ttl">내장 24비트 DSP</div><div class="feat-txt">게인, EQ, 딜레이, 리미터, 프리셋 메모리를 패널 LCD에서 직접 조작하거나 RS-485 네트워크로 전체 시스템을 원격 통합 제어합니다.</div></div>
-      <div class="feat"><div class="feat-icon">🔌</div><div class="feat-ttl">RS-485 네트워크 통합 제어</div><div class="feat-txt">다수의 GL26A-T / GL26SA-T를 RS-485 네트워크로 연결하여 하나의 인터페이스에서 시스템 전체를 온라인 제어합니다.</div></div>
-      <div class="feat"><div class="feat-icon">🔧</div><div class="feat-ttl">다양한 설치 유연성</div><div class="feat-txt">스택, 서스펜션(Hanging), 폴 마운트(Supported), 풀 서스펜션 등 4가지 설치 방식. 3개 행잉 포인트로 안정적인 플라잉 운용 가능.</div></div>
-      <div class="feat"><div class="feat-icon">▶️</div><div class="feat-ttl">플러그 앤 플레이</div><div class="feat-txt">다수의 기본 프리셋 내장으로 전문 엔지니어 없이도 즉시 운용 가능. 소규모 행사부터 중형 투어링까지 빠른 현장 셋업이 이루어집니다.</div></div>
     </div>
   </div>
 </section>
@@ -643,7 +620,7 @@ footer{background:#111;color:#fff;padding:24px;font-size:11px;opacity:.5;text-al
 
 <script>
 // ── 탭 네비게이션 ──
-const sections = ['sys-img','spec','install','features','quote'];
+const sections = ['sys-img','features','spec','install','quote'];
 function goTab(id) {
   const el = document.getElementById(id);
   if (!el) return;
