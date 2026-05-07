@@ -45,6 +45,12 @@ header{background:#fff;border-bottom:1px solid var(--border);padding:0 24px;heig
 .hero-img{text-align:center}
 .hero-img img{width:100%;max-width:380px;filter:drop-shadow(0 16px 48px rgba(108,63,197,.4));border-radius:4px}
 .hero-img-cap{margin-top:12px;font-size:11px;color:rgba(255,255,255,.35);letter-spacing:.1em;text-transform:uppercase}
+/* HERO IMAGE CROSS-FADE SLIDER (P118_1.png ↔ P118_02.jpg) */
+.hero-slider{position:relative;width:100%;max-width:380px;height:380px;margin:0 auto}
+.hero-slider .hs-img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;animation:p118fade 7s infinite ease-in-out}
+.hero-slider .hs-a{animation-delay:0s}
+.hero-slider .hs-b{animation-delay:3.5s}
+@keyframes p118fade{0%,42%{opacity:1}50%,92%{opacity:0}100%{opacity:1}}
 
 /* TABS */
 .tab-wrap{background:#fff;border-bottom:2px solid var(--border);position:sticky;top:60px;z-index:100}
@@ -213,8 +219,12 @@ footer{background:#111;color:#fff;padding:24px;font-size:11px;opacity:.5;text-al
       </div>
     </div>
     <div class="hero-img">
-      <img src="P118_01.jpg" alt="P118 시스템"
-           onerror="this.style.display='none'">
+      <div class="hero-slider">
+        <img src="P118_1.png"  alt="P118 시스템 1" class="hs-img hs-a"
+             onerror="this.style.display='none'">
+        <img src="P118_02.jpg" alt="P118 시스템 2" class="hs-img hs-b"
+             onerror="this.style.display='none'">
+      </div>
       <div class="hero-img-cap">P118 Active Mobile Array Sound System</div>
     </div>
   </div>
@@ -293,74 +303,55 @@ footer{background:#111;color:#fff;padding:24px;font-size:11px;opacity:.5;text-al
   <div class="si">
     <div class="sl">제품 사양</div>
     <div class="st">SPECIFICATIONS</div>
+    <p class="sd">패시브 어레이 TOP과 18인치 액티브 서브우퍼의 사양을 한눈에 비교할 수 있습니다.</p>
 
-    <div class="prod-tabs">
-      <button class="ptb on" onclick="showProd('p-top', event)">🔊 패시브 어레이 (TOP)</button>
-      <button class="ptb" onclick="showProd('p-sub', event)">🔈 18" 액티브 서브우퍼 (SUB)</button>
-    </div>
+    <div class="spec-grid">
+      <!-- TOP — 패시브 어레이 -->
+      <div>
+        <div class="prod-badge">Passive Array Full-Range Loudspeaker</div>
+        <div class="prod-h2" style="font-size:2.2rem;line-height:1">P118 Array</div>
+        <div class="prod-type">Passive Array Full-Range Loudspeaker</div>
+        <p class="prod-desc">4개의 5인치 네오디뮴 MLF 스피커와 16개의 1인치 돔 혼 HF로 구성된 캐비닛 어레이. 혼 HF 설계로 강한 투과력과 분석력을 자랑하며, 수직 각도 커버리지가 넓어 다양한 공간에서 균일한 음장을 제공합니다. 뉴매틱 리프팅 브라켓으로 높이를 자유롭게 조절할 수 있습니다.</p>
+        <div class="slbl">제품 사양</div>
+        <table class="sp">
+          <tr><td>MF 유닛</td><td>4 × 5" 네오디뮴 MLF 스피커</td></tr>
+          <tr><td>HF 유닛</td><td>16 × 1" 돔 혼 HF</td></tr>
+          <tr><td>커버리지 (H × V)</td><td>100° × 60°</td></tr>
+          <tr><td>높이 조절</td><td>뉴매틱 리프팅 브라켓 (무단 조절)</td></tr>
+          <tr><td>연결 방식</td><td>내부 소켓 배선 — 외부 케이블 불필요</td></tr>
+          <tr><td>제품 사이즈 (W×H×D)</td><td>198 × 736 × 339 mm</td></tr>
+          <tr><td>중량</td><td>12.1 kg</td></tr>
+        </table>
+      </div>
 
-    <!-- TOP -->
-    <div class="prod-panel on" id="p-top">
-      <div class="spec-grid">
-        <div class="spec-img-wrap">
-          <img src="P118_02.jpg" alt="P118 패시브 어레이"
-               onerror="this.style.opacity='.3'">
-        </div>
-        <div>
-          <div class="prod-badge">Passive Array Full-Range Loudspeaker</div>
-          <div class="prod-h2" style="font-size:2.2rem;line-height:1">P118 Array</div>
-          <div class="prod-type">Passive Array Full-Range Loudspeaker</div>
-          <p class="prod-desc">4개의 5인치 네오디뮴 MLF 스피커와 16개의 1인치 돔 혼 HF로 구성된 캐비닛 어레이. 혼 HF 설계로 강한 투과력과 분석력을 자랑하며, 수직 각도 커버리지가 넓어 다양한 공간에서 균일한 음장을 제공합니다. 뉴매틱 리프팅 브라켓으로 높이를 자유롭게 조절할 수 있습니다.</p>
-          <div class="slbl">제품 사양</div>
-          <table class="sp">
-            <tr><td>MF 유닛</td><td>4 × 5" 네오디뮴 MLF 스피커</td></tr>
-            <tr><td>HF 유닛</td><td>16 × 1" 돔 혼 HF</td></tr>
-            <tr><td>커버리지 (H × V)</td><td>100° × 60°</td></tr>
-            <tr><td>높이 조절</td><td>뉴매틱 리프팅 브라켓 (무단 조절)</td></tr>
-            <tr><td>연결 방식</td><td>내부 소켓 배선 — 외부 케이블 불필요</td></tr>
-            <tr><td>제품 사이즈 (W×H×D)</td><td>198 × 736 × 339 mm</td></tr>
-            <tr><td>중량</td><td>12.1 kg</td></tr>
-          </table>
+      <!-- SUB — 18인치 액티브 서브우퍼 -->
+      <div>
+        <div class="prod-badge">18" Active Subwoofer</div>
+        <div class="prod-h2" style="font-size:2.2rem;line-height:1">18" Active SUB</div>
+        <div class="prod-type">18" Active Subwoofer with Integrated Mixer &amp; DSP</div>
+        <p class="prod-desc">18인치 LF 스피커와 2×800W CLASS-D 앰프가 내장된 액티브 서브우퍼. 4채널 입력 믹서, 24비트 DSP, 0~100m 딜레이 DSP 설정을 탑재하여 단독으로 완전한 PA 시스템을 구성합니다. 위상 반전 설계와 캐스터로 이동과 세팅이 간편합니다.</p>
+        <div class="slbl">제품 사양</div>
+        <table class="sp">
+          <tr><td>LF 스피커</td><td>18" LF 스피커</td></tr>
+          <tr><td>앰프 출력</td><td>2 × 800W RMS (CLASS-D)</td></tr>
+          <tr class="sp-hl"><td>시스템 최대 음압</td><td>132 dB (peak)</td></tr>
+          <tr><td>주파수 응답</td><td>30Hz ~ 20kHz (-10dB)</td></tr>
+          <tr><td>입력 감도</td><td>0dBu</td></tr>
+          <tr><td>전원</td><td>AC 100V ~ 240V</td></tr>
+          <tr><td>믹서 입력</td><td>4채널 (Mic/Line×2, RCA 스테레오, HI-Z×1)</td></tr>
+          <tr><td>출력</td><td>XLR 라인 출력×2, MIX OUTPUT×1</td></tr>
+          <tr><td>DSP</td><td>24bit / 게인·EQ·크로스오버·딜레이(0~100m)·리미터</td></tr>
+          <tr><td>이동 편의</td><td>캐스터(바퀴) 내장</td></tr>
+          <tr><td>제품 사이즈 (W×H×D)</td><td>523 × 852 × 564 mm</td></tr>
+          <tr><td>중량</td><td>44.5 kg</td></tr>
+        </table>
+        <div class="price-box">
+          <div class="slbl">가격</div>
+          <div class="price-inquiry">견적문의</div>
+          <div class="price-note">※ 실제 판매가는 영업 문의를 통해 확인해 주세요.<br>※ 참고 소비자가: 8,000,000원 / 조 (VAT 포함)</div>
         </div>
       </div>
     </div>
-
-    <!-- SUB -->
-    <div class="prod-panel" id="p-sub">
-      <div class="spec-grid">
-        <div class="spec-img-wrap">
-          <img src="P118_03.jpg" alt="P118 서브우퍼"
-               onerror="this.style.opacity='.3'">
-        </div>
-        <div>
-          <div class="prod-badge">18" Active Subwoofer</div>
-          <div class="prod-h2" style="font-size:2.2rem;line-height:1">18" Active SUB</div>
-          <div class="prod-type">18" Active Subwoofer with Integrated Mixer & DSP</div>
-          <p class="prod-desc">18인치 LF 스피커와 2×800W CLASS-D 앰프가 내장된 액티브 서브우퍼. 4채널 입력 믹서, 24비트 DSP, 0~100m 딜레이 DSP 설정을 탑재하여 단독으로 완전한 PA 시스템을 구성합니다. 위상 반전 설계와 캐스터로 이동과 세팅이 간편합니다.</p>
-          <div class="slbl">제품 사양</div>
-          <table class="sp">
-            <tr><td>LF 스피커</td><td>18" LF 스피커</td></tr>
-            <tr><td>앰프 출력</td><td>2 × 800W RMS (CLASS-D)</td></tr>
-            <tr class="sp-hl"><td>시스템 최대 음압</td><td>132 dB (peak)</td></tr>
-            <tr><td>주파수 응답</td><td>30Hz ~ 20kHz (-10dB)</td></tr>
-            <tr><td>입력 감도</td><td>0dBu</td></tr>
-            <tr><td>전원</td><td>AC 100V ~ 240V</td></tr>
-            <tr><td>믹서 입력</td><td>4채널 (Mic/Line×2, RCA 스테레오, HI-Z×1)</td></tr>
-            <tr><td>출력</td><td>XLR 라인 출력×2, MIX OUTPUT×1</td></tr>
-            <tr><td>DSP</td><td>24bit / 게인·EQ·크로스오버·딜레이(0~100m)·리미터</td></tr>
-            <tr><td>이동 편의</td><td>캐스터(바퀴) 내장</td></tr>
-            <tr><td>제품 사이즈 (W×H×D)</td><td>523 × 852 × 564 mm</td></tr>
-            <tr><td>중량</td><td>44.5 kg</td></tr>
-          </table>
-          <div class="price-box">
-            <div class="slbl">가격</div>
-            <div class="price-inquiry">견적문의</div>
-            <div class="price-note">※ 실제 판매가는 영업 문의를 통해 확인해 주세요.<br>※ 참고 소비자가: 8,000,000원 / 조 (VAT 포함)</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
   </div>
 </section>
 
@@ -371,21 +362,13 @@ footer{background:#111;color:#fff;padding:24px;font-size:11px;opacity:.5;text-al
     <div class="sl">내장 믹서</div>
     <div class="st">BUILT-IN 4CH MIXER</div>
     <p class="sd">별도의 믹서 없이 서브우퍼 상단 패널에서 직접 4채널 입력을 제어할 수 있습니다.</p>
-    <div class="mixer-grid">
-      <div class="mixer-img">
-        <img src="P118_01.jpg" alt="P118 믹서 패널"
-             style="width:100%;max-width:380px"
-             onerror="this.style.opacity='.3'">
-        <p style="font-size:11px;color:rgba(255,255,255,.4);margin-top:10px;text-align:center">서브우퍼 상단 컨트롤 패널</p>
-      </div>
-      <div class="mixer-channels">
-        <div class="mc"><div class="mc-num">1·2</div><div class="mc-info"><div class="mc-ttl">GAIN A·B — Mic/Line 입력</div><div class="mc-txt">XLR/6.35mm COMBO 소켓. LINE/MIC 선택 스위치로 라인·마이크 게인 별도 설정 가능</div></div></div>
-        <div class="mc"><div class="mc-num">3</div><div class="mc-info"><div class="mc-ttl">GAIN C HI-Z — 악기 입력</div><div class="mc-txt">6.35mm JACK. 어쿠스틱 기타 등 고임피던스 악기 직접 연결</div></div></div>
-        <div class="mc"><div class="mc-num">4</div><div class="mc-info"><div class="mc-ttl">GAIN D — 라인 입력</div><div class="mc-txt">RCA 스테레오 라인 입력. 음원 플레이어, 노트북 등 라인 레벨 기기 연결</div></div></div>
-        <div class="mc"><div class="mc-num">DSP</div><div class="mc-info"><div class="mc-ttl">DSP CONTROL</div><div class="mc-txt">LCD 디스플레이 + 로터리 노브로 EQ·크로스오버·딜레이(0~100m, 0.25m 단위)·리미터 설정</div></div></div>
-        <div class="mc"><div class="mc-num">SUB</div><div class="mc-info"><div class="mc-ttl">SUB LEVEL</div><div class="mc-txt">서브우퍼 음량을 독립적으로 조절. 저역 밸런스를 현장에 맞게 즉시 변경 가능</div></div></div>
-        <div class="mc"><div class="mc-num">OUT</div><div class="mc-info"><div class="mc-ttl">LINE LINK + MIX OUTPUT</div><div class="mc-txt">LINE LINK: 입력 1·2번 신호를 개별 출력. MIX OUTPUT: 믹스 신호 출력으로 추가 스피커 연결</div></div></div>
-      </div>
+    <div class="mixer-channels" style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+      <div class="mc"><div class="mc-num">1·2</div><div class="mc-info"><div class="mc-ttl">GAIN A·B — Mic/Line 입력</div><div class="mc-txt">XLR/6.35mm COMBO 소켓. LINE/MIC 선택 스위치로 라인·마이크 게인 별도 설정 가능</div></div></div>
+      <div class="mc"><div class="mc-num">3</div><div class="mc-info"><div class="mc-ttl">GAIN C HI-Z — 악기 입력</div><div class="mc-txt">6.35mm JACK. 어쿠스틱 기타 등 고임피던스 악기 직접 연결</div></div></div>
+      <div class="mc"><div class="mc-num">4</div><div class="mc-info"><div class="mc-ttl">GAIN D — 라인 입력</div><div class="mc-txt">RCA 스테레오 라인 입력. 음원 플레이어, 노트북 등 라인 레벨 기기 연결</div></div></div>
+      <div class="mc"><div class="mc-num">DSP</div><div class="mc-info"><div class="mc-ttl">DSP CONTROL</div><div class="mc-txt">LCD 디스플레이 + 로터리 노브로 EQ·크로스오버·딜레이(0~100m, 0.25m 단위)·리미터 설정</div></div></div>
+      <div class="mc"><div class="mc-num">SUB</div><div class="mc-info"><div class="mc-ttl">SUB LEVEL</div><div class="mc-txt">서브우퍼 음량을 독립적으로 조절. 저역 밸런스를 현장에 맞게 즉시 변경 가능</div></div></div>
+      <div class="mc"><div class="mc-num">OUT</div><div class="mc-info"><div class="mc-ttl">LINE LINK + MIX OUTPUT</div><div class="mc-txt">LINE LINK: 입력 1·2번 신호를 개별 출력. MIX OUTPUT: 믹스 신호 출력으로 추가 스피커 연결</div></div></div>
     </div>
   </div>
 </section>
