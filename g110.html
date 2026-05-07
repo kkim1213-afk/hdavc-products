@@ -157,7 +157,25 @@ table.sp td:last-child{color:var(--dark);font-weight:600}
 
 footer{background:#111;color:#fff;padding:24px;font-size:11px;opacity:.5;text-align:center;line-height:1.8}
 
-@media(max-width:1024px){.hero-inner{grid-template-columns:1fr}.hero-img{display:none}.spec-grid{grid-template-columns:1fr}.spec-img-wrap{position:static}}
+/* RELATED PRODUCTS */
+.rel-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.rel-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--border);border-radius:14px;overflow:hidden;text-decoration:none;color:inherit;transition:all .25s;position:relative}
+.rel-card:hover{border-color:rgba(233,69,96,.4);transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.08)}
+.rel-img-wrap{background:linear-gradient(135deg,#1a2332,#0d1117);padding:32px;text-align:center;border-bottom:1px solid var(--border)}
+.rel-img-wrap img{width:100%;max-width:300px;height:170px;object-fit:contain;filter:drop-shadow(0 6px 18px rgba(0,0,0,.4))}
+.rel-body{padding:24px 26px 26px}
+.rel-tag{display:inline-block;background:#fff3f5;border:1px solid #ffd0d8;color:var(--red);font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+.rel-tag-blue{background:#eff6ff;border-color:#bfdbfe;color:#2563eb}
+.rel-name{font-family:'Bebas Neue',sans-serif;font-size:2.4rem;letter-spacing:.06em;line-height:.95;margin-bottom:4px;color:var(--dark)}
+.rel-sub{font-size:12px;color:var(--light);text-transform:uppercase;letter-spacing:.06em;margin-bottom:14px}
+.rel-desc{font-size:13px;color:var(--mid);line-height:1.85;margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid var(--border)}
+.rel-bullets{list-style:none;margin:0 0 18px;padding:0}
+.rel-bullets li{font-size:12.5px;color:var(--mid);line-height:1.85;padding-left:16px;position:relative}
+.rel-bullets li::before{content:'·';position:absolute;left:4px;color:var(--red);font-weight:900}
+.rel-link{display:inline-block;font-size:13px;font-weight:700;color:var(--red);letter-spacing:.04em}
+.rel-card:hover .rel-link{text-decoration:underline}
+
+@media(max-width:1024px){.hero-inner{grid-template-columns:1fr}.hero-img{display:none}.spec-grid{grid-template-columns:1fr}.spec-img-wrap{position:static}.rel-grid{grid-template-columns:1fr}}
 @media(max-width:768px){.feat-grid{grid-template-columns:1fr 1fr}.install-modes{grid-template-columns:1fr 1fr}.preset-grid{grid-template-columns:1fr!important}.ci{grid-template-columns:1fr auto}}
 @media(max-width:540px){.feat-grid{grid-template-columns:1fr}.install-modes{grid-template-columns:1fr}.hero-inner,.sec{padding-left:16px;padding-right:16px}.hero-inner{padding-top:40px;padding-bottom:40px}.sec{padding-top:44px;padding-bottom:44px}}
 </style>
@@ -217,8 +235,7 @@ footer{background:#111;color:#fff;padding:24px;font-size:11px;opacity:.5;text-al
   <div class="tabs">
     <button class="tb on" onclick="goTab('sec-spec')">제품 사양</button>
     <button class="tb" onclick="goTab('sec-features')">주요 특징</button>
-    <button class="tb" onclick="goTab('sec-install')">설치 방식</button>
-    <button class="tb" onclick="goTab('sec-quote')">견적 계산기</button>
+    <button class="tb" onclick="goTab('sec-related')">관련 상품</button>
   </div>
 </div>
 
@@ -228,87 +245,68 @@ footer{background:#111;color:#fff;padding:24px;font-size:11px;opacity:.5;text-al
   <div class="si">
     <div class="sl">제품 사양</div>
     <div class="st">SPECIFICATIONS</div>
+    <p class="sd">G110 탑 스피커와 G110S 18인치 서브우퍼의 사양을 한눈에 비교할 수 있습니다.</p>
 
-    <div class="prod-tabs">
-      <button class="ptb on" onclick="showProd('p-g110', event)">🔊 G110 (TOP)</button>
-      <button class="ptb" onclick="showProd('p-g110s', event)">🔈 G110S (SUB)</button>
-    </div>
-
-    <!-- G110 -->
-    <div class="prod-panel on" id="p-g110">
-      <div class="spec-grid">
-        <div class="spec-img-wrap">
-          <img src="g110_1.png" alt="G110"
-               onerror="this.src='https://www.soundking.com/data/upload/20230921/G110490_490.webp'">
+    <div class="spec-grid">
+      <!-- G110 -->
+      <div>
+        <div class="prod-badge">Passive 2-Way Line Array</div>
+        <div class="prod-h2">G110</div>
+        <div class="prod-type">Passive 2-Way 10" Line Array Full-Range Speaker</div>
+        <p class="prod-desc">10인치 네오디뮴 우퍼와 <strong>Italy FaitalPRO 2.6인치 65mm 커스텀 압축 드라이버</strong>를 탑재한 컴팩트 패시브 라인어레이. FaitalPRO 드라이버는 구면파를 등위상 평면파로 변환하는 평면파 컨버터를 통해 원거리 간섭을 크게 줄이고 선명도를 향상시킵니다. 사다리꼴 캐비넷 설계로 유닛 간 간격을 최소화하며, 정밀 알루미늄 합금 리프팅 시스템으로 캐비넷 간 연결 각도를 0~10°로 조절할 수 있어 다양한 현장에 대응합니다.</p>
+        <div class="slbl">제품 사양</div>
+        <table class="sp">
+          <tr><td>타입</td><td>패시브 2웨이 풀레인지 라인어레이</td></tr>
+          <tr><td>재생주파수</td><td>60Hz ~ 20kHz (-10dB) / 70Hz ~ 18kHz (±3dB)</td></tr>
+          <tr><td>커버리지</td><td>수평 120° × 수직 10°</td></tr>
+          <tr><td>LF 유닛</td><td>1 × 10" (260mm) 3" 보이스코일 / 네오디뮴</td></tr>
+          <tr><td>HF 유닛</td><td>1 × 2.6" 65mm <strong>Italy FaitalPRO</strong> 압축 드라이버 / 네오디뮴</td></tr>
+          <tr><td>감도 (1W @ 1m)</td><td>HF: 110dB / LF: 103dB</td></tr>
+          <tr><td>임피던스</td><td>HF: 16Ω / LF: 16Ω (각각 독립)</td></tr>
+          <tr><td>출력</td><td>HF: 80W / LF: 400W</td></tr>
+          <tr class="sp-hl"><td>최대 음압 (SPL)</td><td>HF: 135dB / LF: 135dB @ 1m</td></tr>
+          <tr><td>권장 크로스오버</td><td>1.5kHz</td></tr>
+          <tr><td>연결 각도 조절</td><td>0° ~ 10° (정밀 알루미늄 합금 리프팅 시스템)</td></tr>
+          <tr><td>하우징</td><td>고품질 자작나무 합판 + 샌드 페인트</td></tr>
+          <tr><td>제품 사이즈 (W×H×D)</td><td>525 × 281 × 343 mm</td></tr>
+          <tr><td>중량</td><td>16 kg</td></tr>
+          <tr><td>공급 방식</td><td>발주계약 공급</td></tr>
+        </table>
+        <div class="price-box">
+          <div class="slbl">가격</div>
+          <div class="price-inquiry">견적문의</div>
+          <div class="price-note">※ 발주계약 공급 제품입니다. 수량 및 납기는 영업 문의를 통해 확인해 주세요.<br>※ 참고 소비자가: 2,500,000원 / 개 (VAT 포함)</div>
         </div>
-        <div>
-          <div class="prod-badge">Passive 2-Way Line Array</div>
-          <div class="prod-h2">G110</div>
-          <div class="prod-type">Passive 2-Way 10" Line Array Full-Range Speaker</div>
-          <p class="prod-desc">10인치 네오디뮴 우퍼와 <strong>Italy FaitalPRO 2.6인치 65mm 커스텀 압축 드라이버</strong>를 탑재한 컴팩트 패시브 라인어레이. FaitalPRO 드라이버는 구면파를 등위상 평면파로 변환하는 평면파 컨버터를 통해 원거리 간섭을 크게 줄이고 선명도를 향상시킵니다. 사다리꼴 캐비넷 설계로 유닛 간 간격을 최소화하며, 정밀 알루미늄 합금 리프팅 시스템으로 캐비넷 간 연결 각도를 0~10°로 조절할 수 있어 다양한 현장에 대응합니다.</p>
-          <div class="slbl">제품 사양</div>
-          <table class="sp">
-            <tr><td>타입</td><td>패시브 2웨이 풀레인지 라인어레이</td></tr>
-            <tr><td>재생주파수</td><td>60Hz ~ 20kHz (-10dB) / 70Hz ~ 18kHz (±3dB)</td></tr>
-            <tr><td>커버리지</td><td>수평 120° × 수직 10°</td></tr>
-            <tr><td>LF 유닛</td><td>1 × 10" (260mm) 3" 보이스코일 / 네오디뮴</td></tr>
-            <tr><td>HF 유닛</td><td>1 × 2.6" 65mm <strong>Italy FaitalPRO</strong> 압축 드라이버 / 네오디뮴</td></tr>
-            <tr><td>감도 (1W @ 1m)</td><td>HF: 110dB / LF: 103dB</td></tr>
-            <tr><td>임피던스</td><td>HF: 16Ω / LF: 16Ω (각각 독립)</td></tr>
-            <tr><td>출력</td><td>HF: 80W / LF: 400W</td></tr>
-            <tr class="sp-hl"><td>최대 음압 (SPL)</td><td>HF: 135dB / LF: 135dB @ 1m</td></tr>
-            <tr><td>권장 크로스오버</td><td>1.5kHz</td></tr>
-            <tr><td>연결 각도 조절</td><td>0° ~ 10° (정밀 알루미늄 합금 리프팅 시스템)</td></tr>
-            <tr><td>하우징</td><td>고품질 자작나무 합판 + 샌드 페인트</td></tr>
-            <tr><td>제품 사이즈 (W×H×D)</td><td>525 × 281 × 343 mm</td></tr>
-            <tr><td>중량</td><td>16 kg</td></tr>
-            <tr><td>공급 방식</td><td>발주계약 공급</td></tr>
-          </table>
-          <div class="price-box">
-            <div class="slbl">가격</div>
-            <div class="price-inquiry">견적문의</div>
-            <div class="price-note">※ 발주계약 공급 제품입니다. 수량 및 납기는 영업 문의를 통해 확인해 주세요.<br>※ 참고 소비자가: 2,500,000원 / 개 (VAT 포함)</div>
-          </div>
+      </div>
+
+      <!-- G110S -->
+      <div>
+        <div class="prod-badge">Passive 18" Subwoofer</div>
+        <div class="prod-h2">G110S</div>
+        <div class="prod-type">Passive 18" Line Array Subwoofer</div>
+        <p class="prod-desc">G110 라인어레이 시스템의 저역을 담당하는 18인치 패시브 서브우퍼. 100mm 보이스코일을 채용한 고성능 18인치 유닛이 40Hz(±3dB)까지 뻗는 넓은 다이나믹 레인지를 구현합니다. 다중 보강 구조의 고강도 자작나무 합판 캐비넷으로 고출력·고음압 환경에서 공진을 최소화하고 저역 표현력을 극대화합니다.</p>
+        <div class="slbl">제품 사양</div>
+        <table class="sp">
+          <tr><td>타입</td><td>패시브 18인치 베이스 리플렉스 서브우퍼</td></tr>
+          <tr><td>재생주파수</td><td>35Hz ~ 180Hz (-10dB) / 40Hz ~ 150Hz (±3dB)</td></tr>
+          <tr><td>우퍼 유닛</td><td>1 × 18" / 4" (100mm) 보이스코일</td></tr>
+          <tr><td>감도 (1W @ 1m)</td><td>98dB</td></tr>
+          <tr><td>출력</td><td>900W</td></tr>
+          <tr class="sp-hl"><td>최대 음압 (SPL)</td><td>134 dB @ 1m</td></tr>
+          <tr><td>임피던스</td><td>8Ω</td></tr>
+          <tr><td>하우징</td><td>고강도 자작나무 합판 + 다중 보강 구조 + 블랙 페인트</td></tr>
+          <tr><td>손잡이</td><td>양측 장착</td></tr>
+          <tr><td>제품 사이즈 (W×H×D)</td><td>525 × 696 × 705 mm</td></tr>
+          <tr><td>중량</td><td>44 kg</td></tr>
+          <tr><td>공급 방식</td><td>발주계약 공급</td></tr>
+        </table>
+        <div class="price-box">
+          <div class="slbl">가격</div>
+          <div class="price-inquiry">견적문의</div>
+          <div class="price-note">※ 발주계약 공급 제품입니다. 수량 및 납기는 영업 문의를 통해 확인해 주세요.<br>※ 참고 소비자가: 2,500,000원 / 개 (VAT 포함)</div>
         </div>
       </div>
     </div>
-
-    <!-- G110S -->
-    <div class="prod-panel" id="p-g110s">
-      <div class="spec-grid">
-        <div class="spec-img-wrap">
-          <img src="g110s_1.png" alt="G110S"
-               onerror="this.src='https://www.soundking.com/data/watermark/20230921/G110S.jpg'">
-        </div>
-        <div>
-          <div class="prod-badge">Passive 18" Subwoofer</div>
-          <div class="prod-h2">G110S</div>
-          <div class="prod-type">Passive 18" Line Array Subwoofer</div>
-          <p class="prod-desc">G110 라인어레이 시스템의 저역을 담당하는 18인치 패시브 서브우퍼. 100mm 보이스코일을 채용한 고성능 18인치 유닛이 40Hz(±3dB)까지 뻗는 넓은 다이나믹 레인지를 구현합니다. 다중 보강 구조의 고강도 자작나무 합판 캐비넷으로 고출력·고음압 환경에서 공진을 최소화하고 저역 표현력을 극대화합니다.</p>
-          <div class="slbl">제품 사양</div>
-          <table class="sp">
-            <tr><td>타입</td><td>패시브 18인치 베이스 리플렉스 서브우퍼</td></tr>
-            <tr><td>재생주파수</td><td>35Hz ~ 180Hz (-10dB) / 40Hz ~ 150Hz (±3dB)</td></tr>
-            <tr><td>우퍼 유닛</td><td>1 × 18" / 4" (100mm) 보이스코일</td></tr>
-            <tr><td>감도 (1W @ 1m)</td><td>98dB</td></tr>
-            <tr><td>출력</td><td>900W</td></tr>
-            <tr class="sp-hl"><td>최대 음압 (SPL)</td><td>134 dB @ 1m</td></tr>
-            <tr><td>임피던스</td><td>8Ω</td></tr>
-            <tr><td>하우징</td><td>고강도 자작나무 합판 + 다중 보강 구조 + 블랙 페인트</td></tr>
-            <tr><td>손잡이</td><td>양측 장착</td></tr>
-            <tr><td>제품 사이즈 (W×H×D)</td><td>525 × 696 × 705 mm</td></tr>
-            <tr><td>중량</td><td>44 kg</td></tr>
-            <tr><td>공급 방식</td><td>발주계약 공급</td></tr>
-          </table>
-          <div class="price-box">
-            <div class="slbl">가격</div>
-            <div class="price-inquiry">견적문의</div>
-            <div class="price-note">※ 발주계약 공급 제품입니다. 수량 및 납기는 영업 문의를 통해 확인해 주세요.<br>※ 참고 소비자가: 2,500,000원 / 개 (VAT 포함)</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
   </div>
 </section>
 
@@ -330,274 +328,55 @@ footer{background:#111;color:#fff;padding:24px;font-size:11px;opacity:.5;text-al
 </section>
 
 
-<!-- ══ INSTALLATION ══ -->
-<section class="sec sec-bg" id="sec-install">
+<!-- ══ RELATED PRODUCTS ══ -->
+<section class="sec sec-bg" id="sec-related">
   <div class="si">
-    <div class="sl">설치 방식</div>
-    <div class="st">INSTALLATION</div>
-    <p class="sd">현장 환경에 맞게 3가지 설치 방식을 선택할 수 있습니다.</p>
+    <div class="sl">관련 상품</div>
+    <div class="st">RELATED PRODUCTS</div>
+    <p class="sd">G110 / G110S는 패시브 스피커이므로 별도의 파워앰프가 필요합니다. 현대에이브이씨가 공식 공급하는 BA · BD 시리즈 파워 앰프를 함께 운용하시면 최적의 시스템 성능을 얻을 수 있습니다.</p>
 
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start">
-      <div>
-        <img src="https://www.soundking.com/data/upload/20230921/G110490_490.webp" alt="G110 시스템"
-             style="width:100%;max-width:320px;border-radius:12px;background:linear-gradient(135deg,#1a2332,#0d1117);padding:32px;box-shadow:0 4px 20px rgba(0,0,0,.15)"
-             onerror="this.style.display='none'">
-      </div>
-      <div>
-        <div class="install-modes">
-          <div class="inst">
-            <div class="inst-num">01</div>
-            <div class="inst-ttl">플라잉 (Flying)</div>
-            <div class="inst-txt">G110 범퍼(플라잉 키트)를 이용해 천장이나 트러스에 매달아 운용합니다. 대형 공연 및 고정 설치에 적합합니다.</div>
-          </div>
-          <div class="inst">
-            <div class="inst-num">02</div>
-            <div class="inst-ttl">스택 (Stacking)</div>
-            <div class="inst-txt">G110S 서브우퍼 위에 G110을 적층하는 구성. 이동형 시스템에 적합하며 빠른 셋업이 가능합니다.</div>
-          </div>
-          <div class="inst">
-            <div class="inst-num">03</div>
-            <div class="inst-ttl">서브우퍼 지지 (Supported)</div>
-            <div class="inst-txt">G110S 위에 폴을 세우고 G110을 올려 운용합니다. 소·중형 행사에서 안정적인 높이 확보가 가능합니다.</div>
-          </div>
+    <div class="rel-grid">
+      <!-- BA 시리즈 -->
+      <a href="ba-series.html" class="rel-card">
+        <div class="rel-img-wrap">
+          <img src="BABD_amplifier/BA_01.jpg" alt="BA 시리즈 파워 앰프"
+               onerror="this.style.opacity='.3'">
         </div>
-        <div style="margin-top:20px;background:var(--white);border:1px solid var(--border);border-radius:10px;padding:20px">
-          <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--light);margin-bottom:12px">⚡ 최저비용 파워앰프 매칭 — 앰프 2대로 전체 구동</div>
-          <table style="width:100%;font-size:12px;border-collapse:collapse">
-            <tr style="border-bottom:1px solid var(--border)">
-              <td style="padding:7px 0;color:var(--light);width:32%">HF + LF (4채널)</td>
-              <td style="padding:7px 0;font-weight:600"><strong>BA4600 × 1대</strong> — 4ch @4Ω 900W/ch<br><span style="color:var(--light);font-size:11px">L-HF / L-LF / R-HF / R-LF 통합 구동</span></td>
-              <td style="padding:7px 0;text-align:right;font-weight:700;color:var(--red)">1,320,000원</td>
-            </tr>
-            <tr style="background:#f0fdf4">
-              <td style="padding:7px 0;color:var(--mid);font-weight:600">SUB (2채널)</td>
-              <td style="padding:7px 0;font-weight:600"><strong>BA21200 × 1대</strong> — 2ch @4Ω 1,800W/ch<br><span style="color:var(--light);font-size:11px">L-SUB / R-SUB</span></td>
-              <td style="padding:7px 0;text-align:right;font-weight:700;color:var(--red)">1,320,000원</td>
-            </tr>
-            <tr style="border-top:2px solid var(--border)">
-              <td style="padding:8px 0;font-weight:700">앰프 합계</td>
-              <td style="padding:8px 0;font-weight:700">총 2대 (vs 기존 6대)</td>
-              <td style="padding:8px 0;text-align:right;font-weight:900;color:var(--red);font-size:14px">2,640,000원</td>
-            </tr>
-          </table>
-          <div style="margin-top:12px;padding:10px 12px;background:#f0fdf4;border-radius:6px;border:1px solid #bbf7d0">
-            <p style="font-size:12px;color:#15803d;font-weight:600;margin-bottom:4px">💚 DSP 내장 원할 시 → BD 시리즈로 교체</p>
-            <p style="font-size:11px;color:#16a34a;line-height:1.7">
-              BA4600 → <strong>BD4600</strong> (1,650,000원) · BA21200 → <strong>BD21200</strong> (1,650,000원)<br>
-              DSP 구성 시 앰프 합계: 3,300,000원 · AES67/RAVENNA 네트워크 오디오 지원
-            </p>
-          </div>
-          <p style="font-size:11px;color:var(--light);margin-top:10px;padding-top:10px;border-top:1px solid var(--border)">
-            ※ G110은 패시브 스피커이므로 반드시 별도 파워앰프가 필요합니다.<br>
-            ※ 크로스오버(권장 1.5kHz) 설정을 위해 외부 DSP 또는 BD 시리즈 사용을 권장합니다.
-          </p>
+        <div class="rel-body">
+          <div class="rel-tag">Power Amplifier</div>
+          <div class="rel-name">BA 시리즈</div>
+          <div class="rel-sub">High-Performance Digital Power Amplifier</div>
+          <p class="rel-desc">고효율 Class-D 디지털 파워 앰프. 2채널 / 4채널 6개 모델 라인업으로 G110 시스템의 HF·LF·SUB를 안정적으로 구동합니다. 스테레오 / 패러럴 / 브릿지 3가지 작동 모드를 지원합니다.</p>
+          <ul class="rel-bullets">
+            <li>2ch · 4ch 6개 모델 (BA2300/2500/21200/4300/4450/4600)</li>
+            <li>최대 출력 2×1,800W @4Ω (BA21200)</li>
+            <li>XLR 입력 · SPEAKON 4-Pole 출력</li>
+            <li>스테레오 · 패러럴 · 브릿지 모드</li>
+          </ul>
+          <span class="rel-link">자세히 보기 →</span>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </a>
 
-
-<!-- ══ QUOTE ══ -->
-<section class="sec sec-dark" id="sec-quote">
-  <div class="si">
-    <div class="sl w">견적 계산기</div>
-    <div class="st w">QUOTE CALCULATOR</div>
-    <p class="sd" style="color:rgba(255,255,255,.45)">제품과 악세사리 수량을 선택하면 참고 소비자가 기준 합계가 자동 계산됩니다.</p>
-
-    <div class="calc-wrap">
-      <div class="calc-title">📦 시스템 구성 예시 — 클릭하면 수량이 자동 입력됩니다</div>
-
-      <div class="preset-grid" id="preset-btns">
-        <button class="preset-btn" onclick="applyPreset(0)">
-          <div class="pb-num">01</div>
-          <div class="pb-name">플라잉<br>Flying</div>
-          <div class="pb-desc">L+R 12통 · 최저비용 구성</div>
-          <div class="pb-items">
-            G110 × 8 / G110S × 4<br>
-            G110 범퍼 × 2<br>
-            <span style="color:#fbbf24">BA4600 × 1 (HF+LF 4ch 통합)</span><br>
-            <span style="color:#86efac">BA21200 × 1 (SUB L+R 2ch)</span>
-          </div>
-        </button>
-        <button class="preset-btn" onclick="applyPreset(1)">
-          <div class="pb-num">02</div>
-          <div class="pb-name">스택<br>Stacking</div>
-          <div class="pb-desc">L+R 12통 · 최저비용 구성</div>
-          <div class="pb-items">
-            G110 × 8 / G110S × 4<br>
-            <span style="color:#fbbf24">BA4600 × 1 (HF+LF 4ch 통합)</span><br>
-            <span style="color:#86efac">BA21200 × 1 (SUB L+R 2ch)</span>
-          </div>
-        </button>
-        <button class="preset-btn" onclick="applyPreset(2)">
-          <div class="pb-num">03</div>
-          <div class="pb-name">소형 플라잉<br>Small Flying</div>
-          <div class="pb-desc">L+R 8통 · 최저비용 구성</div>
-          <div class="pb-items">
-            G110 × 4 / G110S × 2<br>
-            G110 범퍼 × 2<br>
-            <span style="color:#fbbf24">BA4600 × 1 (HF+LF 4ch 통합)</span><br>
-            <span style="color:#86efac">BA21200 × 1 (SUB L+R 2ch)</span>
-          </div>
-        </button>
-      </div>
-
-      <div class="calc-divider"></div>
-
-      <div class="calc-items" id="calc-items">
-
-        <div style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35);padding:8px 0 4px">본 제품</div>
-
-        <div class="ci" data-price="2500000" data-key="g110">
-          <div class="ci-left">
-            <div class="ci-icon">🔊</div>
-            <div class="ci-info">
-              <div class="ci-model">G110</div>
-              <div class="ci-name">패시브 2웨이 라인어레이 · 135dB · HF/LF 각 16Ω</div>
-            </div>
-          </div>
-          <div class="ci-unit">2,500,000원 / 개</div>
-          <div class="qty-ctrl">
-            <button class="qty-btn" onclick="changeQty(this,-1)">−</button>
-            <div class="qty-num">0</div>
-            <button class="qty-btn" onclick="changeQty(this,1)">+</button>
-          </div>
-          <div class="ci-price">0원</div>
+      <!-- BD 시리즈 -->
+      <a href="bd-series.html" class="rel-card">
+        <div class="rel-img-wrap">
+          <img src="BABD_amplifier/BD_01.jpg" alt="BD 시리즈 DSP 네트워크 파워 앰프"
+               onerror="this.style.opacity='.3'">
         </div>
-
-        <div class="ci" data-price="2500000" data-key="g110s">
-          <div class="ci-left">
-            <div class="ci-icon">🔈</div>
-            <div class="ci-info">
-              <div class="ci-model">G110S</div>
-              <div class="ci-name">패시브 18인치 서브우퍼 · 134dB · 900W · 8Ω</div>
-            </div>
-          </div>
-          <div class="ci-unit">2,500,000원 / 개</div>
-          <div class="qty-ctrl">
-            <button class="qty-btn" onclick="changeQty(this,-1)">−</button>
-            <div class="qty-num">0</div>
-            <button class="qty-btn" onclick="changeQty(this,1)">+</button>
-          </div>
-          <div class="ci-price">0원</div>
+        <div class="rel-body">
+          <div class="rel-tag rel-tag-blue">DSP Network Amplifier</div>
+          <div class="rel-name">BD 시리즈</div>
+          <div class="rel-sub">DSP &amp; Network Power Amplifier</div>
+          <p class="rel-desc">DSP·네트워크 오디오 기능이 내장된 디지털 파워 앰프. 2.2" 컬러 LCD를 통한 직관적 제어와 이더넷 원격 모니터링을 지원하며, G110 시스템의 크로스오버(권장 1.5kHz) 설정도 별도 장비 없이 처리합니다.</p>
+          <ul class="rel-bullets">
+            <li>2ch · 4ch 6개 모델 (BD2300/2500/21200/4300/4450/4600)</li>
+            <li>DSP 내장 — EQ · 크로스오버 · 딜레이 · 리미터</li>
+            <li>이더넷 기반 실시간 원격 모니터링</li>
+            <li>2.2" 컬러 LCD 직관적 제어</li>
+          </ul>
+          <span class="rel-link">자세히 보기 →</span>
         </div>
-
-        <div class="calc-divider"></div>
-
-        <div style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35);padding:8px 0 4px">설치 악세사리</div>
-
-        <div class="ci" data-price="800000" data-key="bumper">
-          <div class="ci-left">
-            <div class="ci-icon">🔩</div>
-            <div class="ci-info">
-              <div class="ci-model">G110 범퍼</div>
-              <div class="ci-name">G110 라인어레이 시스템 전용 플라잉 키트</div>
-            </div>
-          </div>
-          <div class="ci-unit">800,000원 / 개</div>
-          <div class="qty-ctrl">
-            <button class="qty-btn" onclick="changeQty(this,-1)">−</button>
-            <div class="qty-num">0</div>
-            <button class="qty-btn" onclick="changeQty(this,1)">+</button>
-          </div>
-          <div class="ci-price">0원</div>
-        </div>
-
-        <div class="calc-divider"></div>
-
-        <div style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35);padding:8px 0 4px">파워앰프 — 최저비용 매칭</div>
-        <div style="font-size:11px;color:rgba(255,255,255,.3);padding-bottom:12px;line-height:1.9">
-          🟡 <strong style="color:#fbbf24">BA4600 × 1대</strong> — 4ch @4Ω 900W/ch
-          · L-HF(160W) + L-LF(800W) + R-HF(160W) + R-LF(800W) 4채널 통합 구동<br>
-          🟢 <strong style="color:#86efac">BA21200 × 1대</strong> — 2ch @4Ω 1,800W/ch
-          · L-SUB(900W) + R-SUB(900W) 구동<br>
-          <span style="color:rgba(134,239,172,.6)">✅ 총 앰프 2대로 전체 시스템 구동 가능 · DSP 내장형 원할 시 BA→BD 시리즈로 교체</span>
-        </div>
-
-        <div class="ci" data-price="1320000" data-key="ba4600">
-          <div class="ci-left">
-            <div class="ci-icon">⚡</div>
-            <div class="ci-info">
-              <div class="ci-model">BA4600</div>
-              <div class="ci-name">4채널 디지털 앰프 · 4×600W@8Ω / 4×900W@4Ω · HF+LF 4ch 통합 권장</div>
-            </div>
-          </div>
-          <div class="ci-unit">1,320,000원 / 개</div>
-          <div class="qty-ctrl">
-            <button class="qty-btn" onclick="changeQty(this,-1)">−</button>
-            <div class="qty-num">0</div>
-            <button class="qty-btn" onclick="changeQty(this,1)">+</button>
-          </div>
-          <div class="ci-price">0원</div>
-        </div>
-
-        <div class="ci" data-price="1320000" data-key="ba21200">
-          <div class="ci-left">
-            <div class="ci-icon">⚡</div>
-            <div class="ci-info">
-              <div class="ci-model">BA21200</div>
-              <div class="ci-name">2채널 디지털 앰프 · 2×1,200W@8Ω / 2×1,800W@4Ω · SUB 전용 권장</div>
-            </div>
-          </div>
-          <div class="ci-unit">1,320,000원 / 개</div>
-          <div class="qty-ctrl">
-            <button class="qty-btn" onclick="changeQty(this,-1)">−</button>
-            <div class="qty-num">0</div>
-            <button class="qty-btn" onclick="changeQty(this,1)">+</button>
-          </div>
-          <div class="ci-price">0원</div>
-        </div>
-
-        <div class="ci" data-price="1650000" data-key="bd21200">
-          <div class="ci-left">
-            <div class="ci-icon">⚡</div>
-            <div class="ci-info">
-              <div class="ci-model">BD21200</div>
-              <div class="ci-name">2ch DSP 네트워크 앰프 · 2×1,200W@8Ω / 2×1,800W@4Ω · DSP 내장 SUB 옵션</div>
-            </div>
-          </div>
-          <div class="ci-unit">1,650,000원 / 개</div>
-          <div class="qty-ctrl">
-            <button class="qty-btn" onclick="changeQty(this,-1)">−</button>
-            <div class="qty-num">0</div>
-            <button class="qty-btn" onclick="changeQty(this,1)">+</button>
-          </div>
-          <div class="ci-price">0원</div>
-        </div>
-
-        <div class="ci" data-price="1650000" data-key="bd4600">
-          <div class="ci-left">
-            <div class="ci-icon">⚡</div>
-            <div class="ci-info">
-              <div class="ci-model">BD4600</div>
-              <div class="ci-name">4ch DSP 네트워크 앰프 · 4×600W@8Ω / 4×900W@4Ω · DSP 내장 HF+LF 옵션</div>
-            </div>
-          </div>
-          <div class="ci-unit">1,650,000원 / 개</div>
-          <div class="qty-ctrl">
-            <button class="qty-btn" onclick="changeQty(this,-1)">−</button>
-            <div class="qty-num">0</div>
-            <button class="qty-btn" onclick="changeQty(this,1)">+</button>
-          </div>
-          <div class="ci-price">0원</div>
-        </div>
-
-      </div>
-
-      <div class="calc-divider"></div>
-
-      <div class="calc-total-box">
-        <div>
-          <div class="ct-label">합계 금액 (참고 소비자가 · VAT 포함)</div>
-          <div class="ct-val" id="grand-total">0<small>원</small></div>
-        </div>
-        <div class="ct-note">
-          ※ 발주계약 공급 제품으로 참고가 기준입니다.<br>
-          ※ 실제 공급가 및 납기는 영업 문의 바랍니다.
-        </div>
-      </div>
-      <p class="calc-foot">위 계산기는 참고용이며 실제 견적은 반드시 영업 문의를 통해 진행해 주세요.</p>
+      </a>
     </div>
   </div>
 </section>
@@ -607,7 +386,7 @@ footer{background:#111;color:#fff;padding:24px;font-size:11px;opacity:.5;text-al
 
 <script>
 // 탭 네비게이션
-const sections = ['sec-spec','sec-features','sec-install','sec-quote'];
+const sections = ['sec-spec','sec-features','sec-related'];
 function goTab(id) {
   const el = document.getElementById(id);
   if (!el) return;
@@ -622,54 +401,6 @@ window.addEventListener('scroll', () => {
   });
 });
 
-function showProd(id, e) {
-  document.querySelectorAll('.prod-panel').forEach(p => p.classList.remove('on'));
-  document.querySelectorAll('.ptb').forEach(b => b.classList.remove('on'));
-  document.getElementById(id).classList.add('on');
-  e.target.classList.add('on');
-}
-
-// 프리셋 — 최저비용: BA4600×1(HF+LF 4ch) + BA21200×1(SUB 2ch)
-const PRESETS = [
-  // 01 플라잉 (L+R 12통)
-  { 'g110':8, 'g110s':4, 'bumper':2, 'ba4600':1, 'ba21200':1, 'bd21200':0, 'bd4600':0 },
-  // 02 스택 (L+R 12통)
-  { 'g110':8, 'g110s':4, 'bumper':0, 'ba4600':1, 'ba21200':1, 'bd21200':0, 'bd4600':0 },
-  // 03 소형 플라잉 (L+R 8통)
-  { 'g110':4, 'g110s':2, 'bumper':2, 'ba4600':1, 'ba21200':1, 'bd21200':0, 'bd4600':0 },
-];
-function applyPreset(idx) {
-  document.querySelectorAll('.preset-btn').forEach((b,i) => b.classList.toggle('active', i===idx));
-  const p = PRESETS[idx];
-  document.querySelectorAll('.ci').forEach(row => {
-    const key = row.dataset.key;
-    if (!key || !(key in p)) return;
-    const qty = p[key];
-    row.querySelector('.qty-num').textContent = qty;
-    const price = parseInt(row.dataset.price);
-    row.querySelector('.ci-price').textContent = qty === 0 ? '0원' : (price*qty).toLocaleString()+'원';
-  });
-  updateTotal();
-}
-
-// 수량 조절
-function changeQty(btn, delta) {
-  const row = btn.closest('.ci');
-  const numEl = row.querySelector('.qty-num');
-  const priceEl = row.querySelector('.ci-price');
-  let qty = parseInt(numEl.textContent) + delta;
-  if (qty < 0) qty = 0;
-  numEl.textContent = qty;
-  priceEl.textContent = qty === 0 ? '0원' : (parseInt(row.dataset.price)*qty).toLocaleString()+'원';
-  updateTotal();
-}
-function updateTotal() {
-  let total = 0;
-  document.querySelectorAll('.ci').forEach(row => {
-    total += parseInt(row.querySelector('.qty-num').textContent) * parseInt(row.dataset.price);
-  });
-  document.getElementById('grand-total').innerHTML = total === 0 ? '0<small>원</small>' : total.toLocaleString()+'<small>원</small>';
-}
 </script>
 </body>
 </html>
