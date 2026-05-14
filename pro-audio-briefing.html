@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pro Audio 월간 브리핑 | 현대에이브이씨</title>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@300;400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#0a0c10;--surface:#111318;--surface2:#181c24;--border:#2a3344;--accent:#f0b642;--accent2:#ff8555;--text:#f1f3f8;--muted:#b4bcc8;--dim:#8a94a5;--green:#4ade80;--red:#f87171;--blue:#60a5fa;--purple:#c084fc}
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Pro Audio 월간 브리핑 | 현대에이브이씨</title><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@300;400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"><style>:root{--bg:#0a0c10;--surface:#111318;--surface2:#181c24;--border:#2a3344;--accent:#f0b642;--accent2:#ff8555;--text:#f1f3f8;--muted:#b4bcc8;--dim:#8a94a5;--green:#4ade80;--red:#f87171;--blue:#60a5fa;--purple:#c084fc}
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:var(--bg);color:var(--text);font-family:'Noto Sans KR',sans-serif;min-height:100vh;overflow-x:hidden}
 a{color:inherit}
@@ -86,9 +78,9 @@ a{color:inherit}
 .ititle{font-size:1.08rem;font-weight:700;line-height:1.5;margin-bottom:.85rem;color:var(--text);letter-spacing:-.01em}
 .ititle .ext{opacity:.55;font-size:.85rem;margin-left:.3rem;color:#fbd96a}
 .iquote{border-left:2px solid var(--accent);background:rgba(240,182,66,.08);padding:.75rem .95rem;margin-bottom:.9rem;font-size:.86rem;color:#f4e0a8;line-height:1.8;font-style:italic;position:relative}
-.iquote::before{content:'📄 원문 인용';display:block;font-style:normal;font-family:'Space Mono',monospace;font-size:.66rem;color:#fbd96a;letter-spacing:.1em;margin-bottom:.4rem;font-weight:700}
+.iquote::before{content:' 원문 인용';display:block;font-style:normal;font-family:'Space Mono',monospace;font-size:.66rem;color:#fbd96a;letter-spacing:.1em;margin-bottom:.4rem;font-weight:700}
 .isummary{font-size:.86rem;color:#d4dae5;line-height:1.8;background:rgba(255,255,255,.04);padding:.75rem .95rem;border-radius:3px;margin-bottom:1rem}
-.isummary::before{content:'🤖 AI 요약';display:block;font-family:'Space Mono',monospace;font-size:.66rem;color:#c4ccd8;letter-spacing:.1em;margin-bottom:.4rem;font-weight:700}
+.isummary::before{content:' AI 요약';display:block;font-family:'Space Mono',monospace;font-size:.66rem;color:#c4ccd8;letter-spacing:.1em;margin-bottom:.4rem;font-weight:700}
 .itags{display:flex;gap:.35rem;flex-wrap:wrap;margin-bottom:.9rem}
 .tag{font-family:'Space Mono',monospace;font-size:.7rem;color:var(--muted);background:var(--surface2);padding:.22rem .55rem;border-radius:2px;letter-spacing:.03em;border:1px solid var(--border)}
 .ifoot{display:flex;align-items:center;justify-content:space-between;margin-top:.9rem;padding-top:.85rem;border-top:1px solid var(--border);gap:.7rem;flex-wrap:wrap}
@@ -254,143 +246,58 @@ footer p{font-size:.78rem;color:var(--muted);font-family:'Space Mono',monospace}
 .icard-thumb{background:#ffffff !important;border:1px solid #f0f0f0 !important;background-image:none !important}
 .icard-thumb img{filter:none !important;box-shadow:none !important;background:transparent !important}
 .hero-img::before,.hero::before{display:none !important}
-</style>
-</head>
-<body>
 
-<header class="hdr">
-  <div class="hdr-left">
-    <a href="https://kkim1213-afk.github.io/hdavc-products/index.html" class="hdr-logo">(주)현대에이브이씨</a>
-    <div class="hdr-div"></div>
-    <span class="hdr-sub">Pro Audio Monthly Briefing</span>
-  </div>
-  <a href="https://kkim1213-afk.github.io/hdavc-products/index.html" class="back-btn">← 메인으로</a>
-</header>
-
-<section class="hero">
-  <div class="hero-tag"><span class="live-dot"></span>Monthly Intelligence Report · Source-Verified</div>
-  <h1>PRO AUDIO<br><span>BRIEFING</span></h1>
-  <div class="hero-meta">
-    <div class="hero-meta-item"><span class="hml">최근 업데이트</span><span class="hmv" id="disp-date">—</span></div>
-    <div class="hero-meta-item"><span class="hml">수집 기간</span><span class="hmv" id="disp-period">—</span></div>
-    <div class="hero-meta-item"><span class="hml">검증 통과</span><span class="hmv" id="disp-count">—</span></div>
-    <div class="hero-meta-item"><span class="hml">총 출처</span><span class="hmv" id="disp-sources">—</span></div>
-  </div>
-</section>
-
-<div class="notice">
-  <div class="notice-box">
-    <span style="font-size:1rem">🛡️</span>
-    <div>
-      <b>검증된 출처만 게재합니다.</b>
-      모든 항목은 <code>화이트리스트 도메인 → 자동 검증 → 관리자 승인</code> 3단계를 통과한 내용입니다.
-      각 카드의 <b>📄 원문 인용</b>은 기사 원문에서 그대로 가져온 문장이며, <b>🤖 AI 요약</b>은 해당 원문만을 근거로 작성됩니다.
-      사실과 다른 내용이 있다면 카드 좌하단의 <b>⚑ 신고</b>로 알려주세요.
-    </div>
-  </div>
-</div>
-
-<main class="content">
-  <div class="empty" id="el-empty">
-    <div class="empty-icon">📡</div>
-    <h3>아직 브리핑 데이터가 없습니다</h3>
-    <p>우측 하단 ⚙ 버튼 → PIN → API 키 입력 후 수집을 시작하세요.<br>수집된 내용은 관리자 승인을 거친 뒤에만 공개됩니다.</p>
-  </div>
-  <div id="el-content" style="display:none;"></div>
-</main>
-
-<footer>
-  <p>© 2026 HYUNDAI AUDIO VISUAL COMMUNICATIONS CO., LTD.</p>
-  <p class="fnote">본 브리핑은 허용 매체의 최근 기사를 기반으로 작성되며, AI가 원문을 요약한 텍스트에는 🤖 표시가 됩니다. 원문 인용(📄)과 원문 링크를 함께 제공합니다.</p>
-</footer>
-
-<!-- 관리자 버튼 -->
-<button id="adm-btn" title="관리자">⚙</button>
-
-<!-- MODAL 1: PIN -->
-<div class="backdrop" id="m-pin">
-  <div class="mbox">
-    <h3>🔐 관리자 인증</h3>
-    <p class="mdesc">관리자 PIN을 입력하세요</p>
-    <input type="password" class="minput" id="inp-pin" placeholder="PIN" maxlength="6" autocomplete="off">
-    <div class="mbtns">
-      <button class="mbtn mbtn-ok" id="btn-pin-ok">확인</button>
-      <button class="mbtn mbtn-cancel" id="btn-pin-cancel">취소</button>
-    </div>
-    <p class="merr" id="err-pin">PIN이 올바르지 않습니다.</p>
-  </div>
-</div>
-
-<!-- MODAL 2: API KEY -->
-<div class="backdrop" id="m-apikey">
-  <div class="mbox">
-    <h3>🔑 API 키 입력</h3>
-    <p class="mdesc">Anthropic API 키를 입력하세요.<br>키는 저장되지 않으며 이번 수집에만 사용됩니다.<br>web_search 툴이 활성화된 키여야 합니다.</p>
-    <input type="password" class="minput" id="inp-apikey" placeholder="sk-ant-api03-..." autocomplete="off" style="letter-spacing:.04em;font-size:.8rem">
-    <div class="mcheck">
-      <input type="checkbox" id="chk-show">
-      <label for="chk-show">키 표시</label>
-    </div>
-    <div class="mbtns">
-      <button class="mbtn mbtn-ok" id="btn-api-ok">수집 시작</button>
-      <button class="mbtn mbtn-cancel" id="btn-api-cancel">취소</button>
-    </div>
-    <p class="merr" id="err-api">올바른 API 키를 입력해주세요. (sk-ant-...)</p>
-  </div>
-</div>
-
-<!-- MODAL 3: REVIEW -->
-<div class="backdrop" id="m-review">
-  <div class="mbox wide">
-    <h3>✅ 관리자 검토 · 게재 승인</h3>
-    <p class="mdesc">각 항목을 개별 승인/거절/수정하세요. <b style="color:var(--accent)">승인(ACCEPT)한 항목만 공개 게시됩니다.</b></p>
-    <div class="review-head">
-      <div class="review-stats">
-        <span>검증 통과 <b id="rv-passed">0</b></span>
-        <span>거절됨 <b id="rv-rejected">0</b></span>
-        <span>선택된 승인 <b id="rv-selected">0</b></span>
-      </div>
-      <div>
-        <button class="rv-btn ok" id="rv-all">전체 승인</button>
-        <button class="rv-btn no" id="rv-none">전체 거절</button>
-      </div>
-    </div>
-    <div class="review-rejected" id="rv-rej-list" style="display:none"></div>
-    <div class="review-list" id="rv-list"></div>
-    <div class="mbtns" style="margin-top:1.5rem">
-      <button class="mbtn mbtn-ok" id="btn-publish">승인 항목만 게시</button>
-      <button class="mbtn mbtn-cancel" id="btn-review-cancel">취소 (저장 안함)</button>
-    </div>
-  </div>
-</div>
-
-<!-- MODAL 4: REPORT -->
-<div class="backdrop" id="m-report">
-  <div class="mbox">
-    <h3>⚑ 사실 오류 신고</h3>
-    <p class="mdesc">이 카드의 어느 부분이 사실과 다른지 알려주세요. 관리자가 확인 후 즉시 조치합니다.</p>
-    <div id="rp-target" style="font-size:.75rem;color:var(--muted);margin-bottom:1rem;padding:.7rem;background:var(--bg);border:1px solid var(--border);border-radius:3px;line-height:1.6"></div>
-    <textarea class="mtextarea" id="inp-report" placeholder="예: 제품 출시일이 실제와 다릅니다. 정확한 날짜는 ..."></textarea>
-    <div class="mbtns">
-      <button class="mbtn mbtn-danger" id="btn-report-ok">신고 접수 (관리자 확인 후 숨김)</button>
-      <button class="mbtn mbtn-cancel" id="btn-report-cancel">취소</button>
-    </div>
-    <p class="mdesc" style="margin-top:1rem;margin-bottom:0;font-size:.68rem">※ 신고 접수 시 관리자 PIN이 필요하며, 즉시 해당 카드는 숨김 처리됩니다.</p>
-  </div>
-</div>
-
-<!-- LOADING -->
-<div class="loading" id="el-loading">
-  <div class="spinner"></div>
-  <div class="load-txt" id="el-load-txt">
-    <span class="load-step">🔍 검증된 출처에서 수집 중...</span><br>
-    화이트리스트 매체(soundonsound, Pro Sound Network 등)를 직접 검색하여<br>
-    최근 30~45일 기사만 가져옵니다. 약 40~60초 소요.
-  </div>
-</div>
-
-<script>
-// ─── CONFIG ───────────────────────────────────────────
+/* BRIEFING-HERO-FIX-V1 — 다크 대시보드 테마 복원·제목 가독성 강화 */
+.hero{
+  background:linear-gradient(140deg,#10141c 0%,#161b26 45%,#1c2230 100%) !important;
+  color:var(--text) !important;
+  padding:3.5rem 2.5rem 2.8rem !important;
+  max-width:1200px !important;
+  margin:1.5rem auto 0 !important;
+  border:1px solid var(--border) !important;
+  border-radius:8px !important;
+  position:relative !important;
+  overflow:hidden !important;
+  box-shadow:0 8px 32px rgba(0,0,0,.4) !important;
+}
+.hero::after{
+  content:'' !important;
+  position:absolute !important;
+  inset:0 !important;
+  background:radial-gradient(ellipse at 80% 20%,rgba(240,182,66,.10),transparent 55%),radial-gradient(ellipse at 15% 90%,rgba(255,133,85,.07),transparent 50%) !important;
+  pointer-events:none !important;
+  z-index:0 !important;
+}
+.hero>*{position:relative;z-index:1}
+.hero-tag{
+  background:rgba(240,182,66,.14) !important;
+  border:1px solid rgba(240,182,66,.45) !important;
+  color:#fbd96a !important;
+}
+.hero h1{
+  background:none !important;
+  -webkit-background-clip:initial !important;
+  background-clip:initial !important;
+  -webkit-text-fill-color:#ffffff !important;
+  color:#ffffff !important;
+  text-shadow:0 2px 16px rgba(0,0,0,.4) !important;
+}
+.hero h1 span{
+  background:linear-gradient(135deg,#fbd96a,#ff9a5a) !important;
+  -webkit-background-clip:text !important;
+  background-clip:text !important;
+  -webkit-text-fill-color:transparent !important;
+  text-shadow:none !important;
+}
+.hero-meta{border-top-color:rgba(255,255,255,.12) !important}
+.hml{color:rgba(255,255,255,.55) !important}
+.hmv{color:#ffffff !important}
+#disp-date{color:#fbd96a !important}
+</style></head><body><header class="hdr"><div class="hdr-left"><a href="https://kkim1213-afk.github.io/hdavc-products/index.html" class="hdr-logo">(주)현대에이브이씨</a><div class="hdr-div"></div><span class="hdr-sub">Pro Audio Monthly Briefing</span></div><a href="https://kkim1213-afk.github.io/hdavc-products/index.html" class="back-btn">← 메인으로</a></header><section class="hero"><div class="hero-tag"><span class="live-dot"></span>Monthly Intelligence Report · Source-Verified</div><h1>PRO AUDIO<br><span>BRIEFING</span></h1><div class="hero-meta"><div class="hero-meta-item"><span class="hml">최근 업데이트</span><span class="hmv" id="disp-date">—</span></div><div class="hero-meta-item"><span class="hml">수집 기간</span><span class="hmv" id="disp-period">—</span></div><div class="hero-meta-item"><span class="hml">검증 통과</span><span class="hmv" id="disp-count">—</span></div><div class="hero-meta-item"><span class="hml">총 출처</span><span class="hmv" id="disp-sources">—</span></div></div></section><div class="notice"><div class="notice-box"><span style="font-size:1rem"></span><div><b>검증된 출처만 게재합니다.</b>모든 항목은 <code>화이트리스트 도메인 → 자동 검증 → 관리자 승인</code>3단계를 통과한 내용입니다.
+      각 카드의 <b>원문 인용</b>은 기사 원문에서 그대로 가져온 문장이며, <b>AI 요약</b>은 해당 원문만을 근거로 작성됩니다.
+      사실과 다른 내용이 있다면 카드 좌하단의 <b>신고</b>로 알려주세요.
+    </div></div></div><main class="content"><div class="empty" id="el-empty"><div class="empty-icon"></div><h3>아직 브리핑 데이터가 없습니다</h3><p>우측 하단 버튼 → PIN → API 키 입력 후 수집을 시작하세요.<br>수집된 내용은 관리자 승인을 거친 뒤에만 공개됩니다.</p></div><div id="el-content" style="display:none;"></div></main><footer><p>© 2026 HYUNDAI AUDIO VISUAL COMMUNICATIONS CO., LTD.</p><p class="fnote">본 브리핑은 허용 매체의 최근 기사를 기반으로 작성되며, AI가 원문을 요약한 텍스트에는 표시가 됩니다. 원문 인용()과 원문 링크를 함께 제공합니다.</p></footer><!-- 관리자 버튼 --><button id="adm-btn" title="관리자"></button><!-- MODAL 1: PIN --><div class="backdrop" id="m-pin"><div class="mbox"><h3>관리자 인증</h3><p class="mdesc">관리자 PIN을 입력하세요</p><input type="password" class="minput" id="inp-pin" placeholder="PIN" maxlength="6" autocomplete="off"><div class="mbtns"><button class="mbtn mbtn-ok" id="btn-pin-ok">확인</button><button class="mbtn mbtn-cancel" id="btn-pin-cancel">취소</button></div><p class="merr" id="err-pin">PIN이 올바르지 않습니다.</p></div></div><!-- MODAL 2: API KEY --><div class="backdrop" id="m-apikey"><div class="mbox"><h3>API 키 입력</h3><p class="mdesc">Anthropic API 키를 입력하세요.<br>키는 저장되지 않으며 이번 수집에만 사용됩니다.<br>web_search 툴이 활성화된 키여야 합니다.</p><input type="password" class="minput" id="inp-apikey" placeholder="sk-ant-api03-..." autocomplete="off" style="letter-spacing:.04em;font-size:.8rem"><div class="mcheck"><input type="checkbox" id="chk-show"><label for="chk-show">키 표시</label></div><div class="mbtns"><button class="mbtn mbtn-ok" id="btn-api-ok">수집 시작</button><button class="mbtn mbtn-cancel" id="btn-api-cancel">취소</button></div><p class="merr" id="err-api">올바른 API 키를 입력해주세요. (sk-ant-...)</p></div></div><!-- MODAL 3: REVIEW --><div class="backdrop" id="m-review"><div class="mbox wide"><h3>관리자 검토 · 게재 승인</h3><p class="mdesc">각 항목을 개별 승인/거절/수정하세요. <b style="color:var(--accent)">승인(ACCEPT)한 항목만 공개 게시됩니다.</b></p><div class="review-head"><div class="review-stats"><span>검증 통과 <b id="rv-passed">0</b></span><span>거절됨 <b id="rv-rejected">0</b></span><span>선택된 승인 <b id="rv-selected">0</b></span></div><div><button class="rv-btn ok" id="rv-all">전체 승인</button><button class="rv-btn no" id="rv-none">전체 거절</button></div></div><div class="review-rejected" id="rv-rej-list" style="display:none"></div><div class="review-list" id="rv-list"></div><div class="mbtns" style="margin-top:1.5rem"><button class="mbtn mbtn-ok" id="btn-publish">승인 항목만 게시</button><button class="mbtn mbtn-cancel" id="btn-review-cancel">취소 (저장 안함)</button></div></div></div><!-- MODAL 4: REPORT --><div class="backdrop" id="m-report"><div class="mbox"><h3>사실 오류 신고</h3><p class="mdesc">이 카드의 어느 부분이 사실과 다른지 알려주세요. 관리자가 확인 후 즉시 조치합니다.</p><div id="rp-target" style="font-size:.75rem;color:var(--muted);margin-bottom:1rem;padding:.7rem;background:var(--bg);border:1px solid var(--border);border-radius:3px;line-height:1.6"></div><textarea class="mtextarea" id="inp-report" placeholder="예: 제품 출시일이 실제와 다릅니다. 정확한 날짜는 ..."></textarea><div class="mbtns"><button class="mbtn mbtn-danger" id="btn-report-ok">신고 접수 (관리자 확인 후 숨김)</button><button class="mbtn mbtn-cancel" id="btn-report-cancel">취소</button></div><p class="mdesc" style="margin-top:1rem;margin-bottom:0;font-size:.68rem">※ 신고 접수 시 관리자 PIN이 필요하며, 즉시 해당 카드는 숨김 처리됩니다.</p></div></div><!-- LOADING --><div class="loading" id="el-loading"><div class="spinner"></div><div class="load-txt" id="el-load-txt"><span class="load-step">검증된 출처에서 수집 중...</span><br>화이트리스트 매체(soundonsound, Pro Sound Network 등)를 직접 검색하여<br>최근 30~45일 기사만 가져옵니다. 약 40~60초 소요.
+  </div></div><script>// ─── CONFIG ───────────────────────────────────────────
 const ADMIN_PIN = "0525"; // 변경 가능
 
 // ─── MODEL (항상 최신) ────────────────────────────────
@@ -435,24 +342,24 @@ const TIER_MAP = {
        'kaps.or.kr','kata.or.kr','mmjmagazine.com','dailysound.co.kr'],
   t2: ['news.naver.com','news.daum.net']
 };
-const tierOf = (host) => {
+const tierOf = (host) =>{
   const h = host.replace(/^www\./,'');
-  if (TIER_MAP.t1.some(d => h.endsWith(d))) return {cls:'t1',label:'T1 · 검증매체'};
-  if (TIER_MAP.t2.some(d => h.endsWith(d))) return {cls:'t2',label:'T2 · 포털뉴스'};
+  if (TIER_MAP.t1.some(d =>h.endsWith(d))) return {cls:'t1',label:'T1 · 검증매체'};
+  if (TIER_MAP.t2.some(d =>h.endsWith(d))) return {cls:'t2',label:'T2 · 포털뉴스'};
   return {cls:'t3',label:'T3 · 기타'};
 };
-const domainOf = (url) => {
+const domainOf = (url) =>{
   try { return new URL(url).hostname.replace(/^www\./,''); } catch { return ''; }
 };
-const allowed = (url) => {
+const allowed = (url) =>{
   const h = domainOf(url);
-  return h && ALLOWED_DOMAINS.some(d => h.endsWith(d));
+  return h && ALLOWED_DOMAINS.some(d =>h.endsWith(d));
 };
 
 // ─── STORAGE (JSONBin) ────────────────────────────────
-const BIN_ID      = '69c8af4d5fdde574550d4379';
-const BIN_MASTER  = '$2a$10$HNwW93eNY/hDt4ksM.63uusA3yNrG1anndUD6ia4E0Shs/LwkJys.';
-const BIN_URL     = 'https://api.jsonbin.io/v3/b/' + BIN_ID;
+const BIN_ID = '69c8af4d5fdde574550d4379';
+const BIN_MASTER = '$2a$10$HNwW93eNY/hDt4ksM.63uusA3yNrG1anndUD6ia4E0Shs/LwkJys.';
+const BIN_URL = 'https://api.jsonbin.io/v3/b/' + BIN_ID;
 
 async function saveData(d) {
   const res = await fetch(BIN_URL, {
@@ -489,7 +396,7 @@ function validateBriefing(d) {
   const today = Date.now();
 
   // 이슈 검증
-  const validIssues = (d.issues||[]).filter(iss => {
+  const validIssues = (d.issues||[]).filter(iss =>{
     if (!iss.title || !iss.summary || !iss.sourceUrl || !iss.quote || !iss.publishedDate) {
       rejected.push({item:iss.title||'(제목 없음)', reason:'필수 필드 누락 (sourceUrl/quote/publishedDate 중)'});
       return false;
@@ -499,7 +406,7 @@ function validateBriefing(d) {
       return false;
     }
     const days = (today - new Date(iss.publishedDate).getTime())/86400000;
-    if (isNaN(days) || days < 0 || days > 60) {
+    if (isNaN(days) || days < 0 || days >60) {
       rejected.push({item:iss.title, reason:'발행일 범위 벗어남: '+iss.publishedDate});
       return false;
     }
@@ -518,7 +425,7 @@ function validateBriefing(d) {
   });
 
   // 트렌드 검증 (relatedUrl 권장)
-  const validTrends = (d.trends||[]).filter(t => {
+  const validTrends = (d.trends||[]).filter(t =>{
     if (!t.keyword || !t.desc) {
       rejected.push({item:t.keyword||'(트렌드)', reason:'필수 필드 누락'});
       return false;
@@ -531,7 +438,7 @@ function validateBriefing(d) {
   });
 
   // 행사 검증
-  const validEvents = (d.events||[]).filter(e => {
+  const validEvents = (d.events||[]).filter(e =>{
     if (!e.name || !e.month || !e.day || !e.location) {
       rejected.push({item:e.name||'(행사)', reason:'필수 필드 누락'});
       return false;
@@ -544,7 +451,7 @@ function validateBriefing(d) {
   });
 
   // 티커 검증 (url 선택)
-  const validTickers = (d.tickers||[]).filter(t => t.label && t.value);
+  const validTickers = (d.tickers||[]).filter(t =>t.label && t.value);
 
   return {
     valid: {
@@ -603,51 +510,26 @@ function render(d) {
 
   const wrap = document.getElementById('el-content');
 
-  const catCls = c => ({'시장동향':'cm','신제품':'cp','트렌드':'ct','행사':'ce','기업동향':'cc'}[c]||'cm');
-  const impCls = v => v==='높음'?'ih':v==='보통'?'im':'il';
-  const impPct = v => v==='높음'?100:v==='보통'?60:30;
-  const esc = s => (s||'').replace(/[<>&"]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c]));
+  const catCls = c =>({'시장동향':'cm','신제품':'cp','트렌드':'ct','행사':'ce','기업동향':'cc'}[c]||'cm');
+  const impCls = v =>v==='높음'?'ih':v==='보통'?'im':'il';
+  const impPct = v =>v==='높음'?100:v==='보통'?60:30;
+  const esc = s =>(s||'').replace(/[<>&"]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c]));
 
-  const card = (iss, n) => {
+  const card = (iss, n) =>{
     const host = iss.sourceDomain || domainOf(iss.sourceUrl);
     const tier = tierOf(host);
     const favicon = `https://www.google.com/s2/favicons?domain=${host}&sz=64`;
     const tagHTML = (iss.tags||[]).slice(0,5).map(t=>`<span class="tag">#${esc(t)}</span>`).join('');
     return `
-    <a class="icard" href="${esc(iss.sourceUrl)}" target="_blank" rel="noopener" data-id="${n}">
-      ${iss.imageUrl?`<div class="icard-thumb" style="background-image:url('${esc(iss.imageUrl)}')"></div>`:''}
-      <div class="icard-body">
-        <span class="icard-num">${String(n).padStart(2,'0')}</span>
-        <div class="icard-head">
-          <img class="src-logo" src="${favicon}" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
-          <div class="src-meta">
-            <div class="src-name">${esc(iss.source)}</div>
-            <div class="src-detail">${esc(host)} · ${esc(iss.publishedDate||'')}</div>
-          </div>
-          <span class="src-tier ${tier.cls}">${tier.label}</span>
-        </div>
-        <span class="icat ${catCls(iss.category)}">${esc(iss.category||'')}</span>
-        <div class="ititle">${esc(iss.title)} <span class="ext">↗</span></div>
-        <blockquote class="iquote">${esc(iss.quote)}</blockquote>
-        <p class="isummary">${esc(iss.summary)}</p>
-        ${tagHTML?`<div class="itags">${tagHTML}</div>`:''}
-        <div class="ifoot">
-          <div class="iimp-wrap">
-            <div class="iimp-row ${impCls(iss.impact)}">● 영향도 ${esc(iss.impact||'보통')}<span class="imp-bar"><i style="width:${impPct(iss.impact)}%"></i></span></div>
-            ${iss.impactReason?`<div class="iimp-reason">${esc(iss.impactReason)}</div>`:''}
-          </div>
-          <span class="view-src">원문 보기 ↗</span>
-        </div>
-      </div>
-      <button class="report-btn" onclick="event.preventDefault();event.stopPropagation();openReport(${n})">⚑ 신고</button>
-    </a>`;
+    <a class="icard" href="${esc(iss.sourceUrl)}" target="_blank" rel="noopener" data-id="${n}">${iss.imageUrl?`<div class="icard-thumb" style="background-image:url('${esc(iss.imageUrl)}')"></div>`:''}
+      <div class="icard-body"><span class="icard-num">${String(n).padStart(2,'0')}</span><div class="icard-head"><img class="src-logo" src="${favicon}" alt="" loading="lazy" onerror="this.style.visibility='hidden'"><div class="src-meta"><div class="src-name">${esc(iss.source)}</div><div class="src-detail">${esc(host)} · ${esc(iss.publishedDate||'')}</div></div><span class="src-tier ${tier.cls}">${tier.label}</span></div><span class="icat ${catCls(iss.category)}">${esc(iss.category||'')}</span><div class="ititle">${esc(iss.title)} <span class="ext">↗</span></div><blockquote class="iquote">${esc(iss.quote)}</blockquote><p class="isummary">${esc(iss.summary)}</p>${tagHTML?`<div class="itags">${tagHTML}</div>`:''}
+        <div class="ifoot"><div class="iimp-wrap"><div class="iimp-row ${impCls(iss.impact)}">● 영향도 ${esc(iss.impact||'보통')}<span class="imp-bar"><i style="width:${impPct(iss.impact)}%"></i></span></div>${iss.impactReason?`<div class="iimp-reason">${esc(iss.impactReason)}</div>`:''}
+          </div><span class="view-src">원문 보기 ↗</span></div></div><button class="report-btn" onclick="event.preventDefault();event.stopPropagation();openReport(${n})">신고</button></a>`;
   };
 
   const ticker = (d.tickers||[]).map(t=>`
     ${t.url?`<a class="t-item" href="${esc(t.url)}" target="_blank" rel="noopener">`:`<div class="t-item">`}
-      <span class="t-label">${esc(t.label)}</span>
-      <span class="t-val ${esc(t.dir||'neutral')}">${esc(t.value)}</span>
-      ${t.note?`<span class="t-note">${esc(t.note)}</span>`:''}
+      <span class="t-label">${esc(t.label)}</span><span class="t-val ${esc(t.dir||'neutral')}">${esc(t.value)}</span>${t.note?`<span class="t-note">${esc(t.note)}</span>`:''}
     ${t.url?`</a>`:`</div>`}`).join('');
 
   const trends = (d.trends||[]).map((t,i)=>{
@@ -655,9 +537,7 @@ function render(d) {
     const change = t.change||'';
     const dir = change.startsWith('+')?'up':change.startsWith('-')?'down':'neutral';
     const inner = `
-      <span class="trank">${String(i+1).padStart(2,'0')}</span>
-      <div class="ttext">${esc(t.keyword)}<small>${esc(t.desc)}</small></div>
-      ${pts.length?sparkline(pts):''}
+      <span class="trank">${String(i+1).padStart(2,'0')}</span><div class="ttext">${esc(t.keyword)}<small>${esc(t.desc)}</small></div>${pts.length?sparkline(pts):''}
       ${change?`<span class="tchange ${dir}">${esc(change)}</span>`:''}`;
     return t.relatedUrl
       ? `<a class="trend-item" href="${esc(t.relatedUrl)}" target="_blank" rel="noopener">${inner}</a>`
@@ -668,11 +548,7 @@ function render(d) {
     const dd = ddayOf(e.month, e.day);
     const flag = flagOf(e.country);
     const inner = `
-      <div class="ev-date"><span class="ev-mo">${esc(e.month)}</span><span class="ev-dy">${esc(e.day)}</span></div>
-      <div class="ev-info">
-        <div class="ev-name">${flag?`<span class="flag">${flag}</span>`:''}${esc(e.name)}</div>
-        <div class="ev-loc"><span>${esc(e.location)}</span>${dd?`<span class="dday">${dd}</span>`:''}</div>
-      </div>`;
+      <div class="ev-date"><span class="ev-mo">${esc(e.month)}</span><span class="ev-dy">${esc(e.day)}</span></div><div class="ev-info"><div class="ev-name">${flag?`<span class="flag">${flag}</span>`:''}${esc(e.name)}</div><div class="ev-loc"><span>${esc(e.location)}</span>${dd?`<span class="dday">${dd}</span>`:''}</div></div>`;
     return e.url
       ? `<a class="ev-item" href="${esc(e.url)}" target="_blank" rel="noopener">${inner}</a>`
       : `<div class="ev-item">${inner}</div>`;
@@ -683,22 +559,14 @@ function render(d) {
   const rest = issues.slice(3).map((iss,i)=>card(iss,i+4)).join('');
 
   const corrections = (d.corrections||[]).map(c=>`
-    <div class="corr-item"><span class="corr-date">${esc(c.date||'')}</span> · ${esc(c.note)}</div>`).join('');
+    <div class="corr-item"><span class="corr-date">${esc(c.date||'')}</span>· ${esc(c.note)}</div>`).join('');
 
   wrap.innerHTML = `
     ${ticker?`<div class="ticker">${ticker}</div>`:''}
-    <div class="brief-grid">
-      <div class="top-row">
-        <div>
-          <div class="sec-label">이달의 핵심 이슈</div>
-          ${issues.slice(0,3).map((iss,i)=>card(iss,i+1)).join('')}
-        </div>
-        <div class="side">
-          ${trends?`<div class="side-card"><div class="sec-label">주목 키워드</div><ul class="trend-list">${trends}</ul></div>`:''}
+    <div class="brief-grid"><div class="top-row"><div><div class="sec-label">이달의 핵심 이슈</div>${issues.slice(0,3).map((iss,i)=>card(iss,i+1)).join('')}
+        </div><div class="side">${trends?`<div class="side-card"><div class="sec-label">주목 키워드</div><ul class="trend-list">${trends}</ul></div>`:''}
           ${events?`<div class="side-card"><div class="sec-label">업계 행사 일정</div>${events}</div>`:''}
-        </div>
-      </div>
-      ${rest?`<div><div class="sec-label">추가 동향</div><div class="rest-grid">${rest}</div></div>`:''}
+        </div></div>${rest?`<div><div class="sec-label">추가 동향</div><div class="rest-grid">${rest}</div></div>`:''}
       ${corrections?`<div class="corr-card"><div class="sec-label">수정·철회 이력</div>${corrections}</div>`:''}
     </div>`;
 }
@@ -711,7 +579,7 @@ async function fetchBriefing(apiKey) {
   const moNames = ['January','February','March','April','May','June','July','August','September','October','November','December'];
 
   document.getElementById('el-load-txt').innerHTML =
-    '<span class="load-step">🔍 검증된 출처에서 수집 중...</span><br>화이트리스트 매체를 직접 검색하여 최근 30~45일 기사만 가져옵니다.<br>약 40~60초 소요.';
+    '<span class="load-step">검증된 출처에서 수집 중...</span><br>화이트리스트 매체를 직접 검색하여 최근 30~45일 기사만 가져옵니다.<br>약 40~60초 소요.';
 
   const prompt =
     `Generate a Pro Audio industry briefing for ${moNames[mo-1]} ${yr} based ONLY on articles you retrieve via the web_search tool from the allowed domains listed in the tool configuration.
@@ -796,7 +664,7 @@ let _reviewState = {}; // { [idx]: 'ok'|'no'|null, edits: {...} }
 function openReview(valid, rejected) {
   _reviewData = valid;
   _reviewState = {};
-  (valid.issues||[]).forEach((_,i)=> _reviewState[i] = {status:'ok', edits:null});
+  (valid.issues||[]).forEach((_,i)=>_reviewState[i] = {status:'ok', edits:null});
 
   document.getElementById('rv-passed').textContent = valid.issues?.length || 0;
   document.getElementById('rv-rejected').textContent = rejected.length;
@@ -805,7 +673,7 @@ function openReview(valid, rejected) {
   if (rejected.length) {
     rejBox.style.display = 'block';
     rejBox.innerHTML = '<b>자동 검증 거절 ('+rejected.length+'건):</b><br>' +
-      rejected.map(r=>`• <b>${r.item}</b> — ${r.reason}`).join('<br>');
+      rejected.map(r=>`• <b>${r.item}</b>— ${r.reason}`).join('<br>');
   } else {
     rejBox.style.display = 'none';
   }
@@ -822,34 +690,7 @@ function renderReviewList() {
     const cls = st.status==='ok'?'approved':st.status==='no'?'rejected':'';
     const host = iss.sourceDomain || domainOf(iss.sourceUrl);
     return `
-    <div class="rv-card ${cls}" data-idx="${i}">
-      <div class="rv-head">
-        <span>#${i+1}</span><span>·</span>
-        <span>${host}</span><span>·</span>
-        <span>${iss.publishedDate||'-'}</span><span>·</span>
-        <span>${iss.category||'-'}</span>
-      </div>
-      <div class="rv-title">${iss.title}</div>
-      <div class="rv-quote">📄 ${iss.quote}</div>
-      <div class="rv-summary">🤖 ${iss.summary}</div>
-      <a class="rv-url" href="${iss.sourceUrl}" target="_blank" rel="noopener">🔗 원문 확인: ${iss.sourceUrl}</a>
-      <div class="rv-actions">
-        <button class="rv-btn ok ${st.status==='ok'?'on':''}" onclick="setReview(${i},'ok')">✓ 승인</button>
-        <button class="rv-btn no ${st.status==='no'?'on':''}" onclick="setReview(${i},'no')">✗ 거절</button>
-        <button class="rv-btn ed" onclick="toggleEdit(${i})">✎ 수정</button>
-      </div>
-      <div class="rv-edit">
-        <label>제목</label>
-        <input class="minput" id="ed-title-${i}" value="${(iss.title||'').replace(/"/g,'&quot;')}">
-        <label>원문 인용</label>
-        <textarea class="mtextarea" id="ed-quote-${i}">${iss.quote||''}</textarea>
-        <label>AI 요약</label>
-        <textarea class="mtextarea" id="ed-summary-${i}">${iss.summary||''}</textarea>
-        <label>영향도 판단 근거</label>
-        <input class="minput" id="ed-ireason-${i}" value="${(iss.impactReason||'').replace(/"/g,'&quot;')}">
-        <button class="rv-btn ok" onclick="saveEdit(${i})">저장</button>
-      </div>
-    </div>`;
+    <div class="rv-card ${cls}" data-idx="${i}"><div class="rv-head"><span>#${i+1}</span><span>·</span><span>${host}</span><span>·</span><span>${iss.publishedDate||'-'}</span><span>·</span><span>${iss.category||'-'}</span></div><div class="rv-title">${iss.title}</div><div class="rv-quote">${iss.quote}</div><div class="rv-summary">${iss.summary}</div><a class="rv-url" href="${iss.sourceUrl}" target="_blank" rel="noopener">원문 확인: ${iss.sourceUrl}</a><div class="rv-actions"><button class="rv-btn ok ${st.status==='ok'?'on':''}" onclick="setReview(${i},'ok')">승인</button><button class="rv-btn no ${st.status==='no'?'on':''}" onclick="setReview(${i},'no')">거절</button><button class="rv-btn ed" onclick="toggleEdit(${i})">수정</button></div><div class="rv-edit"><label>제목</label><input class="minput" id="ed-title-${i}" value="${(iss.title||'').replace(/"/g,'&quot;')}"><label>원문 인용</label><textarea class="mtextarea" id="ed-quote-${i}">${iss.quote||''}</textarea><label>AI 요약</label><textarea class="mtextarea" id="ed-summary-${i}">${iss.summary||''}</textarea><label>영향도 판단 근거</label><input class="minput" id="ed-ireason-${i}" value="${(iss.impactReason||'').replace(/"/g,'&quot;')}"><button class="rv-btn ok" onclick="saveEdit(${i})">저장</button></div></div>`;
   }).join('') || '<div style="color:var(--muted);font-size:.8rem;padding:2rem;text-align:center">검증 통과한 이슈가 없습니다. 다시 수집해주세요.</div>';
 }
 
@@ -882,19 +723,19 @@ window.setReview = setReview;
 window.toggleEdit = toggleEdit;
 window.saveEdit = saveEdit;
 
-document.getElementById('rv-all').onclick = () => {
-  Object.keys(_reviewState).forEach(k => _reviewState[k].status='ok');
+document.getElementById('rv-all').onclick = () =>{
+  Object.keys(_reviewState).forEach(k =>_reviewState[k].status='ok');
   renderReviewList(); updateReviewStats();
 };
-document.getElementById('rv-none').onclick = () => {
-  Object.keys(_reviewState).forEach(k => _reviewState[k].status='no');
+document.getElementById('rv-none').onclick = () =>{
+  Object.keys(_reviewState).forEach(k =>_reviewState[k].status='no');
   renderReviewList(); updateReviewStats();
 };
-document.getElementById('btn-review-cancel').onclick = () => {
+document.getElementById('btn-review-cancel').onclick = () =>{
   document.getElementById('m-review').classList.remove('on');
   _reviewData = null;
 };
-document.getElementById('btn-publish').onclick = async () => {
+document.getElementById('btn-publish').onclick = async () =>{
   const approvedIssues = (_reviewData.issues||[]).filter((_,i)=>_reviewState[i].status==='ok');
   if (!approvedIssues.length) {
     if (!confirm('승인된 이슈가 없습니다. 그래도 빈 브리핑을 게시하시겠습니까?')) return;
@@ -909,28 +750,28 @@ document.getElementById('btn-publish').onclick = async () => {
     await saveData(toSave);
     document.getElementById('m-review').classList.remove('on');
     render(toSave);
-    alert('✅ 게시 완료: ' + approvedIssues.length + '건 공개');
+    alert(' 게시 완료: ' + approvedIssues.length + '건 공개');
   } catch(err) {
-    alert('❌ 저장 오류: ' + err.message);
+    alert(' 저장 오류: ' + err.message);
   }
 };
 
 // ─── REPORT MODAL ─────────────────────────────────────
 let _reportIdx = null;
-window.openReport = (idx) => {
+window.openReport = (idx) =>{
   _reportIdx = idx - 1;
   const iss = (window._lastIssues||[])[_reportIdx];
   if (!iss) return;
   document.getElementById('rp-target').innerHTML =
-    `<b>신고 대상:</b> ${iss.title}<br><small style="color:var(--dim)">${iss.sourceDomain||''} · ${iss.publishedDate||''}</small>`;
+    `<b>신고 대상:</b>${iss.title}<br><small style="color:var(--dim)">${iss.sourceDomain||''} · ${iss.publishedDate||''}</small>`;
   document.getElementById('inp-report').value = '';
   document.getElementById('m-report').classList.add('on');
 };
 
-document.getElementById('btn-report-cancel').onclick = () => {
+document.getElementById('btn-report-cancel').onclick = () =>{
   document.getElementById('m-report').classList.remove('on');
 };
-document.getElementById('btn-report-ok').onclick = async () => {
+document.getElementById('btn-report-ok').onclick = async () =>{
   const note = document.getElementById('inp-report').value.trim();
   if (!note) { alert('신고 내용을 입력해주세요.'); return; }
   const pin = prompt('관리자 PIN을 입력하세요 (신고 즉시 해당 카드를 숨기려면):');
@@ -949,23 +790,23 @@ document.getElementById('btn-report-ok').onclick = async () => {
     await saveData(cur);
     document.getElementById('m-report').classList.remove('on');
     render(cur);
-    alert('✅ 신고 접수 완료. 카드가 즉시 숨김 처리되었습니다.');
+    alert(' 신고 접수 완료. 카드가 즉시 숨김 처리되었습니다.');
   } catch(err) {
-    alert('❌ 저장 오류: ' + err.message);
+    alert(' 저장 오류: ' + err.message);
   }
 };
 
 // ─── MODAL LOGIC ──────────────────────────────────────
-const $ = id => document.getElementById(id);
+const $ = id =>document.getElementById(id);
 
-$('adm-btn').onclick = () => {
+$('adm-btn').onclick = () =>{
   $('inp-pin').value = '';
   $('err-pin').style.display = 'none';
   $('m-pin').classList.add('on');
-  setTimeout(() => $('inp-pin').focus(), 80);
+  setTimeout(() =>$('inp-pin').focus(), 80);
 };
-$('btn-pin-cancel').onclick = () => $('m-pin').classList.remove('on');
-$('btn-pin-ok').onclick = () => {
+$('btn-pin-cancel').onclick = () =>$('m-pin').classList.remove('on');
+$('btn-pin-ok').onclick = () =>{
   if ($('inp-pin').value !== ADMIN_PIN) {
     $('err-pin').style.display = 'block'; return;
   }
@@ -975,17 +816,17 @@ $('btn-pin-ok').onclick = () => {
   $('chk-show').checked = false;
   $('inp-apikey').type = 'password';
   $('m-apikey').classList.add('on');
-  setTimeout(() => $('inp-apikey').focus(), 80);
+  setTimeout(() =>$('inp-apikey').focus(), 80);
 };
-$('inp-pin').onkeydown = e => { if(e.key==='Enter') $('btn-pin-ok').click(); };
+$('inp-pin').onkeydown = e =>{ if(e.key==='Enter') $('btn-pin-ok').click(); };
 $('chk-show').onchange = function() {
   $('inp-apikey').type = this.checked ? 'text' : 'password';
 };
-$('btn-api-cancel').onclick = () => {
+$('btn-api-cancel').onclick = () =>{
   $('m-apikey').classList.remove('on');
   $('inp-apikey').value = '';
 };
-$('btn-api-ok').onclick = async () => {
+$('btn-api-ok').onclick = async () =>{
   const key = $('inp-apikey').value.trim();
   if (!key.startsWith('sk-')) { $('err-api').style.display = 'block'; return; }
   $('m-apikey').classList.remove('on');
@@ -998,18 +839,16 @@ $('btn-api-ok').onclick = async () => {
   } catch(err) {
     $('el-loading').classList.remove('on');
     console.error(err);
-    alert('❌ 수집 오류: ' + err.message);
+    alert(' 수집 오류: ' + err.message);
   } finally {
     $('inp-apikey').value = '';
   }
 };
-$('inp-apikey').onkeydown = e => { if(e.key==='Enter') $('btn-api-ok').click(); };
+$('inp-apikey').onkeydown = e =>{ if(e.key==='Enter') $('btn-api-ok').click(); };
 
 // ─── INIT ─────────────────────────────────────────────
-(async () => {
+(async () =>{
   const d = await loadData();
   if (d) render(d);
 })();
-</script>
-</body>
-</html>
+</script></body></html>
