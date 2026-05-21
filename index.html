@@ -83,14 +83,6 @@ header{background:#fff;border-bottom:1px solid #eee;box-shadow:0 2px 8px rgba(0,
 }
 .briefing-banner:hover .briefing-arrow{transform:translateX(3px);}
 
-/* 히어로 배너 */
-.hero-banner{width:100%;height:240px;background:linear-gradient(135deg,#1a1a2e,#0f3460);display:flex;align-items:center;justify-content:center;cursor:pointer;overflow:hidden;position:relative}
-.hero-banner img{width:100%;height:100%;object-fit:cover;display:none}
-.banner-placeholder{text-align:center;color:rgba(255,255,255,.4);pointer-events:none}
-.banner-placeholder div:first-child{font-size:36px;margin-bottom:8px}
-.banner-placeholder div{font-size:13px}
-.banner-placeholder div:last-child{font-size:11px;margin-top:4px}
-
 /* 메인 */
 main{max-width:1200px;margin:0 auto;padding:24px 16px}
 
@@ -132,7 +124,6 @@ footer{background:#111;color:#fff;padding:24px 20px;font-size:11px;opacity:.6;te
   .card-img{height:120px;font-size:28px}
   .card-body{padding:10px}
   .card-name{font-size:12px}
-  .hero-banner{height:180px}
   main{padding:18px 12px}
   .briefing-banner{padding:0 16px;height:44px}
 }
@@ -146,7 +137,6 @@ footer{background:#111;color:#fff;padding:24px 20px;font-size:11px;opacity:.6;te
   .card-body{padding:9px}
   .card-name{font-size:12px}
   .card-price{font-size:13px}
-  .hero-banner{height:140px}
   .cat-section-title{font-size:15px}
   main{padding:14px 10px}
   .cat-section-header{margin-bottom:14px}
@@ -159,7 +149,7 @@ footer{background:#111;color:#fff;padding:24px 20px;font-size:11px;opacity:.6;te
   .product-grid{grid-template-columns:repeat(2,1fr);gap:8px}
   .card-img{height:95px}
 }
-</style></head><body><header><div class="logo"><a href="index.html"><img src="logo.png" alt="(주)현대에이브이씨"></a></div><div class="search-box"><input type="text" id="searchInput" placeholder=" 제품 검색..." oninput="doSearch()"></div></header><div class="hero-banner" id="heroBanner" onclick="document.getElementById('bannerUpload').click()"><img id="bannerImg" src="" alt="배너"><div class="banner-placeholder" id="bannerPlaceholder"><div></div><div>클릭하여 배너 이미지 추가</div><div>권장 사이즈: 1200 × 240px</div></div></div><input type="file" id="bannerUpload" accept="image/*" style="display:none" onchange="setBanner(event)"><!-- ===== 브리핑 링크 배너 ===== --><a href="pro-audio-briefing.html" class="briefing-banner"><div class="briefing-banner-left"><span class="briefing-live-dot"></span><span class="briefing-tag">Monthly</span><span class="briefing-text"><strong>Pro Audio 월간 브리핑</strong>— 업계 핫이슈 · 신제품 · 시장동향을 한눈에</span></div><span class="briefing-arrow">→</span></a><div class="filter-wrap"><div class="filter-row"><span class="filter-label">브랜드</span><div class="filter-scroll"><button class="cat-btn active" id="brand-전체" onclick="filterBrand('전체',this)">전체</button><button class="cat-btn" id="brand-Soundking" onclick="filterBrand('Soundking',this)">Soundking</button><button class="cat-btn" id="brand-CAROL" onclick="filterBrand('CAROL',this)">CAROL</button><button class="cat-btn" id="brand-PROSTAR" onclick="filterBrand('PROSTAR',this)">PROSTAR</button><button class="cat-btn" id="brand-Sound+Music" onclick="filterBrand('Sound+Music',this)">Sound+Music</button><button class="cat-btn" id="brand-ADAM" onclick="filterBrand('ADAM',this)">ADAM</button><button class="cat-btn" id="brand-Newnabie" onclick="filterBrand('Newnabie',this)">Newnabie</button></div></div><div class="filter-row" style="border-top:1px solid #f0f0f0"><span class="filter-label">제품군</span><div class="filter-scroll"><button class="cat-btn active" id="cat-전체" onclick="filterCat('전체',this)">전체</button><button class="cat-btn" id="cat-스피커" onclick="filterCat('스피커',this)">스피커</button><button class="cat-btn" id="cat-파워앰프" onclick="filterCat('파워앰프',this)">파워앰프</button><button class="cat-btn" id="cat-믹서" onclick="filterCat('믹서',this)">믹서</button><button class="cat-btn" id="cat-마이크" onclick="filterCat('마이크',this)">마이크</button><button class="cat-btn" id="cat-악세서리" onclick="filterCat('악세서리',this)">악세서리</button><button class="cat-btn" id="cat-스탠드" onclick="filterCat('스탠드',this)">스탠드</button><button class="cat-btn" id="cat-전자드럼" onclick="filterCat('전자드럼',this)">전자드럼</button></div></div></div><main><div class="no-result" id="noResult">검색 결과가 없습니다.</div><div id="catalogWrap"></div></main><footer>경기도 평택시 도일유통길 39-9 (도일동) · 031-8054-0048<br>COPYRIGHT ⓒ HYUNDAI AUDIO VISUAL COMMUNICATIONS CO., LTD. ALL RIGHTS RESERVED.
+</style></head><body><header><div class="logo"><a href="index.html"><img src="logo.png" alt="(주)현대에이브이씨"></a></div><div class="search-box"><input type="text" id="searchInput" placeholder=" 제품 검색..." oninput="doSearch()"></div></header><!-- ===== 브리핑 링크 배너 ===== --><a href="pro-audio-briefing.html" class="briefing-banner"><div class="briefing-banner-left"><span class="briefing-live-dot"></span><span class="briefing-tag">Monthly</span><span class="briefing-text"><strong>Pro Audio 월간 브리핑</strong>— 업계 핫이슈 · 신제품 · 시장동향을 한눈에</span></div><span class="briefing-arrow">→</span></a><div class="filter-wrap"><div class="filter-row"><span class="filter-label">브랜드</span><div class="filter-scroll"><button class="cat-btn active" id="brand-전체" onclick="filterBrand('전체',this)">전체</button><button class="cat-btn" id="brand-Soundking" onclick="filterBrand('Soundking',this)">Soundking</button><button class="cat-btn" id="brand-CAROL" onclick="filterBrand('CAROL',this)">CAROL</button><button class="cat-btn" id="brand-PROSTAR" onclick="filterBrand('PROSTAR',this)">PROSTAR</button><button class="cat-btn" id="brand-Sound+Music" onclick="filterBrand('Sound+Music',this)">Sound+Music</button><button class="cat-btn" id="brand-ADAM" onclick="filterBrand('ADAM',this)">ADAM</button><button class="cat-btn" id="brand-Newnabie" onclick="filterBrand('Newnabie',this)">Newnabie</button></div></div><div class="filter-row" style="border-top:1px solid #f0f0f0"><span class="filter-label">제품군</span><div class="filter-scroll"><button class="cat-btn active" id="cat-전체" onclick="filterCat('전체',this)">전체</button><button class="cat-btn" id="cat-스피커" onclick="filterCat('스피커',this)">스피커</button><button class="cat-btn" id="cat-파워앰프" onclick="filterCat('파워앰프',this)">파워앰프</button><button class="cat-btn" id="cat-믹서" onclick="filterCat('믹서',this)">믹서</button><button class="cat-btn" id="cat-마이크" onclick="filterCat('마이크',this)">마이크</button><button class="cat-btn" id="cat-악세서리" onclick="filterCat('악세서리',this)">악세서리</button><button class="cat-btn" id="cat-스탠드" onclick="filterCat('스탠드',this)">스탠드</button><button class="cat-btn" id="cat-전자드럼" onclick="filterCat('전자드럼',this)">전자드럼</button></div></div></div><main><div class="no-result" id="noResult">검색 결과가 없습니다.</div><div id="catalogWrap"></div></main><footer>경기도 평택시 도일유통길 39-9 (도일동) · 031-8054-0048<br>COPYRIGHT ⓒ HYUNDAI AUDIO VISUAL COMMUNICATIONS CO., LTD. ALL RIGHTS RESERVED.
 </footer><script>const products = [
   {cat:'스피커',sub:'라인어레이',name:'GL26A 액티브 컬럼 라인어레이 시스템',model:'GL26A-T',brand:'Soundking',spec:'TOP 129dB / SUB 130dB / 폴리우레아 마감',price:2200000,unit:'개~',page:'gl26.html',img:'gl26_1.png',inquiry:true},
   {cat:'스피커',sub:'라인어레이',name:'G110 패시브 라인어레이 시스템',model:'G110',brand:'Soundking',spec:'TOP 135dB / SUB 134dB / 발주계약 공급',price:2500000,unit:'개~',page:'g110.html',badge:'발주계약',inquiry:true,img:'g110_01.png'},
@@ -348,17 +338,6 @@ function filterBrand(brand,el){
 function doSearch(){
   searchTerm=document.getElementById('searchInput').value;
   render();
-}
-
-function setBanner(e){
-  const file=e.target.files[0];
-  if(!file) return;
-  const url=URL.createObjectURL(file);
-  const img=document.getElementById('bannerImg');
-  img.src=url; img.style.display='block';
-  document.getElementById('bannerPlaceholder').style.display='none';
-  document.getElementById('heroBanner').style.cursor='default';
-  document.getElementById('heroBanner').onclick=null;
 }
 
 window.addEventListener('load', () =>{
