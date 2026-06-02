@@ -293,10 +293,103 @@ footer p{font-size:.78rem;color:var(--muted);font-family:'Space Mono',monospace}
 .hml{color:rgba(255,255,255,.55) !important}
 .hmv{color:#ffffff !important}
 #disp-date{color:#fbd96a !important}
-</style></head><body><header class="hdr"><div class="hdr-left"><a href="https://kkim1213-afk.github.io/hdavc-products/index.html" class="hdr-logo">(주)현대에이브이씨</a><div class="hdr-div"></div><span class="hdr-sub">Pro Audio Monthly Briefing</span></div><a href="https://kkim1213-afk.github.io/hdavc-products/index.html" class="back-btn">← 메인으로</a></header><section class="hero"><div class="hero-tag"><span class="live-dot"></span>Monthly Intelligence Report · Source-Verified</div><h1>PRO AUDIO<br><span>BRIEFING</span></h1><div class="hero-meta"><div class="hero-meta-item"><span class="hml">최근 업데이트</span><span class="hmv" id="disp-date">—</span></div><div class="hero-meta-item"><span class="hml">수집 기간</span><span class="hmv" id="disp-period">—</span></div><div class="hero-meta-item"><span class="hml">검증 통과</span><span class="hmv" id="disp-count">—</span></div><div class="hero-meta-item"><span class="hml">총 출처</span><span class="hmv" id="disp-sources">—</span></div></div></section><div class="notice"><div class="notice-box"><span style="font-size:1rem"></span><div><b>검증된 출처만 게재합니다.</b>모든 항목은 <code>화이트리스트 도메인 → 자동 검증 → 관리자 승인</code>3단계를 통과한 내용입니다.
-      각 카드의 <b>원문 인용</b>은 기사 원문에서 그대로 가져온 문장이며, <b>AI 요약</b>은 해당 원문만을 근거로 작성됩니다.
-      사실과 다른 내용이 있다면 카드 좌하단의 <b>신고</b>로 알려주세요.
-    </div></div></div><main class="content"><div class="empty" id="el-empty"><div class="empty-icon"></div><h3>아직 브리핑 데이터가 없습니다</h3><p>우측 하단 버튼 → PIN → API 키 입력 후 수집을 시작하세요.<br>수집된 내용은 관리자 승인을 거친 뒤에만 공개됩니다.</p></div><div id="el-content" style="display:none;"></div></main><footer><p>© 2026 HYUNDAI AUDIO VISUAL COMMUNICATIONS CO., LTD.</p><p class="fnote">본 브리핑은 허용 매체의 최근 기사를 기반으로 작성되며, AI가 원문을 요약한 텍스트에는 표시가 됩니다. 원문 인용()과 원문 링크를 함께 제공합니다.</p></footer><!-- 관리자 버튼 --><button id="adm-btn" title="관리자"></button><!-- MODAL 1: PIN --><div class="backdrop" id="m-pin"><div class="mbox"><h3>관리자 인증</h3><p class="mdesc">관리자 PIN을 입력하세요</p><input type="password" class="minput" id="inp-pin" placeholder="PIN" maxlength="6" autocomplete="off"><div class="mbtns"><button class="mbtn mbtn-ok" id="btn-pin-ok">확인</button><button class="mbtn mbtn-cancel" id="btn-pin-cancel">취소</button></div><p class="merr" id="err-pin">PIN이 올바르지 않습니다.</p></div></div><!-- MODAL 2: API KEY --><div class="backdrop" id="m-apikey"><div class="mbox"><h3>API 키 입력</h3><p class="mdesc">Anthropic API 키를 입력하세요.<br>키는 저장되지 않으며 이번 수집에만 사용됩니다.<br>web_search 툴이 활성화된 키여야 합니다.</p><input type="password" class="minput" id="inp-apikey" placeholder="sk-ant-api03-..." autocomplete="off" style="letter-spacing:.04em;font-size:.8rem"><div class="mcheck"><input type="checkbox" id="chk-show"><label for="chk-show">키 표시</label></div><div class="mbtns"><button class="mbtn mbtn-ok" id="btn-api-ok">수집 시작</button><button class="mbtn mbtn-cancel" id="btn-api-cancel">취소</button></div><p class="merr" id="err-api">올바른 API 키를 입력해주세요. (sk-ant-...)</p></div></div><!-- MODAL 3: REVIEW --><div class="backdrop" id="m-review"><div class="mbox wide"><h3>관리자 검토 · 게재 승인</h3><p class="mdesc">각 항목을 개별 승인/거절/수정하세요. <b style="color:var(--accent)">승인(ACCEPT)한 항목만 공개 게시됩니다.</b></p><div class="review-head"><div class="review-stats"><span>검증 통과 <b id="rv-passed">0</b></span><span>거절됨 <b id="rv-rejected">0</b></span><span>선택된 승인 <b id="rv-selected">0</b></span></div><div><button class="rv-btn ok" id="rv-all">전체 승인</button><button class="rv-btn no" id="rv-none">전체 거절</button></div></div><div class="review-rejected" id="rv-rej-list" style="display:none"></div><div class="review-list" id="rv-list"></div><div class="mbtns" style="margin-top:1.5rem"><button class="mbtn mbtn-ok" id="btn-publish">승인 항목만 게시</button><button class="mbtn mbtn-cancel" id="btn-review-cancel">취소 (저장 안함)</button></div></div></div><!-- MODAL 4: REPORT --><div class="backdrop" id="m-report"><div class="mbox"><h3>사실 오류 신고</h3><p class="mdesc">이 카드의 어느 부분이 사실과 다른지 알려주세요. 관리자가 확인 후 즉시 조치합니다.</p><div id="rp-target" style="font-size:.75rem;color:var(--muted);margin-bottom:1rem;padding:.7rem;background:var(--bg);border:1px solid var(--border);border-radius:3px;line-height:1.6"></div><textarea class="mtextarea" id="inp-report" placeholder="예: 제품 출시일이 실제와 다릅니다. 정확한 날짜는 ..."></textarea><div class="mbtns"><button class="mbtn mbtn-danger" id="btn-report-ok">신고 접수 (관리자 확인 후 숨김)</button><button class="mbtn mbtn-cancel" id="btn-report-cancel">취소</button></div><p class="mdesc" style="margin-top:1rem;margin-bottom:0;font-size:.68rem">※ 신고 접수 시 관리자 PIN이 필요하며, 즉시 해당 카드는 숨김 처리됩니다.</p></div></div><!-- LOADING --><div class="loading" id="el-loading"><div class="spinner"></div><div class="load-txt" id="el-load-txt"><span class="load-step">검증된 출처에서 수집 중...</span><br>화이트리스트 매체(soundonsound, Pro Sound Network 등)를 직접 검색하여<br>최근 30~45일 기사만 가져옵니다. 약 40~60초 소요.
+
+/* LAYOUT-OVERLAP-FIX-V1 — 카드 절대 위치 요소 겹침 방지·간격 정리 */
+.icard{padding:0 !important}
+.icard-body{padding:1.4rem 1.4rem 1.2rem !important}
+.icard-num{
+  font-size:2.2rem !important;
+  top:.5rem !important;
+  right:1rem !important;
+  opacity:.15 !important;
+  z-index:0 !important;
+}
+.icard-head{position:relative;z-index:1;padding-right:2.6rem;margin-bottom:1rem !important}
+.icat{position:relative;z-index:1;margin-bottom:.85rem !important}
+.ititle{position:relative;z-index:1}
+.iquote{
+  margin-bottom:1rem !important;
+  padding:.85rem 1rem !important;
+}
+.iquote::before{
+  display:block !important;
+  margin-bottom:.5rem !important;
+  font-size:.62rem !important;
+  letter-spacing:.12em !important;
+}
+.isummary{
+  margin-bottom:1.1rem !important;
+  padding:.85rem 1rem !important;
+}
+.isummary::before{
+  display:block !important;
+  margin-bottom:.5rem !important;
+  font-size:.62rem !important;
+  letter-spacing:.12em !important;
+}
+.itags{margin-bottom:1.1rem !important}
+.ifoot{
+  margin-top:1rem !important;
+  padding-top:1rem !important;
+  padding-bottom:.4rem !important;
+  align-items:center !important;
+  gap:1rem !important;
+}
+.iimp-wrap{flex:1;min-width:0}
+.iimp-reason{
+  white-space:normal !important;
+  word-break:keep-all !important;
+  overflow-wrap:anywhere !important;
+}
+.view-src{
+  flex-shrink:0;
+  white-space:nowrap !important;
+}
+.report-btn{
+  position:static !important;
+  display:inline-block !important;
+  margin:.4rem 0 0 0 !important;
+  padding:.3rem .65rem !important;
+  font-size:.66rem !important;
+  background:transparent !important;
+}
+.icard-body::after{
+  content:'';
+  display:block;
+  clear:both;
+}
+
+/* 카드 내부 정렬: 신고 버튼을 ifoot 옆으로 자연 위치 */
+.icard-body{display:flex;flex-direction:column}
+.icard-body .ifoot{order:98}
+.icard-body .report-btn{order:99;align-self:flex-start;color:var(--dim) !important;border:1px solid var(--border) !important;border-radius:3px}
+.icard-body .report-btn:hover{color:var(--red) !important;border-color:rgba(239,68,68,.4) !important;background:rgba(239,68,68,.05) !important}
+
+/* 사이드 카드(주목 키워드·행사) — 스파크라인·D-day 정렬 */
+.trend-item{flex-wrap:wrap;gap:.6rem !important;padding:.85rem 0 !important;align-items:center !important}
+.ttext{flex:1 1 60%;min-width:0}
+.tspark{flex-shrink:0}
+.tchange{flex-shrink:0}
+.ev-item{padding:.85rem 0 !important;gap:1rem !important;align-items:center !important}
+.ev-name{line-height:1.5 !important}
+.ev-loc{margin-top:.2rem !important}
+
+/* Ticker — 좁은 화면에서 줄바꿈 정리 */
+.ticker{padding:1.2rem 1.5rem !important;gap:1.4rem 2rem !important}
+.t-item{padding-right:1rem}
+.t-note{margin-top:.2rem}
+
+/* Hero 모바일에서 제목·메타 겹침 방지 */
+.hero h1{margin-bottom:1.4rem !important;padding-right:.5rem !important}
+.hero-meta{margin-top:1.8rem !important;padding-top:1.8rem !important;gap:1.8rem 2.4rem !important;row-gap:1.2rem !important}
+@media(max-width:600px){
+  .hero h1{font-size:clamp(2.4rem,12vw,3.6rem) !important;line-height:1 !important}
+  .hero-meta{gap:1rem 1.6rem !important;flex-wrap:wrap}
+  .icard-body{padding:1.2rem 1.2rem 1rem !important}
+  .ifoot{flex-direction:column !important;align-items:flex-start !important}
+  .view-src{align-self:flex-end}
+}
+</style></head><body><header class="hdr"><div class="hdr-left"><a href="https://kkim1213-afk.github.io/hdavc-products/index.html" class="hdr-logo">(주)현대에이브이씨</a><div class="hdr-div"></div><span class="hdr-sub">Pro Audio Monthly Briefing</span></div><a href="https://kkim1213-afk.github.io/hdavc-products/index.html" class="back-btn">← 메인으로</a></header><section class="hero"><div class="hero-tag"><span class="live-dot"></span>Monthly Intelligence Report · Source-Verified</div><h1>PRO AUDIO<br><span>BRIEFING</span></h1><div class="hero-meta"><div class="hero-meta-item"><span class="hml">최근 업데이트</span><span class="hmv" id="disp-date">—</span></div><div class="hero-meta-item"><span class="hml">수집 기간</span><span class="hmv" id="disp-period">—</span></div><div class="hero-meta-item"><span class="hml">검증 통과</span><span class="hmv" id="disp-count">—</span></div><div class="hero-meta-item"><span class="hml">총 출처</span><span class="hmv" id="disp-sources">—</span></div></div></section><main class="content"><div class="empty" id="el-empty"><div class="empty-icon"></div><h3>아직 브리핑 데이터가 없습니다</h3><p>우측 하단 버튼 → PIN → API 키 입력 후 수집을 시작하세요.<br>수집된 내용은 관리자 승인을 거친 뒤에만 공개됩니다.</p></div><div id="el-content" style="display:none;"></div></main><footer><p>© 2026 HYUNDAI AUDIO VISUAL COMMUNICATIONS CO., LTD.</p><p class="fnote">본 브리핑은 허용 매체의 최근 기사를 기반으로 작성되며, AI가 원문을 요약한 텍스트에는 표시가 됩니다. 원문 인용()과 원문 링크를 함께 제공합니다.</p></footer><!-- 관리자 버튼 --><button id="adm-btn" title="관리자"></button><!-- MODAL 1: PIN --><div class="backdrop" id="m-pin"><div class="mbox"><h3>관리자 인증</h3><p class="mdesc">관리자 PIN을 입력하세요</p><input type="password" class="minput" id="inp-pin" placeholder="PIN" maxlength="6" autocomplete="off"><div class="mbtns"><button class="mbtn mbtn-ok" id="btn-pin-ok">확인</button><button class="mbtn mbtn-cancel" id="btn-pin-cancel">취소</button></div><p class="merr" id="err-pin">PIN이 올바르지 않습니다.</p></div></div><!-- MODAL 2: API KEY --><div class="backdrop" id="m-apikey"><div class="mbox"><h3>API 키 입력</h3><p class="mdesc">Anthropic API 키를 입력하세요.<br>키는 저장되지 않으며 이번 수집에만 사용됩니다.<br>web_search 툴이 활성화된 키여야 합니다.</p><input type="password" class="minput" id="inp-apikey" placeholder="sk-ant-api03-..." autocomplete="off" style="letter-spacing:.04em;font-size:.8rem"><div class="mcheck"><input type="checkbox" id="chk-show"><label for="chk-show">키 표시</label></div><div class="mbtns"><button class="mbtn mbtn-ok" id="btn-api-ok">수집 시작</button><button class="mbtn mbtn-cancel" id="btn-api-cancel">취소</button></div><p class="merr" id="err-api">올바른 API 키를 입력해주세요. (sk-ant-...)</p></div></div><!-- MODAL 3: REVIEW --><div class="backdrop" id="m-review"><div class="mbox wide"><h3>관리자 검토 · 게재 승인</h3><p class="mdesc">각 항목을 개별 승인/거절/수정하세요. <b style="color:var(--accent)">승인(ACCEPT)한 항목만 공개 게시됩니다.</b></p><div class="review-head"><div class="review-stats"><span>검증 통과 <b id="rv-passed">0</b></span><span>거절됨 <b id="rv-rejected">0</b></span><span>선택된 승인 <b id="rv-selected">0</b></span></div><div><button class="rv-btn ok" id="rv-all">전체 승인</button><button class="rv-btn no" id="rv-none">전체 거절</button></div></div><div class="review-rejected" id="rv-rej-list" style="display:none"></div><div class="review-list" id="rv-list"></div><div class="mbtns" style="margin-top:1.5rem"><button class="mbtn mbtn-ok" id="btn-publish">승인 항목만 게시</button><button class="mbtn mbtn-cancel" id="btn-review-cancel">취소 (저장 안함)</button></div></div></div><!-- MODAL 4: REPORT --><div class="backdrop" id="m-report"><div class="mbox"><h3>사실 오류 신고</h3><p class="mdesc">이 카드의 어느 부분이 사실과 다른지 알려주세요. 관리자가 확인 후 즉시 조치합니다.</p><div id="rp-target" style="font-size:.75rem;color:var(--muted);margin-bottom:1rem;padding:.7rem;background:var(--bg);border:1px solid var(--border);border-radius:3px;line-height:1.6"></div><textarea class="mtextarea" id="inp-report" placeholder="예: 제품 출시일이 실제와 다릅니다. 정확한 날짜는 ..."></textarea><div class="mbtns"><button class="mbtn mbtn-danger" id="btn-report-ok">신고 접수 (관리자 확인 후 숨김)</button><button class="mbtn mbtn-cancel" id="btn-report-cancel">취소</button></div><p class="mdesc" style="margin-top:1rem;margin-bottom:0;font-size:.68rem">※ 신고 접수 시 관리자 PIN이 필요하며, 즉시 해당 카드는 숨김 처리됩니다.</p></div></div><!-- LOADING --><div class="loading" id="el-loading"><div class="spinner"></div><div class="load-txt" id="el-load-txt"><span class="load-step">검증된 출처에서 수집 중...</span><br>화이트리스트 매체(soundonsound, Pro Sound Network 등)를 직접 검색하여<br>최근 30~45일 기사만 가져옵니다. 약 40~60초 소요.
   </div></div><script>// ─── CONFIG ───────────────────────────────────────────
 const ADMIN_PIN = "0525"; // 변경 가능
 
@@ -318,6 +411,7 @@ const ALLOWED_DOMAINS = [
   'yamaha.com','yamahaproaudio.com','bose.com','bosepro.com','jblpro.com','harman.com',
   'qsc.com','rcf.it','danley.com','lacoustics.com','meyer-sound.com','d-and-b.com',
   'adamhall.com','soundking.com','dbtechnologies.com','rode.com','rodemic.com',
+  'taiwancarol.com','twncarol.en.taiwantrade.com','microphone.com.tw',
   'avid.com','presonus.com','solid-state-logic.com','focusrite.com',
   'allen-heath.com','midasconsoles.com','digico.biz','ssl.com',
   'behringer.com','mackie.com','tannoy.com','genelec.com','adam-audio.com',
@@ -336,6 +430,7 @@ const TIER_MAP = {
        'yamaha.com','yamahaproaudio.com','bose.com','bosepro.com','jblpro.com','harman.com',
        'qsc.com','rcf.it','danley.com','lacoustics.com','meyer-sound.com','d-and-b.com',
        'adamhall.com','soundking.com','dbtechnologies.com','rode.com','rodemic.com',
+       'taiwancarol.com','twncarol.en.taiwantrade.com','microphone.com.tw',
        'avid.com','presonus.com','solid-state-logic.com','focusrite.com',
        'allen-heath.com','midasconsoles.com','digico.biz','ssl.com',
        'behringer.com','mackie.com','tannoy.com','genelec.com','adam-audio.com',
@@ -558,16 +653,12 @@ function render(d) {
   window._lastIssues = issues;
   const rest = issues.slice(3).map((iss,i)=>card(iss,i+4)).join('');
 
-  const corrections = (d.corrections||[]).map(c=>`
-    <div class="corr-item"><span class="corr-date">${esc(c.date||'')}</span>· ${esc(c.note)}</div>`).join('');
-
   wrap.innerHTML = `
     ${ticker?`<div class="ticker">${ticker}</div>`:''}
     <div class="brief-grid"><div class="top-row"><div><div class="sec-label">이달의 핵심 이슈</div>${issues.slice(0,3).map((iss,i)=>card(iss,i+1)).join('')}
         </div><div class="side">${trends?`<div class="side-card"><div class="sec-label">주목 키워드</div><ul class="trend-list">${trends}</ul></div>`:''}
           ${events?`<div class="side-card"><div class="sec-label">업계 행사 일정</div>${events}</div>`:''}
         </div></div>${rest?`<div><div class="sec-label">추가 동향</div><div class="rest-grid">${rest}</div></div>`:''}
-      ${corrections?`<div class="corr-card"><div class="sec-label">수정·철회 이력</div>${corrections}</div>`:''}
     </div>`;
 }
 
@@ -584,6 +675,12 @@ async function fetchBriefing(apiKey) {
   const prompt =
     `Generate a Pro Audio industry briefing for ${moNames[mo-1]} ${yr} based ONLY on articles you retrieve via the web_search tool from the allowed domains listed in the tool configuration.
 
+PRIORITY BRANDS — search these FIRST and place verified items at the TOP of the issues array:
+A. **Soundking** — search soundking.com plus pro audio media (Mix Online, FOH Magazine, TPi, AVNetwork, etc.) for any Soundking, K&F (Kling & Freitag), CADAC, or Studiomaster news within the last 45 days. Include product launches, exhibition participation (e.g., Prolight + Sound Guangzhou/Frankfurt, InfoComm China, ISE), installation case studies, or corporate announcements.
+B. **Taiwan Carol (佳樂)** — search taiwancarol.com plus pro audio media for any Taiwan Carol Electronics news within the last 45 days. Include wireless microphone launches, conference system updates, distributor announcements, or exhibition participation.
+
+If either brand has NO verified article within the last 45 days, DO NOT fabricate one. Instead, skip it and continue with general industry issues. Always attempt the search before deciding to skip.
+
 CRITICAL RULES — you MUST obey every one:
 1. Every "issue" MUST have a "sourceUrl" pointing to a specific article page you actually retrieved.
 2. The "quote" field MUST be a verbatim substring (30~150 chars) copied EXACTLY from the retrieved article — do NOT paraphrase inside quote.
@@ -592,6 +689,7 @@ CRITICAL RULES — you MUST obey every one:
 5. If you cannot find enough verified articles, return fewer items. DO NOT pad the array with speculative or generic content.
 6. Never invent product names, prices, release dates, or company statements.
 7. If a fact is uncertain, exclude the item entirely.
+8. ORDER: Soundking items first, then Taiwan Carol items, then general industry issues. This preserves the Korean distributor's brand-priority view.
 
 Return a raw JSON object (no markdown, no code fences, no prose) with these exact keys:
 {
