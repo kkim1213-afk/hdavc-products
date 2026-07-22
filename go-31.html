@@ -1,27 +1,19 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CAROL GO-31 악기용 콘덴서 마이크 | HDAVC</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --carol-blue:  #00AEEF;
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>CAROL GO-31 악기용 콘덴서 마이크 | HDAVC</title><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet"><style>:root {
+    --carol-blue: #00AEEF;
     --carol-blue2: #0090D0;
     --carol-blue3: #007BB5;
-    --carol-navy:  #1a2b4a;
+    --carol-navy: #1a2b4a;
     --carol-navy2: #243559;
-    --bg:          #f5f7fa;
-    --bg2:         #eef1f6;
-    --white:       #ffffff;
-    --border:      #dde2ea;
-    --border2:     #c8d0db;
-    --text-dark:   #1a1e2e;
-    --text-mid:    #3d4660;
-    --text-gray:   #6b7593;
-    --text-light:  #9aa3b8;
-    --sax-accent:  #d95f3b;
+    --bg: #f5f7fa;
+    --bg2: #eef1f6;
+    --white: #ffffff;
+    --border: #dde2ea;
+    --border2: #c8d0db;
+    --text-dark: #1a1e2e;
+    --text-mid: #3d4660;
+    --text-gray: #6b7593;
+    --text-light: #9aa3b8;
+    --sax-accent: #d95f3b;
     --violin-accent:#5a9a42;
     --flute-accent:#c49a1a;
     --cello-accent:#2a9e8c;
@@ -128,10 +120,10 @@
   .clip-card { background:var(--white); border-radius:var(--radius); border:2px solid var(--border); overflow:hidden; transition:all .25s; box-shadow:var(--shadow); }
   .clip-card:hover { border-color:var(--carol-blue); box-shadow:0 8px 32px rgba(0,174,239,0.14); transform:translateY(-2px); }
   .clip-hdr { padding:7px 20px; font-size:11px; font-weight:700; letter-spacing:2px; color:#fff; text-transform:uppercase; }
-  .sax  .clip-hdr { background:var(--sax-accent); }
-  .vln  .clip-hdr { background:var(--violin-accent); }
-  .flt  .clip-hdr { background:var(--flute-accent); }
-  .clo  .clip-hdr { background:var(--cello-accent); }
+  .sax .clip-hdr { background:var(--sax-accent); }
+  .vln .clip-hdr { background:var(--violin-accent); }
+  .flt .clip-hdr { background:var(--flute-accent); }
+  .clo .clip-hdr { background:var(--cello-accent); }
   .clip-body { padding:22px 22px 22px; display:grid; grid-template-columns:1fr 1fr; gap:18px; align-items:start; }
   .clip-imgw { display:flex; justify-content:center; align-items:center; }
   .clip-imgw img { max-height:200px; max-width:100%; object-fit:contain; filter:drop-shadow(0 4px 12px rgba(0,0,0,0.13)); }
@@ -141,7 +133,7 @@
   .clip-pts { list-style:none; margin-bottom:12px; }
   .clip-pts li { font-size:12.5px; color:var(--text-mid); line-height:1.6; padding:5px 0; border-bottom:1px solid var(--border); display:flex; gap:6px; }
   .clip-pts li:last-child { border-bottom:none; }
-  .clip-pts li::before { content:'✓'; color:var(--carol-blue); flex-shrink:0; font-weight:900; }
+  .clip-pts li::before { content:''; color:var(--carol-blue); flex-shrink:0; font-weight:900; }
   .clip-compat { background:var(--bg2); border-radius:4px; padding:6px 10px; font-size:11px; color:var(--text-gray); margin-bottom:12px; }
   .clip-compat strong { color:var(--carol-navy); }
   .clip-price { font-size:17px; font-weight:900; color:var(--carol-navy); }
@@ -248,425 +240,10 @@
     .ctabs { flex-direction:column; }
     section { padding:56px 0; }
   }
-</style>
-</head>
-<body>
-
-<!-- HEADER -->
-<header>
-  <div class="hdr">
-    <a href="index.html" class="hdr-logo">
-      <img src="logo.png" alt="HDAVC" onerror="this.style.display='none'">
-      <span class="hdr-logo-text">HDAVC</span>
-    </a>
-    <div class="hdr-right">
-      <a href="index.html" class="back-link">← 전체 제품</a>
-      <div class="hdr-search">
-        <input type="text" id="searchInput" placeholder="제품 검색...">
-        <button onclick="goSearch()">검색</button>
-      </div>
-    </div>
-  </div>
-</header>
-
-<!-- BREADCRUMB -->
-<div class="breadcrumb">
-  <div class="bc">
-    <a href="index.html">홈</a> <span style="color:var(--border2)">›</span>
-    <a href="index.html">마이크</a> <span style="color:var(--border2)">›</span>
-    <a href="index.html">CAROL</a> <span style="color:var(--border2)">›</span>
-    GO-31 악기용 콘덴서 마이크
-  </div>
-</div>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-in">
-    <div>
-      <div class="hero-badges">
-        <span class="badge">CAROL</span>
-        <span class="badge">GO SERIES</span>
-        <span class="badge out">악기용 마이크</span>
-      </div>
-      <div class="hero-brand">Instrument Condenser Microphone</div>
-      <h1 class="hero-title">GO-31<br><em>악기 전용</em><br>콘덴서 마이크</h1>
-      <p class="hero-sub">Saxophone · Violin · Flute · Cello</p>
-      <div class="kpi-strip">
-        <div class="kpi-item"><div class="kpi-val">Condenser</div><div class="kpi-lbl">마이크 타입</div></div>
-        <div class="kpi-item"><div class="kpi-val">Cardioid</div><div class="kpi-lbl">지향성 패턴</div></div>
-        <div class="kpi-item"><div class="kpi-val">50–15kHz</div><div class="kpi-lbl">응답 주파수</div></div>
-        <div class="kpi-item"><div class="kpi-val">31g</div><div class="kpi-lbl">본체 중량</div></div>
-      </div>
-      <div class="price-block">
-        <div>
-          <div class="price-lbl">권장 소비자가 (VAT 포함)</div>
-          <div class="price-num">220,000<span>원</span></div>
-          <div class="price-note">GO-31 본체 + 전용 클립 1종 선택 포함</div>
-        </div>
-        <div class="price-tag">클립 1종<br>선택 구성</div>
-      </div>
-    </div>
-    <div class="hero-img">
-      <div class="hero-slider">
-        <div class="hero-slides">
-          <div class="hero-slide active"><img src="GO-31_1.png" alt="GO-31 악기용 콘덴서 마이크"></div>
-          <div class="hero-slide"><img src="GO-31&GO-32.png" alt="GO-32 색소폰 클립"></div>
-          <div class="hero-slide"><img src="GO-31&GO-33.png" alt="GO-33 바이올린 클립"></div>
-          <div class="hero-slide"><img src="GO-31&GO-34.png" alt="GO-34 플루트 클립"></div>
-          <div class="hero-slide"><img src="GO-31&GO-35.png" alt="GO-35 첼로 클립"></div>
-          <div class="slider-arrows">
-            <button class="slider-arrow" onclick="slideHero(-1)">&#8249;</button>
-            <button class="slider-arrow" onclick="slideHero(1)">&#8250;</button>
-          </div>
-        </div>
-        <div class="slider-dots">
-          <button class="slider-dot active" onclick="goHero(0)"></button>
-          <button class="slider-dot" onclick="goHero(1)"></button>
-          <button class="slider-dot" onclick="goHero(2)"></button>
-          <button class="slider-dot" onclick="goHero(3)"></button>
-          <button class="slider-dot" onclick="goHero(4)"></button>
-        </div>
-        <div class="slider-label" id="sliderLabel">GO-31 본체</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- STICKY NAV -->
-<nav class="snav">
-  <div class="snav-in">
-    <a href="#overview" class="active">제품 개요</a>
-    <a href="#clips">클립 선택</a>
-    <a href="#connection">연결 방법</a>
-    <a href="#specs">제품 사양</a>
-    <a href="#features">주요 특징</a>
-    <a href="#accessories">액세서리</a>
-  </div>
-</nav>
-
-<!-- OVERVIEW -->
-<section id="overview">
-  <div class="si">
-    <div class="sh">
-      <div class="eyebrow">Product Overview</div>
-      <h2 class="st">무대 위 악기 연주를 위한<br><em>전문 악기용 콘덴서 마이크</em></h2>
-    </div>
-    <div class="ov-grid">
-      <div class="ov-text">
-        <p><strong>GO-31</strong>은 색소폰, 바이올린, 플루트, 첼로 등 다양한 관악기·현악기의 무대 공연을 위해 특별히 설계된 콘덴서 마이크입니다. 섬세한 음색을 포착하는 <strong>고감도 카디오이드 패턴</strong>과, 악기 어느 위치에도 정밀하게 조준할 수 있는 <strong>플렉시블 구스넥</strong>을 결합했습니다.</p>
-        <p>카디오이드 지향성 패턴이 주변 소음과 피드백을 효과적으로 차단하며, 50Hz~15,000Hz의 광대역 응답 주파수로 저음역부터 고음역까지 악기 고유의 음색을 자연스럽게 재현합니다. <strong>31g의 초경량 설계</strong>로 악기에 장착해도 연주에 전혀 방해가 되지 않습니다.</p>
-        <p>GO-31은 <strong>악기 종류에 맞는 전용 클립(GO-32~GO-35)</strong> 중 1개를 선택하여 함께 구매하는 방식입니다. 유선(GO-10 팬텀파워)과 무선(벨트팩 송신기) 연결을 모두 지원하며, CAROL 및 MIPRO 무선 시스템과 직결 호환됩니다.</p>
-        <div class="inst-tags">
-          <span class="inst-tag">🎷 색소폰</span>
-          <span class="inst-tag">🎺 트럼펫</span>
-          <span class="inst-tag">🎺 트럼본</span>
-          <span class="inst-tag">🎵 클라리넷</span>
-          <span class="inst-tag">🎻 바이올린</span>
-          <span class="inst-tag">🪗 비올라</span>
-          <span class="inst-tag">🎶 플루트</span>
-          <span class="inst-tag">🎻 첼로</span>
-        </div>
-      </div>
-      <div class="ov-img">
-        <img src="go-31_clips.png" alt="GO-31 클립 구성">
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CLIPS -->
-<section id="clips">
-  <div class="si">
-    <div class="sh">
-      <div class="eyebrow">Clip Selection</div>
-      <h2 class="st">악기에 맞는 <em>클립을 선택하세요</em></h2>
-      <p class="sdesc">GO-31은 아래 4종의 전용 클립 중 1개를 선택하여 구매합니다. 추가 클립은 옵션으로 별도 구매 가능합니다.</p>
-    </div>
-    <div class="clip-notice">
-      📌 구매 시 <strong>GO-32 · GO-33 · GO-34 · GO-35 중 1개를 선택</strong>하여 함께 구성됩니다. 연주하는 악기 종류에 따라 알맞은 클립을 선택하세요.
-    </div>
-    <div class="clips-grid">
-      <!-- GO-32 -->
-      <div class="clip-card sax">
-        <div class="clip-hdr">Option 01 — Saxophone Clip</div>
-        <div class="clip-body">
-          <div class="clip-imgw"><img src="GO-32.png" alt="GO-32 색소폰 클립"></div>
-          <div class="clip-info">
-            <div class="clip-model">GO-32</div>
-            <div class="clip-name">색소폰 클립</div>
-            <ul class="clip-pts">
-              <li>버튼 클립 방식, 흔들림 없는 안정 고정</li>
-              <li>대부분의 관악기 노즐에 탈착 가능</li>
-              <li>푸시 타입으로 수음 높이 자유 조절</li>
-            </ul>
-            <div class="clip-compat"><strong>호환 악기:</strong> 색소폰, 트럼펫, 트럼본, 클라리넷</div>
-            <div class="clip-price">77,000원 <small>(별도 구매 시)</small></div>
-          </div>
-        </div>
-      </div>
-      <!-- GO-33 -->
-      <div class="clip-card vln">
-        <div class="clip-hdr">Option 02 — Violin Clip</div>
-        <div class="clip-body">
-          <div class="clip-imgw"><img src="GO-33.png" alt="GO-33 바이올린 클립"></div>
-          <div class="clip-info">
-            <div class="clip-model">GO-33</div>
-            <div class="clip-name">바이올린 클립</div>
-            <ul class="clip-pts">
-              <li>노브 타입으로 다양한 두께의 악기 대응</li>
-              <li>상하 쿠션 패드로 진동 충격 방지</li>
-              <li>푸시 타입으로 최적 수음 위치 조절</li>
-            </ul>
-            <div class="clip-compat"><strong>호환 악기:</strong> 바이올린, 비올라</div>
-            <div class="clip-price">77,000원 <small>(별도 구매 시)</small></div>
-          </div>
-        </div>
-      </div>
-      <!-- GO-34 -->
-      <div class="clip-card flt">
-        <div class="clip-hdr">Option 03 — Flute Clip</div>
-        <div class="clip-body">
-          <div class="clip-imgw"><img src="GO-34.png" alt="GO-34 플루트 클립"></div>
-          <div class="clip-info">
-            <div class="clip-model">GO-34</div>
-            <div class="clip-name">플루트 클립</div>
-            <ul class="clip-pts">
-              <li>링 타입으로 한 손 원터치 장착/탈착</li>
-              <li>링형 충격 흡수 패드, 악기 손상 없음</li>
-              <li>버클 스프링 2,000회 이상 내구성 테스트</li>
-            </ul>
-            <div class="clip-compat"><strong>호환 악기:</strong> 플루트</div>
-            <div class="clip-price">77,000원 <small>(별도 구매 시)</small></div>
-          </div>
-        </div>
-      </div>
-      <!-- GO-35 -->
-      <div class="clip-card clo">
-        <div class="clip-hdr">Option 04 — Cello Clip</div>
-        <div class="clip-body">
-          <div class="clip-imgw"><img src="GO-35.png" alt="GO-35 첼로 클립"></div>
-          <div class="clip-info">
-            <div class="clip-model">GO-35</div>
-            <div class="clip-name">첼로 클립</div>
-            <ul class="clip-pts">
-              <li>전 버클 충격 흡수 패드 내장</li>
-              <li>수음 위치를 높여 구스넥 조절 범위 확장</li>
-              <li>테일피스 고정, 악기 바디 안전 보호</li>
-            </ul>
-            <div class="clip-compat"><strong>호환 악기:</strong> 첼로</div>
-            <div class="clip-price">88,000원 <small>(별도 구매 시)</small></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONNECTION -->
-<section id="connection">
-  <div class="si">
-    <div class="sh">
-      <div class="eyebrow">Connection Guide</div>
-      <h2 class="st">유선 · 무선 <em>연결 방법 안내</em></h2>
-    </div>
-    <div class="ctabs">
-      <button class="ctab active" onclick="switchTab('wired',this)">🔌 유선 연결 (GO-10 팬텀파워)</button>
-      <button class="ctab" onclick="switchTab('wireless',this)">📡 무선 연결 (벨트팩 송신기)</button>
-    </div>
-    <!-- WIRED -->
-    <div class="cpanel active" id="panel-wired">
-      <div class="flow-wrap">
-        <div class="flow">
-          <div class="fnode src"><div class="fn-m">GO-31</div><div class="fn-d">악기용 마이크<br>4P Mini XLR</div></div>
-          <div class="farrow">→</div>
-          <div class="fnode"><div class="fn-m">GO-10</div><div class="fn-d">전용 팬텀파워 어댑터<br>48V Phantom</div></div>
-          <div class="farrow">→</div>
-          <div class="fnode"><div class="fn-m">믹서 / 앰프</div><div class="fn-d">XLR 입력<br>팬텀파워 ON</div></div>
-        </div>
-      </div>
-      <div style="margin-top:18px; text-align:center;">
-        <img src="GO-31wiredconnection.png" alt="GO-31 유선 연결 방법" style="max-width:100%; border-radius:var(--radius); box-shadow:var(--shadow2);">
-      </div>
-      <div class="cnote">⚠️ <strong>주의:</strong> GO-31은 일반 팬텀파워 어댑터와 호환되지 않습니다. 반드시 <span class="hl">CAROL 전용 팬텀파워 어댑터 GO-10</span>을 사용하세요. GO-10의 4핀 미니 XLR 커넥터가 GO-31에 연결되며, 믹서·앰프의 팬텀파워(48V)를 통해 전원이 공급됩니다.</div>
-    </div>
-    <!-- WIRELESS -->
-    <div class="cpanel" id="panel-wireless">
-      <div class="flow-wrap">
-        <div class="flow">
-          <div class="fnode src"><div class="fn-m">GO-31</div><div class="fn-d">악기용 마이크<br>4P Mini XLR</div></div>
-          <div class="farrow">→</div>
-          <div class="fnode" style="border-color:var(--carol-blue);background:rgba(0,174,239,0.05)"><div class="fn-m">어댑터</div><div class="fn-d">직결 또는<br>CR-어댑터</div></div>
-          <div class="farrow">→</div>
-          <div class="fnode"><div class="fn-m">벨트팩 TX</div><div class="fn-d">무선 송신기</div></div>
-          <div class="farrow">→</div>
-          <div class="fnode"><div class="fn-m">수신기 RX</div><div class="fn-d">→ 믹서 / 앰프</div></div>
-        </div>
-      </div>
-      <div class="wl-grid">
-        <div class="wl-card direct">
-          <div class="wl-brand">직결 호환</div>
-          <div class="wl-name">CAROL 무선 시스템</div>
-          <div class="wl-desc">CAROL 벨트팩 송신기는 GO-31의 4핀 미니 XLR에 직접 연결됩니다. 별도 어댑터 불필요.</div>
-          <span class="wl-badge">어댑터 불필요</span>
-        </div>
-        <div class="wl-card direct">
-          <div class="wl-brand">직결 호환</div>
-          <div class="wl-name">MIPRO 무선 시스템</div>
-          <div class="wl-desc">MIPRO 벨트팩 송신기도 GO-31의 4핀 미니 XLR에 직접 연결됩니다. 별도 어댑터 불필요.</div>
-          <span class="wl-badge">어댑터 불필요</span>
-        </div>
-        <div class="wl-card">
-          <div class="wl-brand">CR-어댑터 필요</div>
-          <div class="wl-name">타 브랜드 무선 시스템</div>
-          <div class="wl-desc">
-            벨트팩 송신기 커넥터 타입 확인 후 CR-어댑터 구매:<br><br>
-            · <strong style="color:var(--carol-navy)">SHURE</strong> — 4PIN Mini XLR<br>
-            · <strong style="color:var(--carol-navy)">SENNHEISER</strong> — 3PIN TRS<br>
-            · <strong style="color:var(--carol-navy)">AKG</strong> — 3PIN XLR
-          </div>
-          <span class="wl-badge">CR-어댑터 45,000원</span>
-        </div>
-      </div>
-      <div style="margin-top:18px; text-align:center;">
-        <img src="GO-31wirelessconnection.png" alt="GO-31 무선 연결 방법" style="max-width:100%; border-radius:var(--radius); box-shadow:var(--shadow2);">
-      </div>
-      <div class="cnote" style="margin-top:18px;">💡 <strong>구매 안내:</strong> 무선 연결 시 벨트팩 송신기의 커넥터 타입을 반드시 확인하세요. </div>
-    </div>
-  </div>
-</section>
-
-<!-- SPECS -->
-<section id="specs">
-  <div class="si">
-    <div class="sh">
-      <div class="eyebrow">Specifications</div>
-      <h2 class="st">GO-31 <em>제품 사양</em></h2>
-    </div>
-    <div class="spec-wrap">
-      <table class="spec-tbl">
-        <thead><tr><th>항목</th><th>사양</th></tr></thead>
-        <tbody>
-          <tr><td>마이크 타입</td><td>콘덴서 (Condenser)</td></tr>
-          <tr><td>지향성 패턴</td><td>카디오이드 (Cardioid)</td></tr>
-          <tr><td>임피던스</td><td>2.2KΩ ± 30% (at 1,000Hz)</td></tr>
-          <tr><td>감도</td><td>-36 ± 3dBV/Pa (at 1,000Hz)</td></tr>
-          <tr><td>응답 주파수</td><td>50Hz ~ 15,000Hz</td></tr>
-          <tr><td>전원 공급</td><td>DC 3V</td></tr>
-          <tr><td>케이블</td><td>Ø1.7mm × 1.5m, 4P Mini XLR</td></tr>
-          <tr><td>본체 치수</td><td>Ø20.9 × 37.4 × 213.5mm</td></tr>
-          <tr><td>본체 중량</td><td>31g</td></tr>
-          <tr><td>기본 구성</td><td>GO-31 본체 + 클립 1종 선택</td></tr>
-        </tbody>
-      </table>
-      <div class="freq-box">
-        <img src="GO-31_frequencyresponse.png" alt="GO-31 주파수 응답 특성">
-        <div class="freq-lbl">Typical Frequency Response</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FEATURES -->
-<section id="features">
-  <div class="si">
-    <div class="sh">
-      <div class="eyebrow">Key Features</div>
-      <h2 class="st">GO-31 <em>주요 특징</em></h2>
-    </div>
-    <div class="feat-grid">
-      <div class="feat-card">
-        <div class="feat-icon">🎯</div>
-        <div class="feat-title">카디오이드 패턴 — 피드백 억제</div>
-        <div class="feat-desc">카디오이드 지향성이 PA 스피커 방향의 피드백과 주변 소음을 효과적으로 차단합니다. 무대 환경에서도 안정적이고 클린한 수음을 보장합니다.</div>
-      </div>
-      <div class="feat-card">
-        <div class="feat-icon">🔧</div>
-        <div class="feat-title">플렉시블 구스넥 설계</div>
-        <div class="feat-desc">유연한 구스넥 암으로 악기의 어느 위치에도 자유롭게 마이크를 조준할 수 있습니다. 연주 중에도 수음 각도와 거리를 손쉽게 조절 가능합니다.</div>
-      </div>
-      <div class="feat-card">
-        <div class="feat-icon">🌊</div>
-        <div class="feat-title">광대역 주파수 응답</div>
-        <div class="feat-desc">50Hz~15kHz의 넓은 주파수 대역으로 저음역(첼로)부터 고음역(바이올린·플루트)까지 악기 고유의 섬세한 음색을 정확히 포착합니다.</div>
-      </div>
-      <div class="feat-card">
-        <div class="feat-icon">🪶</div>
-        <div class="feat-title">31g 초경량 본체</div>
-        <div class="feat-desc">31g의 초경량 설계로 악기에 장착해도 무게 부담이 거의 없습니다. 바이올린·플루트 등 섬세한 악기에도 안심하고 사용할 수 있습니다.</div>
-      </div>
-      <div class="feat-card">
-        <div class="feat-icon">🔄</div>
-        <div class="feat-title">교체형 윈드스크린</div>
-        <div class="feat-desc">마이크 헤드의 쿠션 지지대(윈드스크린)를 별도 구매하여 교체할 수 있습니다. 위생적인 관리와 제품 수명 연장이 가능합니다.</div>
-      </div>
-      <div class="feat-card">
-        <div class="feat-icon">📡</div>
-        <div class="feat-title">유선 · 무선 모두 지원</div>
-        <div class="feat-desc">GO-10 팬텀파워 어댑터(유선)와 CAROL·MIPRO 무선 시스템(직결), SHURE·SENNHEISER·AKG 무선 시스템(CR-어댑터)을 모두 지원합니다.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ACCESSORIES -->
-<section id="accessories">
-  <div class="si">
-    <div class="sh">
-      <div class="eyebrow">Accessories</div>
-      <h2 class="st">GO-31 <em>전용 액세서리</em></h2>
-      <p class="sdesc">GO-31과 함께 사용하는 전용 액세서리 목록입니다. 구매 시 클립 1종이 기본 포함됩니다.</p>
-    </div>
-    <table class="acc-tbl">
-      <thead>
-        <tr><th>모델</th><th>제품명 / 설명</th><th>소비자가 (VAT 포함)</th></tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><span class="acc-model">GO-10</span></td>
-          <td><div class="acc-name-txt">GO-31 전용 팬텀파워 어댑터<span class="tag-req">유선 연결 필수</span></div><div class="acc-sub">4PIN Mini XLR / 48V 팬텀파워 / GO-31 전용 (타 마이크 호환 불가)</div></td>
-          <td><div class="acc-price">88,000원<small>소비자가</small></div></td>
-        </tr>
-        <tr>
-          <td><span class="acc-model">GO-32</span></td>
-          <td><div class="acc-name-txt">색소폰 전용 악기 장착 클립<span class="tag-opt">기본 선택 가능</span></div><div class="acc-sub">색소폰 / 트럼펫 / 트럼본 / 클라리넷 호환</div></td>
-          <td><div class="acc-price">77,000원<small>소비자가</small></div></td>
-        </tr>
-        <tr>
-          <td><span class="acc-model">GO-33</span></td>
-          <td><div class="acc-name-txt">바이올린 전용 악기 장착 클립<span class="tag-opt">기본 선택 가능</span></div><div class="acc-sub">바이올린 / 비올라 호환</div></td>
-          <td><div class="acc-price">77,000원<small>소비자가</small></div></td>
-        </tr>
-        <tr>
-          <td><span class="acc-model">GO-34</span></td>
-          <td><div class="acc-name-txt">플루트 전용 악기 장착 클립<span class="tag-opt">기본 선택 가능</span></div><div class="acc-sub">플루트 호환</div></td>
-          <td><div class="acc-price">77,000원<small>소비자가</small></div></td>
-        </tr>
-        <tr>
-          <td><span class="acc-model">GO-35</span></td>
-          <td><div class="acc-name-txt">첼로 전용 악기 장착 클립<span class="tag-opt">기본 선택 가능</span></div><div class="acc-sub">첼로 호환 / 테일피스 고정 방식</div></td>
-          <td><div class="acc-price">88,000원<small>소비자가</small></div></td>
-        </tr>
-        <tr>
-          <td><span class="acc-model">CR-어댑터</span></td>
-          <td><div class="acc-name-txt">GO-31 전용 변환 어댑터<span class="tag-opt">타 브랜드 무선용</span></div><div class="acc-sub">SHURE (4PIN Mini XLR) / SENNHEISER (3PIN TRS) / AKG (3PIN XLR) 타입 중 선택</div></td>
-          <td><div class="acc-price">45,000원<small>소비자가</small></div></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="ftr">
-    <div class="ftr-brand"><strong>(주)현대에이브이씨 HDAVC</strong><br>경기도 평택시 도일유통길 39-9 (도일동)<br>CAROL GO-31 공식 수입·유통사</div>
-    <a href="#" class="topbtn" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">↑ 맨 위로</a>
-    <div class="ftr-contact">문의: <a href="tel:031-8054-0048">031-8054-0048</a><br><a href="index.html">← 전체 제품 목록</a></div>
-  </div>
-</footer>
-
-<script>
-function goSearch(){const q=document.getElementById('searchInput').value.trim();if(q)window.location.href='index.html?search='+encodeURIComponent(q);}
+</style></head><body><!-- HEADER --><header><div class="hdr"><a href="index.html" class="hdr-logo"><img src="logo.png" alt="HDAVC" onerror="this.style.display='none'"><span class="hdr-logo-text">HDAVC</span></a><div class="hdr-right"><a href="index.html" class="back-link">← 전체 제품</a><div class="hdr-search"><input type="text" id="searchInput" placeholder="제품 검색..."><button onclick="goSearch()">검색</button></div></div></div></header><!-- BREADCRUMB --><div class="breadcrumb"><div class="bc"><a href="index.html">홈</a><span style="color:var(--border2)">›</span><a href="index.html">마이크</a><span style="color:var(--border2)">›</span><a href="index.html">CAROL</a><span style="color:var(--border2)">›</span>GO-31 악기용 콘덴서 마이크
+  </div></div><!-- HERO --><section class="hero"><div class="hero-in"><div><div class="hero-badges"><span class="badge">CAROL</span><span class="badge">GO SERIES</span><span class="badge out">악기용 마이크</span></div><div class="hero-brand">Instrument Condenser Microphone</div><h1 class="hero-title">GO-31<br><em>악기 전용</em><br>콘덴서 마이크</h1><p class="hero-sub">Saxophone · Violin · Flute · Cello</p><div class="kpi-strip"><div class="kpi-item"><div class="kpi-val">Condenser</div><div class="kpi-lbl">마이크 타입</div></div><div class="kpi-item"><div class="kpi-val">Cardioid</div><div class="kpi-lbl">지향성 패턴</div></div><div class="kpi-item"><div class="kpi-val">50–15kHz</div><div class="kpi-lbl">응답 주파수</div></div><div class="kpi-item"><div class="kpi-val">31g</div><div class="kpi-lbl">본체 중량</div></div></div><div class="price-block"><div><div class="price-lbl">권장 소비자가 (VAT 포함)</div><div class="price-num">220,000<span>원</span></div><div class="price-note">GO-31 본체 + 전용 클립 1종 선택 포함</div></div><div class="price-tag">클립 1종<br>선택 구성</div></div></div><div class="hero-img"><div class="hero-slider"><div class="hero-slides"><div class="hero-slide active"><img src="GO-31_1.png" alt="GO-31 악기용 콘덴서 마이크"></div><div class="hero-slide"><img src="GO-31&GO-32.png" alt="GO-32 색소폰 클립"></div><div class="hero-slide"><img src="GO-31&GO-33.png" alt="GO-33 바이올린 클립"></div><div class="hero-slide"><img src="GO-31&GO-34.png" alt="GO-34 플루트 클립"></div><div class="hero-slide"><img src="GO-31&GO-35.png" alt="GO-35 첼로 클립"></div><div class="slider-arrows"><button class="slider-arrow" onclick="slideHero(-1)">&#8249;</button><button class="slider-arrow" onclick="slideHero(1)">&#8250;</button></div></div><div class="slider-dots"><button class="slider-dot active" onclick="goHero(0)"></button><button class="slider-dot" onclick="goHero(1)"></button><button class="slider-dot" onclick="goHero(2)"></button><button class="slider-dot" onclick="goHero(3)"></button><button class="slider-dot" onclick="goHero(4)"></button></div><div class="slider-label" id="sliderLabel">GO-31 본체</div></div></div></div></section><!-- STICKY NAV --><nav class="snav"><div class="snav-in"><a href="#overview" class="active">제품 개요</a><a href="#clips">클립 선택</a><a href="#connection">연결 방법</a><a href="#specs">제품 사양</a><a href="#features">주요 특징</a><a href="#accessories">액세서리</a></div></nav><!-- OVERVIEW --><section id="overview"><div class="si"><div class="sh"><div class="eyebrow">Product Overview</div><h2 class="st">무대 위 악기 연주를 위한<br><em>전문 악기용 콘덴서 마이크</em></h2></div><div class="ov-grid"><div class="ov-text"><p><strong>GO-31</strong>은 색소폰, 바이올린, 플루트, 첼로 등 다양한 관악기·현악기의 무대 공연을 위해 특별히 설계된 콘덴서 마이크입니다. 섬세한 음색을 포착하는 <strong>고감도 카디오이드 패턴</strong>과, 악기 어느 위치에도 정밀하게 조준할 수 있는 <strong>플렉시블 구스넥</strong>을 결합했습니다.</p><p>카디오이드 지향성 패턴이 주변 소음과 피드백을 효과적으로 차단하며, 50Hz~15,000Hz의 광대역 응답 주파수로 저음역부터 고음역까지 악기 고유의 음색을 자연스럽게 재현합니다. <strong>31g의 초경량 설계</strong>로 악기에 장착해도 연주에 전혀 방해가 되지 않습니다.</p><p>GO-31은 <strong>악기 종류에 맞는 전용 클립(GO-32~GO-35)</strong>중 1개를 선택하여 함께 구매하는 방식입니다. 유선(GO-10 팬텀파워)과 무선(벨트팩 송신기) 연결을 모두 지원하며, CAROL 및 MIPRO 무선 시스템과 직결 호환됩니다.</p><div class="inst-tags"><span class="inst-tag">색소폰</span><span class="inst-tag">트럼펫</span><span class="inst-tag">트럼본</span><span class="inst-tag">클라리넷</span><span class="inst-tag">바이올린</span><span class="inst-tag">비올라</span><span class="inst-tag">플루트</span><span class="inst-tag">첼로</span></div></div><div class="ov-img"><img src="go-31_clips.png" alt="GO-31 클립 구성"></div></div></div></section><!-- CLIPS --><section id="clips"><div class="si"><div class="sh"><div class="eyebrow">Clip Selection</div><h2 class="st">악기에 맞는 <em>클립을 선택하세요</em></h2><p class="sdesc">GO-31은 아래 4종의 전용 클립 중 1개를 선택하여 구매합니다. 추가 클립은 옵션으로 별도 구매 가능합니다.</p></div><div class="clip-notice">구매 시 <strong>GO-32 · GO-33 · GO-34 · GO-35 중 1개를 선택</strong>하여 함께 구성됩니다. 연주하는 악기 종류에 따라 알맞은 클립을 선택하세요.
+    </div><div class="clips-grid"><!-- GO-32 --><div class="clip-card sax"><div class="clip-hdr">Option 01 — Saxophone Clip</div><div class="clip-body"><div class="clip-imgw"><img src="GO-32.png" alt="GO-32 색소폰 클립"></div><div class="clip-info"><div class="clip-model">GO-32</div><div class="clip-name">색소폰 클립</div><ul class="clip-pts"><li>버튼 클립 방식, 흔들림 없는 안정 고정</li><li>대부분의 관악기 노즐에 탈착 가능</li><li>푸시 타입으로 수음 높이 자유 조절</li></ul><div class="clip-compat"><strong>호환 악기:</strong>색소폰, 트럼펫, 트럼본, 클라리넷</div><div class="clip-price">77,000원 <small>(별도 구매 시)</small></div></div></div></div><!-- GO-33 --><div class="clip-card vln"><div class="clip-hdr">Option 02 — Violin Clip</div><div class="clip-body"><div class="clip-imgw"><img src="GO-33.png" alt="GO-33 바이올린 클립"></div><div class="clip-info"><div class="clip-model">GO-33</div><div class="clip-name">바이올린 클립</div><ul class="clip-pts"><li>노브 타입으로 다양한 두께의 악기 대응</li><li>상하 쿠션 패드로 진동 충격 방지</li><li>푸시 타입으로 최적 수음 위치 조절</li></ul><div class="clip-compat"><strong>호환 악기:</strong>바이올린, 비올라</div><div class="clip-price">77,000원 <small>(별도 구매 시)</small></div></div></div></div><!-- GO-34 --><div class="clip-card flt"><div class="clip-hdr">Option 03 — Flute Clip</div><div class="clip-body"><div class="clip-imgw"><img src="GO-34.png" alt="GO-34 플루트 클립"></div><div class="clip-info"><div class="clip-model">GO-34</div><div class="clip-name">플루트 클립</div><ul class="clip-pts"><li>링 타입으로 한 손 원터치 장착/탈착</li><li>링형 충격 흡수 패드, 악기 손상 없음</li><li>버클 스프링 2,000회 이상 내구성 테스트</li></ul><div class="clip-compat"><strong>호환 악기:</strong>플루트</div><div class="clip-price">77,000원 <small>(별도 구매 시)</small></div></div></div></div><!-- GO-35 --><div class="clip-card clo"><div class="clip-hdr">Option 04 — Cello Clip</div><div class="clip-body"><div class="clip-imgw"><img src="GO-35.png" alt="GO-35 첼로 클립"></div><div class="clip-info"><div class="clip-model">GO-35</div><div class="clip-name">첼로 클립</div><ul class="clip-pts"><li>전 버클 충격 흡수 패드 내장</li><li>수음 위치를 높여 구스넥 조절 범위 확장</li><li>테일피스 고정, 악기 바디 안전 보호</li></ul><div class="clip-compat"><strong>호환 악기:</strong>첼로</div><div class="clip-price">88,000원 <small>(별도 구매 시)</small></div></div></div></div></div></div></section><!-- CONNECTION --><section id="connection"><div class="si"><div class="sh"><div class="eyebrow">Connection Guide</div><h2 class="st">유선 · 무선 <em>연결 방법 안내</em></h2></div><div class="ctabs"><button class="ctab active" onclick="switchTab('wired',this)">유선 연결 (GO-10 팬텀파워)</button><button class="ctab" onclick="switchTab('wireless',this)">무선 연결 (벨트팩 송신기)</button></div><!-- WIRED --><div class="cpanel active" id="panel-wired"><div class="flow-wrap"><div class="flow"><div class="fnode src"><div class="fn-m">GO-31</div><div class="fn-d">악기용 마이크<br>4P Mini XLR</div></div><div class="farrow">→</div><div class="fnode"><div class="fn-m">GO-10</div><div class="fn-d">전용 팬텀파워 어댑터<br>48V Phantom</div></div><div class="farrow">→</div><div class="fnode"><div class="fn-m">믹서 / 앰프</div><div class="fn-d">XLR 입력<br>팬텀파워 ON</div></div></div></div><div style="margin-top:18px; text-align:center;"><img src="GO-31wiredconnection.png" alt="GO-31 유선 연결 방법" style="max-width:100%; border-radius:var(--radius); box-shadow:var(--shadow2);"></div><div class="cnote"><strong>주의:</strong>GO-31은 일반 팬텀파워 어댑터와 호환되지 않습니다. 반드시 <span class="hl">CAROL 전용 팬텀파워 어댑터 GO-10</span>을 사용하세요. GO-10의 4핀 미니 XLR 커넥터가 GO-31에 연결되며, 믹서·앰프의 팬텀파워(48V)를 통해 전원이 공급됩니다.</div></div><!-- WIRELESS --><div class="cpanel" id="panel-wireless"><div class="flow-wrap"><div class="flow"><div class="fnode src"><div class="fn-m">GO-31</div><div class="fn-d">악기용 마이크<br>4P Mini XLR</div></div><div class="farrow">→</div><div class="fnode" style="border-color:var(--carol-blue);background:rgba(0,174,239,0.05)"><div class="fn-m">어댑터</div><div class="fn-d">직결 또는<br>CR-어댑터</div></div><div class="farrow">→</div><div class="fnode"><div class="fn-m">벨트팩 TX</div><div class="fn-d">무선 송신기</div></div><div class="farrow">→</div><div class="fnode"><div class="fn-m">수신기 RX</div><div class="fn-d">→ 믹서 / 앰프</div></div></div></div><div class="wl-grid"><div class="wl-card direct"><div class="wl-brand">직결 호환</div><div class="wl-name">CAROL 무선 시스템</div><div class="wl-desc">CAROL 벨트팩 송신기는 GO-31의 4핀 미니 XLR에 직접 연결됩니다. 별도 어댑터 불필요.</div><span class="wl-badge">어댑터 불필요</span></div><div class="wl-card direct"><div class="wl-brand">직결 호환</div><div class="wl-name">MIPRO 무선 시스템</div><div class="wl-desc">MIPRO 벨트팩 송신기도 GO-31의 4핀 미니 XLR에 직접 연결됩니다. 별도 어댑터 불필요.</div><span class="wl-badge">어댑터 불필요</span></div><div class="wl-card"><div class="wl-brand">CR-어댑터 필요</div><div class="wl-name">타 브랜드 무선 시스템</div><div class="wl-desc">벨트팩 송신기 커넥터 타입 확인 후 CR-어댑터 구매:<br><br>· <strong style="color:var(--carol-navy)">SHURE</strong>— 4PIN Mini XLR<br>· <strong style="color:var(--carol-navy)">SENNHEISER</strong>— 3PIN TRS<br>· <strong style="color:var(--carol-navy)">AKG</strong>— 3PIN XLR
+          </div><span class="wl-badge">CR-어댑터 45,000원</span></div></div><div style="margin-top:18px; text-align:center;"><img src="GO-31wirelessconnection.png" alt="GO-31 무선 연결 방법" style="max-width:100%; border-radius:var(--radius); box-shadow:var(--shadow2);"></div><div class="cnote" style="margin-top:18px;"><strong>구매 안내:</strong>무선 연결 시 벨트팩 송신기의 커넥터 타입을 반드시 확인하세요. </div></div></div></section><!-- SPECS --><section id="specs"><div class="si"><div class="sh"><div class="eyebrow">Specifications</div><h2 class="st">GO-31 <em>제품 사양</em></h2></div><div class="spec-wrap"><table class="spec-tbl"><thead><tr><th>항목</th><th>사양</th></tr></thead><tbody><tr><td>마이크 타입</td><td>콘덴서 (Condenser)</td></tr><tr><td>지향성 패턴</td><td>카디오이드 (Cardioid)</td></tr><tr><td>임피던스</td><td>2.2KΩ ± 30% (at 1,000Hz)</td></tr><tr><td>감도</td><td>-36 ± 3dBV/Pa (at 1,000Hz)</td></tr><tr><td>응답 주파수</td><td>50Hz ~ 15,000Hz</td></tr><tr><td>전원 공급</td><td>DC 3V</td></tr><tr><td>케이블</td><td>Ø1.7mm × 1.5m, 4P Mini XLR</td></tr><tr><td>본체 치수</td><td>Ø20.9 × 37.4 × 213.5mm</td></tr><tr><td>본체 중량</td><td>31g</td></tr><tr><td>기본 구성</td><td>GO-31 본체 + 클립 1종 선택</td></tr></tbody></table><div class="freq-box"><img src="GO-31_frequencyresponse.png" alt="GO-31 주파수 응답 특성"><div class="freq-lbl">Typical Frequency Response</div></div></div></div></section><!-- FEATURES --><section id="features"><div class="si"><div class="sh"><div class="eyebrow">Key Features</div><h2 class="st">GO-31 <em>주요 특징</em></h2></div><div class="feat-grid"><div class="feat-card"><div class="feat-icon"></div><div class="feat-title">카디오이드 패턴 — 피드백 억제</div><div class="feat-desc">카디오이드 지향성이 PA 스피커 방향의 피드백과 주변 소음을 효과적으로 차단합니다. 무대 환경에서도 안정적이고 클린한 수음을 보장합니다.</div></div><div class="feat-card"><div class="feat-icon"></div><div class="feat-title">플렉시블 구스넥 설계</div><div class="feat-desc">유연한 구스넥 암으로 악기의 어느 위치에도 자유롭게 마이크를 조준할 수 있습니다. 연주 중에도 수음 각도와 거리를 손쉽게 조절 가능합니다.</div></div><div class="feat-card"><div class="feat-icon"></div><div class="feat-title">광대역 주파수 응답</div><div class="feat-desc">50Hz~15kHz의 넓은 주파수 대역으로 저음역(첼로)부터 고음역(바이올린·플루트)까지 악기 고유의 섬세한 음색을 정확히 포착합니다.</div></div><div class="feat-card"><div class="feat-icon"></div><div class="feat-title">31g 초경량 본체</div><div class="feat-desc">31g의 초경량 설계로 악기에 장착해도 무게 부담이 거의 없습니다. 바이올린·플루트 등 섬세한 악기에도 안심하고 사용할 수 있습니다.</div></div><div class="feat-card"><div class="feat-icon"></div><div class="feat-title">교체형 윈드스크린</div><div class="feat-desc">마이크 헤드의 쿠션 지지대(윈드스크린)를 별도 구매하여 교체할 수 있습니다. 위생적인 관리와 제품 수명 연장이 가능합니다.</div></div><div class="feat-card"><div class="feat-icon"></div><div class="feat-title">유선 · 무선 모두 지원</div><div class="feat-desc">GO-10 팬텀파워 어댑터(유선)와 CAROL·MIPRO 무선 시스템(직결), SHURE·SENNHEISER·AKG 무선 시스템(CR-어댑터)을 모두 지원합니다.</div></div></div></div></section><!-- ACCESSORIES --><section id="accessories"><div class="si"><div class="sh"><div class="eyebrow">Accessories</div><h2 class="st">GO-31 <em>전용 액세서리</em></h2><p class="sdesc">GO-31과 함께 사용하는 전용 액세서리 목록입니다. 구매 시 클립 1종이 기본 포함됩니다.</p></div><table class="acc-tbl"><thead><tr><th>모델</th><th>제품명 / 설명</th><th>소비자가 (VAT 포함)</th></tr></thead><tbody><tr><td><span class="acc-model">GO-10</span></td><td><div class="acc-name-txt">GO-31 전용 팬텀파워 어댑터<span class="tag-req">유선 연결 필수</span></div><div class="acc-sub">4PIN Mini XLR / 48V 팬텀파워 / GO-31 전용 (타 마이크 호환 불가)</div></td><td><div class="acc-price">88,000원<small>소비자가</small></div></td></tr><tr><td><span class="acc-model">GO-32</span></td><td><div class="acc-name-txt">색소폰 전용 악기 장착 클립<span class="tag-opt">기본 선택 가능</span></div><div class="acc-sub">색소폰 / 트럼펫 / 트럼본 / 클라리넷 호환</div></td><td><div class="acc-price">77,000원<small>소비자가</small></div></td></tr><tr><td><span class="acc-model">GO-33</span></td><td><div class="acc-name-txt">바이올린 전용 악기 장착 클립<span class="tag-opt">기본 선택 가능</span></div><div class="acc-sub">바이올린 / 비올라 호환</div></td><td><div class="acc-price">77,000원<small>소비자가</small></div></td></tr><tr><td><span class="acc-model">GO-34</span></td><td><div class="acc-name-txt">플루트 전용 악기 장착 클립<span class="tag-opt">기본 선택 가능</span></div><div class="acc-sub">플루트 호환</div></td><td><div class="acc-price">77,000원<small>소비자가</small></div></td></tr><tr><td><span class="acc-model">GO-35</span></td><td><div class="acc-name-txt">첼로 전용 악기 장착 클립<span class="tag-opt">기본 선택 가능</span></div><div class="acc-sub">첼로 호환 / 테일피스 고정 방식</div></td><td><div class="acc-price">88,000원<small>소비자가</small></div></td></tr><tr><td><span class="acc-model">CR-어댑터</span></td><td><div class="acc-name-txt">GO-31 전용 변환 어댑터<span class="tag-opt">타 브랜드 무선용</span></div><div class="acc-sub">SHURE (4PIN Mini XLR) / SENNHEISER (3PIN TRS) / AKG (3PIN XLR) 타입 중 선택</div></td><td><div class="acc-price">45,000원<small>소비자가</small></div></td></tr></tbody></table></div></section><!-- FOOTER --><footer><div class="ftr"><div class="ftr-brand"><strong>(주)현대에이브이씨 HDAVC</strong><br>경기도 평택시 도일유통길 39-9 (도일동)<br>CAROL GO-31 공식 수입·유통사</div><a href="#" class="topbtn" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">↑ 맨 위로</a><div class="ftr-contact">문의: <a href="tel:031-8054-0048">031-8054-0048</a><br><a href="index.html">← 전체 제품 목록</a></div></div><div style="margin-top:14px;padding-top:14px;border-top:1px solid rgba(255,255,255,0.12);font-size:11px;color:rgba(255,255,255,0.38);line-height:1.9;text-align:center">본 상품정보는 (주)현대에이브이씨에 저작권이 있으며, 상품정보의 복제, 변경 또는 재배포를 원할경우 반드시 저작권자의 허락을 득한 뒤 행하시기 바랍니다.<br>COPYRIGHT ⓒ HYUNDAI AUDIO VISUAL COMMUNICATIONS CO., LTD. ALL RIGHTS RESERVED.</div></footer><script>function goSearch(){const q=document.getElementById('searchInput').value.trim();if(q)window.location.href='index.html?search='+encodeURIComponent(q);}
 document.getElementById('searchInput').addEventListener('keydown',e=>{if(e.key==='Enter')goSearch();});
 function switchTab(type,btn){document.querySelectorAll('.ctab').forEach(t=>t.classList.remove('active'));document.querySelectorAll('.cpanel').forEach(p=>p.classList.remove('active'));btn.classList.add('active');document.getElementById('panel-'+type).classList.add('active');}
 const sections=document.querySelectorAll('section[id]');const navLinks=document.querySelectorAll('.snav-in a');
@@ -692,9 +269,7 @@ function goHero(n) {
 function slideHero(dir) { goHero(heroIdx + dir); }
 function resetHeroTimer() {
   clearInterval(heroTimer);
-  heroTimer = setInterval(() => goHero(heroIdx + 1), 4000);
+  heroTimer = setInterval(() =>goHero(heroIdx + 1), 4000);
 }
 resetHeroTimer();
-</script>
-</body>
-</html>
+</script></body></html>
